@@ -2,9 +2,13 @@
 
 ## Purpose
 
-Create a premium restaurant website for a dine-in business in Sylhet, Bangladesh. It must be visually memorable while helping guests discover food, request reservations, and enquire about private events.
+Create a premium, frontend-first restaurant website for a dine-in business in Sylhet, Bangladesh. The current milestone is the public architecture, visual design, responsive composition, and usable interaction prototypes—not production backend or staff tooling.
 
-## Launch pages
+The site should feel memorable and editorial while helping guests explore the food, understand the restaurant, and complete realistic reservation and private-event enquiry interfaces.
+
+## Current milestone
+
+Deliver the complete public-facing frontend for:
 
 - Home
 - Menu
@@ -13,54 +17,55 @@ Create a premium restaurant website for a dine-in business in Sylhet, Bangladesh
 - Gallery
 - Contact
 
-Private-event enquiries live within Reservations or Contact as a distinct flow, not as a vague contact-field option.
+All routes, navigation, layouts, responsive states, content states, and primary interactions should be represented. A polished interface is required even where submission or persistence remains mocked.
 
-## Public features
+## Public experiences
 
-- Browse menu categories and filter dishes by relevant properties such as category, dietary preference, spice level, and availability.
-- Submit a table-reservation request without creating an account.
-- Submit a private-event enquiry.
-- Find the restaurant's address, phone, opening hours, map, and social links.
+- Browse menu categories and filter typed fixture data by verified properties such as category, dietary preference, spice level, and availability.
+- Explore signature dishes, restaurant story, gallery imagery, testimonials, location, contact details, opening hours, map, and social links.
+- Complete a table-reservation form and receive a clearly labelled simulated success or error state.
+- Complete a distinct private-event enquiry flow rather than hiding it in a generic contact-field option.
+- Use every experience with keyboard, touch, pointer, reduced-motion, mobile, desktop, and short-height layouts.
 
-## Reservation rules for launch
+## Frontend data boundary
 
-- Reservation status: pending, confirmed, cancelled.
-- Use Asia/Dhaka as the business timezone.
-- Validate fields server-side and apply basic anti-spam and duplicate-submission protection.
-- Respect configured opening hours, blackout dates, and party-size limits.
-- A request is not a confirmed table until staff confirms it.
-- Notify staff of a new request through a defined transactional email path.
+- Use typed local fixtures for menu items, gallery items, testimonials, hours, contact details, and prototype reservation or enquiry results.
+- Keep fixtures separate from presentation components so a future data source can replace them without redesigning the UI.
+- Treat categories, prices, dietary claims, spice levels, hours, addresses, testimonials, and photography as provisional until confirmed by the restaurant.
+- Do not create duplicate production and mock data systems during this milestone.
+- No user account is required for any public prototype flow.
 
-## Staff and admin features
+## Reservation and event prototypes
 
-- Staff authenticate with Supabase Auth; public guests do not.
-- Roles: admin and editor.
-- The admin interface manages menu categories and items, gallery items, operating and contact details, reservation statuses, and private-event enquiries.
-- Do not build a general page builder or give restaurant staff Supabase dashboard access at launch.
+- Build complete field, validation, loading, failure, success, and reset states.
+- Submission may be handled entirely in local UI state or through a development-only mock handler.
+- Clearly communicate that the prototype does not create a confirmed booking or send a real enquiry.
+- Preserve a clean interface boundary for later server-backed submission.
+- EmailJS is not required for architecture or design work and should not be introduced as a substitute for persistence.
 
-## Content model
+## Deferred work
 
-- menu_categories
-- menu_items
-- gallery_items
-- reservations
-- event_enquiries
-- profiles or an equivalent staff-role record
-- A narrowly scoped site_settings model for opening hours, contact and social details, address and map data, reservation limits, and optional announcements
+The following are intentionally outside the current milestone:
 
-## Security and data rules
+- Supabase project setup, schema, migrations, Storage, generated database types, and Row Level Security.
+- Staff authentication, roles, admin routes, content management, and reservation management.
+- Production reservation persistence, pending/confirmed/cancelled workflow, availability enforcement, blackout dates, duplicate protection, and transactional email.
+- Production private-event persistence and staff notification.
+- Guest accounts, online ordering, delivery, payments, loyalty programmes, and a general page-builder CMS.
 
-- Use Supabase Row Level Security for all exposed tables.
-- Restrict staff actions by role and use secure authorization checks.
-- Validate public form submissions on the server.
-- Keep privileged keys server-only.
-- Preview deployments must use non-production data and email configuration.
-
-## Non-goals for launch
-
-- Online ordering, delivery, payments, guest accounts, loyalty programmes, and a generic CMS.
-- Automatic table-allocation optimisation beyond the request and confirmation workflow.
+These capabilities may be added later behind the frontend boundaries established in this phase. They must not be presented as complete until they are implemented and verified.
 
 ## Local discovery
 
-Add Restaurant structured data, an accurate local address, phone number, opening hours, sitemap, metadata, map location, and Google Business Profile alignment.
+Design the frontend to accommodate accurate restaurant metadata, structured data, address, phone, opening hours, map location, social links, sitemap, and Google Business Profile alignment. Use placeholders only when visibly marked as unverified content.
+
+## Delivery order
+
+1. Confirm the visual concept, exact copy, content inventory, and canonical brand tokens.
+2. Establish fonts, global layout, responsive containers, page shells, navigation, and footer.
+3. Build the complete Home-page composition using typed fixtures.
+4. Build Menu and its filtering interactions.
+5. Build About, Gallery, Reservations, Contact, and the private-event flow.
+6. Add the restrained GSAP motion pass after static responsive layouts are accepted.
+7. Verify mobile, short-height, reduced-motion, keyboard, performance, and visual fidelity.
+8. Add backend capabilities later as a separate, approved milestone.
