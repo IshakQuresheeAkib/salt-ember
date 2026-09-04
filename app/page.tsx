@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CanvasText } from "@/components/ui/canvas-text";
 
 const logoUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
 
@@ -39,7 +40,25 @@ export default function Home() {
       <section id="top" className="hero content-shell">
         <div className="hero-copy">
           <p className="eyebrow">A restaurant for the curious</p>
-          <h1 className="font-heading">Good food.<br /><em>Great fire.</em></h1>
+          <h1 className="font-heading">Good food.<br /><CanvasText
+            text="Great fire."
+            backgroundClassName="bg-orange-600 dark:bg-orange-600"
+            colors={[
+              "rgba(255, 107, 53, 1)",
+              "rgba(255, 107, 53, 0.9)",
+              "rgba(255, 107, 53, 0.8)",
+              "rgba(255, 107, 53, 0.7)",
+              "rgba(255, 107, 53, 0.6)",
+              "rgba(255, 107, 53, 0.5)",
+              "rgba(255, 107, 53, 0.4)",
+              "rgba(255, 107, 53, 0.3)",
+              "rgba(255, 107, 53, 0.2)",
+              "rgba(255, 107, 53, 0.1)",
+            ]}
+            lineGap={4}
+            animationDuration={20}
+            className="inline-block"
+          /></h1>
           <p className="hero-intro">We bring the warmth of the flame to everything we do. Local ingredients, global instincts, and a table made for staying awhile.</p>
           <a className="primary-button" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
         </div>
