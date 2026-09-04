@@ -15,8 +15,8 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Salt & Ember",
-  description: "A premium dine-in restaurant website for Sylhet, Bangladesh.",
+  title: "Salt & Ember | Flavour Meets Fire",
+  description: "A fire-led restaurant in Sylhet where local ingredients meet global instincts.",
 };
 
 type RootLayoutProps = Readonly<{
@@ -25,7 +25,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} bg-background`}>
       <body>{children}</body>
     </html>
   );
