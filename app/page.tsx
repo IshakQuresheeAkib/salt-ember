@@ -1,14 +1,8 @@
 import Image from "next/image";
 import { HeroFoodSelector } from "@/components/hero-food-selector";
+import { HeritageMenu } from "@/components/heritage-menu";
 
 const logoUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
-
-const dishes = [
-  { name: "Charred miso ramen", detail: "Slow broth, smoked egg, spring onion", price: "$18", image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85" },
-  { name: "Ember chicken", detail: "Coal-roasted thigh, ember glaze, herbs", price: "$24", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=85" },
-  { name: "Fire-roasted pizza", detail: "Tomato, fior di latte, basil oil", price: "$19", image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85" },
-  { name: "Market greens", detail: "Crisp garden vegetables, tahini, lime", price: "$14", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85" },
-];
 
 const testimonials = [
   ["Maya Rahman", "The food tastes like a warm evening around a real fire. Every plate had a point of view."],
@@ -56,10 +50,7 @@ export default function Home() {
         <a href="#contact" className="round-arrow" aria-label="Claim offer">↗</a>
       </section>
 
-      <section id="menu" className="section content-shell">
-        <div className="section-heading"><div><p className="eyebrow">From our kitchen</p><BracketTitle>Our best <em>served</em></BracketTitle></div><a className="text-link" href="#contact">See full menu <span aria-hidden="true">↗</span></a></div>
-        <div className="dish-grid">{dishes.map((dish) => <article className="dish-card" key={dish.name}><div className="dish-image"><Image src={dish.image} alt={dish.name} width={500} height={500} sizes="(max-width: 768px) 90vw, 25vw" /></div><div className="dish-meta"><div className="dish-title-row"><h3>{dish.name}</h3><button className="dish-favorite" type="button" aria-label={`Save ${dish.name} to favorites`}>♡</button></div><div className="dish-details"><strong>{dish.price}</strong><div className="dish-rating" aria-label="5 out of 5 stars"><span aria-hidden="true">★</span> 5.0</div></div><p>{dish.detail}</p><div className="dish-actions"><a className="dish-order" href="#contact">Order now <span aria-hidden="true">↗</span></a></div></div></article>)}</div>
-      </section>
+      <HeritageMenu />
 
       <section id="story" className="story-band">
         <div className="content-shell story-grid"><div className="story-image"><Image src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85" alt="Fresh ingredients arranged on a kitchen counter" width={800} height={700} sizes="(max-width: 768px) 100vw, 50vw" /></div><div className="story-copy"><p className="eyebrow">Our philosophy</p><BracketTitle>Made with <em>heat</em>,<br />served with heart.</BracketTitle><p>Salt & Ember is a place for food with a little edge. We cook over flame, follow the seasons, and borrow the best ideas from every table we have loved.</p><a className="text-link" href="#contact">Meet the people behind it <span aria-hidden="true">↗</span></a></div></div>
