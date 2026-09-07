@@ -58,7 +58,7 @@ export default function Home() {
 
       <section id="menu" className="section content-shell">
         <div className="section-heading"><div><p className="eyebrow">From our kitchen</p><BracketTitle>Our best <em>served</em></BracketTitle></div><a className="text-link" href="#contact">See full menu <span aria-hidden="true">↗</span></a></div>
-        <div className="dish-grid">{dishes.map((dish) => <article className="dish-card" key={dish.name}><div className="dish-image"><Image src={dish.image} alt={dish.name} width={500} height={360} sizes="(max-width: 768px) 90vw, 25vw" /></div><div className="dish-meta"><div><h3>{dish.name}</h3><p>{dish.detail}</p></div><strong>{dish.price}</strong></div></article>)}</div>
+        <div className="dish-grid">{dishes.map((dish) => <article className="dish-card" key={dish.name}><div className="dish-image"><Image src={dish.image} alt={dish.name} width={500} height={500} sizes="(max-width: 768px) 90vw, 25vw" /></div><div className="dish-meta"><div className="dish-title-row"><h3>{dish.name}</h3><button className="dish-favorite" type="button" aria-label={`Save ${dish.name} to favorites`}>♡</button></div><div className="dish-details"><strong>{dish.price}</strong><div className="dish-rating" aria-label="5 out of 5 stars"><span aria-hidden="true">★</span> 5.0</div></div><p>{dish.detail}</p><div className="dish-actions"><a className="dish-order" href="#contact">Order now <span aria-hidden="true">↗</span></a></div></div></article>)}</div>
       </section>
 
       <section id="story" className="story-band">
