@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HeroFoodSelector } from "@/components/hero-food-selector";
 
 const logoUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
 
@@ -46,12 +47,7 @@ export default function Home() {
           <div className="hero-actions"><a className="primary-button" href="#menu">Order now <span aria-hidden="true">↗</span></a><a className="secondary-button" href="#contact">Book a menu</a></div>
           <div className="hero-contact"><div className="socials" aria-label="Social links"><a href="#contact" aria-label="Twitter">tw</a><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="TikTok">tk</a><a href="#contact" aria-label="Instagram">ig</a></div><span>+20 654 87 432</span></div>
         </div>
-        <div className="hero-art">
-          <div className="hero-orbit" aria-hidden="true"><span /><span /><span /><span /></div>
-          <Image src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90" alt="A fresh bowl of noodles topped with herbs and egg" width={900} height={900} className="hero-dish" priority />
-          <div className="delivery-card"><span className="delivery-icon" aria-hidden="true">●</span><span><strong>Fast Delivery</strong><small>Free of cost any delivery</small></span></div>
-          <div className="hero-categories"><a className="category-pill active" href="#menu">◉ Dishes</a><a className="category-pill" href="#menu">▱ Dessert</a><a className="category-pill" href="#menu">♧ Drinks</a><a className="category-pill" href="#menu">◉ Platter</a></div>
-        </div>
+        <HeroFoodSelector />
       </section>
 
       <section className="offer content-shell" aria-label="Current offer">
