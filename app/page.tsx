@@ -24,29 +24,33 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <header className="site-header">
         <a href="#top" className="brand-mark" aria-label="Salt and Ember home">
-          <Image src={logoUrl} alt="Salt & Ember logo" width={100} height={62} className="h-12 w-auto object-contain mix-blend-screen" priority />
+          <Image src={logoUrl} alt="Salt & Ember logo" width={100} height={62} className="h-12 w-auto object-contain mix-blend-multiply" priority />
           <span>Salt <i>&</i> Ember</span>
         </a>
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
           <a className="nav-link active" href="#top">Home</a>
+          <a className="nav-link" href="#story">About Us</a>
           <a className="nav-link" href="#menu">Menu</a>
-          <a className="nav-link" href="#story">Our story</a>
-          <a className="nav-link" href="#contact">Contact</a>
+          <a className="nav-link" href="#contact">Reviews</a>
+          <a className="nav-link" href="#contact">Contacts</a>
+          <a className="nav-link" href="#menu">Shop</a>
         </nav>
-        <a href="#contact" className="header-action">Reserve a table <span aria-hidden="true">↗</span></a>
+        <a href="#menu" className="cart-button" aria-label="View cart"><span aria-hidden="true">▣</span><b>02</b></a>
       </header>
 
       <section id="top" className="hero content-shell">
         <div className="hero-copy">
-          <p className="eyebrow">A restaurant for the curious</p>
-          <h1 className="font-heading">Good food.<br /><em>Great fire.</em></h1>
-          <p className="hero-intro">We bring the warmth of the flame to everything we do. Local ingredients, global instincts, and a table made for staying awhile.</p>
-          <a className="primary-button" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
+          <p className="hero-kicker">Flavour meets fire</p>
+          <h1 className="font-heading">Taste the tradition,<br /><em>served fresh daily.</em></h1>
+          <p className="hero-intro">Where authentic taste meets modern dining — experience freshness, tradition, and a touch of luxury in every meal.</p>
+          <div className="hero-actions"><a className="primary-button" href="#menu">Order now <span aria-hidden="true">↗</span></a><a className="secondary-button" href="#contact">Book a menu</a></div>
+          <div className="hero-contact"><div className="socials" aria-label="Social links"><a href="#contact" aria-label="Twitter">tw</a><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="TikTok">tk</a><a href="#contact" aria-label="Instagram">ig</a></div><span>+20 654 87 432</span></div>
         </div>
         <div className="hero-art">
-          <div className="hero-orbit" aria-hidden="true" />
-          <Image src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90" alt="A bowl of noodles topped with a soft egg and herbs" width={900} height={900} className="hero-dish" priority />
-          <div className="hero-caption"><span>01</span><span>Flavour<br />meets fire</span></div>
+          <div className="hero-orbit" aria-hidden="true"><span /><span /><span /><span /></div>
+          <Image src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90" alt="A fresh bowl of noodles topped with herbs and egg" width={900} height={900} className="hero-dish" priority />
+          <div className="delivery-card"><span className="delivery-icon" aria-hidden="true">●</span><span><strong>Fast Delivery</strong><small>Free of cost any delivery</small></span></div>
+          <div className="hero-categories"><a className="category-pill active" href="#menu">◉ Dishes</a><a className="category-pill" href="#menu">▱ Dessert</a><a className="category-pill" href="#menu">♧ Drinks</a><a className="category-pill" href="#menu">◉ Platter</a></div>
         </div>
       </section>
 
