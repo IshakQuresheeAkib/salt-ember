@@ -8,7 +8,11 @@ export function HeroSection() {
       <div className="content-shell hero-grid">
         <div className="hero-copy">
           <p className="hero-location">Sylhet, Bangladesh</p>
-          <h1 id="hero-title" className="hero-title font-heading">
+          <h1
+            id="hero-title"
+            className="hero-title font-heading"
+            aria-label="Flavour meets fire."
+          >
             <span>Flavour meets </span>
             <em>fire.</em>
           </h1>
