@@ -1,3 +1,4 @@
+import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { navItems } from "@/lib/constants/nav";
 
 export function Navbar() {
@@ -24,9 +25,7 @@ export function Navbar() {
           Reserve a table
           <span aria-hidden="true">↘</span>
         </a>
-        <a className="button-secondary nav-menu" href="#menu">
-          Menu
-        </a>
+        <MobileNavigation />
       </div>
     </header>
   );

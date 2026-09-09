@@ -382,7 +382,7 @@ git commit -m "feat: rebuild static Ember Seam homepage"
 - Consumes: `navItems`, shared action classes, and the static Navbar/Marquee compositions from Task 2.
 - Produces: A focus-managed mobile Sheet and a marquee control with accessible names “Pause announcement” and “Resume announcement.”
 
-- [ ] **Step 1: Write failing interaction tests**
+- [x] **Step 1: Write failing interaction tests**
 
 ```tsx
 it("opens mobile navigation and closes after choosing About", async () => {
@@ -402,13 +402,13 @@ it("lets diners pause and resume the announcement strip", async () => {
 });
 ```
 
-- [ ] **Step 2: Run the tests and verify RED**
+- [x] **Step 2: Run the tests and verify RED**
 
 Run: `npm run test -- tests/navigation-marquee.test.tsx`
 
 Expected: FAIL because the mobile Sheet and stateful marquee control do not exist.
 
-- [ ] **Step 3: Confirm current official shadcn APIs and install primitives**
+- [x] **Step 3: Confirm current official shadcn APIs and install primitives**
 
 Review the current official Button and Sheet documentation for the Base Nova preset, then run:
 
@@ -418,11 +418,11 @@ npx shadcn@4.21.0 add button sheet
 
 Inspect `git diff` immediately. Keep only the generated primitives and their direct dependencies; reject palette, font, or unrelated global-style changes.
 
-- [ ] **Step 4: Implement focused client interactions**
+- [x] **Step 4: Implement focused client interactions**
 
 `MobileNavigation` owns `open` state and calls `setOpen(false)` on each anchor. It uses Sheet title “Navigation,” a visible close control, and the same `navItems` source as desktop. `MarqueeStrip` owns `paused` state, sets `data-paused`, and changes the button’s visible and accessible label between Pause and Resume. CSS uses `animation-play-state` and makes the strip static under reduced motion.
 
-- [ ] **Step 5: Verify and commit**
+- [x] **Step 5: Verify and commit**
 
 Run:
 
