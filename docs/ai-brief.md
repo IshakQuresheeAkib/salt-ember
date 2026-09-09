@@ -33,7 +33,7 @@ Do not expand the current milestone into backend, authentication, admin, databas
 
 ## Product boundaries
 
-- Public routes: Home, Menu, About, Reservations, Gallery, and Contact.
+- Public surface: one homepage containing the Hero, Menu, About, Reservations, Gallery, and Contact sections. Navigation links scroll to their matching section; do not create separate public routes for them.
 - Use typed local fixtures for menu, gallery, testimonials, restaurant details, and prototype submission outcomes.
 - Menu filters and forms must update meaningful local UI state; controls must not be decorative or inert.
 - Reservation and private-event submissions are explicit prototypes and must not imply that a real request was stored or sent.

@@ -8,16 +8,16 @@ The site should feel memorable and editorial while helping guests explore the fo
 
 ## Current milestone
 
-Deliver the complete public-facing frontend for:
+Deliver one complete public-facing homepage with these sections:
 
-- Home
+- Hero
 - Menu
 - About
 - Reservations
 - Gallery
 - Contact
 
-All routes, navigation, layouts, responsive states, content states, and primary interactions should be represented. A polished interface is required even where submission or persistence remains mocked.
+Navigation links must scroll to their matching homepage section rather than navigate to separate routes. All section layouts, responsive states, content states, and primary interactions should be represented. A polished interface is required even where submission or persistence remains mocked.
 
 ## Public experiences
 
@@ -62,10 +62,10 @@ Design the frontend to accommodate accurate restaurant metadata, structured data
 ## Delivery order
 
 1. Confirm the visual concept, exact copy, content inventory, and canonical brand tokens.
-2. Establish fonts, global layout, responsive containers, page shells, navigation, and footer.
-3. Build the complete Home-page composition using typed fixtures.
-4. Build Menu and its filtering interactions.
-5. Build About, Gallery, Reservations, Contact, and the private-event flow.
+2. Establish fonts, global layout, responsive containers, anchor navigation, and footer.
+3. Build the complete homepage composition using typed fixtures.
+4. Build the Menu section and its filtering interactions.
+5. Build the About, Gallery, Reservations, and Contact sections, including the private-event flow.
 6. Add the restrained GSAP motion pass after static responsive layouts are accepted.
 7. Verify mobile, short-height, reduced-motion, keyboard, performance, and visual fidelity.
 8. Add backend capabilities later as a separate, approved milestone.
