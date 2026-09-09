@@ -1,6 +1,6 @@
 # Salt & Ember homepage redesign
 
-**Status:** Approved direction, awaiting specification review  
+**Status:** Approved for implementation  
 **Date:** 2026-09-10  
 **Visual direction:** The Ember Seam
 
