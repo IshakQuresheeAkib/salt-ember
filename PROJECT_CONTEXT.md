@@ -58,12 +58,7 @@ deep-red    #A7281A   → dark accent, gradient depth
 ```
 app/
 ├── layout.tsx
-├── page.tsx                  → Home
-├── menu/page.tsx
-├── about/page.tsx
-├── gallery/page.tsx
-├── reservations/page.tsx
-├── contact/page.tsx
+├── page.tsx                  → Single public homepage and section anchors
 ├── globals.css
 
 components/
@@ -211,10 +206,10 @@ Run all three before every merge. No `next lint` — it does not exist in Next.j
 
 ---
 
-## Pages & Section Order (Phase 1)
+## Single-Page Section Order (Phase 1)
 
 ### Homepage sections (in order):
-1. Navbar — sticky, blur backdrop, mobile drawer
+1. Navbar — sticky, blur backdrop, mobile drawer; every navigation item scrolls to its matching homepage section
 2. HeroSection — fullscreen food image, typography reveal, one ember effect
 3. MarqueeStrip — "Flavour Meets Fire · Salt & Ember · Sylhet ·" with pause control
 4. SignatureDishes — horizontal scroll, parallax depth
@@ -225,10 +220,11 @@ Run all three before every merge. No `next lint` — it does not exist in Next.j
 9. ReservationCTA — form prototype with full field/validation/loading/success/error/reset states
 10. Footer — logo, links, social, hours, copyright
 
-The `ReservationForm` component is shared by the homepage `ReservationCTA` and the `/reservations` page; copy differs, component does not.
+The `ReservationForm` component is used within the homepage reservation section. It remains a prototype and must clearly state that no booking was sent or stored.
 
-### All pages:
-Home, Menu, About, Gallery, Reservations (prototype only), Contact
+### Navigation contract
+
+Salt & Ember is a single-page public site. Hero, Menu, About, Reservations, Gallery, and Contact are homepage sections, not separate routes. Each navigation item must use the corresponding in-page anchor and provide an accessible, keyboard-operable path to that section.
 
 ---
 
@@ -273,12 +269,12 @@ Do not suggest, implement, or reference any of these:
 
 ```
 1. globals.css tokens + fonts + layout.tsx
-2. Navbar + Footer + page shells (all routes)
+2. Navbar + Footer + single-page shell with section-anchor navigation
 3. All lib/constants/ typed fixtures
 4. Homepage composition (section by section)
 5. Performance gate: LCP candidate, `next/image` audit, font subsetting
-6. Menu page + filter interactions
-7. About, Gallery, Reservations, Contact
+6. Menu section + filter interactions
+7. About, Gallery, Reservations, and Contact sections
 8. GSAP animation pass (after static layouts accepted)
 9. Responsive QA: 340px → 1920px + short-height
 10. prefers-reduced-motion pass
