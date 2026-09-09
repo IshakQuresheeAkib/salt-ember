@@ -70,7 +70,7 @@
 
 ### Tests
 
-- `vitest.config.ts` — jsdom, aliases, and setup.
+- `vitest.config.mts` — jsdom, aliases, and setup.
 - `tests/setup.ts` — jest-dom and a stable `next/image` test adapter.
 - `tests/fixtures.test.ts` — fixture integrity and prohibited-scope assertions.
 - `tests/homepage-contract.test.tsx` — sections, anchor targets, approved copy, and no commerce affordances.
@@ -87,7 +87,7 @@
 **Files:**
 - Modify: `package.json`
 - Modify: `package-lock.json`
-- Create: `vitest.config.ts`
+- Create: `vitest.config.mts`
 - Create: `tests/setup.ts`
 - Create: `tests/fixtures.test.ts`
 - Create: `lib/types.ts`
@@ -101,7 +101,7 @@
 - Consumes: Canonical categories, section anchors, provisional-content rules, and visual copy from the approved specification.
 - Produces: `MenuItem`, `MenuCategory`, `DietaryTag`, `GalleryItem`, `Testimonial`, `NavItem`, `RestaurantDetails`, `ReservationValues`, `EventEnquiryValues`, `FieldErrors<T>`, `PrototypeResult`, and typed fixture arrays used by every later task.
 
-- [ ] **Step 1: Install the focused test harness**
+- [x] **Step 1: Install the focused test harness**
 
 Run:
 
@@ -116,9 +116,9 @@ Add scripts to `package.json`:
 "test:watch": "vitest"
 ```
 
-Create `vitest.config.ts` with `environment: "jsdom"`, `setupFiles: ["./tests/setup.ts"]`, and alias `@` to the repository root. In `tests/setup.ts`, import `@testing-library/jest-dom/vitest`, run DOM cleanup after every test, stub `Element.prototype.scrollIntoView`, and mock `next/image` as a native image while removing `priority`, `fill`, and `unoptimized` props.
+Create `vitest.config.mts` with `environment: "jsdom"`, `setupFiles: ["./tests/setup.ts"]`, and alias `@` to the repository root. The `.mts` extension keeps the ESM config compatible with this CommonJS-default package without loader warnings. In `tests/setup.ts`, import `@testing-library/jest-dom/vitest`, run DOM cleanup after every test, stub `Element.prototype.scrollIntoView`, and mock `next/image` as a native image while removing `priority`, `fill`, and `unoptimized` props.
 
-- [ ] **Step 2: Write the failing fixture-contract test**
+- [x] **Step 2: Write the failing fixture-contract test**
 
 Create `tests/fixtures.test.ts`:
 
@@ -163,13 +163,13 @@ describe("public fixture contract", () => {
 });
 ```
 
-- [ ] **Step 3: Run the test and verify RED**
+- [x] **Step 3: Run the test and verify RED**
 
 Run: `npm run test -- tests/fixtures.test.ts`
 
 Expected: FAIL because the `lib/types.ts` and `lib/constants/*` modules do not exist.
 
-- [ ] **Step 4: Implement types and fixtures**
+- [x] **Step 4: Implement types and fixtures**
 
 Define the core menu contract in `lib/types.ts`:
 
@@ -209,7 +209,7 @@ export interface MenuItem {
 
 Add the remaining named interfaces from the task’s Produces list. Use stable IDs, Bangladesh-style phone formatting, integer BDT prices, existing allowed Unsplash hosts, accurate image descriptions, and explicit `isProvisional: true` values. `navItems` must match the exact href array in the failing test.
 
-- [ ] **Step 5: Run focused and structural checks**
+- [x] **Step 5: Run focused and structural checks**
 
 Run:
 
@@ -221,10 +221,10 @@ npm run lint
 
 Expected: all commands exit 0 with four fixture tests passing.
 
-- [ ] **Step 6: Commit the content boundary**
+- [x] **Step 6: Commit the content boundary**
 
 ```powershell
-git add package.json package-lock.json vitest.config.ts tests/setup.ts tests/fixtures.test.ts lib/types.ts lib/constants
+git add package.json package-lock.json vitest.config.mts tests/setup.ts tests/fixtures.test.ts lib/types.ts lib/constants
 git commit -m "test: establish typed homepage fixtures"
 ```
 
