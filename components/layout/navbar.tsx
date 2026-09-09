@@ -20,11 +20,11 @@ export function Navbar() {
           ))}
         </nav>
 
-        <a className="button-primary hidden sm:inline-flex" href="#reservations">
+        <a className="button-primary nav-reserve" href="#reservations">
           Reserve a table
           <span aria-hidden="true">↘</span>
         </a>
-        <a className="button-secondary sm:hidden" href="#menu">
+        <a className="button-secondary nav-menu" href="#menu">
           Menu
         </a>
       </div>

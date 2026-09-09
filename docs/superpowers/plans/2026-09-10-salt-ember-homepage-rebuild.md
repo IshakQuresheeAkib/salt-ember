@@ -253,7 +253,7 @@ git commit -m "test: establish typed homepage fixtures"
 - Consumes: Typed fixtures from Task 1 and canonical CSS values from `DESIGN.md`.
 - Produces: A complete semantic static homepage, stable section IDs, section components, `.content-shell`, `.section-shell`, `.section-heading`, `.ember-seam`, and button/link recipes used by later client islands.
 
-- [ ] **Step 1: Write the failing homepage contract test**
+- [x] **Step 1: Write the failing homepage contract test**
 
 Create `tests/homepage-contract.test.tsx`:
 
@@ -281,13 +281,13 @@ describe("homepage contract", () => {
 });
 ```
 
-- [ ] **Step 2: Run the test and verify RED**
+- [x] **Step 2: Run the test and verify RED**
 
 Run: `npm run test -- tests/homepage-contract.test.tsx`
 
 Expected: FAIL because the current page lacks the approved sections and still renders ecommerce language.
 
-- [ ] **Step 3: Implement the server composition and static sections**
+- [x] **Step 3: Implement the server composition and static sections**
 
 Replace `app/page.tsx` with this composition shape:
 
@@ -315,7 +315,7 @@ export default function Home() {
 
 Implement every listed component with the exact heading/copy and order from the specification. Use `next/image` with stable width/height, `sizes`, and `priority` only for the hero image. Keep static sections server-rendered. Render real content without inert interaction controls: a static menu list, a testimonial list, and reservation/event explanations are replaced by their functional islands in Tasks 3–7. Do not render fake success messages in the static state.
 
-- [ ] **Step 4: Replace global styles with the runtime design foundation**
+- [x] **Step 4: Replace global styles with the runtime design foundation**
 
 In `app/globals.css`, expose every canonical colour to Tailwind v4:
 
@@ -339,7 +339,7 @@ In `app/globals.css`, expose every canonical colour to Tailwind v4:
 
 Add one global owned-scrollbar baseline, forced-colour fallback, skip-link, focus-visible treatment, stable anchor scroll margin, fluid content shell, responsive section rhythm, the twelve-column desktop grid, the mobile Ember Seam transformation, and a complete `prefers-reduced-motion` override. Component classes must consume variables or semantic Tailwind utilities rather than raw colours.
 
-- [ ] **Step 5: Update metadata and run checks**
+- [x] **Step 5: Update metadata and run checks**
 
 Keep Cormorant Garamond and Inter in `app/layout.tsx`; update only the title/description if needed to match the approved dine-in copy. Run:
 
@@ -352,11 +352,11 @@ npm run build
 
 Expected: both homepage tests pass and all structural commands exit 0.
 
-- [ ] **Step 6: Inspect the static page in a browser**
+- [x] **Step 6: Inspect the static page in a browser**
 
 Run `npm run dev`, open `/`, and capture desktop 1440×900, mobile 375×812, and short-height 1280×720 screenshots. Confirm the hero has one focal image, the Ember Seam is the only expressive effect, the reservation field is the only light section, all copy is visible, and no horizontal page overflow occurs.
 
-- [ ] **Step 7: Commit the static layout**
+- [x] **Step 7: Commit the static layout**
 
 ```powershell
 git add app components/layout components/sections components/shared tests/homepage-contract.test.tsx
