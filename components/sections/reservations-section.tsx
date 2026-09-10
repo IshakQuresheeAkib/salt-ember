@@ -25,7 +25,7 @@ export function ReservationsSection() {
               experience will include validation, loading, success, failure, and reset.
             </p>
             <p className="prototype-disclosure">
-              Prototype only — no booking is sent or stored.
+              Prototype only. No booking is sent or stored.
             </p>
           </article>
 
@@ -37,7 +37,7 @@ export function ReservationsSection() {
               preferred date, event type, and what you have in mind.
             </p>
             <p className="prototype-disclosure">
-              Prototype only — no enquiry is sent or stored.
+              Prototype only. No enquiry is sent or stored.
             </p>
           </article>
         </div>

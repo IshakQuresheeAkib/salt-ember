@@ -26,6 +26,11 @@ export interface ImageFixture {
   alt: string;
 }
 
+export interface HeroOrbitItem extends ImageFixture {
+  id: string;
+  label: string;
+}
+
 export interface MenuItem {
   id: string;
   name: string;

@@ -18,8 +18,8 @@ export const restaurantDetails = {
     alt: "A cook working carefully at a warmly lit restaurant kitchen pass",
   },
   hours: [
-    { days: "Sunday–Thursday", hours: "12:00–23:00" },
-    { days: "Friday–Saturday", hours: "12:00–00:00" },
+    { days: "Sunday-Thursday", hours: "12:00-23:00" },
+    { days: "Friday-Saturday", hours: "12:00-00:00" },
   ],
   socialLinks: [
     { href: "https://www.instagram.com/", label: "Instagram" },

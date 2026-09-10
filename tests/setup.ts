@@ -5,6 +5,7 @@ import { afterEach, vi } from "vitest";
 
 type TestImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   fill?: boolean;
+  preload?: boolean;
   priority?: boolean;
   unoptimized?: boolean;
 };
@@ -35,8 +36,9 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 vi.mock("next/image", () => ({
-  default: ({ fill, priority, unoptimized, ...props }: TestImageProps) => {
+  default: ({ fill, preload, priority, unoptimized, ...props }: TestImageProps) => {
     void fill;
+    void preload;
     void priority;
     void unoptimized;
     return createElement("img", props);

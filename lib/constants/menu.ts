@@ -1,4 +1,4 @@
-import type { MenuItem } from "@/lib/types";
+import type { HeroOrbitItem, MenuItem } from "@/lib/types";
 
 export const menuItems = [
   {
@@ -154,3 +154,20 @@ export const menuItems = [
 ] satisfies MenuItem[];
 
 export const featuredMenuItems = menuItems.filter((item) => item.isFeatured);
+
+function createHeroOrbitItem(id: string, label: string): HeroOrbitItem {
+  const item = menuItems.find((candidate) => candidate.id === id);
+
+  if (!item) {
+    throw new Error(`Missing hero orbit menu item: ${id}`);
+  }
+
+  return { id, label, src: item.image, alt: item.alt };
+}
+
+export const heroOrbitItems = [
+  createHeroOrbitItem("ember-chicken", "Grill"),
+  createHeroOrbitItem("coal-roasted-cauliflower", "Plant-led"),
+  createHeroOrbitItem("cardamom-milk-cake", "Dessert"),
+  createHeroOrbitItem("tamarind-ember-soda", "Drinks"),
+];

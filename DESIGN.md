@@ -48,7 +48,7 @@ The interface should feel like an evening service viewed across an open-fire pas
 - **Locales and language policy:** English is the current interface language. Copy should be concise, conversational, and usable by readers with varied English fluency. The architecture must not prevent a future Bangla locale.
 - **Usage scene:** Mobile discovery, social-link visits, and desktop planning for a meal or event. The page must work from 340px through large desktop widths and on short-height laptops.
 - **Register:** Brand-led public marketing with small product-like interaction islands for menu filtering, testimonial controls, and prototype forms.
-- **Memorable signature:** The Ember Seam: a narrow, off-centre structural line that aligns section boundaries, image crops, and selected transitions. It may glow once in the hero but must not become a continuous animated effect.
+- **Memorable signature:** The Ember Seam remains the narrow, off-centre structural line that aligns section boundaries and image crops. The hero pairs it with one controlled food carousel: four representative menu images advance around an offset orbit while the focal dish changes on the same beat. This is the page's only continuous decorative motion.
 - **Restraint:** Navigation, menu filtering, forms, validation, disclosures, and contact details use quiet, familiar patterns. Food photography and display typography carry the expression.
 - **Anti-references:** Generic orange-on-black restaurant templates, faux-luxury gold, glassmorphism, neon fire effects, rounded card grids, ordering-app UI, and dense decorative iconography.
 - **Token ownership/runtime mapping:** The existing Tailwind v4 token layer in `app/globals.css` remains the runtime owner. This file mirrors the accepted semantic values and rationale. `PROJECT_CONTEXT.md` constrains the canonical names. Implementation maps each documented token through `@theme inline` or `:root` once and shared components consume semantic variables rather than raw colours.
@@ -67,7 +67,7 @@ Display type uses fluid `clamp()` sizing, compact line height, and deliberate li
 
 ## Layout
 
-The desktop system uses an asymmetric twelve-column composition within a maximum 77.5rem content width. The hero gives copy roughly seven columns and the primary image five, with the Ember Seam marking their tension rather than a hard card boundary. Sections alternate open dark fields, charcoal bands, and one bone reservation field. The page favours editorial rails, lists, and large image planes over nested cards.
+The desktop system uses an asymmetric twelve-column composition within a maximum 77.5rem content width. The hero gives copy roughly seven columns and a circular food composition five, with the Ember Seam marking their tension rather than a hard card boundary. A large active dish remains the visual anchor while four smaller menu images establish variety along the orbit. Sections alternate open dark fields, charcoal bands, and one bone reservation field. The page favours editorial rails, lists, and large image planes over nested cards.
 
 Mobile is recomposed rather than shrunk: copy precedes imagery, the Ember Seam becomes a short horizontal crop guide, signature dishes use labelled horizontal scrolling, menu filters can scroll without hiding selections, galleries simplify to a stable two-column rhythm, and forms stack in document order. Section spacing can compress below 768px without reducing touch targets. Sticky navigation must not obscure anchor destinations or keyboard focus.
 
@@ -75,7 +75,7 @@ Every image reserves its aspect ratio. Scrollbar geometry remains stable. Loadin
 
 ## Elevation & Depth
 
-Depth comes from tonal contrast, image overlap, fine borders, and selective shadow under floating navigation or open overlays. Static content is predominantly flat. Heavy glow, glass panels, and repeated drop shadows are forbidden. The hero may use one tightly bounded heat bloom behind the focal image; other sections stay materially quiet.
+Depth comes from tonal contrast, image overlap, fine borders, and selective shadow under floating navigation or open overlays. Static content is predominantly flat. Heavy glow, glass panels, and repeated drop shadows are forbidden. The hero may use one tightly bounded heat bloom behind the food orbit; other sections stay materially quiet.
 
 ## Shapes
 
@@ -103,9 +103,13 @@ Table reservation and private-event enquiry are distinct workflows. Each owns fi
 
 Use the Lucide family configured by shadcn with a consistent 1.5–2px stroke and optical sizing appropriate to the control. Icons support text; they do not replace important action labels. Social links use recognizable marks or explicit text labels with accessible names.
 
+### Hero food orbit
+
+The hero artwork uses one large active dish and four smaller circular menu images labelled Grill, Plant-led, Dessert, and Drinks. The composition is content-complete before animation and remains balanced when static. The small dishes advance around an offset arc while remaining upright; the active dish changes on the same beat by entering and leaving through the right edge. The carousel has a persistent pause/resume control and never moves the headline, description, or primary actions.
+
 ### Motion
 
-Static responsive layout is the first acceptance gate. CSS owns hover, focus, and short state transitions. GSAP may later own one hero entrance and restrained section/image sequences after the static composition is approved. It must not animate every section, overlap CSS ownership, or run heavy scroll effects below 768px. Reduced motion removes automatic movement, leaves content complete, and presents the marquee statically. Persistent moving content includes a pause control.
+Static responsive layout is the first acceptance gate. CSS owns hover, focus, short state transitions, and the predetermined hero carousel. Its 12-second loop holds each composition before advancing the offset orbit by a quarter-turn with equal counter-rotation, while the active dish uses a transform-and-opacity handoff through the right edge. GSAP may later own one hero entrance and restrained section/image sequences after the static composition is approved, but it must not overlap carousel ownership. Reduced motion removes the orbital, dish-swap, and marquee movement while leaving every composition complete. Every persistent moving region includes a pause control.
 
 ### Content and data visualization
 
@@ -113,7 +117,7 @@ Copy is warm, direct, and specific without invented culinary claims. Primary act
 
 ## Do's and Don'ts
 
-- **Do:** Let one large food image, editorial typography, and the Ember Seam establish the identity.
+- **Do:** Let the active focal dish, restrained food orbit, editorial typography, and the Ember Seam establish the identity.
 - **Do:** Keep fixtures separate from presentation and visibly distinguish unverified restaurant information.
 - **Do:** Preserve a calm, familiar interaction model for navigation, filters, forms, and feedback.
 - **Don't:** reintroduce ordering, cart, delivery, loyalty, or production-booking language.

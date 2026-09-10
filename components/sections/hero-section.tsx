@@ -1,6 +1,5 @@
-import Image from "next/image";
-
-import { restaurantDetails } from "@/lib/constants/restaurant";
+import { HeroFoodOrbit } from "@/components/sections/hero-food-orbit";
+import { heroOrbitItems } from "@/lib/constants/menu";
 
 export function HeroSection() {
   return (
@@ -31,22 +30,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <figure className="hero-image-frame">
-          <div className="hero-heat" aria-hidden="true" />
-          <div className="ember-seam" aria-hidden="true" />
-          <Image
-            src={restaurantDetails.heroImage.src}
-            alt={restaurantDetails.heroImage.alt}
-            width={1200}
-            height={1500}
-            sizes="(max-width: 767px) 100vw, 48vw"
-            className="h-full w-full object-cover"
-            priority
-          />
-          <figcaption className="hero-caption">
-            Provisional image · final restaurant photography pending
-          </figcaption>
-        </figure>
+        <HeroFoodOrbit items={heroOrbitItems} />
       </div>
     </section>
   );
