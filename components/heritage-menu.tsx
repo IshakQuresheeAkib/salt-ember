@@ -29,7 +29,11 @@ export function HeritageMenu() {
   }
 
   return (
-    <section className="heritage-menu content-shell" id="heritage-menu" aria-labelledby="heritage-menu-title">
+    <section
+      className="heritage-menu content-shell content-shell--wide"
+      id="heritage-menu"
+      aria-labelledby="heritage-menu-title"
+    >
       <div className="heritage-heading">
         <p className="eyebrow">From our kitchen</p>
         <h2 id="heritage-menu-title" className="font-heading">Our <em>heritage</em> menu</h2>

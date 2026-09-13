@@ -29,19 +29,16 @@ function BracketTitle({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="site-header">
+      <header className="site-header content-shell content-shell--wide">
         <a href="#top" className="brand-mark" aria-label="Salt and Ember home">
           <Image
             src={logoUrl}
             alt="Salt & Ember logo"
-            width={100}
-            height={62}
+            width={120}
+            height={72}
             className="h-12 w-auto object-contain mix-blend-multiply"
             priority
           />
-          <span>
-            Salt <i>&</i> Ember
-          </span>
         </a>
         <nav
           className="hidden items-center gap-8 md:flex"
@@ -62,17 +59,10 @@ export default function Home() {
           <a className="nav-link" href="#contact">
             Contacts
           </a>
-          <a className="nav-link" href="#menu">
-            Shop
-          </a>
         </nav>
-        <a href="#menu" className="cart-button" aria-label="View cart">
-          <span aria-hidden="true">▣</span>
-          <b>02</b>
-        </a>
       </header>
 
-      <section id="top" className="hero content-shell">
+      <section id="top" className="hero content-shell content-shell--hero">
         <div className="hero-copy">
           <p className="hero-kicker">Savor the taste of Perfection</p>
           <h1 className="font-heading">
@@ -113,33 +103,10 @@ export default function Home() {
         <HeroFoodSelector />
       </section>
 
-      <section className="offer content-shell" aria-label="Current offer">
-        <div>
-          <strong>
-            Good food and a little
-            <br className="hidden sm:block" /> extra joy.
-          </strong>
-          <span className="offer-note">
-            A table full of reasons to come back.
-          </span>
-        </div>
-        <div className="offer-number">
-          <b>20%</b>
-          <span>
-            off your first
-            <br />
-            visit
-          </span>
-        </div>
-        <a href="#contact" className="round-arrow" aria-label="Claim offer">
-          ↗
-        </a>
-      </section>
-
       <HeritageMenu />
 
       <section id="story" className="story-band">
-        <div className="content-shell story-grid">
+        <div className="content-shell content-shell--wide story-grid">
           <div className="story-image">
             <Image
               src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85"
@@ -167,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section content-shell">
+      <section className="section content-shell content-shell--comfort">
         <div className="section-heading">
           <div>
             <p className="eyebrow">The word around town</p>
@@ -189,7 +156,10 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="contact" className="footer content-shell">
+      <footer
+        id="contact"
+        className="footer content-shell content-shell--wide"
+      >
         <div className="footer-top">
           <div>
             <a className="footer-brand" href="#top">
