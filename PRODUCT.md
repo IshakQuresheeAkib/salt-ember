@@ -13,7 +13,7 @@ Salt & Ember is a visual restaurant concept for prospective diners in and around
 ## Implemented capabilities
 
 - In-page navigation to Home, Menu, Reviews, and Contact, with a desktop navigation bar and a mobile disclosure menu.
-- A hero food selector with four food states. It advances automatically only when the document is visible, the selector is not hovered or focused, and reduced motion is not requested. Visitors can choose a state or pause/resume rotation.
+- A hero food selector with four food states. It advances automatically only when the document is visible, the selector is not hovered or focused, and reduced motion is not requested. Visitors can choose a state.
 - A category-filtered sample menu with eight hard-coded dishes and BDT-formatted illustrative prices.
 - Nine illustrative testimonials. Animated columns are progressively enhanced with Framer Motion; reduced motion renders all nine cards statically.
 - A contact footer containing sample address, telephone, email, and social destinations.

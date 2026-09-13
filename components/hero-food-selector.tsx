@@ -84,7 +84,6 @@ export function HeroFoodSelector() {
     direction: 1,
     revision: 0,
   });
-  const [isRotationPaused, setIsRotationPaused] = useState(false);
   const [isPointerHovered, setIsPointerHovered] = useState(false);
   const [isFocusWithin, setIsFocusWithin] = useState(false);
   const [manualAnnouncement, setManualAnnouncement] = useState("");
@@ -110,7 +109,6 @@ export function HeroFoodSelector() {
   const renderedTransitionRevisionRef = useRef<number | null>(null);
   const activeFood = foodStates[transition.activeIndex];
   const shouldScheduleRotation =
-    !isRotationPaused &&
     !isPointerHovered &&
     !isFocusWithin &&
     isDocumentVisible &&
@@ -504,14 +502,6 @@ export function HeroFoodSelector() {
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          className="hero-rotation-toggle"
-          aria-pressed={isRotationPaused}
-          onClick={() => setIsRotationPaused((paused) => !paused)}
-        >
-          {isRotationPaused ? "Resume rotation" : "Pause rotation"}
-        </button>
       </div>
     </div>
   );

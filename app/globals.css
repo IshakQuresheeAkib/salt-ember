@@ -764,26 +764,6 @@ a {
 .testimonial-section {
   position: relative;
 }
-.hero-rotation-toggle {
-  min-height: 2.5rem;
-  padding: 8px 12px;
-  border: 1px solid var(--flameburst-orange);
-  border-radius: 0.625rem;
-  background: var(--midnight-shadow);
-  color: var(--silver-mist);
-  cursor: pointer;
-  font: inherit;
-  font-size: 11px;
-  font-weight: 700;
-  transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    background 0.2s ease;
-}
-.hero-rotation-toggle[aria-pressed="true"] {
-  border-color: var(--flameburst-orange);
-  color: var(--flameburst-orange);
-}
 .testimonial-section::before {
   position: absolute;
   top: 0;
@@ -1006,8 +986,12 @@ a {
 }
 @media (max-width: 480px) {
   .content-shell,
-  .site-header {
+  .site-header, .hero-copy {
     width: min(100% - 28px, 1180px);
+    margin: 0 auto;
+  }
+  .content-shell--hero{
+    width: 100%;
   }
   .site-header {
     padding-right: 10px;
@@ -1061,11 +1045,11 @@ a {
   }
   .hero-dish-curve {
     right: 0;
-    width: 64%;
+    width: 55%;
     height: 112%;
   }
   .hero-dish-scene {
-    width: 70%;
+    width: 55%;
   }
   .delivery-card {
     bottom: 66px;
