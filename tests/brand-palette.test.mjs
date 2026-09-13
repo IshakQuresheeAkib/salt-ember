@@ -4,15 +4,20 @@ import test from "node:test";
 const baseUrl = process.env.HERO_BASE_URL ?? "http://localhost:3000";
 
 const approvedPalette = [
+  "#e4e4e4",
+  "#fc5000",
+  "#050505",
+];
+
+const retiredPalette = [
   "#ffd9a3",
   "#ffb45c",
   "#f28b2c",
   "#c35a1a",
   "#7a2e0b",
   "#1a0d06",
-];
-
-const retiredPalette = [
+  "#a33400",
+  "#060101eb",
   "#0b0a09",
   "#181513",
   "#332d29",
@@ -24,7 +29,7 @@ const retiredPalette = [
   "#a7281a",
 ];
 
-test("serves the approved amber brand palette without retired colors", async () => {
+test("serves the approved Flameburst palette without retired colors", async () => {
   const pageResponse = await fetch(baseUrl);
   assert.equal(pageResponse.ok, true, `Expected ${baseUrl} to render successfully`);
 

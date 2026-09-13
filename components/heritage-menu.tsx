@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 const menuItems = [
@@ -15,25 +15,101 @@ const menuItems = [
   { name: "Rosemary Fizz", category: "Drinks", detail: "Rosemary, lemon, tonic, smoked ice.", price: "৳ 500", image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=88" },
 ];
 
-const categories = ["All", "Dishes", "Platter", "Drinks", "Dessert"];
+const categories = ["All", "Dishes", "Platter", "Drinks", "Dessert"] as const;
+const crossfadeDurationMs = 180;
+
+type MenuCategory = (typeof categories)[number];
+type MenuItem = (typeof menuItems)[number];
+
+function filterMenuItems(category: MenuCategory) {
+  return category === "All"
+    ? menuItems
+    : menuItems.filter((item) => item.category === category);
+}
+
+function HeritageGrid({
+  items,
+  isEntering = false,
+  isExiting = false,
+}: {
+  items: MenuItem[];
+  isEntering?: boolean;
+  isExiting?: boolean;
+}) {
+  return (
+    <div
+      className={`heritage-grid${isEntering ? " is-entering" : ""}${isExiting ? " is-exiting" : ""}`}
+      aria-hidden={isExiting || undefined}
+    >
+      {items.map((item) => (
+        <article className="heritage-card" key={item.name}>
+          <div className="heritage-card-image">
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={500}
+              height={500}
+              sizes="(max-width: 700px) 42vw, 220px"
+            />
+          </div>
+          <div className="heritage-card-body">
+            <h3>{item.name}</h3>
+            <div className="heritage-card-details">
+              <strong>{item.price}</strong>
+            </div>
+            <p>{item.detail}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
 
 export function HeritageMenu() {
-  const [category, setCategory] = useState("All");
-  const filteredItems = useMemo(() => category === "All" ? menuItems : menuItems.filter((item) => item.category === category), [category]);
+  const [category, setCategory] = useState<MenuCategory>("All");
+  const [outgoingCategory, setOutgoingCategory] =
+    useState<MenuCategory | null>(null);
+  const cleanupTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const filteredItems = useMemo(() => filterMenuItems(category), [category]);
+  const outgoingItems = useMemo(
+    () => (outgoingCategory ? filterMenuItems(outgoingCategory) : null),
+    [outgoingCategory],
+  );
 
-  function selectCategory(nextCategory: string) {
+  useEffect(() => {
+    return () => {
+      if (cleanupTimer.current) {
+        clearTimeout(cleanupTimer.current);
+      }
+    };
+  }, []);
+
+  function selectCategory(nextCategory: MenuCategory) {
+    if (nextCategory === category) {
+      return;
+    }
+
+    if (cleanupTimer.current) {
+      clearTimeout(cleanupTimer.current);
+    }
+
+    setOutgoingCategory(category);
     setCategory(nextCategory);
+    cleanupTimer.current = setTimeout(() => {
+      setOutgoingCategory(null);
+      cleanupTimer.current = null;
+    }, crossfadeDurationMs);
   }
 
   return (
     <section
       className="heritage-menu content-shell content-shell--wide"
-      id="heritage-menu"
+      id="menu"
       aria-labelledby="heritage-menu-title"
     >
       <div className="heritage-heading">
         <p className="eyebrow">From our kitchen</p>
-        <TextBlockAnimation blockColor="var(--burnt-sienna)">
+        <TextBlockAnimation blockColor="var(--flameburst-orange)">
           <h2 id="heritage-menu-title" className="font-heading">
             Our <em>heritage</em> menu
           </h2>
@@ -41,10 +117,31 @@ export function HeritageMenu() {
         <p>Sample menu — dishes and prices are illustrative.</p>
       </div>
       <div className="heritage-tabs" aria-label="Filter menu by category">
-        {categories.map((item) => <button key={item} type="button" aria-pressed={category === item} className={category === item ? "is-active" : ""} onClick={() => selectCategory(item)}>{item}</button>)}
+        {categories.map((item) => (
+          <button
+            key={item}
+            type="button"
+            aria-pressed={category === item}
+            className={category === item ? "is-active" : ""}
+            onClick={() => selectCategory(item)}
+          >
+            {item}
+          </button>
+        ))}
       </div>
-      <div className="heritage-grid">
-        {filteredItems.map((item) => <article className="heritage-card" key={item.name}><div className="heritage-card-image"><Image src={item.image} alt={item.name} width={500} height={500} sizes="(max-width: 700px) 42vw, 220px" /></div><div className="heritage-card-body"><h3>{item.name}</h3><div className="heritage-card-details"><strong>{item.price}</strong></div><p>{item.detail}</p></div></article>)}
+      <div className="heritage-grid-stack">
+        {outgoingItems ? (
+          <HeritageGrid
+            key={outgoingCategory}
+            items={outgoingItems}
+            isExiting
+          />
+        ) : null}
+        <HeritageGrid
+          key={category}
+          items={filteredItems}
+          isEntering={Boolean(outgoingItems)}
+        />
       </div>
     </section>
   );

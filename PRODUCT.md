@@ -4,51 +4,33 @@
 
 ## Platform
 
-web
+Web, with one public homepage at `/`.
 
-## Users
+## Current product
 
-The primary users are local prospective diners in and around Sylhet, Bangladesh. They arrive to understand the restaurant, explore its menu, and begin a table-reservation or private-event enquiry.
+Salt & Ember is a visual restaurant concept for prospective diners in and around Sylhet, Bangladesh. The implemented experience helps a visitor explore a sample menu, view illustrative guest notes, and find placeholder contact details. It is not a live restaurant operations system.
 
-## Product Purpose
+## Implemented capabilities
 
-Salt & Ember is the public website for an active restaurant. The current product milestone helps diners discover the restaurant and use realistic reservation and private-event enquiry prototypes. Success is a clear, trustworthy public experience that supports informed dining interest without implying that a booking or enquiry has been submitted.
+- In-page navigation to Home, Menu, Reviews, and Contact, with a desktop navigation bar and a mobile disclosure menu.
+- A hero food selector with four food states. It advances automatically only when the document is visible, the selector is not hovered or focused, and reduced motion is not requested. Visitors can choose a state or pause/resume rotation.
+- A category-filtered sample menu with eight hard-coded dishes and BDT-formatted illustrative prices.
+- Nine illustrative testimonials. Animated columns are progressively enhanced with Framer Motion; reduced motion renders all nine cards statically.
+- A contact footer containing sample address, telephone, email, and social destinations.
 
-## Positioning
+## Product boundaries
 
-Salt & Ember is an active premium dine-in restaurant serving local prospective diners in Sylhet. Its specific cuisine and differentiating dining proposition are not yet confirmed and must not be invented in product copy.
+The current repository has no reservation form, private-event form, gallery, about section, CMS, backend API, database, authentication, admin tools, ordering, delivery, payments, map integration, analytics, or persistence. Do not describe any of those as current functionality.
 
-## Operating Context
+All restaurant claims are provisional. This includes cuisine positioning, dishes, prices, availability, imagery, testimonials, address, phone numbers, email, and social links. The contact data in the hero and footer is not yet consolidated; production publication requires an approved, single source of restaurant facts.
 
-Visitors commonly discover the site from mobile and social links, then use it on mobile or desktop to plan a meal or a larger event. The current experience is a single public homepage with menu exploration, restaurant information, and local-only prototype flows.
+## Product principles
 
-## Capabilities and Constraints
+1. Make the sample nature of the experience clear and avoid claims of live service capability.
+2. Keep interaction controls purposeful, keyboard-operable, and usable on small screens.
+3. Keep animation supplemental; content remains available with reduced motion.
+4. Replace provisional content only after restaurant approval.
 
-- This is a frontend-only Next.js web milestone with typed local fixtures.
-- Menu browsing and filtering are supported through fixture data.
-- Reservation and private-event enquiry workflows are simulations only; they do not send, store, confirm, or manage requests.
-- Backend services, authentication, accounts, ordering, delivery, payments, staff/admin tooling, CMS features, and production reservation management are out of scope.
-- Restaurant details, dishes, dietary information, availability, prices, reviews, hours, contact details, and photography remain provisional until confirmed by the restaurant.
+## Next product decisions
 
-## Brand Commitments
-
-- Product name: Salt & Ember.
-- Existing repository copy uses the tagline “Flavour Meets Fire”; retain it unless the restaurant changes it.
-- The public voice should be warm, direct, and suitable for readers with varied English fluency. The architecture must allow a future Bangla locale.
-
-## Evidence on Hand
-
-- Product, brand, UI, and implementation briefs are in `PROJECT_CONTEXT.md` and `docs/`.
-- Typed local fixtures and public interaction prototypes are in the repository.
-- No confirmed cuisine, dining proposition, restaurant-detail dataset, or production integration has been supplied. Future work must not fabricate these facts.
-
-## Product Principles
-
-1. Help a local prospective diner make an informed decision with clear, honest information.
-2. Keep every current interaction truthful about its simulated, frontend-only nature.
-3. Preserve an easy path from casual discovery to a reservation or private-event expression of interest.
-4. Keep provisional restaurant information visibly distinct from confirmed facts.
-
-## Accessibility & Inclusion
-
-The public web experience must remain keyboard-operable, responsive from small mobile screens through desktop, and complete when reduced motion is requested. Accessible labels, visible focus, clear form feedback, and touch-friendly controls are required.
+Future work needs separate approval before adding new public sections or operational features. At minimum, confirm the restaurant identity, real menu and availability data, final contact details, consent/privacy requirements, the reservation workflow, and an operational owner for any submitted enquiry.

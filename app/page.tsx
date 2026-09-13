@@ -2,32 +2,10 @@ import Image from "next/image";
 import { HeroFoodSelector } from "@/components/hero-food-selector";
 import { HeritageMenu } from "@/components/heritage-menu";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
+import TestimonialsSection from "@/components/ui/testimonial-v2";
 
 const logoUrl =
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
-
-const testimonials = [
-  [
-    "Maya Rahman",
-    "The food tastes like a warm evening around a real fire. Every plate had a point of view.",
-  ],
-  [
-    "Arif Chowdhury",
-    "A beautiful room, generous service, and the kind of flavors you talk about on the way home.",
-  ],
-  [
-    "Nadia Khan",
-    "Salt & Ember made our ordinary Friday feel like an occasion. The ramen is unforgettable.",
-  ],
-];
-
-function BracketTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <TextBlockAnimation blockColor="var(--golden-hour)">
-      <h2 className="bracket-title font-heading text-balance">{children}</h2>
-    </TextBlockAnimation>
-  );
-}
 
 export default function Home() {
   return (
@@ -50,9 +28,6 @@ export default function Home() {
           <a className="nav-link active" href="#top">
             Home
           </a>
-          <a className="nav-link" href="#story">
-            About Us
-          </a>
           <a className="nav-link" href="#menu">
             Menu
           </a>
@@ -67,7 +42,6 @@ export default function Home() {
           <summary>Menu</summary>
           <nav aria-label="Mobile navigation">
             <a href="#top">Home</a>
-            <a href="#story">About us</a>
             <a href="#menu">Menu</a>
             <a href="#testimonials">Reviews</a>
             <a href="#contact">Contact</a>
@@ -80,14 +54,14 @@ export default function Home() {
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.08}
-            blockColor="var(--golden-hour)"
+            blockColor="var(--flameburst-orange)"
           >
             <p className="hero-kicker">Savor the taste of Perfection</p>
           </TextBlockAnimation>
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.16}
-            blockColor="var(--burnt-sienna)"
+            blockColor="var(--flameburst-orange)"
             duration={0.75}
           >
             <h1 className="font-heading">
@@ -99,7 +73,7 @@ export default function Home() {
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.3}
-            blockColor="var(--sunset-orange)"
+            blockColor="var(--flameburst-orange)"
           >
             <p className="hero-intro">
               Where authentic taste meets modern dining — experience freshness,
@@ -137,59 +111,7 @@ export default function Home() {
 
       <HeritageMenu />
 
-      <section id="story" className="story-band">
-        <div className="content-shell content-shell--wide story-grid">
-          <div className="story-image">
-            <Image
-              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=85"
-              alt="Fresh ingredients arranged on a kitchen counter"
-              width={800}
-              height={700}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          <div className="story-copy">
-            <p className="eyebrow">Our philosophy</p>
-            <BracketTitle>
-              Made with <em>heat</em>,<br />
-              served with heart.
-            </BracketTitle>
-            <p>
-              Salt & Ember is a place for food with a little edge. We cook over
-              flame, follow the seasons, and borrow the best ideas from every
-              table we have loved.
-            </p>
-            <a className="text-link" href="#contact">
-              Meet the people behind it <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="testimonials"
-        className="section content-shell content-shell--comfort"
-      >
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">The word around town</p>
-            <BracketTitle>
-              What they <em>say</em>
-            </BracketTitle>
-          </div>
-        </div>
-        <div className="testimonial-grid">
-          {testimonials.map(([name, quote]) => (
-            <figure className="testimonial" key={name}>
-              <div className="stars" aria-label="5 out of 5 stars">
-                ★★★★★
-              </div>
-              <blockquote>“{quote}”</blockquote>
-              <figcaption>{name}</figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
+      <TestimonialsSection />
 
       <footer
         id="contact"

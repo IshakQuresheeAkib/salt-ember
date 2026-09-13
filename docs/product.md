@@ -1,71 +1,28 @@
 # Salt & Ember Product Brief
 
-## Purpose
+## Current scope
 
-Create a premium, frontend-first restaurant website for a dine-in business in Sylhet, Bangladesh. The current milestone is the public architecture, visual design, responsive composition, and usable interaction prototypes—not production backend or staff tooling.
+Salt & Ember is a frontend-only homepage. It currently implements a brand-led restaurant discovery experience, not restaurant operations or a booking product.
 
-The site should feel memorable and editorial while helping guests explore the food, understand the restaurant, and complete realistic reservation and private-event enquiry interfaces.
+### Available now
 
-## Current milestone
+- Home, Menu, Reviews, and Contact anchors.
+- Desktop navigation plus a small-screen disclosure menu.
+- A four-state hero food selector with manual selection and pause/resume control.
+- A category-filtered menu of eight illustrative dishes.
+- Nine illustrative testimonials with animated and reduced-motion presentations.
+- A sample contact footer.
 
-Deliver one complete public-facing homepage with these sections:
+### Not implemented
 
-- Hero
-- Menu
-- About
-- Reservations
-- Gallery
-- Contact
+- About, gallery, marquee, signature-dish rail, reservation, or private-event sections.
+- Any form submission, email delivery, persistence, booking confirmation, availability, or staff workflow.
+- Backend services, authentication, databases, accounts, CMS, ordering, delivery, payment, loyalty, maps, or analytics.
 
-Navigation links must scroll to their matching homepage section rather than navigate to separate routes. All section layouts, responsive states, content states, and primary interactions should be represented. A polished interface is required even where submission or persistence remains mocked.
+## Content and trust
 
-## Public experiences
+All restaurant facts are provisional. The menu, prices, dietary information, availability, imagery, quotes, phone numbers, address, email, and social links need approval before publication. Treat the current page as a visual prototype, not evidence that a restaurant is live or that it accepts customer requests.
 
-- Browse menu categories and filter typed fixture data by verified properties such as category, dietary preference, spice level, and availability.
-- Explore signature dishes, restaurant story, gallery imagery, testimonials, location, contact details, opening hours, map, and social links.
-- Complete a table-reservation form and receive a clearly labelled simulated success or error state.
-- Complete a distinct private-event enquiry flow rather than hiding it in a generic contact-field option.
-- Use every experience with keyboard, touch, pointer, reduced-motion, mobile, desktop, and short-height layouts.
+## Future-work gate
 
-## Frontend data boundary
-
-- Use typed local fixtures for menu items, gallery items, testimonials, hours, contact details, and prototype reservation or enquiry results.
-- Keep fixtures separate from presentation components so a future data source can replace them without redesigning the UI.
-- Treat categories, prices, dietary claims, spice levels, hours, addresses, testimonials, and photography as provisional until confirmed by the restaurant.
-- Do not create duplicate production and mock data systems during this milestone.
-- No user account is required for any public prototype flow.
-
-## Reservation and event prototypes
-
-- Build complete field, validation, loading, failure, success, and reset states.
-- Submission may be handled entirely in local UI state or through a development-only mock handler.
-- Clearly communicate that the prototype does not create a confirmed booking or send a real enquiry.
-- Preserve a clean interface boundary for later server-backed submission.
-- EmailJS is not required for architecture or design work and should not be introduced as a substitute for persistence.
-
-## Deferred work
-
-The following are intentionally outside the current milestone:
-
-- Supabase project setup, schema, migrations, Storage, generated database types, and Row Level Security.
-- Staff authentication, roles, admin routes, content management, and reservation management.
-- Production reservation persistence, pending/confirmed/cancelled workflow, availability enforcement, blackout dates, duplicate protection, and transactional email.
-- Production private-event persistence and staff notification.
-- Guest accounts, online ordering, delivery, payments, loyalty programmes, and a general page-builder CMS.
-
-These capabilities may be added later behind the frontend boundaries established in this phase. They must not be presented as complete until they are implemented and verified.
-
-## Local discovery
-
-Design the frontend to accommodate accurate restaurant metadata, structured data, address, phone, opening hours, map location, social links, sitemap, and Google Business Profile alignment. Use placeholders only when visibly marked as unverified content.
-
-## Delivery order
-
-1. Confirm the visual concept, exact copy, content inventory, and canonical brand tokens.
-2. Establish fonts, global layout, responsive containers, anchor navigation, and footer.
-3. Build the complete homepage composition using typed fixtures.
-4. Build the Menu section and its filtering interactions.
-5. Build the About, Gallery, Reservations, and Contact sections, including the private-event flow.
-6. Add the restrained GSAP motion pass after static responsive layouts are accepted.
-7. Verify mobile, short-height, reduced-motion, keyboard, performance, and visual fidelity.
-8. Add backend capabilities later as a separate, approved milestone.
+Adding a reservation or event journey requires a separately approved product decision: confirmed fields, consent and privacy copy, delivery/persistence ownership, confirmation and failure states, staff hand-off, accessibility, and operational readiness. Do not add a fake submission flow merely to fill the page.

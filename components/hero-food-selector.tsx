@@ -1,7 +1,16 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
+import { gsap } from "@/lib/gsap";
 
 const foodStates = [
   { id: "dishes", label: "Dishes", icon: "◉", image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90", alt: "A fresh bowl of noodles topped with herbs and egg" },
@@ -11,74 +20,454 @@ const foodStates = [
 ] as const;
 
 type FoodId = (typeof foodStates)[number]["id"];
+type Direction = 1 | -1;
 
-const DISH_TRANSITION_MS = 720;
+interface HeroTransition {
+  activeIndex: number;
+  outgoingIndex: number | null;
+  outgoingMotion: SceneMotionState | null;
+  direction: Direction;
+  revision: number;
+}
+
+interface SceneMotionState {
+  opacity: number;
+  pathProgress: number;
+}
+
+const DISH_MOTION_SECONDS = 0.8;
+const DISH_FADE_SECONDS = 0.6;
+const OUTGOING_FADE_START_SECONDS =
+  DISH_MOTION_SECONDS - DISH_FADE_SECONDS;
+const AUTOPLAY_DWELL_MS = 800;
+const HERO_ARC_PATH =
+  "M 54 0 C 24.177 0 0 26.863 0 60 C 0 93.137 24.177 120 54 120";
+const HERO_CURVE_FILL_PATH =
+  "M 100 0 H 54 C 24.177 0 0 26.863 0 60 C 0 93.137 24.177 120 54 120 H 100 Z";
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+const ARC_MIDPOINT = 0.5;
+
+function subscribeToReducedMotion(onStoreChange: () => void) {
+  const mediaQuery = window.matchMedia(REDUCED_MOTION_QUERY);
+  mediaQuery.addEventListener("change", onStoreChange);
+
+  return () => mediaQuery.removeEventListener("change", onStoreChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return true;
+}
+
+function subscribeToVisibility(onStoreChange: () => void) {
+  document.addEventListener("visibilitychange", onStoreChange);
+
+  return () => document.removeEventListener("visibilitychange", onStoreChange);
+}
+
+function getVisibilitySnapshot() {
+  return document.visibilityState === "visible";
+}
+
+function getVisibilityServerSnapshot() {
+  return false;
+}
 
 export function HeroFoodSelector() {
-  const [activeId, setActiveId] = useState<FoodId>("dishes");
-  const [exitingIds, setExitingIds] = useState<ReadonlySet<FoodId>>(
-    () => new Set(),
+  const [transition, setTransition] = useState<HeroTransition>({
+    activeIndex: 0,
+    outgoingIndex: null,
+    outgoingMotion: null,
+    direction: 1,
+    revision: 0,
+  });
+  const [isRotationPaused, setIsRotationPaused] = useState(false);
+  const [isPointerHovered, setIsPointerHovered] = useState(false);
+  const [isFocusWithin, setIsFocusWithin] = useState(false);
+  const [manualAnnouncement, setManualAnnouncement] = useState("");
+  const [geometryRevision, setGeometryRevision] = useState(0);
+  const reducedMotion = useSyncExternalStore(
+    subscribeToReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot,
   );
-  const exitTimersRef = useRef(new Map<FoodId, number>());
-  const activeFood = useMemo(() => foodStates.find((food) => food.id === activeId) ?? foodStates[0], [activeId]);
+  const isDocumentVisible = useSyncExternalStore(
+    subscribeToVisibility,
+    getVisibilitySnapshot,
+    getVisibilityServerSnapshot,
+  );
+  const rootRef = useRef<HTMLDivElement>(null);
+  const arcPathRef = useRef<SVGPathElement>(null);
+  const sceneRefs = useRef(new Map<FoodId, HTMLDivElement>());
+  const sceneMotionRef = useRef(new Map<FoodId, SceneMotionState>());
+  const categoryButtonRefs = useRef(new Map<FoodId, HTMLButtonElement>());
+  const autoplayTimerRef = useRef<number | null>(null);
+  const geometryFrameRef = useRef<number | null>(null);
+  const previousReducedMotionRef = useRef(reducedMotion);
+  const renderedTransitionRevisionRef = useRef<number | null>(null);
+  const activeFood = foodStates[transition.activeIndex];
+  const shouldScheduleRotation =
+    !isRotationPaused &&
+    !isPointerHovered &&
+    !isFocusWithin &&
+    isDocumentVisible &&
+    !reducedMotion;
+
+  const captureSceneMotion = useCallback(
+    (index: number): SceneMotionState | null => {
+      const food = foodStates[index];
+      const scene = sceneRefs.current.get(food.id);
+      const existingMotion = sceneMotionRef.current.get(food.id);
+      if (!scene || !existingMotion) return null;
+
+      const opacity = Number(window.getComputedStyle(scene).opacity);
+      const capturedMotion = {
+        ...existingMotion,
+        opacity: Number.isFinite(opacity) ? opacity : existingMotion.opacity,
+      };
+      sceneMotionRef.current.set(food.id, capturedMotion);
+
+      return capturedMotion;
+    },
+    [],
+  );
+
+  const selectFood = useCallback((requestedIndex: number | null) => {
+    if (requestedIndex !== null) {
+      setManualAnnouncement(foodStates[requestedIndex].alt);
+    }
+
+    setTransition((current) => {
+      const nextIndex =
+        requestedIndex ?? (current.activeIndex + 1) % foodStates.length;
+      if (current.activeIndex === nextIndex) return current;
+
+      return {
+        activeIndex: nextIndex,
+        outgoingIndex: current.activeIndex,
+        outgoingMotion: captureSceneMotion(current.activeIndex),
+        direction: 1,
+        revision: current.revision + 1,
+      };
+    });
+  }, [captureSceneMotion]);
 
   useEffect(() => {
-    const exitTimers = exitTimersRef.current;
+    if (autoplayTimerRef.current !== null) {
+      window.clearTimeout(autoplayTimerRef.current);
+      autoplayTimerRef.current = null;
+    }
+
+    if (!shouldScheduleRotation || transition.outgoingIndex !== null) return;
+
+    autoplayTimerRef.current = window.setTimeout(() => {
+      autoplayTimerRef.current = null;
+      selectFood(null);
+    }, AUTOPLAY_DWELL_MS);
 
     return () => {
-      exitTimers.forEach((timer) => window.clearTimeout(timer));
-      exitTimers.clear();
+      if (autoplayTimerRef.current !== null) {
+        window.clearTimeout(autoplayTimerRef.current);
+        autoplayTimerRef.current = null;
+      }
     };
-  }, []);
+  }, [selectFood, shouldScheduleRotation, transition.activeIndex, transition.outgoingIndex]);
 
-  const selectFood = useCallback(
-    (nextId: FoodId) => {
-      if (nextId === activeId) return;
+  useEffect(() => {
+    const activeButton = categoryButtonRefs.current.get(activeFood.id);
+    const categoryRow = rootRef.current?.querySelector<HTMLDivElement>(
+      ".hero-categories",
+    );
+    if (!activeButton || !categoryRow || !window.matchMedia("(max-width: 800px)").matches) {
+      return;
+    }
 
-      const previousId = activeId;
-      const pendingNextExit = exitTimersRef.current.get(nextId);
-      if (pendingNextExit !== undefined) {
-        window.clearTimeout(pendingNextExit);
-        exitTimersRef.current.delete(nextId);
+    const buttonBounds = activeButton.getBoundingClientRect();
+    const rowBounds = categoryRow.getBoundingClientRect();
+    const centeredLeft =
+      categoryRow.scrollLeft +
+      buttonBounds.left -
+      rowBounds.left -
+      categoryRow.clientLeft +
+      (buttonBounds.width - categoryRow.clientWidth) / 2;
+
+    categoryRow.scrollTo({
+      left: Math.max(0, Math.min(centeredLeft, categoryRow.scrollWidth - categoryRow.clientWidth)),
+      behavior: reducedMotion ? "auto" : "smooth",
+    });
+  }, [activeFood.id, reducedMotion]);
+
+  useLayoutEffect(() => {
+    const reducedMotionWasEnabled = previousReducedMotionRef.current;
+    previousReducedMotionRef.current = reducedMotion;
+
+    if (!reducedMotion || reducedMotionWasEnabled) return;
+
+    setTransition((current) => {
+      if (current.outgoingIndex === null) return current;
+
+      return {
+        ...current,
+        outgoingIndex: null,
+        outgoingMotion: null,
+        revision: current.revision + 1,
+      };
+    });
+  }, [reducedMotion]);
+
+  useEffect(() => {
+    const stage = rootRef.current?.querySelector<HTMLDivElement>(
+      ".hero-dish-stage",
+    );
+    const arcPath = arcPathRef.current;
+    if (!stage || !arcPath) return;
+
+    const refreshGeometry = () => {
+      if (geometryFrameRef.current !== null) {
+        window.cancelAnimationFrame(geometryFrameRef.current);
       }
 
-      const pendingPreviousExit = exitTimersRef.current.get(previousId);
-      if (pendingPreviousExit !== undefined) {
-        window.clearTimeout(pendingPreviousExit);
-      }
-
-      setExitingIds((currentIds) => {
-        const nextIds = new Set(currentIds);
-        nextIds.delete(nextId);
-        nextIds.add(previousId);
-        return nextIds;
+      geometryFrameRef.current = window.requestAnimationFrame(() => {
+        foodStates.forEach((_, index) => captureSceneMotion(index));
+        geometryFrameRef.current = null;
+        setGeometryRevision((current) => current + 1);
       });
-      setActiveId(nextId);
+    };
+    const observer = new ResizeObserver(refreshGeometry);
+    observer.observe(stage);
+    observer.observe(arcPath);
+    window.addEventListener("orientationchange", refreshGeometry);
 
-      const exitTimer = window.setTimeout(() => {
-        setExitingIds((currentIds) => {
-          if (!currentIds.has(previousId)) return currentIds;
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("orientationchange", refreshGeometry);
+      if (geometryFrameRef.current !== null) {
+        window.cancelAnimationFrame(geometryFrameRef.current);
+      }
+    };
+  }, [captureSceneMotion]);
 
-          const nextIds = new Set(currentIds);
-          nextIds.delete(previousId);
-          return nextIds;
-        });
-        exitTimersRef.current.delete(previousId);
-      }, DISH_TRANSITION_MS);
+  useGSAP(
+    () => {
+      const arcPath = arcPathRef.current;
+      const activeScene = sceneRefs.current.get(activeFood.id);
+      if (!arcPath || !activeScene) return;
 
-      exitTimersRef.current.set(previousId, exitTimer);
+      rootRef.current?.classList.add("hero-art--gsap-ready");
+
+      const motionPathAt = (progress: number) => ({
+        path: arcPath,
+        align: arcPath,
+        alignOrigin: [0.5, 0.5] as [number, number],
+        autoRotate: false,
+        start: progress,
+        end: progress,
+      });
+      const setSceneMotion = (
+        foodId: FoodId,
+        pathProgress: number,
+        opacity: number,
+      ) => {
+        sceneMotionRef.current.set(foodId, { opacity, pathProgress });
+      };
+      const pathProgressForTween = (
+        start: number,
+        end: number,
+        progress: number,
+      ) => start + (end - start) * gsap.parseEase("ember-in-out")(progress);
+      const allScenes = Array.from(sceneRefs.current.values());
+      const outgoingScene =
+        transition.outgoingIndex === null
+          ? null
+          : sceneRefs.current.get(foodStates[transition.outgoingIndex].id) ?? null;
+      const isResumingTransition =
+        renderedTransitionRevisionRef.current === transition.revision;
+      renderedTransitionRevisionRef.current = transition.revision;
+      const activeMotion = sceneMotionRef.current.get(activeFood.id);
+      const outgoingFood =
+        transition.outgoingIndex === null
+          ? null
+          : foodStates[transition.outgoingIndex];
+      const outgoingMotion = transition.outgoingMotion;
+
+      gsap.set(allScenes, { autoAlpha: 0, zIndex: 0 });
+      gsap.set(activeScene, {
+        autoAlpha: 1,
+        zIndex: 1,
+        motionPath: motionPathAt(
+          isResumingTransition && activeMotion
+            ? activeMotion.pathProgress
+            : ARC_MIDPOINT,
+        ),
+      });
+
+      if (!outgoingScene) {
+        setSceneMotion(activeFood.id, ARC_MIDPOINT, 1);
+        return;
+      }
+
+      gsap.set(outgoingScene, {
+        autoAlpha: outgoingMotion?.opacity ?? 1,
+        zIndex: 1,
+        motionPath: motionPathAt(outgoingMotion?.pathProgress ?? ARC_MIDPOINT),
+      });
+      if (outgoingFood) {
+        setSceneMotion(
+          outgoingFood.id,
+          outgoingMotion?.pathProgress ?? ARC_MIDPOINT,
+          outgoingMotion?.opacity ?? 1,
+        );
+      }
+
+      if (reducedMotion) {
+        gsap
+          .timeline({
+            onComplete: () => {
+              setSceneMotion(activeFood.id, ARC_MIDPOINT, 1);
+              setTransition((current) =>
+                current.revision === transition.revision
+                  ? { ...current, outgoingIndex: null, outgoingMotion: null }
+                  : current,
+              );
+            },
+          })
+          .set(activeScene, { autoAlpha: 0, zIndex: 2 })
+          .to(activeScene, { autoAlpha: 1, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0)
+          .to(outgoingScene, { autoAlpha: 0, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0);
+        return;
+      }
+
+      const incomingStart = transition.direction === 1 ? 1 : 0;
+      const outgoingEnd = transition.direction === 1 ? 0 : 1;
+      const activeStart =
+        isResumingTransition && activeMotion
+          ? activeMotion.pathProgress
+          : incomingStart;
+      const activeOpacity =
+        isResumingTransition && activeMotion ? activeMotion.opacity : 0;
+      const outgoingStart = outgoingMotion?.pathProgress ?? ARC_MIDPOINT;
+      const timeline = gsap.timeline({
+        paused: true,
+        onComplete: () => {
+          setSceneMotion(activeFood.id, ARC_MIDPOINT, 1);
+          if (outgoingFood) {
+            setSceneMotion(outgoingFood.id, outgoingEnd, 0);
+          }
+          setTransition((current) =>
+            current.revision === transition.revision
+              ? { ...current, outgoingIndex: null, outgoingMotion: null }
+              : current,
+          );
+        },
+      });
+
+      gsap.set(activeScene, {
+        autoAlpha: activeOpacity,
+        zIndex: 2,
+        motionPath: motionPathAt(activeStart),
+      });
+      setSceneMotion(activeFood.id, activeStart, activeOpacity);
+
+      timeline
+        .to(
+          activeScene,
+          {
+            duration: DISH_MOTION_SECONDS,
+            ease: "ember-in-out",
+            motionPath: { ...motionPathAt(activeStart), end: ARC_MIDPOINT },
+            onUpdate: () => {
+              setSceneMotion(
+                activeFood.id,
+                pathProgressForTween(
+                  activeStart,
+                  ARC_MIDPOINT,
+                  timeline.progress(),
+                ),
+                Number(gsap.getProperty(activeScene, "opacity")),
+              );
+            },
+          },
+          0,
+        )
+        .to(
+          outgoingScene,
+          {
+            duration: DISH_MOTION_SECONDS,
+            ease: "ember-in-out",
+            motionPath: { ...motionPathAt(outgoingStart), end: outgoingEnd },
+            onUpdate: () => {
+              if (!outgoingFood) return;
+
+              setSceneMotion(
+                outgoingFood.id,
+                pathProgressForTween(
+                  outgoingStart,
+                  outgoingEnd,
+                  timeline.progress(),
+                ),
+                Number(gsap.getProperty(outgoingScene, "opacity")),
+              );
+            },
+          },
+          0,
+        )
+        .to(activeScene, { autoAlpha: 1, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0)
+        .to(
+          outgoingScene,
+          { autoAlpha: 0, duration: DISH_FADE_SECONDS, ease: "ember-out" },
+          OUTGOING_FADE_START_SECONDS,
+        )
+        .play(0);
     },
-    [activeId],
+    {
+      scope: rootRef,
+      dependencies: [geometryRevision, transition.revision, reducedMotion],
+      revertOnUpdate: true,
+    },
   );
 
   return (
-    <div className="hero-art">
+    <div
+      ref={rootRef}
+      className="hero-art"
+      onPointerEnter={() => setIsPointerHovered(true)}
+      onPointerLeave={() => setIsPointerHovered(false)}
+      onFocusCapture={() => setIsFocusWithin(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setIsFocusWithin(false);
+        }
+      }}
+    >
       <div className="hero-dish-stage" aria-hidden="true">
-        <span className="hero-dish-curve" />
+        <svg
+          className="hero-dish-curve"
+          viewBox="0 0 100 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path className="hero-dish-curve-fill" d={HERO_CURVE_FILL_PATH} />
+          <path
+            ref={arcPathRef}
+            className="hero-dish-arc"
+            d={HERO_ARC_PATH}
+            pathLength="1"
+          />
+        </svg>
         {foodStates.map((food) => (
           <div
             key={food.id}
-            className={`hero-dish-scene ${food.id === activeFood.id ? "is-active" : ""} ${exitingIds.has(food.id) ? "is-exiting" : ""}`}
+            ref={(element) => {
+              if (element) {
+                sceneRefs.current.set(food.id, element);
+              } else {
+                sceneRefs.current.delete(food.id);
+              }
+            }}
+            className={`hero-dish-scene ${food.id === "dishes" ? "is-initial" : ""}`}
           >
             <Image
               src={food.image}
@@ -91,9 +480,38 @@ export function HeroFoodSelector() {
           </div>
         ))}
       </div>
-      <span className="sr-only" aria-live="polite">{activeFood.alt}</span>
-      <div className="hero-categories" aria-label="Food categories">
-        {foodStates.map((food) => <button type="button" key={food.id} className={`category-pill ${food.id === activeFood.id ? "active" : ""}`} aria-pressed={food.id === activeFood.id} onClick={() => selectFood(food.id)}><span aria-hidden="true">{food.icon}</span> {food.label}</button>)}
+      <span className="sr-only" aria-live="polite">
+        {manualAnnouncement}
+      </span>
+      <div className="hero-category-controls">
+        <div className="hero-categories" aria-label="Food categories">
+          {foodStates.map((food, index) => (
+            <button
+              type="button"
+              key={food.id}
+              ref={(element) => {
+                if (element) {
+                  categoryButtonRefs.current.set(food.id, element);
+                } else {
+                  categoryButtonRefs.current.delete(food.id);
+                }
+              }}
+              className={`category-pill ${index === transition.activeIndex ? "active" : ""}`}
+              aria-pressed={index === transition.activeIndex}
+              onClick={() => selectFood(index)}
+            >
+              <span aria-hidden="true">{food.icon}</span> {food.label}
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          className="hero-rotation-toggle"
+          aria-pressed={isRotationPaused}
+          onClick={() => setIsRotationPaused((paused) => !paused)}
+        >
+          {isRotationPaused ? "Resume rotation" : "Pause rotation"}
+        </button>
       </div>
     </div>
   );
