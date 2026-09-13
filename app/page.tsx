@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HeroFoodSelector } from "@/components/hero-food-selector";
 import { HeritageMenu } from "@/components/heritage-menu";
+import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 const logoUrl =
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
@@ -22,7 +23,9 @@ const testimonials = [
 
 function BracketTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="bracket-title font-heading text-balance">{children}</h2>
+    <TextBlockAnimation blockColor="var(--golden-hour)">
+      <h2 className="bracket-title font-heading text-balance">{children}</h2>
+    </TextBlockAnimation>
   );
 }
 
@@ -74,16 +77,35 @@ export default function Home() {
 
       <section id="top" className="hero content-shell content-shell--hero">
         <div className="hero-copy">
-          <p className="hero-kicker">Savor the taste of Perfection</p>
-          <h1 className="font-heading">
-            It’s not just food;
-            <br />
-            <em>it’s an experience</em>
-          </h1>
-          <p className="hero-intro">
-            Where authentic taste meets modern dining — experience freshness,
-            tradition, and a touch of luxury in every meal.
-          </p>
+          <TextBlockAnimation
+            animateOnScroll={false}
+            delay={0.08}
+            blockColor="var(--golden-hour)"
+          >
+            <p className="hero-kicker">Savor the taste of Perfection</p>
+          </TextBlockAnimation>
+          <TextBlockAnimation
+            animateOnScroll={false}
+            delay={0.16}
+            blockColor="var(--burnt-sienna)"
+            duration={0.75}
+          >
+            <h1 className="font-heading">
+              It’s not just food;
+              <br />
+              <em>it’s an experience</em>
+            </h1>
+          </TextBlockAnimation>
+          <TextBlockAnimation
+            animateOnScroll={false}
+            delay={0.3}
+            blockColor="var(--sunset-orange)"
+          >
+            <p className="hero-intro">
+              Where authentic taste meets modern dining — experience freshness,
+              tradition, and a touch of luxury in every meal.
+            </p>
+          </TextBlockAnimation>
           <div className="hero-actions">
             <a className="primary-button" href="#menu">
               Explore the menu <span aria-hidden="true">↗</span>

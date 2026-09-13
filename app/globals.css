@@ -259,6 +259,20 @@ a {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+.text-block-animation__mask {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.text-block-animation__block {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+}
 .hero h1 {
   margin: 0;
   max-width: 620px;

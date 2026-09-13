@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
+import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 const menuItems = [
   { name: "Charred Miso Ramen", category: "Dishes", detail: "Slow broth, smoked egg, spring onion.", price: "৳ 1,450", image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=88" },
@@ -32,7 +33,11 @@ export function HeritageMenu() {
     >
       <div className="heritage-heading">
         <p className="eyebrow">From our kitchen</p>
-        <h2 id="heritage-menu-title" className="font-heading">Our <em>heritage</em> menu</h2>
+        <TextBlockAnimation blockColor="var(--burnt-sienna)">
+          <h2 id="heritage-menu-title" className="font-heading">
+            Our <em>heritage</em> menu
+          </h2>
+        </TextBlockAnimation>
         <p>Sample menu — dishes and prices are illustrative.</p>
       </div>
       <div className="heritage-tabs" aria-label="Filter menu by category">
