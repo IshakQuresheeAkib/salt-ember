@@ -27,18 +27,15 @@ Check `package.json` for pinned versions. Do not copy version numbers from promp
 Defined as `--color-*` custom properties in `globals.css` under `@theme` so Tailwind v4 generates `bg-*` / `text-*` utilities. Never scatter raw hex values in component files.
 
 ```
-ink         #0B0A09   → primary page background
-charcoal    #181513   → raised surfaces, navigation
-ash         #332D29   → borders, dividers, subtle texture
-bone        #FFF4E8   → primary text, light surfaces
-smoke       #B8A99A   → secondary/muted text
-ember       #E84520   → primary brand accent, emphasis
-chilli      #F6531A   → strong interactive accent
-amber       #FFAA20   → highlights, secondary CTA accent
-deep-red    #A7281A   → dark accent, gradient depth
+soft-amber    #FFD9A3   → primary text and deliberate light surfaces
+golden-hour   #FFB45C   → focus rings, fine rules, highlights
+sunset-orange #F28B2C   → primary actions and selected controls
+burnt-sienna  #C35A1A   → borders, secondary emphasis, gradient warmth
+deep-amber    #7A2E0B   → raised surfaces and hero depth
+rich-espresso #1A0D06   → primary page background and dark control text
 ```
 
-**Forbidden aliases:** `char-black`, `cream`, `ember-orange`, `gold`, `bone-white`. Use only the token names above.
+Semantic component tokens may map to these values once in `globals.css`. Do not add another brand-color naming layer or scatter raw hex values through components.
 
 ---
 

@@ -6,23 +6,20 @@ Salt & Ember is where flavour meets fire: a confident, warm restaurant identity 
 
 ## Colour system
 
-Use the supplied Salt & Ember logo as the source for colour grading. The tokens below are canonical starting values and should be calibrated against an original transparent logo asset when available.
+Use the approved six-colour amber reference as the source for colour grading. The tokens below are canonical and should remain synchronized with the runtime theme.
 
-| Token | Suggested value | Use |
+| Token | Value | Use |
 | --- | --- | --- |
-| ink | `#0B0A09` | Primary page background |
-| charcoal | `#181513` | Raised surfaces and navigation |
-| ash | `#332D29` | Borders, dividers, subtle texture |
-| bone | `#FFF4E8` | Primary text and light surfaces |
-| smoke | `#B8A99A` | Secondary text |
-| ember | `#E84520` | Primary brand accent and emphasis |
-| chilli | `#F6531A` | Strong interactive accent |
-| amber | `#FFAA20` | Highlights and secondary CTA accent |
-| deep-red | `#A7281A` | Dark accent and gradient depth |
+| soft-amber | `#FFD9A3` | Primary text and deliberate light surfaces |
+| golden-hour | `#FFB45C` | Focus rings, fine rules, and highlights |
+| sunset-orange | `#F28B2C` | Primary actions and selected controls |
+| burnt-sienna | `#C35A1A` | Borders, secondary emphasis, and gradient warmth |
+| deep-amber | `#7A2E0B` | Raised surfaces and hero depth |
+| rich-espresso | `#1A0D06` | Primary page background and dark text on bright controls |
 
-Use these token names consistently in documentation and implementation. Do not introduce aliases such as `char-black`, `cream`, `ember-orange`, or `gold` as a second palette.
+Use these token names consistently in documentation and implementation. Semantic component tokens may map to them once in `globals.css`, but do not create a second brand palette.
 
-Dark backgrounds are the default. Orange and red create focus rather than filling the interface. Maintain readable contrast and do not use amber for body text on light backgrounds.
+Rich Espresso is the default canvas. Sunset Orange creates interactive focus, while Golden Hour and Burnt Sienna support it without becoming competing accents. Use Rich Espresso text on bright actions and Soft Amber text on dark surfaces to maintain readable contrast.
 
 ## Colour lock
 

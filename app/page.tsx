@@ -34,9 +34,9 @@ export default function Home() {
           <Image
             src={logoUrl}
             alt="Salt & Ember logo"
-            width={120}
-            height={72}
-            className="h-12 w-auto object-contain mix-blend-multiply"
+            width={200}
+            height={200}
+            className="object-contain mix-blend-multiply"
             priority
           />
         </a>

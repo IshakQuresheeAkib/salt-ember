@@ -1,17 +1,14 @@
 ---
 version: alpha
 name: "Salt & Ember"
-description: "A dark, fire-led editorial restaurant identity for a premium dine-in experience in Sylhet."
+description: "An amber-to-espresso, fire-led editorial restaurant identity for a premium dine-in experience in Sylhet."
 colors:
-  ink: "#0B0A09"
-  charcoal: "#181513"
-  ash: "#332D29"
-  bone: "#FFF4E8"
-  smoke: "#B8A99A"
-  ember: "#E84520"
-  chilli: "#F6531A"
-  amber: "#FFAA20"
-  deep-red: "#A7281A"
+  soft-amber: "#FFD9A3"
+  golden-hour: "#FFB45C"
+  sunset-orange: "#F28B2C"
+  burnt-sienna: "#C35A1A"
+  deep-amber: "#7A2E0B"
+  rich-espresso: "#1A0D06"
 typography:
   display:
     fontFamily: "Cormorant Garamond, Georgia, serif"
@@ -55,9 +52,9 @@ The interface should feel like an evening service viewed across an open-fire pas
 
 ## Colors
 
-`ink` is the dominant page canvas and `charcoal` is the only routine raised dark surface. `bone` carries primary copy and becomes a deliberate light interlude for the reservation section. `smoke` is secondary text, never a substitute for disabled-state signalling. `ash` defines quiet borders, scrollbar tracks, and image-edge separation.
+`rich-espresso` is the dominant page canvas and `deep-amber` carries raised surfaces and hero depth. `soft-amber` carries primary copy and becomes the deliberate light surface. Secondary copy is derived from Soft Amber and Deep Amber so it remains inside the supplied palette. `burnt-sienna` defines borders, gradient warmth, and secondary emphasis.
 
-`ember` is the expressive brand accent used for the Ember Seam and rare headline emphasis. `chilli` is the stronger interactive colour for primary actions and selected controls. `amber` is reserved for focus rings, fine rules, and sparing highlights. `deep-red` may deepen shadows or the restrained hero heat treatment but must not create a competing red theme. High-contrast and forced-colour modes may replace decorative colour treatments while preserving structure and visible focus.
+`sunset-orange` is the single interactive accent used for primary actions and selected controls. `golden-hour` is reserved for focus rings, fine rules, and sparing highlights. Burnt Sienna and Deep Amber create the restrained heat treatment without introducing a competing red theme. Rich Espresso is used for text on bright actions, while Soft Amber is used on dark surfaces. High-contrast and forced-colour modes may replace decorative treatments while preserving structure and visible focus.
 
 ## Typography
 
@@ -67,7 +64,7 @@ Display type uses fluid `clamp()` sizing, compact line height, and deliberate li
 
 ## Layout
 
-The desktop system uses an asymmetric twelve-column composition within a maximum 77.5rem content width. The hero gives copy roughly seven columns and the primary image five, with the Ember Seam marking their tension rather than a hard card boundary. Sections alternate open dark fields, charcoal bands, and one bone reservation field. The page favours editorial rails, lists, and large image planes over nested cards.
+The desktop system uses an asymmetric twelve-column composition within a maximum 77.5rem content width. The hero gives copy roughly seven columns and the primary image five, with the Ember Seam marking their tension rather than a hard card boundary. Sections alternate open Rich Espresso fields, Deep Amber bands, and one Soft Amber reservation field. The page favours editorial rails, lists, and large image planes over nested cards.
 
 Mobile is recomposed rather than shrunk: copy precedes imagery, the Ember Seam becomes a short horizontal crop guide, signature dishes use labelled horizontal scrolling, menu filters can scroll without hiding selections, galleries simplify to a stable two-column rhythm, and forms stack in document order. Section spacing can compress below 768px without reducing touch targets. Sticky navigation must not obscure anchor destinations or keyboard focus.
 
@@ -79,7 +76,7 @@ Depth comes from tonal contrast, image overlap, fine borders, and selective shad
 
 ## Shapes
 
-Controls use the 0.625rem control radius and primary panels use the 1.25rem panel radius. Editorial image crops may use asymmetric corners or a clipped leading edge when the crop supports the section composition. Full pills are not a general-purpose shape; filter controls should read as compact rectangular tabs. Dividers are one-pixel `ash` or `amber` rules. Icons use consistent strokes without decorative containers unless the control needs a touch target.
+Controls use the 0.625rem control radius and primary panels use the 1.25rem panel radius. Editorial image crops may use asymmetric corners or a clipped leading edge when the crop supports the section composition. Full pills are not a general-purpose shape; filter controls should read as compact rectangular tabs. Dividers are one-pixel Burnt Sienna or Golden Hour rules. Icons use consistent strokes without decorative containers unless the control needs a touch target.
 
 ## Components
 
@@ -89,7 +86,7 @@ Every interactive element has default, hover, focus-visible, active, selected, d
 
 ### Buttons and actions
 
-Primary actions use solid `chilli` on `bone`; secondary actions use a quiet border on dark surfaces or `ink` on the bone reservation field. Text links use a visible directional cue only when it reflects navigation. Labels stay stable from trigger through feedback: “Reserve a table” produces a reservation result, and “Send event enquiry” produces an event-enquiry result. Ordering, cart, delivery, and purchase actions are outside this milestone.
+Primary actions use solid Sunset Orange with Rich Espresso text. Secondary actions use a quiet Sunset Orange border on dark surfaces or Rich Espresso on the Soft Amber reservation field. Text links use a visible directional cue only when it reflects navigation. Labels stay stable from trigger through feedback: “Reserve a table” produces a reservation result, and “Send event enquiry” produces an event-enquiry result. Ordering, cart, delivery, and purchase actions are outside this milestone.
 
 ### Navigation and data display
 
