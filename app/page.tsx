@@ -53,22 +53,32 @@ export default function Home() {
           <a className="nav-link" href="#menu">
             Menu
           </a>
-          <a className="nav-link" href="#contact">
+          <a className="nav-link" href="#testimonials">
             Reviews
           </a>
           <a className="nav-link" href="#contact">
-            Contacts
+            Contact
           </a>
         </nav>
+        <details className="mobile-navigation">
+          <summary>Menu</summary>
+          <nav aria-label="Mobile navigation">
+            <a href="#top">Home</a>
+            <a href="#story">About us</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </details>
       </header>
 
       <section id="top" className="hero content-shell content-shell--hero">
         <div className="hero-copy">
           <p className="hero-kicker">Savor the taste of Perfection</p>
           <h1 className="font-heading">
-            Its not just food,
+            It’s not just food;
             <br />
-            <em>its an experience</em>
+            <em>it’s an experience</em>
           </h1>
           <p className="hero-intro">
             Where authentic taste meets modern dining — experience freshness,
@@ -76,10 +86,10 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#menu">
-              Order now <span aria-hidden="true">↗</span>
+              Explore the menu <span aria-hidden="true">↗</span>
             </a>
             <a className="secondary-button" href="#contact">
-              Book a menu
+              Get in touch
             </a>
           </div>
           <div className="hero-contact">
@@ -134,7 +144,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section content-shell content-shell--comfort">
+      <section
+        id="testimonials"
+        className="section content-shell content-shell--comfort"
+      >
         <div className="section-heading">
           <div>
             <p className="eyebrow">The word around town</p>
