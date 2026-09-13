@@ -3,9 +3,7 @@ import { HeroFoodSelector } from "@/components/hero-food-selector";
 import { HeritageMenu } from "@/components/heritage-menu";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import TestimonialsSection from "@/components/ui/testimonial-v2";
-
-const logoUrl =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/725861508_122133968169161286_5477338884146038255_n-TRM8WIjzHsUOLTgcgfXoTLlJMPd63v.jpg";
+import logo from "@/public/logo.webp"
 
 export default function Home() {
   return (
@@ -13,11 +11,11 @@ export default function Home() {
       <header className="site-header content-shell content-shell--wide">
         <a href="#top" className="brand-mark" aria-label="Salt and Ember home">
           <Image
-            src={logoUrl}
+            src={logo}
             alt="Salt & Ember logo"
             width={200}
             height={200}
-            className="object-contain mix-blend-multiply"
+            className="object-contain mix-blend-multiply rotate-45"
             priority
           />
         </a>

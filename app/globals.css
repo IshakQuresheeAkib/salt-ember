@@ -31,7 +31,11 @@
   --foreground: var(--silver-mist);
   --card: var(--surface);
   --card-foreground: var(--silver-mist);
-  --border: color-mix(in srgb, var(--flameburst-orange) 72%, var(--midnight-shadow));
+  --border: color-mix(
+    in srgb,
+    var(--flameburst-orange) 72%,
+    var(--midnight-shadow)
+  );
   --primary: var(--flameburst-orange);
   --primary-foreground: var(--midnight-shadow);
   --muted-foreground: color-mix(
@@ -75,10 +79,7 @@ a {
 
 .content-shell {
   --shell-max: 1440px;
-  width: min(
-    var(--shell-max),
-    calc(100% - clamp(48px, 6vw, 112px))
-  );
+  width: min(var(--shell-max), calc(100% - clamp(48px, 6vw, 112px)));
   margin-inline: auto;
 }
 .content-shell--hero {
@@ -99,8 +100,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 18px auto 0;
-  padding: 8px 0;
 }
 .site-header::after {
   position: absolute;
@@ -111,22 +110,10 @@ a {
   background: color-mix(in srgb, var(--flameburst-orange) 16%, transparent);
   content: "";
 }
-.brand-mark {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--silver-mist);
-  font-family: var(--font-heading), serif;
-  font-size: 20px;
-  font-weight: 700;
-  white-space: nowrap;
-}
 .brand-mark img {
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
-  object-position: 50% 38%;
-  filter: saturate(0.9);
+  width: 80px;
+  height: 80px;
+  margin: 10px 0 0;
 }
 .brand-mark i,
 .footer-brand i {
@@ -187,7 +174,8 @@ a {
     border: 1px solid var(--flameburst-orange);
     border-radius: 0.75rem;
     background: var(--surface);
-    box-shadow: 0 12px 28px color-mix(in srgb, var(--midnight-shadow) 42%, transparent);
+    box-shadow: 0 12px 28px
+      color-mix(in srgb, var(--midnight-shadow) 42%, transparent);
     opacity: 0;
     transform: scale(0.97);
     transform-origin: top right;
@@ -259,7 +247,6 @@ a {
   grid-template-columns: 0.86fr 1.14fr;
   align-items: center;
   min-height: 580px;
-  padding: 44px 0 64px;
   color: var(--silver-mist);
   box-shadow: 0 0 0 100vmax var(--midnight-shadow);
   clip-path: inset(0 -100vmax);
@@ -369,61 +356,17 @@ a {
   isolation: isolate;
   display: grid;
   place-items: center;
-  min-height: 500px;
+  min-height: 89vh;
+  min-height: 89svh;
   overflow: hidden;
-  border-left: 1px solid
-    color-mix(in srgb, var(--flameburst-orange) 44%, transparent);
-  background: var(--midnight-shadow);
 }
-.hero-art::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(
-      ellipse 72% 62% at 58% 44%,
-      color-mix(in srgb, var(--flameburst-orange) 34%, transparent) 0%,
-      color-mix(in srgb, var(--flameburst-orange) 12%, transparent) 46%,
-      transparent 76%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--silver-mist) 18%, var(--midnight-shadow)) 0%,
-      color-mix(
-          in srgb,
-          var(--flameburst-orange) 28%,
-          var(--midnight-shadow)
-        )
-        48%,
-      var(--midnight-shadow) 100%
-    );
-  content: "";
-}
-.hero-art::after {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(
-      90deg,
-      var(--midnight-shadow) 0%,
-      color-mix(in srgb, var(--midnight-shadow) 76%, transparent) 18%,
-      transparent 46%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--midnight-shadow) 22%, transparent) 0%,
-      transparent 36%,
-      var(--midnight-shadow) 100%
-    );
-  content: "";
-}
+
 .hero-dish-stage {
   --hero-arc-midpoint-x: 36%;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(620px, 52vw);
+  width: min(650px, 52vw);
   aspect-ratio: 1.2;
   transform: translate(-48%, -50%);
 }
@@ -455,7 +398,7 @@ a {
   overflow: visible;
 }
 .hero-dish-curve-fill {
-  fill: var(--surface);
+  fill: color-mix(in srgb, var(--flameburst-orange) 75%, transparent);
 }
 .hero-dish-arc {
   fill: none;
@@ -467,11 +410,13 @@ a {
   width: 100%;
   height: 100%;
   aspect-ratio: 1;
-  border: 1px solid color-mix(in srgb, var(--flameburst-orange) 38%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--flameburst-orange) 38%, transparent);
   border-radius: 50%;
   object-fit: cover;
   filter: saturate(1.2) contrast(1.03);
-  box-shadow: 0 24px 70px color-mix(in srgb, var(--midnight-shadow) 58%, transparent);
+  box-shadow: 0 24px 70px
+    color-mix(in srgb, var(--midnight-shadow) 58%, transparent);
 }
 .delivery-card {
   position: absolute;
@@ -484,7 +429,8 @@ a {
   padding: 11px 16px 11px 9px;
   border-radius: 8px;
   background: var(--silver-mist);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--midnight-shadow) 12%, transparent);
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--midnight-shadow) 12%, transparent);
   color: var(--midnight-shadow);
   font-size: 11px;
 }
@@ -652,13 +598,10 @@ a {
   position: relative;
   overflow: visible;
   min-width: 0;
-  border: 1px solid color-mix(in srgb, var(--flameburst-orange) 72%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--flameburst-orange) 72%, transparent);
   border-radius: 16px;
-  background: color-mix(
-    in srgb,
-    var(--surface) 22%,
-    var(--midnight-shadow)
-  );
+  background: color-mix(in srgb, var(--surface) 22%, var(--midnight-shadow));
   transition:
     transform 0.25s ease,
     border-color 0.25s ease;
@@ -676,7 +619,8 @@ a {
   overflow: hidden;
   border-radius: 50%;
   background: var(--midnight-shadow);
-  box-shadow: 0 10px 22px color-mix(in srgb, var(--midnight-shadow) 32%, transparent);
+  box-shadow: 0 10px 22px
+    color-mix(in srgb, var(--midnight-shadow) 32%, transparent);
 }
 .dish-image img {
   width: 100%;
@@ -779,7 +723,11 @@ a {
 }
 
 .story-band {
-  background: linear-gradient(110deg, var(--flameburst-orange), var(--surface) 65%);
+  background: linear-gradient(
+    110deg,
+    var(--flameburst-orange),
+    var(--surface) 65%
+  );
 }
 .story-grid {
   display: grid;
@@ -1068,8 +1016,8 @@ a {
     font-size: 17px;
   }
   .brand-mark img {
-    width: 35px;
-    height: 35px;
+    width: 60px;
+    height: 60px;
   }
   .header-action {
     display: none;
@@ -1297,11 +1245,7 @@ a {
   min-width: 0;
   border: 0;
   border-radius: 14px;
-  background: color-mix(
-    in srgb,
-    var(--surface) 46%,
-    var(--midnight-shadow)
-  );
+  background: color-mix(in srgb, var(--surface) 46%, var(--midnight-shadow));
   box-shadow:
     20px 20px 28px var(--heritage-card-shadow-dark),
     -9px -9px 20px var(--heritage-card-shadow-light),
@@ -1313,11 +1257,7 @@ a {
 }
 .heritage-card:hover {
   transform: translateY(-4px);
-  background: color-mix(
-    in srgb,
-    var(--surface) 58%,
-    var(--midnight-shadow)
-  );
+  background: color-mix(in srgb, var(--surface) 58%, var(--midnight-shadow));
   box-shadow:
     18px 18px 34px var(--heritage-card-shadow-dark),
     -1-2px -11px 24px var(--heritage-card-shadow-light),
