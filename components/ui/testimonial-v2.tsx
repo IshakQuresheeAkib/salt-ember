@@ -128,7 +128,7 @@ export default function TestimonialsSection() {
             <TextBlockAnimation blockColor="var(--flameburst-orange)">
               <h2
                 id="testimonials-heading"
-                className="bracket-title font-heading text-balance"
+                className="bracket-title font-heading display-title text-balance"
               >
                 What they <em>say</em>
               </h2>
@@ -154,7 +154,7 @@ export default function TestimonialsSection() {
           </ul>
         ) : (
           <div
-            className="testimonial-columns mt-12 flex max-h-[700px] justify-center gap-5 overflow-hidden"
+            className="testimonial-columns mt-12 flex max-h-200 justify-center gap-5 overflow-hidden"
             role="region"
             aria-label="Guest testimonials"
           >

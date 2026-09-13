@@ -55,6 +55,9 @@ html {
   background: var(--midnight-shadow);
   scrollbar-color: var(--flameburst-orange) var(--midnight-shadow);
 }
+html[data-title-font="dynapuff"] {
+  --font-title: var(--font-dynapuff);
+}
 body {
   margin: 0;
   background: var(--midnight-shadow);
@@ -244,7 +247,7 @@ a {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: 0.86fr 1.14fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
   min-height: 580px;
   color: var(--silver-mist);
@@ -275,11 +278,14 @@ a {
 }
 .hero h1 {
   margin: 0;
-  max-width: 620px;
+  max-width: 890px;
   color: var(--silver-mist);
-  font-size: clamp(3.3rem, 6vw, 6.2rem);
+  font-size: clamp(3rem, 4.2vw, 6rem);
   font-weight: 700;
-  letter-spacing: -0.055em;
+  line-height: 1.2;
+}
+.display-title {
+  font-family: var(--font-title), sans-serif;
 }
 .hero h1 em,
 .bracket-title em {
@@ -305,7 +311,7 @@ a {
   gap: 22px;
   padding: 13px 20px;
   border-radius: 11px;
-  background: var(--flameburst-orange);
+  background: var(--silver-mist);
   color: var(--midnight-shadow);
   font-size: 14px;
   font-weight: 700;
@@ -324,9 +330,9 @@ a {
   display: inline-flex;
   align-items: center;
   padding: 12px 19px;
-  border: 1px solid var(--flameburst-orange);
+  border: 1px solid var(--silver-mist);
   border-radius: 11px;
-  color: var(--flameburst-orange);
+  color: var(--silver-mist);
   font-size: 14px;
   font-weight: 700;
 }
@@ -467,7 +473,7 @@ a {
 }
 .category-pill {
   padding: 8px 12px;
-  border: 1px solid var(--silver-mist);
+  border: 1px solid transparent;
   border-radius: 0.625rem;
   background: var(--midnight-shadow);
   color: var(--silver-mist);
@@ -480,8 +486,7 @@ a {
     scale 150ms var(--ease-out);
 }
 .category-pill.active {
-  border-color: var(--flameburst-orange);
-  background: var(--flameburst-orange);
+  background: var(--silver-mist);
   color: var(--midnight-shadow);
 }
 
@@ -564,10 +569,9 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0 20px;
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-size: clamp(2.3rem, 4vw, 4rem);
   font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
+  line-height: 1.2;
 }
 .bracket-title::before,
 .bracket-title::after {
@@ -917,11 +921,12 @@ a {
     min-height: auto;
     padding-top: 70px;
     padding-bottom: 44px;
+    width: 100%;
   }
   .hero-copy {
     position: relative;
     z-index: 1;
-    width: 100%;
+    padding: 0 10px;
   }
   .hero-actions {
     flex-wrap: nowrap;
@@ -1146,8 +1151,8 @@ a {
 .heritage-heading h2 {
   margin: 0;
   color: var(--silver-mist);
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  line-height: 1;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.2;
   text-transform: capitalize;
 }
 .heritage-heading h2 em {

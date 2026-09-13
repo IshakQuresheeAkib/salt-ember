@@ -51,18 +51,11 @@ export default function Home() {
         <div className="hero-copy">
           <TextBlockAnimation
             animateOnScroll={false}
-            delay={0.08}
-            blockColor="var(--flameburst-orange)"
-          >
-            <p className="hero-kicker">Savor the taste of Perfection</p>
-          </TextBlockAnimation>
-          <TextBlockAnimation
-            animateOnScroll={false}
             delay={0.16}
             blockColor="var(--flameburst-orange)"
             duration={0.75}
           >
-            <h1 className="font-heading">
+            <h1 className="font-heading display-title">
               It’s not just food;
               <br />
               <em>it’s an experience</em>
