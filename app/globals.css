@@ -279,7 +279,6 @@ a {
   color: var(--silver-mist);
   font-size: clamp(3.3rem, 6vw, 6.2rem);
   font-weight: 700;
-  line-height: 0.96;
   letter-spacing: -0.055em;
 }
 .hero h1 em,
@@ -1218,18 +1217,18 @@ a {
 .heritage-card {
   --heritage-card-shadow-dark: color-mix(
     in srgb,
-    var(--midnight-shadow) 74%,
+    var(--midnight-shadow) 94%,
     transparent
   );
   --heritage-card-shadow-light: color-mix(
     in srgb,
-    var(--silver-mist) 7%,
+    var(--silver-mist) 5%,
     transparent
   );
   min-width: 0;
   border: 0;
   border-radius: 14px;
-  background: color-mix(in srgb, var(--surface) 46%, var(--midnight-shadow));
+  background: color-mix(in srgb, var(--surface) 80%, var(--midnight-shadow));
   box-shadow:
     20px 20px 28px var(--heritage-card-shadow-dark),
     -9px -9px 20px var(--heritage-card-shadow-light),

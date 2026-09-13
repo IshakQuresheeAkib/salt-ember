@@ -110,8 +110,7 @@ export function HeritageMenu() {
       <div className="heritage-heading">
         <p className="eyebrow">From our kitchen</p>
         <TextBlockAnimation blockColor="var(--flameburst-orange)">
-          <h2 id="heritage-menu-title" className="font-heading">
-            Our <em>heritage</em> menu
+        <h2 id="testimonials-heading"className="bracket-title font-heading text-balance">Our <em>heritage</em> menu
           </h2>
         </TextBlockAnimation>
         <p>Sample menu — dishes and prices are illustrative.</p>

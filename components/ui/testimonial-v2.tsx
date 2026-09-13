@@ -125,7 +125,6 @@ export default function TestimonialsSection() {
       >
         <div className="testimonial-section__heading">
           <div>
-            <p className="eyebrow">The word around town</p>
             <TextBlockAnimation blockColor="var(--flameburst-orange)">
               <h2
                 id="testimonials-heading"
@@ -135,8 +134,7 @@ export default function TestimonialsSection() {
               </h2>
             </TextBlockAnimation>
             <p className="testimonial-section__intro">
-              Notes from guests who came for the fire and stayed for the
-              feeling.
+              Notes from guests
             </p>
           </div>
         </div>
