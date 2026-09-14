@@ -26,7 +26,7 @@ const inactiveNavigationLinkClassName =
 const mobileNavigationLinkClassName =
   "rounded-[10px] px-[12.8px] py-[11.2px] text-[12.8px] text-silver-mist hover:bg-[color-mix(in_srgb,var(--flameburst-orange)_18%,transparent)] hover:text-flameburst-orange focus-visible:bg-[color-mix(in_srgb,var(--flameburst-orange)_18%,transparent)] focus-visible:text-flameburst-orange";
 const headerClassName =
-  "relative z-2 flex min-h-[clamp(64px,5vw,80px)] items-center justify-between max-tablet:mt-4";
+  "relative z-2 flex min-h-[clamp(64px,5vw,80px)] items-center justify-between mt-2 tablet:mt-4";
 const desktopNavigationClassName =
   "hidden items-center gap-8 desktop:absolute desktop:left-1/2 desktop:flex desktop:-translate-x-1/2";
 const mapLinkClassName =

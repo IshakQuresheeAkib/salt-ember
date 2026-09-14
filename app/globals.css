@@ -5,10 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 801px;
   --breakpoint-desktop: 801px;
 }
+
+/* Small-screen variants: declare mobile last so it wins when both ranges apply. */
+@custom-variant tablet (@media (width < 801px));
+@custom-variant mobile (@media (width < 480px));
 
 @theme inline {
   --font-heading: var(--font-display);
@@ -64,9 +66,6 @@ html {
   scroll-behavior: smooth;
   background: var(--midnight-shadow);
   scrollbar-color: var(--flameburst-orange) var(--midnight-shadow);
-}
-html[data-title-font="dynapuff"] {
-  --font-title: var(--font-dynapuff);
 }
 body {
   margin: 0;
@@ -160,11 +159,38 @@ body {
   }
 }
 
+/* A brief outward nudge makes the full menu's pagination discoverable. */
+.fan-carousel__arrow {
+  animation: fan-carousel-arrow-nudge 1.5s var(--ease-out) infinite;
+  will-change: filter, transform;
+}
+.fan-carousel__arrow--previous {
+  --fan-carousel-arrow-offset: -4px;
+}
+.fan-carousel__arrow--next {
+  --fan-carousel-arrow-offset: 4px;
+  animation-delay: 1s;
+}
+
+@keyframes fan-carousel-arrow-nudge {
+  0%,
+  66%,
+  100% {
+    transform: translateX(0);
+  }
+  78% {
+    transform: translateX(var(--fan-carousel-arrow-offset));
+  }
+  88% {
+    transform: translateX(0);
+  }
+}
+
 .hero-art {
   position: relative;
   display: grid;
   width: calc(100% + var(--hero-art-right-bleed));
-  min-height: 450px;
+  min-height: 490px;
   place-items: center;
   overflow: hidden;
   isolation: isolate;
@@ -306,8 +332,11 @@ body {
 
 @media (max-width: 800px) {
   .hero-dish-stage {
-    top: 60%;
-    width: min(700px, 106vw);
+    top: calc(100vw - 48%);
+    width: min(800px, 106vw);
+  }
+  .hero-art{
+    min-height: calc(100vw - 50px);
   }
 }
 @media (min-width: 801px) {

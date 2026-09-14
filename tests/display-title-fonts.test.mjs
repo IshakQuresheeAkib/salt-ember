@@ -4,30 +4,26 @@ import test from "node:test";
 
 const readSource = (path) => readFile(new URL(path, import.meta.url), "utf8");
 
-test("provides switchable DynaPuff and Original Surfer fonts for display titles", async () => {
+test("loads Yeon Sung as the shared title font", async () => {
   const layout = await readSource("../app/layout.tsx");
 
-  assert.match(layout, /DynaPuff/);
-  assert.match(layout, /Original_Surfer/);
-  assert.match(layout, /--font-dynapuff/);
-  assert.match(layout, /--font-original-surfer/);
-  assert.match(layout, /data-title-font="dynapuff"/);
+  assert.match(layout, /Yeon_Sung/);
+  assert.match(layout, /weight: "400"/);
+  assert.match(layout, /variable: "--font-title"/);
+  assert.match(layout, /\$\{titleFont\.variable\}/);
+  assert.doesNotMatch(layout, /data-title-font/);
 });
 
-test("scopes the display-font trial to the hero and section titles", async () => {
-  const [hero, menu, testimonials, styles] = await Promise.all([
+test("applies the shared title font to the hero and section headings", async () => {
+  const [hero, menu, testimonials, tailwind] = await Promise.all([
     readSource("../components/hero-section.tsx"),
     readSource("../components/menu.tsx"),
     readSource("../components/testimonials.tsx"),
-    readSource("../app/globals.css"),
+    readSource("../lib/tailwind.ts"),
   ]);
 
-  assert.match(hero, /<h1 className="font-heading display-title">/);
-  assert.match(menu, /className="bracket-title font-heading display-title text-balance"/);
-  assert.match(
-    testimonials,
-    /className="bracket-title font-heading display-title text-balance"/,
-  );
-  assert.match(styles, /\.display-title/);
-  assert.match(styles, /data-title-font="original-surfer"/);
+  assert.match(hero, /font-\[family-name:var\(--font-title\)\]/);
+  assert.match(tailwind, /font-\[family-name:var\(--font-title\)\]/);
+  assert.match(menu, /className=\{sectionHeadingClassName\}/);
+  assert.match(testimonials, /className=\{sectionHeadingClassName\}/);
 });

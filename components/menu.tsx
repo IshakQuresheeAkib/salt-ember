@@ -1,175 +1,72 @@
 "use client";
 
-import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import CardFanCarousel, { type CardItem } from "@/components/ui/card-fan-carousel";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import {
   contentShellClassName,
   highlightedTextClassName,
   sectionHeadingClassName,
 } from "@/lib/tailwind";
-import { cn } from "@/lib/utils";
 
-const menuItems = [
-  { name: "Charred Miso Ramen", category: "Dishes", detail: "Slow broth, smoked egg, spring onion.", price: "৳ 1,450", image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=700&q=88" },
-  { name: "Ember Chicken", category: "Dishes", detail: "Coal-roasted thigh, ember glaze, herbs.", price: "৳ 1,850", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=88" },
-  { name: "Fire-Roasted Pizza", category: "Platter", detail: "Tomato, fire oil, basil, ash salt.", price: "৳ 1,250", image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=88" },
-  { name: "Market Greens", category: "Dishes", detail: "Crisp garden vegetables, tahini, lime.", price: "৳ 850", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=88" },
-  { name: "Salted Chocolate Tart", category: "Dessert", detail: "Dark chocolate, sea salt, ember cream.", price: "৳ 650", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476f?auto=format&fit=crop&w=700&q=88" },
-  { name: "Citrus Ember Spritz", category: "Drinks", detail: "Bitter orange, spice, sparkling finish.", price: "৳ 550", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=88" },
-  { name: "Garden Platter", category: "Platter", detail: "Seasonal vegetables, warm flatbread, dips.", price: "৳ 2,100", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=88" },
-  { name: "Rosemary Fizz", category: "Drinks", detail: "Rosemary, lemon, tonic, smoked ice.", price: "৳ 500", image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=88" },
-];
+const menuPageNames = [
+  "718174826_122132414409161286_343033684358365820_n.jpg",
+  "718190680_122132413767161286_7654096250232741609_n.jpg",
+  "718204025_122132413539161286_688450090359965079_n.jpg",
+  "middle.jpg",
+  "1.jpg",
+  "2.jpg",
+  "718204025_122132413599161286_2521099691469240578_n.jpg",
+  "718204025_122132414319161286_99081618114908965_n.jpg",
+  "718221956_122132414265161286_8931308670791313504_n.jpg",
+  "718296521_122132414013161286_5662676464652194707_n.jpg",
+  "718314834_122132413905161286_8436691967879702742_n.jpg",
+  "718318489_122132414217161286_8904567683720636025_n.jpg",
+  "718744573_122132414625161286_4053402117406301464_n.jpg",
+  "718777164_122132413725161286_5260076824641002721_n.jpg",
+  "718792242_122132413395161286_7540068954091055116_n.jpg",
+  "718792248_122132414451161286_3535992131666826892_n.jpg",
+  "718792990_122132413821161286_3406031361915741478_n.jpg",
+  "718816246_122132414067161286_6768096711618002859_n.jpg",
+  "718894432_122132413965161286_7265357915511886068_n.jpg",
+  "718895739_122132414169161286_7018089502648193477_n.jpg",
+  "719009974_122132414499161286_4873848084012011035_n.jpg",
+  "719068500_122132413665161286_504820364162658866_n.jpg",
+  "719068771_122132414367161286_5129346587719079190_n.jpg",
+  "719127559_122132414121161286_9030078855108927897_n.jpg",
+  "719161221_122132414547161286_5747180975288204175_n.jpg",
+  "719532900_122132413863161286_8849917445959065355_n.jpg",
+  "719782557_122132413311161286_2111139795614795123_n.jpg",
+  "720292996_122132413491161286_7501462188157293249_n.jpg",
+] as const;
 
-const categories = ["All", "Dishes", "Platter", "Drinks", "Dessert"] as const;
-const crossfadeDurationMs = 180;
-const heritageGridClassName =
-  "heritage-grid [grid-area:1/1] grid grid-cols-2 gap-y-[clamp(48px,5vw,72px)] gap-x-[clamp(10px,1.5vw,18px)] self-start transition-opacity duration-[180ms] min-[704px]:grid-cols-3 min-[1120px]:grid-cols-[repeat(4,minmax(0,1fr))]";
-const heritageCardClassName =
-  "heritage-card group min-w-0 transition-transform duration-[250ms] hover:-translate-y-1";
-const heritageCardImageClassName =
-  "heritage-card-image mx-auto mt-[clamp(-50px,-4vw,-32px)] aspect-square w-[calc(100%_-_clamp(16px,2.5vw,34px))] overflow-hidden rounded-full bg-midnight-shadow";
-const heritageCardBodyClassName =
-  "flex flex-col gap-[clamp(12px,1.5vw,18px)] px-[clamp(12px,1.6vw,18px)] pt-[clamp(25px,3vw,35px)] pb-[clamp(14px,1.6vw,18px)]";
-const menuCategoryTabClassName =
-  "min-h-8 min-w-8 rounded-[10px] border px-[clamp(10px,1.1vw,14.4px)] py-2 text-[clamp(11.2px,10.56px+0.14vw,12.8px)] transition-[color,background,border-color,scale] duration-200 active:scale-[0.97]";
-const activeMenuCategoryTabClassName =
-  "border-flameburst-orange bg-flameburst-orange text-midnight-shadow";
-const inactiveMenuCategoryTabClassName =
-  "border-transparent bg-transparent text-muted-foreground hover:border-flameburst-orange hover:bg-flameburst-orange hover:text-midnight-shadow";
-const menuTabsClassName =
-  "mb-[clamp(48px,6vw,72px)] flex flex-wrap justify-center gap-[var(--space-2xs)]";
-
-type MenuCategory = (typeof categories)[number];
-type MenuItem = (typeof menuItems)[number];
-
-function filterMenuItems(category: MenuCategory) {
-  return category === "All"
-    ? menuItems
-    : menuItems.filter((item) => item.category === category);
-}
-
-function HeritageGrid({
-  items,
-  isEntering = false,
-  isExiting = false,
-}: {
-  items: MenuItem[];
-  isEntering?: boolean;
-  isExiting?: boolean;
-}) {
-  return (
-    <div
-      className={`${heritageGridClassName}${isEntering ? " is-entering" : ""}${isExiting ? " is-exiting" : ""}`}
-      aria-hidden={isExiting || undefined}
-    >
-      {items.map((item) => (
-        <article className={heritageCardClassName} key={item.name}>
-          <div className={heritageCardImageClassName}>
-            <Image
-              src={item.image}
-              alt={item.name}
-              width={500}
-              height={500}
-              sizes="(max-width: 700px) 42vw, 220px"
-              className="size-full object-cover transition-transform duration-[350ms] group-hover:scale-[1.06]"
-            />
-          </div>
-          <div className={heritageCardBodyClassName}>
-            <h3 className="m-0 font-heading text-[clamp(16px,1.25vw,22px)] leading-[1.1] text-silver-mist">{item.name}</h3>
-            <div className="flex items-baseline">
-              <strong className="whitespace-nowrap font-heading text-[clamp(21px,2vw,27px)] font-medium text-silver-mist">{item.price}</strong>
-            </div>
-            <p className="mt-[-10px] mb-0 text-left text-[clamp(11px,10px+0.14vw,13px)] leading-[1.4] text-muted-foreground">{item.detail}</p>
-          </div>
-        </article>
-      ))}
-    </div>
-  );
-}
+const menuPages: CardItem[] = menuPageNames.map((name, index) => ({
+  alt:
+    name === "middle.jpg" ? "Menu cover page" : `Salt & Ember menu page ${index + 1}`,
+  imgUrl: `/menu-images/${name}`,
+}));
 
 export function Menu() {
-  const [category, setCategory] = useState<MenuCategory>("All");
-  const [outgoingCategory, setOutgoingCategory] =
-    useState<MenuCategory | null>(null);
-  const cleanupTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const filteredItems = useMemo(() => filterMenuItems(category), [category]);
-  const outgoingItems = useMemo(
-    () => (outgoingCategory ? filterMenuItems(outgoingCategory) : null),
-    [outgoingCategory],
-  );
-
-  useEffect(() => {
-    return () => {
-      if (cleanupTimer.current) {
-        clearTimeout(cleanupTimer.current);
-      }
-    };
-  }, []);
-
-  function selectCategory(nextCategory: MenuCategory) {
-    if (nextCategory === category) {
-      return;
-    }
-
-    if (cleanupTimer.current) {
-      clearTimeout(cleanupTimer.current);
-    }
-
-    setOutgoingCategory(category);
-    setCategory(nextCategory);
-    cleanupTimer.current = setTimeout(() => {
-      setOutgoingCategory(null);
-      cleanupTimer.current = null;
-    }, crossfadeDurationMs);
-  }
-
   return (
     <section
+      aria-labelledby="heritage-menu-title"
       className={contentShellClassName}
       id="menu"
-      aria-labelledby="heritage-menu-title"
     >
-      <div className="mx-auto mb-[var(--space-md)] max-w-[620px] text-center">
-        <p className="mb-3 text-xs uppercase tracking-[0.16em] text-flameburst-orange">From our kitchen</p>
+      <div className="mx-auto max-w-155 text-center">
+        <p className="mb-3 text-xs uppercase tracking-[0.16em] text-flameburst-orange">
+          From our kitchen
+        </p>
         <TextBlockAnimation blockColor="var(--flameburst-orange)">
-        <h2 id="testimonials-heading" className={sectionHeadingClassName}>Our <em className={highlightedTextClassName}>heritage</em> menu
+          <h2 id="heritage-menu-title" className={sectionHeadingClassName}>
+            Our <em className={highlightedTextClassName}>Heritage</em> Menu
           </h2>
         </TextBlockAnimation>
-        <p className="mt-[15px] mb-0 text-[clamp(11.2px,10.56px+0.14vw,13px)] text-muted-foreground">From casual meals to special celebrations, we serve food and moments made to be remembered.</p>
+        <p className="mt-[15px] mb-0 text-[clamp(11.2px,10.56px+0.14vw,13px)] text-muted-foreground">
+          Browse every page of our menu. Use the arrows or select a page to
+          bring it forward.
+        </p>
       </div>
-      <div className={menuTabsClassName} aria-label="Filter menu by category">
-        {categories.map((item) => (
-          <button
-            key={item}
-            type="button"
-            aria-pressed={category === item}
-            className={cn(
-              menuCategoryTabClassName,
-              category === item
-                ? activeMenuCategoryTabClassName
-                : inactiveMenuCategoryTabClassName,
-            )}
-            onClick={() => selectCategory(item)}
-          >
-            {item}
-          </button>
-        ))}
-      </div>
-      <div className="grid">
-        {outgoingItems ? (
-          <HeritageGrid
-            key={outgoingCategory}
-            items={outgoingItems}
-            isExiting
-          />
-        ) : null}
-        <HeritageGrid
-          key={category}
-          items={filteredItems}
-          isEntering={Boolean(outgoingItems)}
-        />
-      </div>
+      <CardFanCarousel cards={menuPages} initialIndex={3} />
     </section>
   );
 }

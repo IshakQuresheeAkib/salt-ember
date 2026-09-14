@@ -49,11 +49,11 @@ const HERO_CURVE_FILL_PATH =
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 const ARC_MIDPOINT = 0.5;
 const heroArtClassName =
-  "hero-art max-tablet:pb-[clamp(84px,18vw,108px)] max-mobile:min-h-[400px]";
+  "hero-art tablet:pb-[clamp(84px,18vw,108px)] mobile:min-h-[400px]";
 const categoryControlsClassName =
   "absolute top-1/2 right-[8vw] min-desktop:right-[clamp(28px,2vw,40px)] z-3 flex -translate-y-1/2 flex-col gap-2.5 ";
 const categoryButtonClassName =
-  "min-h-8 min-w-8 rounded-[10px] border border-transparent px-[clamp(10px,1.1vw,14.4px)] py-2 text-[clamp(11.2px,10.56px+0.14vw,12.8px)] active:scale-[0.97] max-mobile:py-1.5";
+  "min-h-8 min-w-8 rounded-[10px] border border-transparent px-[clamp(10px,1.1vw,14.4px)] py-2 text-[clamp(11.2px,10.56px+0.14vw,12.8px)] active:scale-[0.97] mobile:py-1.5";
 const activeCategoryButtonClassName = "bg-silver-mist text-midnight-shadow";
 const inactiveCategoryButtonClassName =
   "bg-midnight-shadow text-silver-mist transition-[background,border-color,color,scale] duration-200 hover:border-silver-mist hover:bg-silver-mist hover:text-midnight-shadow";
