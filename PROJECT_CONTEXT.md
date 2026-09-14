@@ -29,10 +29,14 @@ app/
   page.tsx                   # homepage composition and header/footer
   globals.css                # token layer and component styling
 components/
+  header.tsx                 # site navigation and location link
+  footer.tsx                 # contact and social links
+  hero-section.tsx           # homepage hero composition
   hero-food-selector.tsx     # hero state, motion, pause control
-  heritage-menu.tsx          # category-filtered sample menu
+  menu.tsx                   # category-filtered sample menu
+  testimonials.tsx           # animated/static testimonial presentation
   ui/
-    testimonial-v2.tsx       # animated/static testimonial presentation
+    social-media.tsx         # social and contact link tooltips
     text-block-animation.tsx # GSAP line-reveal enhancement
 lib/
   constants/testimonials.ts  # typed testimonial fixtures

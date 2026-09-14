@@ -112,7 +112,7 @@ function TestimonialsColumn({
   );
 }
 
-export default function TestimonialsSection() {
+export default function Testimonials() {
   const shouldReduceMotion = useReducedMotion();
   const motionIsPaused = shouldReduceMotion === true;
 

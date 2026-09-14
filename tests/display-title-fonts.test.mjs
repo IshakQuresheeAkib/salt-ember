@@ -15,14 +15,14 @@ test("provides switchable DynaPuff and Original Surfer fonts for display titles"
 });
 
 test("scopes the display-font trial to the hero and section titles", async () => {
-  const [page, menu, testimonials, styles] = await Promise.all([
-    readSource("../app/page.tsx"),
-    readSource("../components/heritage-menu.tsx"),
-    readSource("../components/ui/testimonial-v2.tsx"),
+  const [hero, menu, testimonials, styles] = await Promise.all([
+    readSource("../components/hero-section.tsx"),
+    readSource("../components/menu.tsx"),
+    readSource("../components/testimonials.tsx"),
     readSource("../app/globals.css"),
   ]);
 
-  assert.match(page, /<h1 className="font-heading display-title">/);
+  assert.match(hero, /<h1 className="font-heading display-title">/);
   assert.match(menu, /className="bracket-title font-heading display-title text-balance"/);
   assert.match(
     testimonials,

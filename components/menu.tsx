@@ -65,7 +65,7 @@ function HeritageGrid({
   );
 }
 
-export function HeritageMenu() {
+export function Menu() {
   const [category, setCategory] = useState<MenuCategory>("All");
   const [outgoingCategory, setOutgoingCategory] =
     useState<MenuCategory | null>(null);
