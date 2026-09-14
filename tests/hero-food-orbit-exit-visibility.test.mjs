@@ -8,7 +8,7 @@ test("the outgoing hero plate fades only at the end of its path", async () => {
     "utf8",
   );
 
-  assert.match(source, /const DISH_FADE_SECONDS = 0\.18;/);
+  assert.match(source, /const DISH_FADE_SECONDS = 0\.6;/);
   assert.match(
     source,
     /const OUTGOING_FADE_START_SECONDS =\s*DISH_MOTION_SECONDS - DISH_FADE_SECONDS;/,

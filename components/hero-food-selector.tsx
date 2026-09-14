@@ -11,6 +11,10 @@ import {
   useSyncExternalStore,
 } from "react";
 import { gsap } from "@/lib/gsap";
+import {
+  canScheduleHeroRotation,
+  reduceHeroRotationPause,
+} from "@/lib/hero-food-autoplay-state";
 
 const foodStates = [
   { id: "dishes", label: "Dishes", icon: "◉", image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90", alt: "A fresh bowl of noodles topped with herbs and egg" },
@@ -85,7 +89,7 @@ export function HeroFoodSelector() {
     revision: 0,
   });
   const [isPointerHovered, setIsPointerHovered] = useState(false);
-  const [isFocusWithin, setIsFocusWithin] = useState(false);
+  const [isRotationPaused, setIsRotationPaused] = useState(false);
   const [manualAnnouncement, setManualAnnouncement] = useState("");
   const [geometryRevision, setGeometryRevision] = useState(0);
   const reducedMotion = useSyncExternalStore(
@@ -108,11 +112,12 @@ export function HeroFoodSelector() {
   const previousReducedMotionRef = useRef(reducedMotion);
   const renderedTransitionRevisionRef = useRef<number | null>(null);
   const activeFood = foodStates[transition.activeIndex];
-  const shouldScheduleRotation =
-    !isPointerHovered &&
-    !isFocusWithin &&
-    isDocumentVisible &&
-    !reducedMotion;
+  const shouldScheduleRotation = canScheduleHeroRotation({
+    isRotationPaused,
+    isPointerHovered,
+    isDocumentVisible,
+    reducedMotion,
+  });
 
   const captureSceneMotion = useCallback(
     (index: number): SceneMotionState | null => {
@@ -433,11 +438,13 @@ export function HeroFoodSelector() {
       className="hero-art"
       onPointerEnter={() => setIsPointerHovered(true)}
       onPointerLeave={() => setIsPointerHovered(false)}
-      onFocusCapture={() => setIsFocusWithin(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) {
-          setIsFocusWithin(false);
-        }
+      onFocusCapture={(event) => {
+        setIsRotationPaused((current) =>
+          reduceHeroRotationPause(current, {
+            type: "focus",
+            focusVisible: (event.target as HTMLElement).matches(":focus-visible"),
+          }),
+        );
       }}
     >
       <div className="hero-dish-stage" aria-hidden="true">
@@ -447,6 +454,21 @@ export function HeroFoodSelector() {
           preserveAspectRatio="none"
           aria-hidden="true"
         >
+          <defs>
+            <linearGradient
+              id="hero-dish-curve-gradient"
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="1"
+            >
+              
+              <stop offset="10%" stopColor="#e4e4e4" />
+              <stop offset="35%" stopColor="#ffae17" />
+              <stop offset="40%" stopColor="#ff7510" />
+              <stop offset="50%" stopColor="#da500b" />
+            </linearGradient>
+          </defs>
           <path className="hero-dish-curve-fill" d={HERO_CURVE_FILL_PATH} />
           <path
             ref={arcPathRef}
@@ -502,6 +524,18 @@ export function HeroFoodSelector() {
             </button>
           ))}
         </div>
+        <button
+          type="button"
+          className="hero-rotation-toggle"
+          data-paused={isRotationPaused ? "true" : "false"}
+          onClick={() => {
+            setIsRotationPaused((current) =>
+              reduceHeroRotationPause(current, { type: "toggle" }),
+            );
+          }}
+        >
+          {isRotationPaused ? "Resume rotation" : "Pause rotation"}
+        </button>
       </div>
     </div>
   );

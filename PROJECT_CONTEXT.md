@@ -6,7 +6,7 @@
 
 Salt & Ember is a frontend-only, single-page restaurant concept for Sylhet, Bangladesh. The current homepage has Hero, Menu, Reviews, and Contact anchors only. It has no backend, database, authentication, CMS, ordering, delivery, payment, reservation, or private-event workflow.
 
-All restaurant-facing copy and remote imagery are sample content. In particular, do not publish the current dishes, prices, testimonials, address, telephone values, email address, or social destinations as confirmed facts. The hero and footer currently contain different sample phone values; replace them together from an approved source before launch.
+Menu dishes, prices, testimonials, email address, and remote imagery remain sample content. The user-approved public details are the Baruthkhana Point, East Zindabazar, Sylhet location; +880 1704 083 376 for calls and WhatsApp; and the listed Facebook and Instagram destinations. Keep the hero and footer contact details in sync.
 
 ## Active stack
 

@@ -113,7 +113,7 @@ export function HeritageMenu() {
         <h2 id="testimonials-heading"className="bracket-title font-heading display-title text-balance">Our <em>heritage</em> menu
           </h2>
         </TextBlockAnimation>
-        <p>Sample menu — dishes and prices are illustrative.</p>
+        <p>From casual meals to special celebrations, we serve food and moments made to be remembered.</p>
       </div>
       <div className="heritage-tabs" aria-label="Filter menu by category">
         {categories.map((item) => (

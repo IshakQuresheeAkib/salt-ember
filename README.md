@@ -10,9 +10,9 @@ The single public route (`/`) contains:
 - a hero with an accessible, rotating food selector, a visible pause/resume control, and reduced-motion support;
 - a client-side sample menu that filters eight illustrative dishes by category;
 - a testimonial section that uses animated columns when motion is allowed and a static nine-card grid when reduced motion is requested;
-- a contact footer with sample address, email, telephone, and social-link placeholders.
+- a contact footer with the approved location, telephone/WhatsApp, and social links.
 
-The menu, testimonials, imagery, restaurant details, and social destinations are illustrative. The page does not accept reservations, send enquiries, process orders, take payments, or persist any visitor data.
+The menu, testimonials, imagery, and email address are illustrative. The location, telephone/WhatsApp number, and Facebook/Instagram destinations are restaurant-approved. The page does not accept reservations, send enquiries, process orders, take payments, or persist any visitor data.
 
 ## Stack
 

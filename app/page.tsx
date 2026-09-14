@@ -1,54 +1,73 @@
 import Image from "next/image";
 import { HeroFoodSelector } from "@/components/hero-food-selector";
 import { HeritageMenu } from "@/components/heritage-menu";
+import {
+  SocialTooltip,
+} from "@/components/ui/social-media";
+import {
+  SALT_AND_EMBER_MOBILE_NUMBER,
+  SALT_AND_EMBER_MOBILE_TEL,
+  SOCIAL_MEDIA_LINKS,
+} from "@/lib/constants/social-media";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import TestimonialsSection from "@/components/ui/testimonial-v2";
+import { Beef, MapPinned, PartyPopper, Sparkles } from "lucide-react";
 import logo from "@/public/logo.webp"
 
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="site-header content-shell content-shell--wide">
-        <a href="#top" className="brand-mark" aria-label="Salt and Ember home">
-          <Image
-            src={logo}
-            alt="Salt & Ember logo"
-            width={200}
-            height={200}
-            className="object-contain mix-blend-multiply rotate-45"
-            priority
-          />
-        </a>
-        <nav
-          className="hidden items-center gap-8 md:flex"
-          aria-label="Primary navigation"
-        >
-          <a className="nav-link active" href="#top">
-            Home
+      <section id="top" className="hero content-shell--hero">
+        <header className="site-header content-shell content-shell--wide">
+          <a href="#top" className="brand-mark" aria-label="Salt and Ember home">
+            <Image
+              src={logo}
+              alt="Salt & Ember logo"
+              width={200}
+              height={200}
+              className="object-contain mix-blend-multiply rotate-45"
+              priority
+            />
           </a>
-          <a className="nav-link" href="#menu">
-            Menu
-          </a>
-          <a className="nav-link" href="#testimonials">
-            Reviews
-          </a>
-          <a className="nav-link" href="#contact">
-            Contact
-          </a>
-        </nav>
-        <details className="mobile-navigation">
-          <summary>Menu</summary>
-          <nav aria-label="Mobile navigation">
-            <a href="#top">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#testimonials">Reviews</a>
-            <a href="#contact">Contact</a>
+          <nav
+            className="hidden items-center gap-8 md:flex"
+            aria-label="Primary navigation"
+          >
+            <a className="nav-link active" href="#top">
+              Home
+            </a>
+            <a className="nav-link" href="#menu">
+              Menu
+            </a>
+            <a className="nav-link" href="#testimonials">
+              Reviews
+            </a>
+            <a className="nav-link" href="#contact">
+              Contact
+            </a>
           </nav>
-        </details>
-      </header>
+          <a
+            className="navbar-location"
+            href="https://maps.app.goo.gl/qBEyyTSasUwqyaRs5"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Salt & Ember's location in Google Maps"
+          >
+            <MapPinned className="navbar-location__pin" aria-hidden="true" />
+          </a>
+          <details className="mobile-navigation">
+            <summary>Menu</summary>
+            <nav aria-label="Mobile navigation">
+              <a href="#top">Home</a>
+              <a href="#menu">Menu</a>
+              <a href="#testimonials">Reviews</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </details>
+        </header>
 
-      <section id="top" className="hero content-shell content-shell--hero">
-        <div className="hero-copy">
+        <div className="hero-layout content-shell content-shell--hero">
+          <div className="hero-copy">
           <TextBlockAnimation
             animateOnScroll={false}
             delay={0.16}
@@ -67,8 +86,18 @@ export default function Home() {
             blockColor="var(--flameburst-orange)"
           >
             <p className="hero-intro">
-              Where authentic taste meets modern dining — experience freshness,
-              tradition, and a touch of luxury in every meal.
+              <span className="hero-intro__line">
+                <Sparkles className="hero-intro__icon" aria-hidden="true" />
+                Modern Family-Friendly Steakhouse
+              </span>
+              <span className="hero-intro__line">
+                <Beef className="hero-intro__icon" aria-hidden="true" />
+                Steaks • Continental • Thai &amp; Chinese • Seafood &amp; More
+              </span>
+              <span className="hero-intro__line">
+                <PartyPopper className="hero-intro__icon" aria-hidden="true" />
+                Family Dining | Parties | Wedding &amp; Corporate Events
+              </span>
             </p>
           </TextBlockAnimation>
           <div className="hero-actions">
@@ -80,21 +109,12 @@ export default function Home() {
             </a>
           </div>
           <div className="hero-contact">
-            <div className="socials" aria-label="Social links">
-              <a href="#contact" aria-label="Twitter">
-                tw
-              </a>
-              <a href="#contact" aria-label="Facebook">
-                f
-              </a>
-              <a href="#contact" aria-label="TikTok">
-                tk
-              </a>
-              <a href="#contact" aria-label="Instagram">
-                ig
-              </a>
-            </div>
-            <span>+20 654 87 432</span>
+            <SocialTooltip
+              className="hero-social-links"
+              items={SOCIAL_MEDIA_LINKS}
+              aria-label="Social and contact links"
+            />
+          </div>
           </div>
         </div>
         <HeroFoodSelector />
@@ -122,35 +142,39 @@ export default function Home() {
           <div>
             <p className="footer-label">Find us</p>
             <p>
-              27 Amber Lane
-              <br />
-              Sylhet, Bangladesh
+              <a
+                href="https://maps.app.goo.gl/qBEyyTSasUwqyaRs5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Baruthkhana Point, East Zindabazar
+                <br />
+                Sylhet, Bangladesh
+              </a>
             </p>
           </div>
           <div>
             <p className="footer-label">Say hello</p>
-            <a href="mailto:hello@saltandember.com">hello@saltandember.com</a>
+            <a href={SALT_AND_EMBER_MOBILE_TEL}>
+              {SALT_AND_EMBER_MOBILE_NUMBER}
+            </a>
             <br />
-            <a href="tel:+8801712345678">+880 1712 345 678</a>
+            <a
+              href="https://wa.me/8801704083376"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp us
+            </a>
           </div>
           <div>
             <p className="footer-label">Follow along</p>
-            <div className="socials">
-              <a href="#contact" aria-label="Instagram">
-                ig
-              </a>
-              <a href="#contact" aria-label="Facebook">
-                fb
-              </a>
-              <a href="#contact" aria-label="TikTok">
-                tk
-              </a>
-            </div>
+            <SocialTooltip
+              className="footer-social-links"
+              items={SOCIAL_MEDIA_LINKS}
+              aria-label="Social and contact links"
+            />
           </div>
-        </div>
-        <div className="footer-bottom">
-          <span>© 2025 Salt & Ember</span>
-          <span>Made for long lunches and late nights.</span>
         </div>
       </footer>
     </main>

@@ -12,5 +12,5 @@ test("every hero food selection uses the forward seam direction", async () => {
   assert.doesNotMatch(source, /automaticDirection/);
   assert.match(source, /direction:\s*1,/);
   assert.match(source, /selectFood\(null\);/);
-  assert.match(source, /const AUTOPLAY_DWELL_MS = 500;/);
+  assert.match(source, /const AUTOPLAY_DWELL_MS = 800;/);
 });
