@@ -12,11 +12,28 @@ import { useRef } from "react";
 
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import { testimonials } from "@/lib/constants/testimonials";
+import {
+  contentShellClassName,
+  highlightedTextClassName,
+  sectionHeadingClassName,
+} from "@/lib/tailwind";
+import { cn } from "@/lib/utils";
 import type { Testimonial } from "@/lib/types";
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
+const testimonialCardClassName =
+  "group w-80 max-w-full rounded-lg border border-border bg-card p-6 shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-flameburst-orange";
+const testimonialSectionClassName = "relative py-[var(--space-xl)]";
+const testimonialStaticGridClassName =
+  "mt-12 grid list-none grid-cols-1 gap-[clamp(12px,1.5vw,20px)] p-0 desktop:grid-cols-3";
+const testimonialColumnsClassName =
+  "testimonial-columns mt-12 flex max-h-200 justify-center gap-[clamp(12px,1.5vw,20px)] overflow-hidden";
+const testimonialAvatarClassName =
+  "size-11 rounded-full object-cover ring-1 ring-flameburst-orange/40 transition group-hover:ring-flameburst-orange";
+const testimonialIntroClassName =
+  "mt-[22px] mb-0 max-w-[470px] text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
 
 type TestimonialsColumnProps = {
   className?: string;
@@ -36,7 +53,7 @@ function TestimonialCard({
     <li
       aria-hidden={duplicate || undefined}
       data-testimonial-card={duplicate ? "duplicate" : "primary"}
-      className="group w-80 max-w-full rounded-lg border border-border bg-card p-6 shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-flameburst-orange"
+      className={testimonialCardClassName}
     >
       <figure className="m-0">
         <div
@@ -55,7 +72,7 @@ function TestimonialCard({
             width={44}
             height={44}
             sizes="44px"
-            className="size-11 rounded-full object-cover ring-1 ring-flameburst-orange/40 transition group-hover:ring-flameburst-orange"
+            className={testimonialAvatarClassName}
           />
           <span className="flex min-w-0 flex-col">
             <cite className="not-italic font-semibold text-card-foreground">
@@ -121,19 +138,19 @@ export default function Testimonials() {
       <section
         id="testimonials"
         aria-labelledby="testimonials-heading"
-        className="testimonial-section section content-shell content-shell--comfort"
+        className={cn(contentShellClassName, testimonialSectionClassName)}
       >
-        <div className="testimonial-section__heading">
+        <div className="flex items-end justify-between gap-8 max-tablet:flex-col max-tablet:items-start">
           <div>
             <TextBlockAnimation blockColor="var(--flameburst-orange)">
               <h2
                 id="testimonials-heading"
-                className="bracket-title font-heading display-title text-balance"
+                className={sectionHeadingClassName}
               >
-                What they <em>say</em>
+                What they <em className={highlightedTextClassName}>say</em>
               </h2>
             </TextBlockAnimation>
-            <p className="testimonial-section__intro">
+            <p className={testimonialIntroClassName}>
               Notes from guests
             </p>
           </div>
@@ -141,7 +158,7 @@ export default function Testimonials() {
 
         {shouldReduceMotion ? (
           <ul
-            className="testimonial-static-grid mt-12"
+            className={testimonialStaticGridClassName}
             aria-label="Guest testimonials"
           >
             {testimonials.map((testimonial) => (
@@ -154,7 +171,7 @@ export default function Testimonials() {
           </ul>
         ) : (
           <div
-            className="testimonial-columns mt-12 flex max-h-200 justify-center gap-5 overflow-hidden"
+            className={testimonialColumnsClassName}
             role="region"
             aria-label="Guest testimonials"
           >
