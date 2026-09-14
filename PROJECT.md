@@ -10,7 +10,7 @@ Salt & Ember is a single-page, frontend-only restaurant website built for a Sylh
 
 - Header navigation to Home, Menu, Reviews, and Contact.
 - A desktop navigation bar, a Google Maps link, and a native `<details>` mobile menu.
-- A hero with a selectable four-item food orbit, automatic rotation, and a pause/resume control.
+- A hero with a selectable four-item food orbit and automatic rotation.
 - A client-side menu filter with eight hard-coded items in All, Dishes, Platter, Drinks, and Dessert categories.
 - A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
 - A contact footer with a maps link, phone link, WhatsApp link, Facebook link, and Instagram link.
@@ -104,7 +104,7 @@ public/
 
 `app/page.tsx` is server-rendered by default and composes the hero, menu, testimonials, and footer. Client components are limited to interaction and browser APIs:
 
-- `hero-food-selector.tsx` observes reduced motion, document visibility, pointer/focus state, geometry, and drives GSAP transitions.
+- `hero-food-selector.tsx` observes reduced motion, document visibility, geometry, and drives GSAP transitions.
 - `menu.tsx` stores the selected category and keeps the outgoing grid mounted during its 180ms crossfade.
 - `testimonials.tsx` reads the reduced-motion preference and drives the animated testimonial columns.
 - `text-block-animation.tsx` uses GSAP `SplitText` only when the viewport is at least 768px wide and reduced motion is not requested.
@@ -147,9 +147,9 @@ Do not move those rules merely to make the stylesheet smaller. Prefer Tailwind f
 ### Hero orbit
 
 - The four selectable states are Dishes, Dessert, Drinks, and Platter.
-- Automatic rotation waits 800ms between selections.
-- Rotation is not scheduled while the page is hidden, the hero is pointer-hovered, reduced motion is enabled, or the visitor has paused it.
-- Keyboard-visible focus pauses rotation; the explicit toggle can resume it.
+- Automatic rotation waits 500ms between selections.
+- Rotation is not scheduled while the page is hidden or reduced motion is enabled.
+- Hovering or focusing the food controls does not interrupt rotation.
 - Manual selections update a polite live region.
 - GSAP owns food-path transitions and title/section line reveals. `MotionPathPlugin`, `ScrollTrigger`, `SplitText`, and two custom eases are registered in `lib/gsap.ts`.
 
