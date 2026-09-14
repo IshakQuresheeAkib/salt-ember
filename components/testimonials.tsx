@@ -140,7 +140,7 @@ export default function Testimonials() {
         aria-labelledby="testimonials-heading"
         className={cn(contentShellClassName, testimonialSectionClassName)}
       >
-        <div className="flex items-end justify-between gap-8 max-tablet:flex-col max-tablet:items-start">
+        <div className="flex items-end justify-between gap-8 tablet:flex-col tablet:items-start">
           <div>
             <TextBlockAnimation blockColor="var(--flameburst-orange)">
               <h2

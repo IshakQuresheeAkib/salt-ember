@@ -5,10 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --breakpoint-mobile: 480px;
-  --breakpoint-tablet: 801px;
   --breakpoint-desktop: 801px;
 }
+
+/* Small-screen variants: declare mobile last so it wins when both ranges apply. */
+@custom-variant tablet (@media (width < 801px));
+@custom-variant mobile (@media (width < 480px));
 
 @theme inline {
   --font-heading: var(--font-display);
@@ -64,9 +66,6 @@ html {
   scroll-behavior: smooth;
   background: var(--midnight-shadow);
   scrollbar-color: var(--flameburst-orange) var(--midnight-shadow);
-}
-html[data-title-font="dynapuff"] {
-  --font-title: var(--font-dynapuff);
 }
 body {
   margin: 0;
@@ -164,7 +163,7 @@ body {
   position: relative;
   display: grid;
   width: calc(100% + var(--hero-art-right-bleed));
-  min-height: 450px;
+  min-height: 490px;
   place-items: center;
   overflow: hidden;
   isolation: isolate;
@@ -306,8 +305,11 @@ body {
 
 @media (max-width: 800px) {
   .hero-dish-stage {
-    top: 60%;
-    width: min(700px, 106vw);
+    top: calc(100vw - 48%);
+    width: min(800px, 106vw);
+  }
+  .hero-art{
+    min-height: calc(100vw - 50px);
   }
 }
 @media (min-width: 801px) {

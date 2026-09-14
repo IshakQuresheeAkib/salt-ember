@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
-  DynaPuff,
+  Yeon_Sung,
   Inter,
 } from "next/font/google";
 import type { ReactNode } from "react";
@@ -18,9 +18,10 @@ const bodyFont = Inter({
   variable: "--font-body",
 });
 
-const dynaPuff = DynaPuff({
+const titleFont = Yeon_Sung({
   subsets: ["latin"],
-  variable: "--font-dynapuff",
+  weight: "400",
+  variable: "--font-title",
 });
 
 export const metadata: Metadata = {
@@ -36,8 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="en"
-      data-title-font="dynapuff"
-      className={`${displayFont.variable} ${bodyFont.variable} ${dynaPuff.variable}`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${titleFont.variable}`}
     >
       <body>{children}</body>
     </html>

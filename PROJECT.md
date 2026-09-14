@@ -47,7 +47,7 @@ Tailwind v4 maps these runtime variables to `background`, `foreground`, `card`, 
 
 - `Cormorant Garamond` is loaded as `--font-display`.
 - `Inter` is loaded as `--font-body` and is the document sans font.
-- `DynaPuff` is also loaded as `--font-dynapuff`.
+- `Yeon Sung` is loaded as `--font-title` for the hero and section headings.
 - Hero and section heading source currently uses `font-[family-name:var(--font-title)]`; any change to display-type behaviour must verify the corresponding token in `app/globals.css` and the browser output.
 
 ### Responsive composition
