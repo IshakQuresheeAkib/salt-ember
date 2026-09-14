@@ -23,6 +23,10 @@ export function getVisibleFanCardCount(viewportWidth: number) {
   return viewportWidth < LAPTOP_BREAKPOINT ? 3 : MAX_VISIBLE_FAN_CARDS;
 }
 
+export function getInitialFanViewportWidth() {
+  return 0;
+}
+
 function getCardWidthPx(viewportWidth: number) {
   if (viewportWidth < MOBILE_BREAKPOINT) {
     return clamp(viewportWidth * 0.6, 180, 260);

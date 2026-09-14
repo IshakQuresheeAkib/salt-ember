@@ -27,6 +27,10 @@ test("the responsive fan count uses three cards on narrow screens and five from 
   assert.equal(carouselLayout?.getVisibleFanCardCount?.(2560), 5);
 });
 
+test("the carousel uses a server-safe viewport width before hydration", () => {
+  assert.equal(carouselLayout?.getInitialFanViewportWidth?.(), 0);
+});
+
 test("the initial selection honours an explicit page and otherwise uses the fan centre", () => {
   assert.equal(carouselLayout?.getInitialFanCenter?.(28), 2);
   assert.equal(carouselLayout?.getInitialFanCenter?.(5), 2);

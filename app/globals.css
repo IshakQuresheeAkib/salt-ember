@@ -159,6 +159,33 @@ body {
   }
 }
 
+/* A brief outward nudge makes the full menu's pagination discoverable. */
+.fan-carousel__arrow {
+  animation: fan-carousel-arrow-nudge 1.5s var(--ease-out) infinite;
+  will-change: filter, transform;
+}
+.fan-carousel__arrow--previous {
+  --fan-carousel-arrow-offset: -4px;
+}
+.fan-carousel__arrow--next {
+  --fan-carousel-arrow-offset: 4px;
+  animation-delay: 1s;
+}
+
+@keyframes fan-carousel-arrow-nudge {
+  0%,
+  66%,
+  100% {
+    transform: translateX(0);
+  }
+  78% {
+    transform: translateX(var(--fan-carousel-arrow-offset));
+  }
+  88% {
+    transform: translateX(0);
+  }
+}
+
 .hero-art {
   position: relative;
   display: grid;

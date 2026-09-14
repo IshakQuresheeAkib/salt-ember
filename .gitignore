@@ -18,9 +18,6 @@ plugins/
 /.next/
 /out/
 
-# locally replaceable menu imagery
-/public/menu-images/
-
 # production
 /build
 

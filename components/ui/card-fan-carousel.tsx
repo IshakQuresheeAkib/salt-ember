@@ -8,6 +8,7 @@ import {
   getFanEntryOffsetRem,
   getHoveredFanPositions,
   getInitialFanCenter,
+  getInitialFanViewportWidth,
   getResponsiveFanPosition,
   getVisibleFanCardCount,
   getVisibleFanSlots,
@@ -98,9 +99,7 @@ export default function CardFanCarousel({
   const directionRef = useRef<"left" | "right" | null>(null);
   const previouslyVisible = useRef<Set<number>>(new Set());
   const totalCards = cards.length;
-  const [viewportWidth, setViewportWidth] = useState(() =>
-    typeof window === "undefined" ? 0 : window.innerWidth,
-  );
+  const [viewportWidth, setViewportWidth] = useState(getInitialFanViewportWidth);
   const visibleCardCount = getVisibleFanCardCount(viewportWidth);
   const needsPagination = totalCards > visibleCardCount;
   const [centerIndex, setCenterIndex] = useState(() =>
@@ -424,7 +423,7 @@ export default function CardFanCarousel({
         <div
           ref={containerRef}
           aria-roledescription="carousel"
-          className="relative flex h-[25rem] w-full max-w-[80rem] items-center justify-center overflow-hidden min-[480px]:h-[65vw] min-[800px]:h-[50vw] min-[1440px]:h-[45rem]"
+          className="relative flex h-100 w-full max-w-7xl items-center justify-center overflow-hidden min-[480px]:h-[75vw] min-[800px]:h-[50vw] min-[1440px]:h-180"
           role="region"
         >
           {cards.map((card, index) => (
@@ -445,17 +444,17 @@ export default function CardFanCarousel({
       </p>
 
       {needsPagination ? (
-        <div className="z-30 mt-4 flex items-center justify-center gap-4 md:mt-6">
+        <div className="z-30 mt-6 flex items-center justify-center gap-4 lg:mt-0">
           <button
             aria-label="Previous menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/40 bg-surface/80 text-silver-mist/70 shadow-[0_4px_20px_color-mix(in_srgb,var(--midnight-shadow)_70%,transparent)] outline-none transition-colors duration-300 before:pointer-events-none before:absolute before:inset-[3px] before:rounded-full before:border before:border-silver-mist/5 before:content-[''] hover:border-flameburst-orange/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver-mist)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver-mist/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
             onClick={() => cycle("left")}
             type="button"
           >
             <ChevronLeft
               aria-hidden="true"
-              className="relative z-[2] size-4 md:size-5"
-              strokeWidth={2.5}
+              className="fan-carousel__arrow fan-carousel__arrow--previous relative z-[2] size-4 text-flameburst-orange md:size-5"
+              strokeWidth={4}
             />
           </button>
 
@@ -474,14 +473,14 @@ export default function CardFanCarousel({
 
           <button
             aria-label="Next menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/40 bg-surface/80 text-silver-mist/70 shadow-[0_4px_20px_color-mix(in_srgb,var(--midnight-shadow)_70%,transparent)] outline-none transition-colors duration-300 before:pointer-events-none before:absolute before:inset-[3px] before:rounded-full before:border before:border-silver-mist/5 before:content-[''] hover:border-flameburst-orange/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver-mist)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver-mist/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
             onClick={() => cycle("right")}
             type="button"
           >
             <ChevronRight
               aria-hidden="true"
-              className="relative z-[2] size-4 md:size-5"
-              strokeWidth={2.5}
+              className="fan-carousel__arrow fan-carousel__arrow--next relative z-2 size-4 text-flameburst-orange md:size-5"
+              strokeWidth={4}
             />
           </button>
         </div>
