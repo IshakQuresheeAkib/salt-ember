@@ -11,10 +11,8 @@ import {
   useSyncExternalStore,
 } from "react";
 import { gsap } from "@/lib/gsap";
-import {
-  canScheduleHeroRotation,
-  reduceHeroRotationPause,
-} from "@/lib/hero-food-autoplay-state";
+import { canScheduleHeroRotation } from "@/lib/hero-food-autoplay-state";
+import { cn } from "@/lib/utils";
 
 const foodStates = [
   { id: "dishes", label: "Dishes", icon: "◉", image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90", alt: "A fresh bowl of noodles topped with herbs and egg" },
@@ -43,14 +41,22 @@ const DISH_MOTION_SECONDS = 0.8;
 const DISH_FADE_SECONDS = 0.6;
 const OUTGOING_FADE_START_SECONDS =
   DISH_MOTION_SECONDS - DISH_FADE_SECONDS;
-const AUTOPLAY_DWELL_MS = 800;
+const AUTOPLAY_DWELL_MS = 500;
 const HERO_ARC_PATH =
   "M 54 0 C 24.177 0 0 26.863 0 60 C 0 93.137 24.177 120 54 120";
 const HERO_CURVE_FILL_PATH =
   "M 100 0 H 54 C 24.177 0 0 26.863 0 60 C 0 93.137 24.177 120 54 120 H 100 Z";
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 const ARC_MIDPOINT = 0.5;
-
+const heroArtClassName =
+  "hero-art max-tablet:pb-[clamp(84px,18vw,108px)] max-mobile:min-h-[400px]";
+const categoryControlsClassName =
+  "absolute top-1/2 right-[8vw] min-desktop:right-[clamp(28px,2vw,40px)] z-3 flex -translate-y-1/2 flex-col gap-2.5 ";
+const categoryButtonClassName =
+  "min-h-8 min-w-8 rounded-[10px] border border-transparent px-[clamp(10px,1.1vw,14.4px)] py-2 text-[clamp(11.2px,10.56px+0.14vw,12.8px)] active:scale-[0.97] max-mobile:py-1.5";
+const activeCategoryButtonClassName = "bg-silver-mist text-midnight-shadow";
+const inactiveCategoryButtonClassName =
+  "bg-midnight-shadow text-silver-mist transition-[background,border-color,color,scale] duration-200 hover:border-silver-mist hover:bg-silver-mist hover:text-midnight-shadow";
 function subscribeToReducedMotion(onStoreChange: () => void) {
   const mediaQuery = window.matchMedia(REDUCED_MOTION_QUERY);
   mediaQuery.addEventListener("change", onStoreChange);
@@ -88,8 +94,6 @@ export function HeroFoodSelector() {
     direction: 1,
     revision: 0,
   });
-  const [isPointerHovered, setIsPointerHovered] = useState(false);
-  const [isRotationPaused, setIsRotationPaused] = useState(false);
   const [manualAnnouncement, setManualAnnouncement] = useState("");
   const [geometryRevision, setGeometryRevision] = useState(0);
   const reducedMotion = useSyncExternalStore(
@@ -113,8 +117,6 @@ export function HeroFoodSelector() {
   const renderedTransitionRevisionRef = useRef<number | null>(null);
   const activeFood = foodStates[transition.activeIndex];
   const shouldScheduleRotation = canScheduleHeroRotation({
-    isRotationPaused,
-    isPointerHovered,
     isDocumentVisible,
     reducedMotion,
   });
@@ -435,17 +437,7 @@ export function HeroFoodSelector() {
   return (
     <div
       ref={rootRef}
-      className="hero-art"
-      onPointerEnter={() => setIsPointerHovered(true)}
-      onPointerLeave={() => setIsPointerHovered(false)}
-      onFocusCapture={(event) => {
-        setIsRotationPaused((current) =>
-          reduceHeroRotationPause(current, {
-            type: "focus",
-            focusVisible: (event.target as HTMLElement).matches(":focus-visible"),
-          }),
-        );
-      }}
+      className={heroArtClassName}
     >
       <div className="hero-dish-stage" aria-hidden="true">
         <svg
@@ -503,8 +495,8 @@ export function HeroFoodSelector() {
       <span className="sr-only" aria-live="polite">
         {manualAnnouncement}
       </span>
-      <div className="hero-category-controls">
-        <div className="hero-categories" aria-label="Food categories">
+      <div className={categoryControlsClassName}>
+        <div className="hero-categories flex flex-col justify-start gap-2.5" aria-label="Food categories">
           {foodStates.map((food, index) => (
             <button
               type="button"
@@ -516,7 +508,12 @@ export function HeroFoodSelector() {
                   categoryButtonRefs.current.delete(food.id);
                 }
               }}
-              className={`category-pill ${index === transition.activeIndex ? "active" : ""}`}
+              className={cn(
+                categoryButtonClassName,
+                index === transition.activeIndex
+                  ? activeCategoryButtonClassName
+                  : inactiveCategoryButtonClassName,
+              )}
               aria-pressed={index === transition.activeIndex}
               onClick={() => selectFood(index)}
             >
@@ -524,18 +521,6 @@ export function HeroFoodSelector() {
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          className="hero-rotation-toggle"
-          data-paused={isRotationPaused ? "true" : "false"}
-          onClick={() => {
-            setIsRotationPaused((current) =>
-              reduceHeroRotationPause(current, { type: "toggle" }),
-            );
-          }}
-        >
-          {isRotationPaused ? "Resume rotation" : "Pause rotation"}
-        </button>
       </div>
     </div>
   );

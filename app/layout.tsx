@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html
       lang="en"
       data-title-font="dynapuff"
-      className={`${displayFont.variable} ${bodyFont.variable} ${dynaPuff.variable} bg-background`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${dynaPuff.variable}`}
     >
       <body>{children}</body>
     </html>
