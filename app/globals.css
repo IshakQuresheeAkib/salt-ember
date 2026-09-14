@@ -909,7 +909,8 @@ a {
 
 @media (min-width: 801px) {
   .hero {
-    height: 100svh;
+    height: 101vh;
+    height: 101svh;
     min-height: 600px;
   }
   .hero-layout {
