@@ -9,8 +9,8 @@ import {
   getHoveredFanPositions,
   getInitialFanCenter,
   getResponsiveFanPosition,
+  getVisibleFanCardCount,
   getVisibleFanSlots,
-  MAX_VISIBLE_FAN_CARDS,
 } from "@/lib/card-fan-carousel-layout";
 import { cn } from "@/lib/utils";
 
@@ -45,7 +45,7 @@ function FanCard({
       draggable={false}
       height={2048}
       priority={isCurrent}
-      sizes="(max-width: 479px) 142px, (max-width: 799px) 22vw, 320px"
+      sizes="(max-width: 479px) 60vw, (max-width: 799px) 42vw, (max-width: 1439px) 27vw, (max-width: 2525px) 19vw, 480px"
       src={card.imgUrl}
       width={1622}
     />
@@ -57,7 +57,7 @@ function FanCard({
     <div
       aria-hidden={!isVisible}
       className={cn(
-        "pointer-events-none absolute top-1/2 left-1/2 block aspect-[811/1024] w-[clamp(142px,22vw,320px)] overflow-hidden rounded-[4px] border border-flameburst-orange/45 bg-surface text-left opacity-0 shadow-[0_20px_45px_color-mix(in_srgb,var(--midnight-shadow)_80%,transparent)] outline-offset-4",
+        "pointer-events-none absolute top-1/2 left-1/2 block aspect-[811/1024] w-[clamp(180px,60vw,260px)] overflow-hidden rounded-[4px] border border-flameburst-orange/45 bg-surface text-left opacity-0 shadow-[0_20px_45px_color-mix(in_srgb,var(--midnight-shadow)_80%,transparent)] outline-offset-4 min-[480px]:w-[clamp(220px,42vw,340px)] min-[800px]:w-[clamp(280px,27vw,400px)] min-[1440px]:w-[clamp(360px,19vw,480px)]",
         isCurrent && "border-flameburst-orange",
       )}
       data-menu-card={index}
@@ -98,7 +98,11 @@ export default function CardFanCarousel({
   const directionRef = useRef<"left" | "right" | null>(null);
   const previouslyVisible = useRef<Set<number>>(new Set());
   const totalCards = cards.length;
-  const needsPagination = totalCards > MAX_VISIBLE_FAN_CARDS;
+  const [viewportWidth, setViewportWidth] = useState(() =>
+    typeof window === "undefined" ? 0 : window.innerWidth,
+  );
+  const visibleCardCount = getVisibleFanCardCount(viewportWidth);
+  const needsPagination = totalCards > visibleCardCount;
   const [centerIndex, setCenterIndex] = useState(() =>
     getInitialFanCenter(totalCards, initialIndex),
   );
@@ -108,8 +112,8 @@ export default function CardFanCarousel({
     : 0;
 
   const visibleSlots = useMemo(
-    () => getVisibleFanSlots(totalCards, activeCenterIndex),
-    [activeCenterIndex, totalCards],
+    () => getVisibleFanSlots(totalCards, activeCenterIndex, visibleCardCount),
+    [activeCenterIndex, totalCards, visibleCardCount],
   );
   const visibleMap = useMemo(
     () => new Map(visibleSlots.map(({ cardIndex, slot }) => [cardIndex, slot])),
@@ -155,6 +159,14 @@ export default function CardFanCarousel({
   }, []);
 
   useEffect(() => {
+    const updateViewportWidth = () => setViewportWidth(window.innerWidth);
+
+    updateViewportWidth();
+    window.addEventListener("resize", updateViewportWidth);
+    return () => window.removeEventListener("resize", updateViewportWidth);
+  }, []);
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container || !totalCards) return;
 
@@ -164,9 +176,10 @@ export default function CardFanCarousel({
     const wasVisible = previouslyVisible.current;
     const isFirstMount = !hasEntered.current;
     const direction = directionRef.current;
-    const slotCount = needsPagination ? MAX_VISIBLE_FAN_CARDS : totalCards;
+    const slotCount = visibleSlots.length;
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
+    const stageWidth = container.clientWidth;
     const shouldReduceMotion =
       prefersReducedMotion ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -191,6 +204,7 @@ export default function CardFanCarousel({
           slot,
           viewportWidth,
           viewportHeight,
+          stageWidth,
         );
         const target = {
           autoAlpha: 1,
@@ -307,6 +321,7 @@ export default function CardFanCarousel({
         hoveredSlot,
         window.innerWidth,
         window.innerHeight,
+        container.clientWidth,
       );
       const centerSlot = visibleElements.length >> 1;
 
@@ -377,7 +392,14 @@ export default function CardFanCarousel({
       if (leaveTimer) clearTimeout(leaveTimer);
       gsap.killTweensOf(cardElements);
     };
-  }, [needsPagination, prefersReducedMotion, totalCards, visibleMap]);
+  }, [
+    needsPagination,
+    prefersReducedMotion,
+    totalCards,
+    visibleCardCount,
+    visibleMap,
+    visibleSlots.length,
+  ]);
 
   if (!totalCards) return null;
 
@@ -402,7 +424,7 @@ export default function CardFanCarousel({
         <div
           ref={containerRef}
           aria-roledescription="carousel"
-          className="relative flex h-[22rem] w-full max-w-[80rem] items-center justify-center overflow-hidden min-[480px]:h-[26rem] min-[640px]:h-[28rem] min-[768px]:h-[34rem] min-[1024px]:h-[38rem]"
+          className="relative flex h-[25rem] w-full max-w-[80rem] items-center justify-center overflow-hidden min-[480px]:h-[65vw] min-[800px]:h-[50vw] min-[1440px]:h-[45rem]"
           role="region"
         >
           {cards.map((card, index) => (
@@ -423,7 +445,7 @@ export default function CardFanCarousel({
       </p>
 
       {needsPagination ? (
-        <div className="z-30 mt-2 sm:mt-0 flex items-center justify-center gap-4 md:mt-6">
+        <div className="z-30 mt-4 flex items-center justify-center gap-4 md:mt-6">
           <button
             aria-label="Previous menu page"
             className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/40 bg-surface/80 text-silver-mist/70 shadow-[0_4px_20px_color-mix(in_srgb,var(--midnight-shadow)_70%,transparent)] outline-none transition-colors duration-300 before:pointer-events-none before:absolute before:inset-[3px] before:rounded-full before:border before:border-silver-mist/5 before:content-[''] hover:border-flameburst-orange/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"

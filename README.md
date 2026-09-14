@@ -12,7 +12,7 @@ The single public route (`/`) contains:
 - a testimonial section that uses animated columns when motion is allowed and a static nine-card grid when reduced motion is requested;
 - a contact footer with the approved location, telephone/WhatsApp, and social links.
 
-The menu, testimonials, imagery, and email address are illustrative. The location, telephone/WhatsApp number, and Facebook/Instagram destinations are restaurant-approved. The page does not accept reservations, send enquiries, process orders, take payments, or persist any visitor data.
+The menu, imagery, and email address are illustrative. The testimonial section contains owner-approved public Google reviews and Facebook recommendations. The location, telephone/WhatsApp number, and Facebook/Instagram destinations are restaurant-approved. The page does not accept reservations, send enquiries, process orders, take payments, or persist any visitor data.
 
 ## Stack
 

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   MotionConfig,
   motion,
@@ -31,7 +30,7 @@ const testimonialStaticGridClassName =
 const testimonialColumnsClassName =
   "testimonial-columns mt-12 flex max-h-200 justify-center gap-[clamp(12px,1.5vw,20px)] overflow-hidden";
 const testimonialAvatarClassName =
-  "size-11 rounded-full object-cover ring-1 ring-flameburst-orange/40 transition group-hover:ring-flameburst-orange";
+  "flex size-11 shrink-0 items-center justify-center rounded-full bg-flameburst-orange/15 font-heading text-lg text-flameburst-orange ring-1 ring-flameburst-orange/40 transition group-hover:ring-flameburst-orange";
 const testimonialIntroClassName =
   "mt-[22px] mb-0 max-w-[470px] text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
 
@@ -56,30 +55,33 @@ function TestimonialCard({
       className={testimonialCardClassName}
     >
       <figure className="m-0">
-        <div
-          className="text-xs tracking-[0.18em] text-flameburst-orange"
-          aria-label="5 out of 5 stars"
-        >
-          ★★★★★
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs tracking-[0.12em] text-flameburst-orange">
+          <span>
+            {testimonial.source === "Google"
+              ? "Google review"
+              : "Recommended on Facebook"}
+          </span>
+          {testimonial.rating ? (
+            <span aria-label={`${testimonial.rating} out of 5 stars`}>
+              {testimonial.rating}/5
+            </span>
+          ) : null}
         </div>
         <blockquote className="mt-5 font-heading text-2xl leading-snug text-card-foreground">
           “{testimonial.text}”
         </blockquote>
         <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-5">
-          <Image
-            src={testimonial.image}
-            alt=""
-            width={44}
-            height={44}
-            sizes="44px"
-            className={testimonialAvatarClassName}
-          />
+          <span aria-hidden="true" className={testimonialAvatarClassName}>
+            {testimonial.name.charAt(0)}
+          </span>
           <span className="flex min-w-0 flex-col">
             <cite className="not-italic font-semibold text-card-foreground">
               {testimonial.name}
             </cite>
             <span className="mt-0.5 text-xs tracking-wide text-muted-foreground">
-              {testimonial.role}
+              {testimonial.source === "Google"
+                ? "Google review"
+                : "Facebook recommendation"}
             </span>
           </span>
         </figcaption>

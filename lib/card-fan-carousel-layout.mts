@@ -1,6 +1,11 @@
-export const MAX_VISIBLE_FAN_CARDS = 7;
+export const MAX_VISIBLE_FAN_CARDS = 5;
 
-const FAN_HALF = 3;
+const MOBILE_BREAKPOINT = 480;
+const LAPTOP_BREAKPOINT = 800;
+const DESKTOP_BREAKPOINT = 1440;
+const CAROUSEL_MAX_WIDTH_PX = 1280;
+const CAROUSEL_EDGE_GUTTER_PX = 16;
+const CARD_ASPECT_RATIO = 1024 / 811;
 
 export interface FanPosition {
   rotation: number;
@@ -10,15 +15,65 @@ export interface FanPosition {
   zIndex: number;
 }
 
-const FAN_POSITIONS: readonly FanPosition[] = [
-  { rotation: -21, scale: 0.7756, xRem: -30, yRem: 7.3, zIndex: 1 },
-  { rotation: -14, scale: 0.8498, xRem: -22, yRem: 4, zIndex: 2 },
-  { rotation: -7, scale: 0.9346, xRem: -11, yRem: 1.3, zIndex: 3 },
-  { rotation: 0, scale: 1, xRem: 0, yRem: 0, zIndex: 10 },
-  { rotation: 7, scale: 0.9346, xRem: 11, yRem: 1.3, zIndex: 3 },
-  { rotation: 14, scale: 0.8498, xRem: 22, yRem: 4, zIndex: 2 },
-  { rotation: 21, scale: 0.7756, xRem: 30, yRem: 7.3, zIndex: 1 },
-];
+function clamp(value: number, minimum: number, maximum: number) {
+  return Math.min(Math.max(value, minimum), maximum);
+}
+
+export function getVisibleFanCardCount(viewportWidth: number) {
+  return viewportWidth < LAPTOP_BREAKPOINT ? 3 : MAX_VISIBLE_FAN_CARDS;
+}
+
+function getCardWidthPx(viewportWidth: number) {
+  if (viewportWidth < MOBILE_BREAKPOINT) {
+    return clamp(viewportWidth * 0.6, 180, 260);
+  }
+  if (viewportWidth < LAPTOP_BREAKPOINT) {
+    return clamp(viewportWidth * 0.42, 220, 340);
+  }
+  if (viewportWidth < DESKTOP_BREAKPOINT) {
+    return clamp(viewportWidth * 0.27, 280, 400);
+  }
+  return clamp(viewportWidth * 0.19, 360, 480);
+}
+
+function getCarouselHeightPx(viewportWidth: number) {
+  if (viewportWidth < MOBILE_BREAKPOINT) return 544;
+  if (viewportWidth < LAPTOP_BREAKPOINT) return 608;
+  if (viewportWidth < DESKTOP_BREAKPOINT) return 704;
+  return 832;
+}
+
+function constrainPositionToStage(
+  position: FanPosition,
+  viewportWidth: number,
+  stageWidthPx = Math.min(viewportWidth, CAROUSEL_MAX_WIDTH_PX),
+) {
+  const cardWidth = getCardWidthPx(viewportWidth) * position.scale;
+  const cardHeight = cardWidth * CARD_ASPECT_RATIO;
+  const rotation = (Math.abs(position.rotation) * Math.PI) / 180;
+  const rotatedWidth =
+    cardWidth * Math.cos(rotation) + cardHeight * Math.sin(rotation);
+  const rotatedHeight =
+    cardHeight * Math.cos(rotation) + cardWidth * Math.sin(rotation);
+  const maxX = Math.max(
+    0,
+    Math.min(stageWidthPx, CAROUSEL_MAX_WIDTH_PX) / 2 -
+      rotatedWidth / 2 -
+      CAROUSEL_EDGE_GUTTER_PX,
+  );
+  const maxY = Math.max(
+    0,
+    getCarouselHeightPx(viewportWidth) / 2 -
+      rotatedHeight / 2 -
+      CAROUSEL_EDGE_GUTTER_PX,
+  );
+
+  return {
+    ...position,
+    xRem: clamp(position.xRem * 16, -maxX, maxX) / 16,
+    yRem: clamp(position.yRem * 16, -maxY, maxY) / 16,
+  };
+}
 
 function getHorizontalMultiplier(viewportWidth: number) {
   if (viewportWidth < 480) return 0.28;
@@ -44,7 +99,7 @@ export function getInitialFanCenter(totalCards: number, initialIndex?: number) {
   if (totalCards <= 0) return 0;
 
   const fallback =
-    totalCards > MAX_VISIBLE_FAN_CARDS ? FAN_HALF : totalCards >> 1;
+    totalCards > MAX_VISIBLE_FAN_CARDS ? MAX_VISIBLE_FAN_CARDS >> 1 : totalCards >> 1;
 
   return Math.min(Math.max(initialIndex ?? fallback, 0), totalCards - 1);
 }
@@ -56,10 +111,20 @@ export function getFanEntryOffsetRem(
   return 12 * getVerticalMultiplier(viewportWidth, viewportHeight);
 }
 
-export function getVisibleFanSlots(totalCards: number, centerIndex: number) {
+export function getVisibleFanSlots(
+  totalCards: number,
+  centerIndex: number,
+  requestedCount = MAX_VISIBLE_FAN_CARDS,
+) {
   if (totalCards <= 0) return [];
 
-  if (totalCards <= MAX_VISIBLE_FAN_CARDS) {
+  const visibleCardCount = clamp(
+    requestedCount % 2 === 0 ? requestedCount - 1 : requestedCount,
+    1,
+    MAX_VISIBLE_FAN_CARDS,
+  );
+
+  if (totalCards <= visibleCardCount) {
     return Array.from({ length: totalCards }, (_, cardIndex) => ({
       cardIndex,
       slot: cardIndex,
@@ -68,18 +133,16 @@ export function getVisibleFanSlots(totalCards: number, centerIndex: number) {
 
   const normalizedCenter = ((centerIndex % totalCards) + totalCards) % totalCards;
 
-  return Array.from({ length: MAX_VISIBLE_FAN_CARDS }, (_, slot) => ({
+  const fanHalf = visibleCardCount >> 1;
+
+  return Array.from({ length: visibleCardCount }, (_, slot) => ({
     cardIndex:
-      (normalizedCenter + slot - FAN_HALF + totalCards) % totalCards,
+      (normalizedCenter + slot - fanHalf + totalCards) % totalCards,
     slot,
   }));
 }
 
 export function getFanSlotPosition(slotCount: number, slot: number): FanPosition {
-  if (slotCount >= MAX_VISIBLE_FAN_CARDS) {
-    return FAN_POSITIONS[slot] ?? FAN_POSITIONS[FAN_HALF];
-  }
-
   const centerSlot = slotCount >> 1;
   const distance = slotCount > 1 ? (slot - centerSlot) / centerSlot : 0;
   const absoluteDistance = Math.abs(distance);
@@ -98,14 +161,19 @@ export function getResponsiveFanPosition(
   slot: number,
   viewportWidth: number,
   viewportHeight: number,
+  stageWidthPx?: number,
 ): FanPosition {
   const base = getFanSlotPosition(slotCount, slot);
 
-  return {
-    ...base,
-    xRem: base.xRem * getHorizontalMultiplier(viewportWidth),
-    yRem: base.yRem * getVerticalMultiplier(viewportWidth, viewportHeight),
-  };
+  return constrainPositionToStage(
+    {
+      ...base,
+      xRem: base.xRem * getHorizontalMultiplier(viewportWidth),
+      yRem: base.yRem * getVerticalMultiplier(viewportWidth, viewportHeight),
+    },
+    viewportWidth,
+    stageWidthPx,
+  );
 }
 
 export function getHoveredFanPositions(
@@ -113,6 +181,7 @@ export function getHoveredFanPositions(
   hoveredSlot: number | null,
   viewportWidth: number,
   viewportHeight: number,
+  stageWidthPx?: number,
 ) {
   const horizontalMultiplier = getHorizontalMultiplier(viewportWidth);
   const verticalMultiplier = getVerticalMultiplier(viewportWidth, viewportHeight);
@@ -126,16 +195,22 @@ export function getHoveredFanPositions(
       yRem: base.yRem * verticalMultiplier,
     };
 
-    if (hoveredSlot === null) return position;
+    if (hoveredSlot === null) {
+      return constrainPositionToStage(position, viewportWidth, stageWidthPx);
+    }
 
     const slotDistance = Math.abs(slot - hoveredSlot);
 
     if (slot === hoveredSlot) {
-      return {
-        ...position,
-        scale: position.scale * 1.08,
-        yRem: position.yRem - 2.5 * verticalMultiplier,
-      };
+      return constrainPositionToStage(
+        {
+          ...position,
+          scale: position.scale * 1.08,
+          yRem: position.yRem - 2.5 * verticalMultiplier,
+        },
+        viewportWidth,
+        stageWidthPx,
+      );
     }
 
     const normalizedDistance =
@@ -143,20 +218,24 @@ export function getHoveredFanPositions(
     const pushStrength =
       8 *
       (1 - Math.abs(normalizedDistance)) *
-      (1 + 0.2 * Math.max(0, 3 - slotDistance));
+      (1 + 0.2 * Math.max(0, centerSlot - slotDistance));
     const direction = slot < hoveredSlot ? -1 : 1;
 
-    return {
-      ...position,
-      rotation:
-        position.rotation + direction * (3 / (slotDistance + 1)),
-      xRem: position.xRem + direction * pushStrength * horizontalMultiplier,
-      yRem:
-        position.yRem -
-        ((slot === slotCount - 1 && hoveredSlot < centerSlot) ||
-        (slot === 0 && hoveredSlot > centerSlot)
-          ? verticalMultiplier
-          : 0),
-    };
+    return constrainPositionToStage(
+      {
+        ...position,
+        rotation:
+          position.rotation + direction * (3 / (slotDistance + 1)),
+        xRem: position.xRem + direction * pushStrength * horizontalMultiplier,
+        yRem:
+          position.yRem -
+          ((slot === slotCount - 1 && hoveredSlot < centerSlot) ||
+          (slot === 0 && hoveredSlot > centerSlot)
+            ? verticalMultiplier
+            : 0),
+      },
+      viewportWidth,
+      stageWidthPx,
+    );
   });
 }

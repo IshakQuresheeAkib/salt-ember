@@ -9,20 +9,26 @@ try {
   // The first TDD run intentionally exercises the not-yet-implemented contract.
 }
 
-test("a long carousel wraps seven visible cards around the selected page", () => {
-  assert.deepEqual(carouselLayout?.getVisibleFanSlots(10, 0), [
-    { cardIndex: 7, slot: 0 },
-    { cardIndex: 8, slot: 1 },
-    { cardIndex: 9, slot: 2 },
-    { cardIndex: 0, slot: 3 },
-    { cardIndex: 1, slot: 4 },
-    { cardIndex: 2, slot: 5 },
-    { cardIndex: 3, slot: 6 },
+test("a long carousel wraps the configured visible cards around the selected page", () => {
+  assert.deepEqual(carouselLayout?.getVisibleFanSlots(10, 0, 5), [
+    { cardIndex: 8, slot: 0 },
+    { cardIndex: 9, slot: 1 },
+    { cardIndex: 0, slot: 2 },
+    { cardIndex: 1, slot: 3 },
+    { cardIndex: 2, slot: 4 },
   ]);
 });
 
+test("the responsive fan count uses three cards on narrow screens and five from laptop up", () => {
+  assert.equal(carouselLayout?.getVisibleFanCardCount?.(479), 3);
+  assert.equal(carouselLayout?.getVisibleFanCardCount?.(480), 3);
+  assert.equal(carouselLayout?.getVisibleFanCardCount?.(799), 3);
+  assert.equal(carouselLayout?.getVisibleFanCardCount?.(800), 5);
+  assert.equal(carouselLayout?.getVisibleFanCardCount?.(2560), 5);
+});
+
 test("the initial selection honours an explicit page and otherwise uses the fan centre", () => {
-  assert.equal(carouselLayout?.getInitialFanCenter?.(28), 3);
+  assert.equal(carouselLayout?.getInitialFanCenter?.(28), 2);
   assert.equal(carouselLayout?.getInitialFanCenter?.(5), 2);
   assert.equal(carouselLayout?.getInitialFanCenter?.(28, 12), 12);
   assert.equal(carouselLayout?.getInitialFanCenter?.(5, 99), 4);
@@ -54,19 +60,38 @@ test("a short carousel keeps every card and centres its fan geometry", () => {
 });
 
 test("mobile fan spacing compresses horizontally while retaining the card angles", () => {
-  assert.deepEqual(carouselLayout?.getResponsiveFanPosition(7, 0, 390, 844), {
-    rotation: -21,
-    scale: 0.7756,
-    xRem: -8.4,
-    yRem: 7.3,
-    zIndex: 1,
-  });
+  const position = carouselLayout?.getResponsiveFanPosition(3, 0, 390, 844);
+
+  assert.equal(position?.rotation, -21);
+  assert.ok(Math.abs((position?.scale ?? 0) - 0.7756) < Number.EPSILON);
+  assert.ok(Math.abs(position?.xRem ?? Infinity) < 6);
+  assert.ok((position?.yRem ?? 0) > 0);
+  assert.ok((position?.yRem ?? Infinity) <= 7.3);
+  assert.equal(position?.zIndex, 9);
+});
+
+test("a guttered mobile stage keeps rotated cards inside its measured width", () => {
+  const position = carouselLayout?.getResponsiveFanPosition(3, 0, 390, 844, 340);
+
+  assert.ok(Math.abs(position?.xRem ?? Infinity) < 2);
+});
+
+test("larger laptop cards stay within the carousel stage after their fan rotation", () => {
+  const position = carouselLayout?.getResponsiveFanPosition(5, 0, 800, 900);
+  const cardWidth = 280;
+  const cardHeight = (cardWidth * 1024) / 811;
+  const rotation = (Math.abs(position?.rotation ?? 0) * Math.PI) / 180;
+  const rotatedWidth =
+    cardWidth * (position?.scale ?? 0) * Math.cos(rotation) +
+    cardHeight * (position?.scale ?? 0) * Math.sin(rotation);
+
+  assert.ok(Math.abs(position?.xRem ?? Infinity) * 16 + rotatedWidth / 2 <= 384);
 });
 
 test("a short viewport compresses vertical offsets to its seventy-percent budget", () => {
   const position = carouselLayout?.getResponsiveFanPosition(7, 0, 1280, 400);
 
-  assert.equal(position?.xRem, -30);
+  assert.ok((position?.xRem ?? -Infinity) > -30);
   assert.equal(position?.rotation, -21);
   assert.ok(Math.abs(position?.yRem - 3.361842105263158) < 1e-12);
   assert.ok(
