@@ -40,6 +40,22 @@ function getVerticalMultiplier(viewportWidth: number, viewportHeight: number) {
   return Math.min(1, (viewportHeight * 0.7) / (idealHeightRem * 16));
 }
 
+export function getInitialFanCenter(totalCards: number, initialIndex?: number) {
+  if (totalCards <= 0) return 0;
+
+  const fallback =
+    totalCards > MAX_VISIBLE_FAN_CARDS ? FAN_HALF : totalCards >> 1;
+
+  return Math.min(Math.max(initialIndex ?? fallback, 0), totalCards - 1);
+}
+
+export function getFanEntryOffsetRem(
+  viewportWidth: number,
+  viewportHeight: number,
+) {
+  return 12 * getVerticalMultiplier(viewportWidth, viewportHeight);
+}
+
 export function getVisibleFanSlots(totalCards: number, centerIndex: number) {
   if (totalCards <= 0) return [];
 

@@ -52,7 +52,7 @@ export function Menu() {
       className={contentShellClassName}
       id="menu"
     >
-      <div className="mx-auto mb-[var(--space-md)] max-w-[620px] text-center">
+      <div className="mx-auto max-w-155 text-center">
         <p className="mb-3 text-xs uppercase tracking-[0.16em] text-flameburst-orange">
           From our kitchen
         </p>

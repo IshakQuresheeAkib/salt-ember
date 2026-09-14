@@ -3,20 +3,21 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  animate,
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useTransform,
-  type MotionValue,
-} from "framer-motion";
 import gsap from "gsap";
+import {
+  getFanEntryOffsetRem,
+  getHoveredFanPositions,
+  getInitialFanCenter,
+  getResponsiveFanPosition,
+  getVisibleFanSlots,
+  MAX_VISIBLE_FAN_CARDS,
+} from "@/lib/card-fan-carousel-layout";
 import { cn } from "@/lib/utils";
 
 export interface CardItem {
-  alt: string;
+  alt?: string;
   imgUrl: string;
+  linkUrl?: string;
 }
 
 interface CardFanCarouselProps {
@@ -24,54 +25,33 @@ interface CardFanCarouselProps {
   initialIndex?: number;
 }
 
-const VISIBLE_RADIUS = 3;
-const SWIPE_DISTANCE_PX = 52;
-const SWIPE_VELOCITY_PX_PER_SECOND = 500;
-
-function shortestOffset(index: number, centerIndex: number, total: number) {
-  const directOffset = index - centerIndex;
-  const wrappedOffset =
-    directOffset > total / 2
-      ? directOffset - total
-      : directOffset < -total / 2
-        ? directOffset + total
-        : directOffset;
-
-  return Math.abs(wrappedOffset) <= VISIBLE_RADIUS ? wrappedOffset : null;
-}
-
-function getPosition(offset: number) {
-  const distance = Math.abs(offset);
-
-  return {
-    rotation: offset * 7,
-    scale: 1 - distance * 0.075,
-    xPercent: -50 + offset * 38,
-    yPercent: -50 + distance * distance * 3,
-    zIndex: 10 - distance,
-  };
-}
-
 function FanCard({
   card,
-  dragX,
   index,
   isCurrent,
   isVisible,
-  offset,
   onSelect,
 }: {
   card: CardItem;
-  dragX: MotionValue<number>;
   index: number;
   isCurrent: boolean;
   isVisible: boolean;
-  offset: number | null;
   onSelect: (index: number) => void;
 }) {
-  const dragMultiplier = offset === null ? 0 : 1 - Math.abs(offset) * 0.08;
-  const cardDragX = useTransform(dragX, (value) => value * dragMultiplier);
-  const cardDragTransform = useMotionTemplate`translate3d(${cardDragX}px, 0, 0)`;
+  const image = (
+    <Image
+      alt={card.alt ?? `Menu page ${index + 1}`}
+      className="size-full object-cover"
+      draggable={false}
+      height={2048}
+      priority={isCurrent}
+      sizes="(max-width: 479px) 142px, (max-width: 799px) 22vw, 320px"
+      src={card.imgUrl}
+      width={1622}
+    />
+  );
+  const interactiveClassName =
+    "block size-full cursor-pointer overflow-hidden transition-[filter] duration-200 hover:brightness-110 focus-visible:brightness-110";
 
   return (
     <div
@@ -82,101 +62,87 @@ function FanCard({
       )}
       data-menu-card={index}
     >
-      <motion.button
-        aria-current={isCurrent ? "true" : undefined}
-        className="size-full cursor-grab overflow-hidden transition-[filter] duration-200 hover:brightness-110 active:cursor-grabbing focus-visible:brightness-110"
-        onClick={() => onSelect(index)}
-        style={{ transform: cardDragTransform }}
-        tabIndex={isVisible ? 0 : -1}
-        type="button"
-      >
-        <Image
-          alt={card.alt}
-          className="size-full object-cover"
-          draggable={false}
-          height={2048}
-          priority={isCurrent}
-          sizes="(max-width: 479px) 142px, (max-width: 799px) 22vw, 320px"
-          src={card.imgUrl}
-          width={1622}
-        />
-      </motion.button>
+      {card.linkUrl ? (
+        <a
+          aria-current={isCurrent ? "true" : undefined}
+          className={interactiveClassName}
+          href={card.linkUrl}
+          rel={card.linkUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+          tabIndex={isVisible ? 0 : -1}
+          target={card.linkUrl.startsWith("http") ? "_blank" : undefined}
+        >
+          {image}
+        </a>
+      ) : (
+        <button
+          aria-current={isCurrent ? "true" : undefined}
+          className={interactiveClassName}
+          onClick={() => onSelect(index)}
+          tabIndex={isVisible ? 0 : -1}
+          type="button"
+        >
+          {image}
+        </button>
+      )}
     </div>
   );
 }
 
 export default function CardFanCarousel({
   cards,
-  initialIndex = 0,
+  initialIndex,
 }: CardFanCarouselProps) {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const isFirstRender = useRef(true);
-  const shouldIgnoreCardClick = useRef(false);
-  const dragX = useMotionValue(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isAnimating = useRef(false);
+  const hasEntered = useRef(false);
+  const directionRef = useRef<"left" | "right" | null>(null);
+  const previouslyVisible = useRef<Set<number>>(new Set());
+  const totalCards = cards.length;
+  const needsPagination = totalCards > MAX_VISIBLE_FAN_CARDS;
   const [centerIndex, setCenterIndex] = useState(() =>
-    Math.min(Math.max(initialIndex, 0), Math.max(cards.length - 1, 0)),
+    getInitialFanCenter(totalCards, initialIndex),
   );
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const activeCenterIndex = totalCards
+    ? Math.min(centerIndex, totalCards - 1)
+    : 0;
 
-  const visibleCards = useMemo(
-    () =>
-      cards
-        .map((card, index) => ({
-          card,
-          index,
-          offset: shortestOffset(index, centerIndex, cards.length),
-        }))
-        .filter(
-          (item): item is { card: CardItem; index: number; offset: number } =>
-            item.offset !== null,
-        ),
-    [cards, centerIndex],
+  const visibleSlots = useMemo(
+    () => getVisibleFanSlots(totalCards, activeCenterIndex),
+    [activeCenterIndex, totalCards],
+  );
+  const visibleMap = useMemo(
+    () => new Map(visibleSlots.map(({ cardIndex, slot }) => [cardIndex, slot])),
+    [visibleSlots],
+  );
+
+  const cycle = useCallback(
+    (direction: "left" | "right") => {
+      if (isAnimating.current || !needsPagination) return;
+
+      isAnimating.current = true;
+      directionRef.current = direction;
+      setCenterIndex((current) =>
+        direction === "right"
+          ? (current + 1) % totalCards
+          : (current - 1 + totalCards) % totalCards,
+      );
+    },
+    [needsPagination, totalCards],
   );
 
   const selectCard = useCallback(
     (index: number) => {
-      if (index !== centerIndex) {
-        setCenterIndex(index);
-      }
+      if (index === activeCenterIndex || isAnimating.current) return;
+
+      const selectedSlot = visibleMap.get(index);
+      const centerSlot = visibleSlots.length >> 1;
+      directionRef.current =
+        selectedSlot !== undefined && selectedSlot > centerSlot ? "right" : "left";
+      isAnimating.current = true;
+      setCenterIndex(index);
     },
-    [centerIndex],
-  );
-
-  const cycle = useCallback(
-    (direction: "previous" | "next") => {
-      setCenterIndex((current) =>
-        direction === "next"
-          ? (current + 1) % cards.length
-          : (current - 1 + cards.length) % cards.length,
-      );
-    },
-    [cards.length],
-  );
-
-  const settleDrag = useCallback(
-    (offsetX: number, velocityX: number) => {
-      const draggedEnough = Math.abs(offsetX) > SWIPE_DISTANCE_PX;
-      const flickedEnough = Math.abs(velocityX) > SWIPE_VELOCITY_PX_PER_SECOND;
-      const shouldAdvance = draggedEnough || flickedEnough;
-
-      shouldIgnoreCardClick.current = Math.abs(offsetX) > 8;
-      if (shouldIgnoreCardClick.current) {
-        window.setTimeout(() => {
-          shouldIgnoreCardClick.current = false;
-        }, 0);
-      }
-
-      if (shouldAdvance) {
-        cycle(offsetX < 0 || velocityX < 0 ? "next" : "previous");
-      }
-
-      if (prefersReducedMotion) {
-        dragX.set(0);
-      } else {
-        animate(dragX, 0, { type: "spring", duration: 0.5, bounce: 0.2 });
-      }
-    },
-    [cycle, dragX, prefersReducedMotion],
+    [activeCenterIndex, visibleMap, visibleSlots.length],
   );
 
   useEffect(() => {
@@ -189,144 +155,315 @@ export default function CardFanCarousel({
   }, []);
 
   useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
+    const container = containerRef.current;
+    if (!container || !totalCards) return;
 
-    const cardElements = carousel.querySelectorAll<HTMLElement>("[data-menu-card]");
+    const cardElements = Array.from(
+      container.querySelectorAll<HTMLElement>("[data-menu-card]"),
+    );
+    const wasVisible = previouslyVisible.current;
+    const isFirstMount = !hasEntered.current;
+    const direction = directionRef.current;
+    const slotCount = needsPagination ? MAX_VISIBLE_FAN_CARDS : totalCards;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const shouldReduceMotion =
+      prefersReducedMotion ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let completedCards = 0;
 
-    cardElements.forEach((element) => {
-      const index = Number(element.dataset.menuCard);
-      const visibleCard = visibleCards.find((card) => card.index === index);
+    if (isFirstMount && !shouldReduceMotion) isAnimating.current = true;
 
-      if (!visibleCard) {
-        gsap.set(element, { autoAlpha: 0, pointerEvents: "none", zIndex: 0 });
-        return;
-      }
+    const finishCardAnimation = () => {
+      completedCards += 1;
+      if (completedCards < visibleMap.size) return;
 
-      const position = getPosition(visibleCard.offset);
-      const animation = {
-        autoAlpha: 1,
-        pointerEvents: "auto",
-        ...position,
-      };
+      isAnimating.current = false;
+      hasEntered.current = true;
+    };
 
-      if (prefersReducedMotion) {
-        gsap.set(element, animation);
-      } else if (isFirstRender.current) {
-        gsap.fromTo(
-          element,
-          { autoAlpha: 0, xPercent: -50, yPercent: -28, scale: 0.78 },
-          {
-            ...animation,
-            duration: 0.72,
-            delay: 0.08 + (visibleCard.offset + VISIBLE_RADIUS) * 0.045,
-            ease: "power3.out",
-            overwrite: true,
-          },
+    cardElements.forEach((element, cardIndex) => {
+      const slot = visibleMap.get(cardIndex);
+
+      if (slot !== undefined) {
+        const position = getResponsiveFanPosition(
+          slotCount,
+          slot,
+          viewportWidth,
+          viewportHeight,
         );
-      } else {
+        const target = {
+          autoAlpha: 1,
+          pointerEvents: "auto",
+          rotation: position.rotation,
+          scale: position.scale,
+          x: `${position.xRem}rem`,
+          xPercent: -50,
+          y: `${position.yRem}rem`,
+          yPercent: -50,
+          zIndex: position.zIndex,
+        };
+
+        if (shouldReduceMotion) {
+          gsap.set(element, target);
+        } else if (isFirstMount) {
+          gsap.fromTo(
+            element,
+            {
+              autoAlpha: 0,
+              rotation: 0,
+              scale: 0.5,
+              x: 0,
+              xPercent: -50,
+              y: `${getFanEntryOffsetRem(viewportWidth, viewportHeight)}rem`,
+              yPercent: -50,
+            },
+            {
+              ...target,
+              delay: 0.2 + slot * 0.06,
+              duration: 1.2,
+              ease: "elastic.out(1.05,.78)",
+              onComplete: finishCardAnimation,
+              overwrite: true,
+            },
+          );
+        } else if (!wasVisible.has(cardIndex)) {
+          const entersFromRight = direction === "right";
+          gsap.fromTo(
+            element,
+            {
+              autoAlpha: 0,
+              rotation: entersFromRight ? 30 : -30,
+              scale: 0.5,
+              x: entersFromRight ? "40rem" : "-40rem",
+              xPercent: -50,
+              y: `${position.yRem}rem`,
+              yPercent: -50,
+            },
+            {
+              ...target,
+              duration: 0.6,
+              ease: "power2.out",
+              onComplete: finishCardAnimation,
+              overwrite: true,
+            },
+          );
+        } else {
+          gsap.to(element, {
+            ...target,
+            duration: 0.5,
+            ease: "power2.out",
+            onComplete: finishCardAnimation,
+            overwrite: true,
+          });
+        }
+      } else if (wasVisible.has(cardIndex) && !shouldReduceMotion) {
+        const exitsLeft = direction === "right";
         gsap.to(element, {
-          ...animation,
-          duration: 0.46,
-          ease: "power3.out",
-          overwrite: true,
+          autoAlpha: 0,
+          duration: 0.4,
+          ease: "power2.in",
+          pointerEvents: "none",
+          rotation: exitsLeft ? -30 : 30,
+          scale: 0.5,
+          x: exitsLeft ? "-40rem" : "40rem",
+          zIndex: 0,
+        });
+      } else {
+        gsap.set(element, {
+          autoAlpha: 0,
+          pointerEvents: "none",
+          scale: 0.3,
+          x: 0,
+          y: 0,
+          zIndex: 0,
         });
       }
     });
 
-    isFirstRender.current = false;
+    if (shouldReduceMotion) {
+      isAnimating.current = false;
+      hasEntered.current = true;
+    }
+
+    previouslyVisible.current = new Set(visibleMap.keys());
+
+    const visibleElements = cardElements
+      .map((element, cardIndex) => ({
+        element,
+        slot: visibleMap.get(cardIndex),
+      }))
+      .filter(
+        (entry): entry is { element: HTMLElement; slot: number } =>
+          entry.slot !== undefined,
+      )
+      .sort((left, right) => left.slot - right.slot);
+    let activeSlot: number | null = null;
+    let leaveTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const updateHoverLayout = (hoveredSlot: number | null) => {
+      const positions = getHoveredFanPositions(
+        slotCount,
+        hoveredSlot,
+        window.innerWidth,
+        window.innerHeight,
+      );
+      const centerSlot = visibleElements.length >> 1;
+
+      visibleElements.forEach(({ element, slot }) => {
+        const position = positions[slot];
+
+        gsap.to(element, {
+          delay: Math.abs(slot - (hoveredSlot ?? centerSlot)) * 0.02,
+          duration: 0.5,
+          ease: "elastic.out(1,.75)",
+          overwrite: "auto",
+          rotation: position.rotation,
+          scale: position.scale,
+          x: `${position.xRem}rem`,
+          y: `${position.yRem}rem`,
+          zIndex: position.zIndex,
+        });
+      });
+    };
+
+    const activateSlot = (slot: number) => {
+      if (shouldReduceMotion || isAnimating.current) return;
+      if (leaveTimer) clearTimeout(leaveTimer);
+      leaveTimer = null;
+
+      if (activeSlot !== slot) {
+        activeSlot = slot;
+        updateHoverLayout(slot);
+      }
+    };
+    const entryHandlers = visibleElements.map(({ element, slot }) => {
+      const handlePointerEnter = () => activateSlot(slot);
+      const handleFocus = () => activateSlot(slot);
+
+      element.addEventListener("pointerenter", handlePointerEnter);
+      element.addEventListener("focusin", handleFocus);
+      return { element, handleFocus, handlePointerEnter };
+    });
+    const resetHoverLayout = () => {
+      if (shouldReduceMotion || isAnimating.current) return;
+      if (leaveTimer) clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(() => {
+        activeSlot = null;
+        updateHoverLayout(null);
+      }, 50);
+    };
+    const handleFocusOut = (event: FocusEvent) => {
+      if (!container.contains(event.relatedTarget as Node | null)) {
+        resetHoverLayout();
+      }
+    };
+    const handleResize = () => {
+      if (!isAnimating.current) updateHoverLayout(activeSlot);
+    };
+
+    container.addEventListener("pointerleave", resetHoverLayout);
+    container.addEventListener("focusout", handleFocusOut);
+    window.addEventListener("resize", handleResize);
+
     return () => {
+      entryHandlers.forEach(({ element, handleFocus, handlePointerEnter }) => {
+        element.removeEventListener("pointerenter", handlePointerEnter);
+        element.removeEventListener("focusin", handleFocus);
+      });
+      container.removeEventListener("pointerleave", resetHoverLayout);
+      container.removeEventListener("focusout", handleFocusOut);
+      window.removeEventListener("resize", handleResize);
+      if (leaveTimer) clearTimeout(leaveTimer);
       gsap.killTweensOf(cardElements);
     };
-  }, [centerIndex, prefersReducedMotion, visibleCards]);
+  }, [needsPagination, prefersReducedMotion, totalCards, visibleMap]);
 
-  if (!cards.length) return null;
+  if (!totalCards) return null;
 
-  const currentCard = cards[centerIndex];
+  const currentCard = cards[activeCenterIndex];
 
   return (
-    <div
-      className="w-full"
+    <section
+      aria-label="Menu pages"
+      className="relative z-20 flex w-full flex-col items-center"
       onKeyDown={(event) => {
         if (event.key === "ArrowLeft") {
           event.preventDefault();
-          cycle("previous");
+          cycle("left");
         }
         if (event.key === "ArrowRight") {
           event.preventDefault();
-          cycle("next");
+          cycle("right");
         }
       }}
     >
-      <motion.div
-        drag={cards.length > 1 ? "x" : false}
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0}
-        dragMomentum={false}
-        onDrag={(_, info) => {
-          if (!prefersReducedMotion) {
-            dragX.set(info.offset.x);
-          }
-        }}
-        onDragEnd={(_, info) => settleDrag(info.offset.x, info.velocity.x)}
-        onDragStart={() => dragX.stop()}
-        className="touch-pan-y"
-      >
+      <div className="flex w-full max-w-[90rem] items-center justify-center">
         <div
-          ref={carouselRef}
-          aria-label="Menu pages"
+          ref={containerRef}
           aria-roledescription="carousel"
-          className="relative mx-auto h-[clamp(300px,43vw,590px)] w-full max-w-11/12 overflow-hidden"
+          className="relative flex h-[22rem] w-full max-w-[80rem] items-center justify-center overflow-hidden min-[480px]:h-[26rem] min-[640px]:h-[28rem] min-[768px]:h-[34rem] min-[1024px]:h-[38rem]"
           role="region"
-          tabIndex={0}
         >
-          {cards.map((card, index) => {
-            const offset = shortestOffset(index, centerIndex, cards.length);
-
-            return (
-              <FanCard
-                card={card}
-                dragX={dragX}
-                index={index}
-                isCurrent={index === centerIndex}
-                isVisible={offset !== null}
-                key={card.imgUrl}
-                offset={offset}
-                onSelect={(selectedIndex) => {
-                  if (shouldIgnoreCardClick.current) {
-                    shouldIgnoreCardClick.current = false;
-                    return;
-                  }
-                  selectCard(selectedIndex);
-                }}
-              />
-            );
-          })}
+          {cards.map((card, index) => (
+            <FanCard
+              card={card}
+              index={index}
+              isCurrent={index === activeCenterIndex}
+              isVisible={visibleMap.has(index)}
+              key={card.imgUrl}
+              onSelect={selectCard}
+            />
+          ))}
         </div>
-      </motion.div>
-
-      <div className="mx-auto mt-3 flex max-w-11/12 items-center justify-between gap-4 border-t border-flameburst-orange/30 pt-4">
-        <button
-          aria-label="Previous menu page"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-flameburst-orange/60 text-silver-mist transition-colors hover:bg-flameburst-orange hover:text-midnight-shadow focus-visible:bg-flameburst-orange focus-visible:text-midnight-shadow"
-          onClick={() => cycle("previous")}
-          type="button"
-        >
-          <ChevronLeft aria-hidden="true" className="size-5" />
-        </button>
-        <p aria-live="polite" className="m-0 text-center text-xs uppercase tracking-[0.16em] text-muted-foreground">
-          Page {centerIndex + 1} of {cards.length}
-          <span className="sr-only">: {currentCard.alt}</span>
-        </p>
-        <button
-          aria-label="Next menu page"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-flameburst-orange/60 text-silver-mist transition-colors hover:bg-flameburst-orange hover:text-midnight-shadow focus-visible:bg-flameburst-orange focus-visible:text-midnight-shadow"
-          onClick={() => cycle("next")}
-          type="button"
-        >
-          <ChevronRight aria-hidden="true" className="size-5" />
-        </button>
       </div>
-    </div>
+
+      <p aria-live="polite" className="sr-only">
+        Page {activeCenterIndex + 1} of {totalCards}: {currentCard.alt ?? "Menu page"}
+      </p>
+
+      {needsPagination ? (
+        <div className="z-30 mt-2 sm:mt-0 flex items-center justify-center gap-4 md:mt-6">
+          <button
+            aria-label="Previous menu page"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/40 bg-surface/80 text-silver-mist/70 shadow-[0_4px_20px_color-mix(in_srgb,var(--midnight-shadow)_70%,transparent)] outline-none transition-colors duration-300 before:pointer-events-none before:absolute before:inset-[3px] before:rounded-full before:border before:border-silver-mist/5 before:content-[''] hover:border-flameburst-orange/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            onClick={() => cycle("left")}
+            type="button"
+          >
+            <ChevronLeft
+              aria-hidden="true"
+              className="relative z-[2] size-4 md:size-5"
+              strokeWidth={2.5}
+            />
+          </button>
+
+          <div aria-hidden="true" className="flex items-center gap-1 md:gap-2">
+            {cards.map((card, index) => (
+              <span
+                className={cn(
+                  "size-1 rounded-full bg-silver-mist/20 transition-[background-color,transform] duration-300 md:size-2",
+                  index === activeCenterIndex &&
+                    "scale-[1.3] bg-flameburst-orange",
+                )}
+                key={card.imgUrl}
+              />
+            ))}
+          </div>
+
+          <button
+            aria-label="Next menu page"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/40 bg-surface/80 text-silver-mist/70 shadow-[0_4px_20px_color-mix(in_srgb,var(--midnight-shadow)_70%,transparent)] outline-none transition-colors duration-300 before:pointer-events-none before:absolute before:inset-[3px] before:rounded-full before:border before:border-silver-mist/5 before:content-[''] hover:border-flameburst-orange/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            onClick={() => cycle("right")}
+            type="button"
+          >
+            <ChevronRight
+              aria-hidden="true"
+              className="relative z-[2] size-4 md:size-5"
+              strokeWidth={2.5}
+            />
+          </button>
+        </div>
+      ) : null}
+    </section>
   );
 }

@@ -21,6 +21,14 @@ test("a long carousel wraps seven visible cards around the selected page", () =>
   ]);
 });
 
+test("the initial selection honours an explicit page and otherwise uses the fan centre", () => {
+  assert.equal(carouselLayout?.getInitialFanCenter?.(28), 3);
+  assert.equal(carouselLayout?.getInitialFanCenter?.(5), 2);
+  assert.equal(carouselLayout?.getInitialFanCenter?.(28, 12), 12);
+  assert.equal(carouselLayout?.getInitialFanCenter?.(5, 99), 4);
+  assert.equal(carouselLayout?.getInitialFanCenter?.(0, 3), 0);
+});
+
 test("a short carousel keeps every card and centres its fan geometry", () => {
   assert.deepEqual(carouselLayout?.getVisibleFanSlots(5, 2), [
     { cardIndex: 0, slot: 0 },
@@ -61,6 +69,11 @@ test("a short viewport compresses vertical offsets to its seventy-percent budget
   assert.equal(position?.xRem, -30);
   assert.equal(position?.rotation, -21);
   assert.ok(Math.abs(position?.yRem - 3.361842105263158) < 1e-12);
+  assert.ok(
+    Math.abs(
+      carouselLayout?.getFanEntryOffsetRem?.(1280, 400) - 5.526315789473684,
+    ) < 1e-12,
+  );
 });
 
 test("hover lifts the selected card and pushes its neighbours away", () => {
