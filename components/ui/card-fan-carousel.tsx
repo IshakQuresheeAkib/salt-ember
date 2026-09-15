@@ -453,7 +453,7 @@ export default function CardFanCarousel({
           >
             <ChevronLeft
               aria-hidden="true"
-              className="fan-carousel__arrow fan-carousel__arrow--previous relative z-[2] size-4 text-flameburst-orange md:size-5"
+              className="fan-carousel__arrow fan-carousel__arrow--previous relative z-2 size-6 text-flameburst-orange xl:size-8"
               strokeWidth={4}
             />
           </button>
@@ -479,7 +479,7 @@ export default function CardFanCarousel({
           >
             <ChevronRight
               aria-hidden="true"
-              className="fan-carousel__arrow fan-carousel__arrow--next relative z-2 size-4 text-flameburst-orange md:size-5"
+              className="fan-carousel__arrow fan-carousel__arrow--next relative z-2 size-6 text-flameburst-orange xl:size-8"
               strokeWidth={4}
             />
           </button>

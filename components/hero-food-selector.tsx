@@ -15,10 +15,12 @@ import { canScheduleHeroRotation } from "@/lib/hero-food-autoplay-state";
 import { cn } from "@/lib/utils";
 
 const foodStates = [
-  { id: "dishes", label: "Dishes", icon: "◉", image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90", alt: "A fresh bowl of noodles topped with herbs and egg" },
-  { id: "dessert", label: "Dessert", icon: "▱", image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=90", alt: "A plated dessert with berries and cream" },
-  { id: "drinks", label: "Drinks", icon: "♧", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1200&q=90", alt: "Colorful handcrafted drinks with fresh citrus" },
-  { id: "platter", label: "Platter", icon: "◉", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=90", alt: "A fire-roasted platter of vegetables and grilled food" },
+  { id: "appetizer", label: "Appetizer", icon: "◉", image: "/hero-food/appetizer.png", alt: "Appetizer" },
+  { id: "biriyani", label: "Biriyani", icon: "◉", image: "/hero-food/biriyani.png", alt: "Biriyani" },
+  { id: "burger", label: "Burger", icon: "◉", image: "/hero-food/burger.png", alt: "Burger" },
+  { id: "kebab", label: "Kebab", icon: "◉", image: "/hero-food/kebab.png", alt: "Kebab" },
+  { id: "pasta", label: "Pasta", icon: "◉", image: "/hero-food/pasta.png", alt: "Pasta" },
+  { id: "pizza", label: "Pizza", icon: "◉", image: "/hero-food/pizza.png", alt: "Pizza" },
 ] as const;
 
 type FoodId = (typeof foodStates)[number]["id"];
@@ -479,7 +481,7 @@ export function HeroFoodSelector() {
                 sceneRefs.current.delete(food.id);
               }
             }}
-            className={`hero-dish-scene ${food.id === "dishes" ? "is-initial" : ""}`}
+            className={`hero-dish-scene ${food.id === "appetizer" ? "is-initial" : ""}`}
           >
             <Image
               src={food.image}
@@ -487,7 +489,7 @@ export function HeroFoodSelector() {
               width={900}
               height={900}
               className="hero-dish"
-              priority={food.id === "dishes"}
+              priority={food.id === "appetizer"}
             />
           </div>
         ))}
