@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { SocialTooltip } from "@/components/ui/social-media";
 import {
   SALT_AND_EMBER_MAP_URL,
@@ -8,8 +10,9 @@ import {
 } from "@/lib/constants/social-media";
 import { contentShellClassName } from "@/lib/tailwind";
 import { cn } from "@/lib/utils";
+import logo from "@/public/logo.webp";
 
-const footerClassName = "border-t border-orange py-[clamp(56px,7vw,72px)] pb-7";
+const footerClassName = "py-[clamp(56px,7vw,72px)] pb-7";
 const footerHeadingClassName =
   "mb-3.5 text-[10px] uppercase tracking-[1.6px] text-orange";
 const footerDetailClassName = "text-xs leading-[1.7] text-muted-foreground";
@@ -23,13 +26,22 @@ export function Footer() {
     <footer id="contact" className={cn(contentShellClassName, footerClassName)}>
       <div className={footerGridClassName}>
         <div>
-          <a className="font-heading text-[30px] font-bold" href="#top">
-            Salt <i className="text-orange not-italic">&</i> Ember
+          <a
+            className="inline-flex"
+            href="#top"
+            aria-label="Salt and Ember home"
+          >
+            <Image
+              src={logo}
+              alt="Salt & Ember logo"
+              className="size-[clamp(90px,8vw,130px)] object-contain rotate-45"
+              priority
+            />
           </a>
           <p className={footerDetailClassName}>
-            Come for the fire.
+            We serve food and moments,
             <br />
-            Stay for the flavour.
+            Made to be remembered.
           </p>
         </div>
         <div>

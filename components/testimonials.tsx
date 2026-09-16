@@ -32,7 +32,7 @@ const testimonialColumnsClassName =
 const testimonialAvatarClassName =
   "flex size-11 shrink-0 items-center justify-center rounded-full bg-orange/15 font-heading text-lg text-orange ring-1 ring-orange/40 transition group-hover:ring-orange";
 const testimonialIntroClassName =
-  "mt-[22px] mb-0 max-w-[470px] text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
+  "mx-auto mt-[22px] mb-0 max-w-[470px] text-center text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
 
 type TestimonialsColumnProps = {
   className?: string;
@@ -142,15 +142,13 @@ export default function Testimonials() {
         aria-labelledby="testimonials-heading"
         className={cn(contentShellClassName, testimonialSectionClassName)}
       >
-        <div className="flex items-end justify-between gap-8 tablet:flex-col tablet:items-start">
-          <div>
-            <TextBlockAnimation blockColor="var(--orange)">
-              <h2 id="testimonials-heading" className={sectionHeadingClassName}>
-                What they <em className={highlightedTextClassName}>say</em>
-              </h2>
-            </TextBlockAnimation>
-            <p className={testimonialIntroClassName}>Words from our honourable guests</p>
-          </div>
+        <div className="mx-auto max-w-155 text-center">
+          <TextBlockAnimation blockColor="var(--orange)">
+            <h2 id="testimonials-heading" className={sectionHeadingClassName}>
+              What they <em className={highlightedTextClassName}>say</em>
+            </h2>
+          </TextBlockAnimation>
+          <p className={testimonialIntroClassName}>Words from our honourable guests</p>
         </div>
 
         {shouldReduceMotion ? (

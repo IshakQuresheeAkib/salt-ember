@@ -353,17 +353,13 @@ export function HeroFoodSelector() {
       const outgoingMotion = transition.outgoingMotion;
 
       gsap.set(allScenes, { autoAlpha: 0, zIndex: 0 });
-      gsap.set(activeScene, {
-        autoAlpha: 1,
-        zIndex: 1,
-        motionPath: motionPathAt(
-          isResumingTransition && activeMotion
-            ? activeMotion.pathProgress
-            : ARC_MIDPOINT,
-        ),
-      });
 
       if (!outgoingScene) {
+        gsap.set(activeScene, {
+          autoAlpha: 1,
+          zIndex: 1,
+          motionPath: motionPathAt(ARC_MIDPOINT),
+        });
         setSceneMotion(activeFood.id, ARC_MIDPOINT, 1);
         return;
       }
@@ -483,7 +479,11 @@ export function HeroFoodSelector() {
         )
         .to(
           activeScene,
-          { autoAlpha: 1, duration: DISH_MOTION_SECONDS, ease: "ember-out" },
+          {
+            autoAlpha: 1,
+            duration: DISH_MOTION_SECONDS,
+            ease: "ember-in-out",
+          },
           0,
         )
         .to(

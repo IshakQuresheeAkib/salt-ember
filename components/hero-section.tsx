@@ -1,11 +1,14 @@
-import { Beef, PartyPopper, Sparkles } from "lucide-react";
+import { Beef, MapPinned, PartyPopper, Sparkles } from "lucide-react";
 
 import { HeroFoodSelector } from "@/components/hero-food-selector";
 import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { SocialTooltip } from "@/components/ui/social-media";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
-import { SOCIAL_MEDIA_LINKS } from "@/lib/constants/social-media";
+import {
+  SALT_AND_EMBER_MAP_URL,
+  SOCIAL_MEDIA_LINKS,
+} from "@/lib/constants/social-media";
 import { contentShellClassName } from "@/lib/tailwind";
 import { cn } from "@/lib/utils";
 
@@ -78,14 +81,17 @@ export function HeroSection() {
               href="#menu"
               className={heroCtaMobileClassName}
             >
-              Explore the menu <span aria-hidden="true">↗</span>
+              Explore the menu <span aria-hidden="true" className="size-[1.5em]">↗</span>
             </Button>
             <Button
               variant="secondary"
-              href="#contact"
+              href={SALT_AND_EMBER_MAP_URL}
               className={heroCtaMobileClassName}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get in touch
+              <MapPinned className="size-[1.5em] shrink-0 mr-1" aria-hidden="true" />
+              Our location
             </Button>
           </div>
           <div className={heroContactClassName}>

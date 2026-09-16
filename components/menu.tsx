@@ -51,7 +51,7 @@ export function Menu() {
   return (
     <section
       aria-labelledby="heritage-menu-title"
-      className={contentShellClassName}
+      className={`${contentShellClassName} my-20 md:my-28`}
       id="menu"
     >
       <div className="mx-auto max-w-155 text-center">

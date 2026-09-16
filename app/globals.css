@@ -317,7 +317,7 @@ body {
   }
   .hero-dish-curve {
     top: 0;
-    width: 50%;
+    width: 45%;
     height: 100%;
   }
   .navbar-location::before {
@@ -339,4 +339,12 @@ body {
   .hero-intro__icon {
     animation: none;
   }
+}
+
+@media (min-width: 2000px) {
+  .hero-dish-curve {
+    width: 55%;
+    height: 112%;
+  }
+
 }

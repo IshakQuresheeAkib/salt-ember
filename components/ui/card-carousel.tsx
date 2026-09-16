@@ -482,7 +482,7 @@ export default function CardCarousel({
       </p>
 
       {needsPagination ? (
-        <div className="z-30 mt-6 mb-20 flex items-center justify-center gap-4 lg:mt-0">
+        <div className="z-30 mt-6 flex items-center justify-center gap-4 lg:mt-0">
           <button
             aria-label="Previous menu page"
             className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver md:size-12"
