@@ -5,8 +5,8 @@ const baseUrl = process.env.HERO_BASE_URL ?? "http://localhost:3000";
 
 const approvedPalette = [
   "#e4e4e4",
-  "#fc5000",
-  "#050505",
+  "#e36414",
+  "#0b2228",
 ];
 
 const retiredPalette = [

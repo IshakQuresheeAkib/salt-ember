@@ -15,12 +15,48 @@ import { canScheduleHeroRotation } from "@/lib/hero-food-autoplay-state";
 import { cn } from "@/lib/utils";
 
 const foodStates = [
-  { id: "appetizer", label: "Appetizer", icon: "◉", image: "/hero-food/appetizer.png", alt: "Appetizer" },
-  { id: "biriyani", label: "Biriyani", icon: "◉", image: "/hero-food/biriyani.png", alt: "Biriyani" },
-  { id: "burger", label: "Burger", icon: "◉", image: "/hero-food/burger.png", alt: "Burger" },
-  { id: "kebab", label: "Kebab", icon: "◉", image: "/hero-food/kebab.png", alt: "Kebab" },
-  { id: "pasta", label: "Pasta", icon: "◉", image: "/hero-food/pasta.png", alt: "Pasta" },
-  { id: "pizza", label: "Pizza", icon: "◉", image: "/hero-food/pizza.png", alt: "Pizza" },
+  {
+    id: "appetizer",
+    label: "Appetizer",
+    icon: "🍟",
+    image: "/hero-food/appetizer.png",
+    alt: "Appetizer",
+  },
+  {
+    id: "biriyani",
+    label: "Biriyani",
+    icon: "🍛",
+    image: "/hero-food/biriyani.png",
+    alt: "Biriyani",
+  },
+  {
+    id: "burger",
+    label: "Burger",
+    icon: "🍔",
+    image: "/hero-food/burger.png",
+    alt: "Burger",
+  },
+  {
+    id: "kebab",
+    label: "Kebab",
+    icon: "🥩",
+    image: "/hero-food/kebab.png",
+    alt: "Kebab",
+  },
+  {
+    id: "pasta",
+    label: "Pasta",
+    icon: "🥗",
+    image: "/hero-food/pasta.png",
+    alt: "Pasta",
+  },
+  {
+    id: "pizza",
+    label: "Pizza",
+    icon: "🍕",
+    image: "/hero-food/pizza.png",
+    alt: "Pizza",
+  },
 ] as const;
 
 type FoodId = (typeof foodStates)[number]["id"];
@@ -41,8 +77,7 @@ interface SceneMotionState {
 
 const DISH_MOTION_SECONDS = 0.8;
 const DISH_FADE_SECONDS = 0.6;
-const OUTGOING_FADE_START_SECONDS =
-  DISH_MOTION_SECONDS - DISH_FADE_SECONDS;
+const OUTGOING_FADE_START_SECONDS = DISH_MOTION_SECONDS - DISH_FADE_SECONDS;
 const AUTOPLAY_DWELL_MS = 500;
 const HERO_ARC_PATH =
   "M 54 0 C 24.177 0 0 26.863 0 60 C 0 93.137 24.177 120 54 120";
@@ -51,14 +86,14 @@ const HERO_CURVE_FILL_PATH =
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 const ARC_MIDPOINT = 0.5;
 const heroArtClassName =
-  "hero-art tablet:pb-[clamp(84px,18vw,108px)] mobile:min-h-[400px]";
+  "hero-art tablet:-mt-[66px] tablet:md:-mt-[82px] tablet:pb-[clamp(84px,18vw,108px)] mobile:min-h-[400px]";
 const categoryControlsClassName =
-  "absolute top-1/2 right-[8vw] min-desktop:right-[clamp(28px,2vw,40px)] z-3 flex -translate-y-1/2 flex-col gap-2.5 ";
+  "absolute top-[40%] sm:top-1/2 right-[8vw] min-desktop:right-[clamp(28px,2vw,40px)] z-3 flex -translate-y-1/2 flex-col gap-2.5 ";
 const categoryButtonClassName =
-  "min-h-8 min-w-8 rounded-[10px] border border-transparent px-[clamp(10px,1.1vw,14.4px)] py-2 text-[clamp(11.2px,10.56px+0.14vw,12.8px)] active:scale-[0.97] mobile:py-1.5";
-const activeCategoryButtonClassName = "bg-silver-mist text-midnight-shadow";
+  "min-h-8 min-w-8 rounded-[10px] border border-transparent px-[clamp(10px,1.1vw,14.4px)] py-2 cursor-pointer text-[clamp(11.2px,10.56px+0.14vw,12.8px)] active:scale-[0.97] mobile:py-1.5";
+const activeCategoryButtonClassName = "bg-orange text-midnight-shadow";
 const inactiveCategoryButtonClassName =
-  "bg-midnight-shadow text-silver-mist transition-[background,border-color,color,scale] duration-200 hover:border-silver-mist hover:bg-silver-mist hover:text-midnight-shadow";
+  "bg-midnight-shadow text-silver transition-[background,border-color,color,scale] font-semibold duration-200 hover:bg-orange hover:text-midnight-shadow";
 function subscribeToReducedMotion(onStoreChange: () => void) {
   const mediaQuery = window.matchMedia(REDUCED_MOTION_QUERY);
   mediaQuery.addEventListener("change", onStoreChange);
@@ -142,25 +177,28 @@ export function HeroFoodSelector() {
     [],
   );
 
-  const selectFood = useCallback((requestedIndex: number | null) => {
-    if (requestedIndex !== null) {
-      setManualAnnouncement(foodStates[requestedIndex].alt);
-    }
+  const selectFood = useCallback(
+    (requestedIndex: number | null) => {
+      if (requestedIndex !== null) {
+        setManualAnnouncement(foodStates[requestedIndex].alt);
+      }
 
-    setTransition((current) => {
-      const nextIndex =
-        requestedIndex ?? (current.activeIndex + 1) % foodStates.length;
-      if (current.activeIndex === nextIndex) return current;
+      setTransition((current) => {
+        const nextIndex =
+          requestedIndex ?? (current.activeIndex + 1) % foodStates.length;
+        if (current.activeIndex === nextIndex) return current;
 
-      return {
-        activeIndex: nextIndex,
-        outgoingIndex: current.activeIndex,
-        outgoingMotion: captureSceneMotion(current.activeIndex),
-        direction: 1,
-        revision: current.revision + 1,
-      };
-    });
-  }, [captureSceneMotion]);
+        return {
+          activeIndex: nextIndex,
+          outgoingIndex: current.activeIndex,
+          outgoingMotion: captureSceneMotion(current.activeIndex),
+          direction: 1,
+          revision: current.revision + 1,
+        };
+      });
+    },
+    [captureSceneMotion],
+  );
 
   useEffect(() => {
     if (autoplayTimerRef.current !== null) {
@@ -181,14 +219,22 @@ export function HeroFoodSelector() {
         autoplayTimerRef.current = null;
       }
     };
-  }, [selectFood, shouldScheduleRotation, transition.activeIndex, transition.outgoingIndex]);
+  }, [
+    selectFood,
+    shouldScheduleRotation,
+    transition.activeIndex,
+    transition.outgoingIndex,
+  ]);
 
   useEffect(() => {
     const activeButton = categoryButtonRefs.current.get(activeFood.id);
-    const categoryRow = rootRef.current?.querySelector<HTMLDivElement>(
-      ".hero-categories",
-    );
-    if (!activeButton || !categoryRow || !window.matchMedia("(max-width: 800px)").matches) {
+    const categoryRow =
+      rootRef.current?.querySelector<HTMLDivElement>(".hero-categories");
+    if (
+      !activeButton ||
+      !categoryRow ||
+      !window.matchMedia("(max-width: 800px)").matches
+    ) {
       return;
     }
 
@@ -202,7 +248,13 @@ export function HeroFoodSelector() {
       (buttonBounds.width - categoryRow.clientWidth) / 2;
 
     categoryRow.scrollTo({
-      left: Math.max(0, Math.min(centeredLeft, categoryRow.scrollWidth - categoryRow.clientWidth)),
+      left: Math.max(
+        0,
+        Math.min(
+          centeredLeft,
+          categoryRow.scrollWidth - categoryRow.clientWidth,
+        ),
+      ),
       behavior: reducedMotion ? "auto" : "smooth",
     });
   }, [activeFood.id, reducedMotion]);
@@ -226,9 +278,8 @@ export function HeroFoodSelector() {
   }, [reducedMotion]);
 
   useEffect(() => {
-    const stage = rootRef.current?.querySelector<HTMLDivElement>(
-      ".hero-dish-stage",
-    );
+    const stage =
+      rootRef.current?.querySelector<HTMLDivElement>(".hero-dish-stage");
     const arcPath = arcPathRef.current;
     if (!stage || !arcPath) return;
 
@@ -289,7 +340,8 @@ export function HeroFoodSelector() {
       const outgoingScene =
         transition.outgoingIndex === null
           ? null
-          : sceneRefs.current.get(foodStates[transition.outgoingIndex].id) ?? null;
+          : (sceneRefs.current.get(foodStates[transition.outgoingIndex].id) ??
+            null);
       const isResumingTransition =
         renderedTransitionRevisionRef.current === transition.revision;
       renderedTransitionRevisionRef.current = transition.revision;
@@ -342,8 +394,16 @@ export function HeroFoodSelector() {
             },
           })
           .set(activeScene, { autoAlpha: 0, zIndex: 2 })
-          .to(activeScene, { autoAlpha: 1, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0)
-          .to(outgoingScene, { autoAlpha: 0, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0);
+          .to(
+            activeScene,
+            { autoAlpha: 1, duration: DISH_FADE_SECONDS, ease: "ember-out" },
+            0,
+          )
+          .to(
+            outgoingScene,
+            { autoAlpha: 0, duration: DISH_FADE_SECONDS, ease: "ember-out" },
+            0,
+          );
         return;
       }
 
@@ -421,7 +481,11 @@ export function HeroFoodSelector() {
           },
           0,
         )
-        .to(activeScene, { autoAlpha: 1, duration: DISH_FADE_SECONDS, ease: "ember-out" }, 0)
+        .to(
+          activeScene,
+          { autoAlpha: 1, duration: DISH_MOTION_SECONDS, ease: "ember-out" },
+          0,
+        )
         .to(
           outgoingScene,
           { autoAlpha: 0, duration: DISH_FADE_SECONDS, ease: "ember-out" },
@@ -437,10 +501,7 @@ export function HeroFoodSelector() {
   );
 
   return (
-    <div
-      ref={rootRef}
-      className={heroArtClassName}
-    >
+    <div ref={rootRef} className={heroArtClassName}>
       <div className="hero-dish-stage" aria-hidden="true">
         <svg
           className="hero-dish-curve"
@@ -456,11 +517,9 @@ export function HeroFoodSelector() {
               x2="0"
               y2="1"
             >
-              
-              <stop offset="10%" stopColor="#e4e4e4" />
-              <stop offset="35%" stopColor="#ffae17" />
-              <stop offset="40%" stopColor="#ff7510" />
-              <stop offset="50%" stopColor="#da500b" />
+              <stop offset="0%" stopColor="#f6f6f6" />
+              <stop offset="60%" stopColor="#549aab" />
+              <stop offset="100%" stopColor="#0b2228" />
             </linearGradient>
           </defs>
           <path className="hero-dish-curve-fill" d={HERO_CURVE_FILL_PATH} />
@@ -498,7 +557,10 @@ export function HeroFoodSelector() {
         {manualAnnouncement}
       </span>
       <div className={categoryControlsClassName}>
-        <div className="hero-categories flex flex-col justify-start gap-2.5" aria-label="Food categories">
+        <div
+          className="hero-categories flex flex-col justify-start gap-2.5"
+          aria-label="Food categories"
+        >
           {foodStates.map((food, index) => (
             <button
               type="button"

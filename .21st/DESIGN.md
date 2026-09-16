@@ -75,16 +75,6 @@ Generated from project sources at 2026-09-14T20:33:23.935Z.
 ### Shadows
 
 - `--midnight-shadow`: `#050505` (app/globals.css)
-- `--heritage-card-shadow-dark`: `color-mix(
-    in srgb,
-    var(--midnight-shadow) 94%,
-    transparent
-  )` (app/globals.css)
-- `--heritage-card-shadow-light`: `color-mix(
-    in srgb,
-    var(--silver-mist) 5%,
-    transparent
-  )` (app/globals.css)
 
 ### Motion
 

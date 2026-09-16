@@ -174,7 +174,7 @@ export function AnimatedUnderlineLink({
         onBlur?.(event);
       }}
     >
-      <span>{children}</span>
+      {children}
       {pathData ? (
         <svg
           aria-hidden="true"

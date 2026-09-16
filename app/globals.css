@@ -23,40 +23,33 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-muted-foreground: var(--muted-foreground);
-  --color-silver-mist: var(--silver-mist);
-  --color-flameburst-orange: var(--flameburst-orange);
+  --color-silver: var(--silver);
+  --color-orange: var(--orange);
   --color-surface: var(--surface);
   --color-midnight-shadow: var(--midnight-shadow);
   --radius-lg: 20px;
 }
 
 :root {
-  --silver-mist: #e4e4e4;
-  --flameburst-orange: #da500b;
-  --midnight-shadow: #050505;
-  --surface: color-mix(in srgb, var(--silver-mist) 8%, var(--midnight-shadow));
+  --silver: #e4e4e4;
+  --orange: #e36414;
+  --midnight-shadow: #0b2228;
+  --surface: color-mix(in srgb, var(--silver) 8%, var(--midnight-shadow));
   --background: var(--midnight-shadow);
-  --foreground: var(--silver-mist);
+  --foreground: var(--silver);
   --card: var(--surface);
-  --card-foreground: var(--silver-mist);
-  --border: color-mix(
-    in srgb,
-    var(--flameburst-orange) 72%,
-    var(--midnight-shadow)
-  );
-  --primary: var(--flameburst-orange);
+  --card-foreground: var(--silver);
+  --border: color-mix(in srgb, var(--orange) 72%, var(--midnight-shadow));
+  --primary: var(--orange);
   --primary-foreground: var(--midnight-shadow);
   --muted-foreground: color-mix(
     in srgb,
-    var(--silver-mist) 72%,
+    var(--silver) 72%,
     var(--midnight-shadow)
   );
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --page-gutter: clamp(16px, 4.5vw, 112px);
-  --space-2xs: clamp(6.4px, 0.5vw, 9.6px);
   --space-xs: clamp(10.4px, 0.85vw, 14.4px);
-  --space-md: clamp(20px, 2vw, 32px);
-  --space-xl: clamp(72px, 9vw, 132px);
 }
 
 * {
@@ -65,16 +58,16 @@
 html {
   scroll-behavior: smooth;
   background: var(--midnight-shadow);
-  scrollbar-color: var(--flameburst-orange) var(--midnight-shadow);
+  scrollbar-color: var(--orange) var(--midnight-shadow);
 }
 body {
   margin: 0;
   background: var(--midnight-shadow);
-  color: var(--silver-mist);
+  color: var(--silver);
   font-family: var(--font-body), sans-serif;
 }
 ::selection {
-  background: var(--flameburst-orange);
+  background: var(--orange);
   color: var(--midnight-shadow);
 }
 @layer base {
@@ -84,7 +77,7 @@ body {
   }
 }
 :focus-visible {
-  outline: 2px solid var(--silver-mist);
+  outline: 2px solid var(--silver);
   outline-offset: 4px;
 }
 [id] {
@@ -152,7 +145,7 @@ body {
   }
   50% {
     filter: drop-shadow(
-      0 0 6px color-mix(in srgb, var(--flameburst-orange) 70%, transparent)
+      0 0 6px color-mix(in srgb, var(--orange) 70%, transparent)
     );
     opacity: 1;
     transform: translateY(-2px) scale(1.08);
@@ -160,26 +153,26 @@ body {
 }
 
 /* A brief outward nudge makes the full menu's pagination discoverable. */
-.fan-carousel__arrow {
-  animation: fan-carousel-arrow-nudge 1.5s var(--ease-out) infinite;
+.carousel__arrow {
+  animation: carousel-arrow-nudge 1.5s var(--ease-out) infinite;
   will-change: filter, transform;
 }
-.fan-carousel__arrow--previous {
-  --fan-carousel-arrow-offset: -4px;
+.carousel__arrow--previous {
+  --carousel-arrow-offset: -4px;
 }
-.fan-carousel__arrow--next {
-  --fan-carousel-arrow-offset: 4px;
+.carousel__arrow--next {
+  --carousel-arrow-offset: 4px;
   animation-delay: 1s;
 }
 
-@keyframes fan-carousel-arrow-nudge {
+@keyframes carousel-arrow-nudge {
   0%,
   66%,
   100% {
     transform: translateX(0);
   }
   78% {
-    transform: translateX(var(--fan-carousel-arrow-offset));
+    transform: translateX(var(--carousel-arrow-offset));
   }
   88% {
     transform: translateX(0);
@@ -207,7 +200,7 @@ body {
 }
 .hero-dish-scene {
   position: absolute;
-  width: 35%;
+  width: 45%;
   aspect-ratio: 1;
   opacity: 0;
   pointer-events: none;
@@ -237,7 +230,6 @@ body {
 }
 .hero-dish-arc {
   fill: none;
-  stroke: color-mix(in srgb, var(--flameburst-orange) 55%, transparent);
   vector-effect: non-scaling-stroke;
 }
 .hero-dish {
@@ -256,17 +248,17 @@ body {
   top: 2px;
   bottom: 0;
   width: 10px;
-  border-top: 2px solid var(--flameburst-orange);
-  border-bottom: 2px solid var(--flameburst-orange);
+  border-top: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
   content: "";
 }
 .bracket-title::before {
   left: 0;
-  border-left: 2px solid var(--flameburst-orange);
+  border-left: 2px solid var(--orange);
 }
 .bracket-title::after {
   right: 0;
-  border-right: 2px solid var(--flameburst-orange);
+  border-right: 2px solid var(--orange);
 }
 
 /* Filtered menu grids overlap only while the previous category fades out. */
@@ -278,42 +270,6 @@ body {
   .heritage-grid.is-entering {
     opacity: 0;
   }
-}
-
-/* These layered, color-mixed shadows are intentionally kept out of long utility strings. */
-.heritage-card {
-  --heritage-card-shadow-dark: color-mix(
-    in srgb,
-    var(--midnight-shadow) 94%,
-    transparent
-  );
-  --heritage-card-shadow-light: color-mix(
-    in srgb,
-    var(--silver-mist) 5%,
-    transparent
-  );
-  border: 0;
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--surface) 80%, var(--midnight-shadow));
-  box-shadow:
-    20px 20px 28px var(--heritage-card-shadow-dark),
-    -9px -9px 20px var(--heritage-card-shadow-light),
-    inset -2px -2px 0 color-mix(in srgb, var(--silver-mist) 10%, transparent);
-  transition:
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-.heritage-card:hover {
-  background: color-mix(in srgb, var(--surface) 58%, var(--midnight-shadow));
-  box-shadow:
-    18px 18px 34px var(--heritage-card-shadow-dark),
-    -12px -11px 24px var(--heritage-card-shadow-light),
-    inset 1px 1px 0 color-mix(in srgb, var(--silver-mist) 7%, transparent);
-}
-.heritage-card-image {
-  box-shadow:
-    9px 9px 16px var(--heritage-card-shadow-dark),
-    -5px -5px 12px var(--heritage-card-shadow-light);
 }
 .testimonial-columns {
   mask-image: linear-gradient(
@@ -327,11 +283,11 @@ body {
 
 @media (max-width: 800px) {
   .hero-dish-stage {
-    top: calc(100vw - 48%);
+    top: calc(100vw - 38%);
     width: min(800px, 106vw);
   }
-  .hero-art{
-    min-height: calc(100vw - 50px);
+  .hero-art {
+    min-height: 110vw;
   }
 }
 @media (min-width: 801px) {

@@ -5,14 +5,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import {
-  getFanEntryOffsetRem,
-  getHoveredFanPositions,
-  getInitialFanCenter,
-  getInitialFanViewportWidth,
-  getResponsiveFanPosition,
-  getVisibleFanCardCount,
-  getVisibleFanSlots,
-} from "@/lib/card-fan-carousel-layout";
+  getEntryOffsetRem,
+  getHoveredPositions,
+  getInitialCenter,
+  getInitialViewportWidth,
+  getResponsivePosition,
+  getVisibleCardCount,
+  getVisibleSlots,
+} from "@/lib/card-carousel-layout";
 import { cn } from "@/lib/utils";
 
 export interface CardItem {
@@ -21,12 +21,12 @@ export interface CardItem {
   linkUrl?: string;
 }
 
-interface CardFanCarouselProps {
+interface CardCarouselProps {
   cards: CardItem[];
   initialIndex?: number;
 }
 
-function FanCard({
+function CarouselCard({
   card,
   index,
   isCurrent,
@@ -58,8 +58,8 @@ function FanCard({
     <div
       aria-hidden={!isVisible}
       className={cn(
-        "pointer-events-none absolute top-1/2 left-1/2 block aspect-[811/1024] w-[clamp(180px,60vw,260px)] overflow-hidden rounded-[4px] border border-flameburst-orange/45 bg-surface text-left opacity-0 shadow-[0_20px_45px_color-mix(in_srgb,var(--midnight-shadow)_80%,transparent)] outline-offset-4 min-[480px]:w-[clamp(220px,42vw,340px)] min-[800px]:w-[clamp(280px,27vw,400px)] min-[1440px]:w-[clamp(360px,19vw,480px)]",
-        isCurrent && "border-flameburst-orange",
+        "pointer-events-none absolute top-1/2 left-1/2 block aspect-[811/1024] w-[clamp(180px,60vw,260px)] overflow-hidden rounded-[4px] border border-orange/45 bg-surface text-left opacity-0 shadow-[0_20px_45px_color-mix(in_srgb,var(--midnight-shadow)_80%,transparent)] outline-offset-4 min-[480px]:w-[clamp(220px,42vw,340px)] min-[800px]:w-[clamp(280px,27vw,400px)] min-[1440px]:w-[clamp(360px,19vw,480px)]",
+        isCurrent && "border-orange",
       )}
       data-menu-card={index}
     >
@@ -68,7 +68,9 @@ function FanCard({
           aria-current={isCurrent ? "true" : undefined}
           className={interactiveClassName}
           href={card.linkUrl}
-          rel={card.linkUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+          rel={
+            card.linkUrl.startsWith("http") ? "noopener noreferrer" : undefined
+          }
           tabIndex={isVisible ? 0 : -1}
           target={card.linkUrl.startsWith("http") ? "_blank" : undefined}
         >
@@ -89,21 +91,24 @@ function FanCard({
   );
 }
 
-export default function CardFanCarousel({
+export default function CardCarousel({
   cards,
   initialIndex,
-}: CardFanCarouselProps) {
+}: CardCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isAnimating = useRef(false);
   const hasEntered = useRef(false);
   const directionRef = useRef<"left" | "right" | null>(null);
   const previouslyVisible = useRef<Set<number>>(new Set());
   const totalCards = cards.length;
-  const [viewportWidth, setViewportWidth] = useState(getInitialFanViewportWidth);
-  const visibleCardCount = getVisibleFanCardCount(viewportWidth);
+  const [viewportWidth, setViewportWidth] = useState(getInitialViewportWidth);
+  const visibleCardCount = getVisibleCardCount(viewportWidth);
   const needsPagination = totalCards > visibleCardCount;
   const [centerIndex, setCenterIndex] = useState(() =>
-    getInitialFanCenter(totalCards, initialIndex),
+    getInitialCenter(totalCards, initialIndex),
+  );
+  const [exitingCardIndexes, setExitingCardIndexes] = useState<Set<number>>(
+    () => new Set(),
   );
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const activeCenterIndex = totalCards
@@ -111,12 +116,21 @@ export default function CardFanCarousel({
     : 0;
 
   const visibleSlots = useMemo(
-    () => getVisibleFanSlots(totalCards, activeCenterIndex, visibleCardCount),
+    () => getVisibleSlots(totalCards, activeCenterIndex, visibleCardCount),
     [activeCenterIndex, totalCards, visibleCardCount],
   );
   const visibleMap = useMemo(
     () => new Map(visibleSlots.map(({ cardIndex, slot }) => [cardIndex, slot])),
     [visibleSlots],
+  );
+  const mountedCardIndexes = useMemo(
+    () =>
+      new Set(
+        [...visibleMap.keys(), ...exitingCardIndexes].filter(
+          (index) => index < totalCards,
+        ),
+      ),
+    [exitingCardIndexes, totalCards, visibleMap],
   );
 
   const cycle = useCallback(
@@ -125,13 +139,14 @@ export default function CardFanCarousel({
 
       isAnimating.current = true;
       directionRef.current = direction;
+      setExitingCardIndexes(new Set(visibleMap.keys()));
       setCenterIndex((current) =>
         direction === "right"
           ? (current + 1) % totalCards
           : (current - 1 + totalCards) % totalCards,
       );
     },
-    [needsPagination, totalCards],
+    [needsPagination, totalCards, visibleMap],
   );
 
   const selectCard = useCallback(
@@ -141,8 +156,11 @@ export default function CardFanCarousel({
       const selectedSlot = visibleMap.get(index);
       const centerSlot = visibleSlots.length >> 1;
       directionRef.current =
-        selectedSlot !== undefined && selectedSlot > centerSlot ? "right" : "left";
+        selectedSlot !== undefined && selectedSlot > centerSlot
+          ? "right"
+          : "left";
       isAnimating.current = true;
+      setExitingCardIndexes(new Set(visibleMap.keys()));
       setCenterIndex(index);
     },
     [activeCenterIndex, visibleMap, visibleSlots.length],
@@ -183,6 +201,10 @@ export default function CardFanCarousel({
       prefersReducedMotion ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let completedCards = 0;
+    let completedExitCards = 0;
+    const exitingCardCount = [...wasVisible].filter(
+      (cardIndex) => !visibleMap.has(cardIndex),
+    ).length;
 
     if (isFirstMount && !shouldReduceMotion) isAnimating.current = true;
 
@@ -193,12 +215,19 @@ export default function CardFanCarousel({
       isAnimating.current = false;
       hasEntered.current = true;
     };
+    const finishExitAnimation = () => {
+      completedExitCards += 1;
+      if (completedExitCards < exitingCardCount) return;
 
-    cardElements.forEach((element, cardIndex) => {
+      setExitingCardIndexes(new Set());
+    };
+
+    cardElements.forEach((element) => {
+      const cardIndex = Number(element.dataset.menuCard);
       const slot = visibleMap.get(cardIndex);
 
       if (slot !== undefined) {
-        const position = getResponsiveFanPosition(
+        const position = getResponsivePosition(
           slotCount,
           slot,
           viewportWidth,
@@ -228,7 +257,7 @@ export default function CardFanCarousel({
               scale: 0.5,
               x: 0,
               xPercent: -50,
-              y: `${getFanEntryOffsetRem(viewportWidth, viewportHeight)}rem`,
+              y: `${getEntryOffsetRem(viewportWidth, viewportHeight)}rem`,
               yPercent: -50,
             },
             {
@@ -281,6 +310,7 @@ export default function CardFanCarousel({
           scale: 0.5,
           x: exitsLeft ? "-40rem" : "40rem",
           zIndex: 0,
+          onComplete: finishExitAnimation,
         });
       } else {
         gsap.set(element, {
@@ -291,6 +321,7 @@ export default function CardFanCarousel({
           y: 0,
           zIndex: 0,
         });
+        if (wasVisible.has(cardIndex)) finishExitAnimation();
       }
     });
 
@@ -302,10 +333,14 @@ export default function CardFanCarousel({
     previouslyVisible.current = new Set(visibleMap.keys());
 
     const visibleElements = cardElements
-      .map((element, cardIndex) => ({
+      .map((element) => {
+        const cardIndex = Number(element.dataset.menuCard);
+
+        return {
         element,
         slot: visibleMap.get(cardIndex),
-      }))
+        };
+      })
       .filter(
         (entry): entry is { element: HTMLElement; slot: number } =>
           entry.slot !== undefined,
@@ -315,7 +350,7 @@ export default function CardFanCarousel({
     let leaveTimer: ReturnType<typeof setTimeout> | null = null;
 
     const updateHoverLayout = (hoveredSlot: number | null) => {
-      const positions = getHoveredFanPositions(
+      const positions = getHoveredPositions(
         slotCount,
         hoveredSlot,
         window.innerWidth,
@@ -426,34 +461,37 @@ export default function CardFanCarousel({
           className="relative flex h-100 w-full max-w-7xl items-center justify-center overflow-hidden min-[480px]:h-[75vw] min-[800px]:h-[50vw] min-[1440px]:h-180"
           role="region"
         >
-          {cards.map((card, index) => (
-            <FanCard
-              card={card}
-              index={index}
-              isCurrent={index === activeCenterIndex}
-              isVisible={visibleMap.has(index)}
-              key={card.imgUrl}
-              onSelect={selectCard}
-            />
-          ))}
+          {cards.map((card, index) =>
+            mountedCardIndexes.has(index) ? (
+              <CarouselCard
+                card={card}
+                index={index}
+                isCurrent={index === activeCenterIndex}
+                isVisible={visibleMap.has(index)}
+                key={card.imgUrl}
+                onSelect={selectCard}
+              />
+            ) : null,
+          )}
         </div>
       </div>
 
       <p aria-live="polite" className="sr-only">
-        Page {activeCenterIndex + 1} of {totalCards}: {currentCard.alt ?? "Menu page"}
+        Page {activeCenterIndex + 1} of {totalCards}:{" "}
+        {currentCard.alt ?? "Menu page"}
       </p>
 
       {needsPagination ? (
-        <div className="z-30 mt-6 flex items-center justify-center gap-4 lg:mt-0">
+        <div className="z-30 mt-6 mb-20 flex items-center justify-center gap-4 lg:mt-0">
           <button
             aria-label="Previous menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver-mist)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver-mist/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver md:size-12"
             onClick={() => cycle("left")}
             type="button"
           >
             <ChevronLeft
               aria-hidden="true"
-              className="fan-carousel__arrow fan-carousel__arrow--previous relative z-2 size-6 text-flameburst-orange xl:size-8"
+              className="carousel__arrow carousel__arrow--previous relative z-2 size-6 text-orange xl:size-8"
               strokeWidth={4}
             />
           </button>
@@ -462,9 +500,8 @@ export default function CardFanCarousel({
             {cards.map((card, index) => (
               <span
                 className={cn(
-                  "size-1 rounded-full bg-silver-mist/20 transition-[background-color,transform] duration-300 md:size-2",
-                  index === activeCenterIndex &&
-                    "scale-[1.3] bg-flameburst-orange",
+                  "size-1 rounded-full bg-silver/20 transition-[background-color,transform] duration-300 md:size-2",
+                  index === activeCenterIndex && "scale-[1.3] bg-orange",
                 )}
                 key={card.imgUrl}
               />
@@ -473,13 +510,13 @@ export default function CardFanCarousel({
 
           <button
             aria-label="Next menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-flameburst-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver-mist)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver-mist/80 hover:text-silver-mist active:opacity-70 focus-visible:border-flameburst-orange focus-visible:text-silver-mist md:size-12"
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver md:size-12"
             onClick={() => cycle("right")}
             type="button"
           >
             <ChevronRight
               aria-hidden="true"
-              className="fan-carousel__arrow fan-carousel__arrow--next relative z-2 size-6 text-flameburst-orange xl:size-8"
+              className="carousel__arrow carousel__arrow--next relative z-2 size-6 text-orange xl:size-8"
               strokeWidth={4}
             />
           </button>

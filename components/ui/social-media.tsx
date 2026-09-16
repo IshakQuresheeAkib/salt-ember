@@ -5,8 +5,7 @@ import { PhoneCall } from "lucide-react";
 import { type SocialItem } from "@/lib/constants/social-media";
 import { cn } from "@/lib/utils";
 
-export interface SocialTooltipProps
-  extends React.HTMLAttributes<HTMLUListElement> {
+export interface SocialTooltipProps extends React.HTMLAttributes<HTMLUListElement> {
   items: readonly SocialItem[];
 }
 
@@ -14,7 +13,7 @@ export { SOCIAL_MEDIA_LINKS } from "@/lib/constants/social-media";
 
 const socialListClassName = "flex items-center gap-3";
 const socialLinkClassName =
-  "relative flex size-12 items-center justify-center overflow-hidden rounded-full border border-flameburst-orange/70 bg-background transition-shadow duration-300 ease-in-out group-hover:shadow-[0_0_1.25rem_color-mix(in_srgb,var(--flameburst-orange)_55%,transparent)] group-focus-within:shadow-[0_0_1.25rem_color-mix(in_srgb,var(--flameburst-orange)_55%,transparent)]";
+  "relative flex size-12 items-center justify-center overflow-hidden rounded-full border border-orange/70 bg-background transition-shadow duration-300 ease-in-out group-hover:shadow-[0_0_1.25rem_color-mix(in_srgb,var(--orange)_55%,transparent)] group-focus-within:shadow-[0_0_1.25rem_color-mix(in_srgb,var(--orange)_55%,transparent)]";
 const socialLinkFillClassName =
   "absolute inset-x-0 bottom-0 h-0 transition-[height] duration-300 ease-in-out group-hover:h-full group-focus-within:h-full";
 const socialIconClassName = "relative z-10 size-6";
@@ -23,11 +22,7 @@ const socialTooltipClassName =
 
 const SocialTooltip = React.forwardRef<HTMLUListElement, SocialTooltipProps>(
   ({ className, items, ...props }, ref) => (
-    <ul
-      ref={ref}
-      className={cn(socialListClassName, className)}
-      {...props}
-    >
+    <ul ref={ref} className={cn(socialListClassName, className)} {...props}>
       {items.map((item) => (
         <li key={item.ariaLabel} className="group relative">
           <a
@@ -44,10 +39,7 @@ const SocialTooltip = React.forwardRef<HTMLUListElement, SocialTooltipProps>(
               style={{ backgroundColor: item.color }}
             />
             {item.kind === "call" ? (
-              <PhoneCall
-                aria-hidden="true"
-                className={socialIconClassName}
-              />
+              <PhoneCall aria-hidden="true" className={socialIconClassName} />
             ) : (
               <Image
                 src={item.svgUrl}

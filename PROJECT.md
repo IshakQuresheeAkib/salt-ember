@@ -9,9 +9,9 @@ Salt & Ember is a single-page, frontend-only restaurant website built for a Sylh
 ### What the page currently provides
 
 - Header navigation to Home, Menu, Reviews, and Contact.
-- A desktop navigation bar, a Google Maps link, and a native `<details>` mobile menu.
-- A hero with a selectable four-item food orbit and automatic rotation.
-- A client-side menu filter with eight hard-coded items in All, Dishes, Platter, Drinks, and Dessert categories.
+- A desktop navigation bar, a Google Maps link, and a fixed mobile bottom navigation bar.
+- A hero with a selectable six-item food orbit and automatic rotation.
+- A client-side, keyboard-operable carousel for 28 local menu-page images.
 - A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
 - A contact footer with a maps link, phone link, WhatsApp link, Facebook link, and Instagram link.
 
@@ -33,15 +33,15 @@ The interface uses a dark, fire-led editorial direction. Its visual signature is
 
 `app/globals.css` owns the shared token layer. Components should use Tailwind token utilities or these variables, rather than introduce new hard-coded palette values.
 
-| Token | Current value | Intended role |
-| --- | --- | --- |
-| `--silver-mist` | `#E4E4E4` | primary light text and focus outline |
-| `--flameburst-orange` | `#DA500B` | emphasis, active controls, rules, and heat |
-| `--midnight-shadow` | `#050505` | page canvas and dark text on light controls |
-| `--surface` | derived with `color-mix()` | raised dark surface |
-| `--muted-foreground` | derived with `color-mix()` | secondary text |
+| Token                | Current value              | Intended role                               |
+| -------------------- | -------------------------- | ------------------------------------------- |
+| `--silver`           | `#E4E4E4`                  | primary light text and focus outline        |
+| `--orange`           | `#E36414`                  | emphasis, active controls, rules, and heat  |
+| `--midnight-shadow`  | `#0B2228`                  | page canvas and dark text on light controls |
+| `--surface`          | derived with `color-mix()` | raised dark surface                         |
+| `--muted-foreground` | derived with `color-mix()` | secondary text                              |
 
-Tailwind v4 maps these runtime variables to `background`, `foreground`, `card`, `border`, `primary`, `muted-foreground`, `silver-mist`, `flameburst-orange`, `surface`, and `midnight-shadow` utilities.
+Tailwind v4 maps these runtime variables to `background`, `foreground`, `card`, `border`, `primary`, `muted-foreground`, `silver`, `orange`, `surface`, and `midnight-shadow` utilities.
 
 ### Typography
 
@@ -52,10 +52,10 @@ Tailwind v4 maps these runtime variables to `background`, `foreground`, `card`, 
 
 ### Responsive composition
 
-The shared page gutter is `clamp(16px, 4.5vw, 112px)`, and content shells use a maximum width of 2200px. Key source breakpoints are 480px, 704px, 800px/801px, and 1120px.
+The shared page gutter is `clamp(16px, 4.5vw, 112px)`, and content shells use a maximum width of 2200px. The project defines `mobile` below 480px, `tablet` below 801px, and `desktop` from 801px. Individual components use additional layout thresholds where needed.
 
-- Below 801px, the hero becomes a single-column layout and the `<details>` navigation is used.
-- At 704px, the menu grows from two to three columns; at 1120px, it grows to four.
+- Below 801px, the hero becomes a single-column layout and the fixed bottom navigation is used.
+- The menu carousel exposes three pages below 800px and five at 800px and above; its card sizing has additional 480px and 1440px thresholds.
 - The reduced-motion testimonial grid becomes three columns at 801px and above.
 
 ## 3. Technical architecture
@@ -83,29 +83,37 @@ app/
 components/
   header.tsx                     # desktop/mobile navigation and maps link
   hero-section.tsx               # hero copy, calls to action, social links
+  mobile-bottom-nav.tsx          # client-side restaurant navigation adapter
   hero-food-selector.tsx         # hero selection, autoplay, GSAP orbit
-  menu.tsx                       # client-side category filter and cards
+  menu.tsx                       # local menu-page fixture and carousel composition
   testimonials.tsx               # Framer Motion or reduced-motion testimonials
   footer.tsx                     # contact and social presentation
   ui/
+    bottom-nav-bar.tsx           # reusable animated bottom navigation primitive
+    button.tsx                   # typed link/button primitive
+    card-carousel.tsx        # selectable, paginated menu-page carousel
+    draw-random-underline.tsx    # GSAP/DrawSVG navigation underline
     social-media.tsx             # social/call controls and tooltips
     text-block-animation.tsx     # GSAP/SplitText line reveal
 lib/
+  card-carousel-layout.mts   # pure carousel geometry and responsive rules
   gsap.ts                        # one-time GSAP plugin and ease registration
   hero-food-autoplay-state.mts   # pure autoplay state rules
   constants/                     # social and testimonial fixtures
   types.ts, utils.ts             # shared types and utilities
 tests/                           # focused Node test files
 public/
+  hero-food/                     # six local hero food images
   logo.webp                      # header logo asset
+  menu-images/                   # 28 local menu-page images
 ```
 
 ### Rendering and client boundaries
 
 `app/page.tsx` is server-rendered by default and composes the hero, menu, testimonials, and footer. Client components are limited to interaction and browser APIs:
 
-- `hero-food-selector.tsx` observes reduced motion, document visibility, geometry, and drives GSAP transitions.
-- `menu.tsx` stores the selected category and keeps the outgoing grid mounted during its 180ms crossfade.
+- `hero-food-selector.tsx` observes reduced motion, document visibility, viewport geometry, and drives GSAP orbit transitions.
+- `menu.tsx` supplies the local menu-page fixture. `card-carousel.tsx` owns the selected page, pagination, keyboard arrows, hover/focus layout, responsive visible-card count, and its reduced-motion behavior.
 - `testimonials.tsx` reads the reduced-motion preference and drives the animated testimonial columns.
 - `text-block-animation.tsx` uses GSAP `SplitText` only when the viewport is at least 768px wide and reduced motion is not requested.
 
@@ -124,11 +132,10 @@ Any additional remote image source must be added to `next.config.ts` before it i
 The project has migrated most component layout, spacing, typography, responsive layout, states, and ordinary transitions from global CSS to Tailwind utility classes. The remaining `app/globals.css` rules are intentionally reserved for concerns that are less legible or impractical as utilities:
 
 - token definitions, global selection, focus, link, and anchor-offset behaviour;
-- map-pin and hero-icon keyframe effects;
+- map-pin, hero-icon, and carousel-arrow keyframe effects;
 - runtime elements inserted by GSAP line reveals;
 - hero clipping, orbit geometry, SVG path styling, and desktop/mobile placement;
 - bracket-title pseudo-elements;
-- menu crossfade entry/exit state;
 - layered `color-mix()` card shadows and testimonial mask;
 - reduced-motion overrides.
 
@@ -139,19 +146,19 @@ Do not move those rules merely to make the stylesheet smaller. Prefer Tailwind f
 ### Navigation and controls
 
 - Navigation targets are `#top`, `#menu`, `#testimonials`, and `#contact`.
-- The mobile menu remains native `<details>`/`<summary>` markup.
-- Hero food and menu category controls are native buttons using `aria-pressed`.
+- The mobile navigation uses labelled anchor controls in a fixed bottom bar.
+- Hero food controls are native buttons using `aria-pressed`. Visible carousel pages are buttons with `aria-current` on the selected page; non-visible pages are hidden from the accessibility tree and tab order.
 - Social links have accessible labels. Decorative remote social icons and hero food images are hidden from the accessible name calculation.
 - The shared `:focus-visible` treatment is a two-pixel Silver Mist outline with a four-pixel offset.
 
 ### Hero orbit
 
-- The four selectable states are Dishes, Dessert, Drinks, and Platter.
+- The six selectable states are Appetizer, Biriyani, Burger, Kebab, Pasta, and Pizza.
 - Automatic rotation waits 500ms between selections.
 - Rotation is not scheduled while the page is hidden or reduced motion is enabled.
 - Hovering or focusing the food controls does not interrupt rotation.
 - Manual selections update a polite live region.
-- GSAP owns food-path transitions and title/section line reveals. `MotionPathPlugin`, `ScrollTrigger`, `SplitText`, and two custom eases are registered in `lib/gsap.ts`.
+- GSAP owns food-path transitions, carousel movement, navigation underlines, and title/section line reveals. `MotionPathPlugin`, `DrawSVGPlugin`, `ScrollTrigger`, `SplitText`, and two custom eases are registered in `lib/gsap.ts`.
 
 ### Testimonials and reduced motion
 
@@ -166,20 +173,19 @@ No content or control may depend on animation completing successfully.
 
 The following values are implementation fixtures or external links and should be changed only as an approved, coherent content update:
 
-- food state images and menu data in `components/hero-food-selector.tsx` and `components/menu.tsx`;
-- testimonial copy, names, roles, and images in `lib/constants/testimonials.ts`;
-- phone, WhatsApp, Facebook, and Instagram links in `lib/constants/social-media.ts`;
-- location/map link in `components/header.tsx` and `components/footer.tsx`;
+- food state labels and image paths in `components/hero-food-selector.tsx`;
+- menu-page filenames in `components/menu.tsx`, with the corresponding assets in `public/menu-images/`;
+- testimonial copy, names, sources, and optional ratings in `lib/constants/testimonials.ts`;
+- phone, map, WhatsApp, Facebook, and Instagram data in `lib/constants/social-media.ts`;
 - page title and description in `app/layout.tsx`.
 
-Keep shared contact data in its constants module where possible; do not create divergent phone or social values in presentation components.
 
 ## 7. Engineering rules
 
 - Preserve the server-first architecture. Add a client boundary only for state, effects, animation, or browser APIs.
 - Use `next/image` with dimensions, useful alternative text for meaningful imagery, and empty alternative text for decorative imagery.
 - Keep GSAP and Framer Motion responsible for separate elements and properties.
-- Preserve stable keys and ensure leaving menu content is hidden from assistive technology during the crossfade.
+- Preserve stable keys and ensure non-visible carousel pages remain unavailable to pointer and keyboard interaction.
 - Keep desktop and mobile anchor targets in sync when navigation changes.
 - Do not add packages, services, external hosts, public product claims, or operational features without an explicit approved requirement.
 - Preserve existing user work; do not commit, deploy, publish, or modify remote systems unless explicitly requested.
@@ -206,9 +212,9 @@ node --test tests/hero-food-autoplay-state.test.mjs
 
 Check at least a small mobile viewport and a desktop viewport. Verify:
 
-- all four navigation anchors and the mobile disclosure menu;
-- hero selection, pause/resume state, hover/focus behaviour, and reduced motion;
-- menu category changes and the temporary crossfade;
+- all four navigation anchors and the mobile bottom navigation;
+- hero selection, automatic rotation, hover/focus behaviour, document visibility, and reduced motion;
+- menu-page selection, pagination controls, keyboard arrows, hover/focus layout, and reduced motion;
 - testimonial motion and static reduced-motion output;
 - keyboard focus visibility, no clipped controls, and image layout stability.
 
