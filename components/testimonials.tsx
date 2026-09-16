@@ -23,16 +23,16 @@ const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 const testimonialCardClassName =
-  "group w-80 max-w-full rounded-lg border border-border bg-card p-6 shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-flameburst-orange";
-const testimonialSectionClassName = "relative py-[var(--space-xl)]";
+  "group w-80 max-w-full rounded-lg border border-border bg-card p-6 shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-orange";
+const testimonialSectionClassName = "relative py-[clamp(72px, 9vw, 132px)]";
 const testimonialStaticGridClassName =
   "mt-12 grid list-none grid-cols-1 gap-[clamp(12px,1.5vw,20px)] p-0 desktop:grid-cols-3";
 const testimonialColumnsClassName =
   "testimonial-columns mt-12 flex max-h-200 justify-center gap-[clamp(12px,1.5vw,20px)] overflow-hidden";
 const testimonialAvatarClassName =
-  "flex size-11 shrink-0 items-center justify-center rounded-full bg-flameburst-orange/15 font-heading text-lg text-flameburst-orange ring-1 ring-flameburst-orange/40 transition group-hover:ring-flameburst-orange";
+  "flex size-11 shrink-0 items-center justify-center rounded-full bg-orange/15 font-heading text-lg text-orange ring-1 ring-orange/40 transition group-hover:ring-orange";
 const testimonialIntroClassName =
-  "mt-[22px] mb-0 max-w-[470px] text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
+  "mx-auto mt-[22px] mb-0 max-w-[470px] text-center text-[clamp(14px,13.12px+0.18vw,16px)] leading-[1.7] text-muted-foreground";
 
 type TestimonialsColumnProps = {
   className?: string;
@@ -55,7 +55,7 @@ function TestimonialCard({
       className={testimonialCardClassName}
     >
       <figure className="m-0">
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs tracking-[0.12em] text-flameburst-orange">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs tracking-[0.12em] text-orange">
           <span>
             {testimonial.source === "Google"
               ? "Google review"
@@ -142,20 +142,13 @@ export default function Testimonials() {
         aria-labelledby="testimonials-heading"
         className={cn(contentShellClassName, testimonialSectionClassName)}
       >
-        <div className="flex items-end justify-between gap-8 tablet:flex-col tablet:items-start">
-          <div>
-            <TextBlockAnimation blockColor="var(--flameburst-orange)">
-              <h2
-                id="testimonials-heading"
-                className={sectionHeadingClassName}
-              >
-                What they <em className={highlightedTextClassName}>say</em>
-              </h2>
-            </TextBlockAnimation>
-            <p className={testimonialIntroClassName}>
-              Notes from guests
-            </p>
-          </div>
+        <div className="mx-auto max-w-155 text-center">
+          <TextBlockAnimation blockColor="var(--orange)">
+            <h2 id="testimonials-heading" className={sectionHeadingClassName}>
+              What they <em className={highlightedTextClassName}>say</em>
+            </h2>
+          </TextBlockAnimation>
+          <p className={testimonialIntroClassName}>Words from our honourable guests</p>
         </div>
 
         {shouldReduceMotion ? (

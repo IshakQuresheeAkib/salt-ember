@@ -15,7 +15,7 @@ test("keeps one ember curve fixed outside the animated dish scenes", async () =>
   );
 
   assert.equal(curves?.length, 1, "Expected one fixed ember curve");
-  assert.equal(scenes?.length, 4, "Expected one animated scene per food state");
+  assert.equal(scenes?.length, 6, "Expected one animated scene per food state");
 
   for (const scene of scenes) {
     assert.doesNotMatch(scene, /class="hero-dish-curve"/);

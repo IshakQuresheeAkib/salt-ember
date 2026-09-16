@@ -142,14 +142,6 @@
       "--midnight-shadow": {
         "value": "#050505",
         "source": "app/globals.css"
-      },
-      "--heritage-card-shadow-dark": {
-        "value": "color-mix(\n    in srgb,\n    var(--midnight-shadow) 94%,\n    transparent\n  )",
-        "source": "app/globals.css"
-      },
-      "--heritage-card-shadow-light": {
-        "value": "color-mix(\n    in srgb,\n    var(--silver-mist) 5%,\n    transparent\n  )",
-        "source": "app/globals.css"
       }
     },
     "motion": {
@@ -163,7 +155,7 @@
   "components": {
     "installed": [
       "button",
-      "card-fan-carousel",
+      "card-carousel",
       "draw-random-underline",
       "social-media",
       "text-block-animation"
@@ -176,7 +168,8 @@
     "avoid": []
   },
   "decisions": [
-    "Menu pages use the user-approved seven-card GSAP fan: fixed 21-degree outer angles, responsive horizontal and height compression, elastic entrance, directional pagination, and hover or focus lift. Preserve Salt & Ember tokens, keyboard and swipe navigation, accessible announcements, and reduced-motion behavior."
+    "Menu pages use the user-approved seven-card GSAP: fixed 21-degree outer angles, responsive horizontal and height compression, elastic entrance, directional pagination, and hover or focus lift. Preserve Salt & Ember tokens, keyboard and swipe navigation, accessible announcements, and reduced-motion behavior.",
+    "Mobile navigation is a fixed, compact bottom bar below the 801px desktop breakpoint. It uses the supplied expanding-label motion with Salt & Ember tokens, real Home, Menu, Reviews, and Contact anchors, visible focus, bottom safe-area spacing, and reduced-motion fallback."
   ],
   "evidence": [
     {

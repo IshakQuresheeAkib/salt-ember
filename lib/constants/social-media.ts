@@ -20,6 +20,8 @@ export type SocialItem = SocialPlatformLink | CallLink;
 
 export const SALT_AND_EMBER_MOBILE_NUMBER = "+880 1704 083 376";
 export const SALT_AND_EMBER_MOBILE_TEL = "tel:+8801704083376";
+export const SALT_AND_EMBER_MAP_URL = "https://maps.app.goo.gl/qBEyyTSasUwqyaRs5";
+export const SALT_AND_EMBER_WHATSAPP_URL = "https://wa.me/8801704083376";
 
 export const SOCIAL_MEDIA_LINKS = [
   {
@@ -27,7 +29,7 @@ export const SOCIAL_MEDIA_LINKS = [
     href: "https://www.facebook.com/saltandember7",
     ariaLabel: "Facebook",
     tooltip: "Facebook",
-    color: "var(--flameburst-orange)",
+    color: "var(--orange)",
     svgUrl: "https://cdn.simpleicons.org/facebook/E4E4E4",
     external: true,
   },
@@ -36,16 +38,16 @@ export const SOCIAL_MEDIA_LINKS = [
     href: "https://www.instagram.com/salt.and.ember_",
     ariaLabel: "Instagram",
     tooltip: "Instagram",
-    color: "var(--flameburst-orange)",
+    color: "var(--orange)",
     svgUrl: "https://cdn.simpleicons.org/instagram/E4E4E4",
     external: true,
   },
   {
     kind: "social",
-    href: "https://wa.me/8801704083376",
+    href: SALT_AND_EMBER_WHATSAPP_URL,
     ariaLabel: "WhatsApp",
     tooltip: "WhatsApp",
-    color: "var(--flameburst-orange)",
+    color: "var(--orange)",
     svgUrl: "https://cdn.simpleicons.org/whatsapp/E4E4E4",
     external: true,
   },
@@ -55,6 +57,6 @@ export const SOCIAL_MEDIA_LINKS = [
     ariaLabel: "Call Salt & Ember",
     tooltip: `Call ${SALT_AND_EMBER_MOBILE_NUMBER}`,
     mobileNumber: SALT_AND_EMBER_MOBILE_NUMBER,
-    color: "var(--flameburst-orange)",
+    color: "var(--orange)",
   },
 ] as const satisfies readonly SocialItem[];

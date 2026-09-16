@@ -19,15 +19,22 @@ test("defines the current palette in the canonical project reference", async () 
   ]);
   const sources = [css, project].join("\n").toLowerCase();
 
-  for (const color of ["#e4e4e4", "#da500b", "#050505"]) {
-    assert.match(sources, new RegExp(color), `Expected ${color} in the brand system`);
+  for (const color of ["#e4e4e4", "#e36414", "#0b2228"]) {
+    assert.match(
+      sources,
+      new RegExp(color),
+      `Expected ${color} in the brand system`,
+    );
   }
 });
 
 test("does not direct contributors to deleted legacy project documents", async () => {
   const project = await readProjectFile("PROJECT.md");
 
-  assert.match(project, /`PROJECT\.md` replaces the prior project, product, design, docs, and plan documents\./);
+  assert.match(
+    project,
+    /`PROJECT\.md` replaces the prior project, product, design, docs, and plan documents\./,
+  );
 });
 
 test("keeps keyboard focus visible with Silver Mist", async () => {
@@ -35,6 +42,6 @@ test("keeps keyboard focus visible with Silver Mist", async () => {
 
   assert.match(
     css,
-    /:focus-visible\s*\{[\s\S]*?outline:\s*2px solid var\(--silver-mist\);/,
+    /:focus-visible\s*\{[\s\S]*?outline:\s*2px solid var\(--silver\);/,
   );
 });

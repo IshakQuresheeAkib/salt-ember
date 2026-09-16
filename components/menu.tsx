@@ -1,6 +1,6 @@
 "use client";
 
-import CardFanCarousel, { type CardItem } from "@/components/ui/card-fan-carousel";
+import CardCarousel, { type CardItem } from "@/components/ui/card-carousel";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import {
   contentShellClassName,
@@ -41,7 +41,9 @@ const menuPageNames = [
 
 const menuPages: CardItem[] = menuPageNames.map((name, index) => ({
   alt:
-    name === "middle.jpg" ? "Menu cover page" : `Salt & Ember menu page ${index + 1}`,
+    name === "middle.jpg"
+      ? "Menu cover page"
+      : `Salt & Ember menu page ${index + 1}`,
   imgUrl: `/menu-images/${name}`,
 }));
 
@@ -49,14 +51,14 @@ export function Menu() {
   return (
     <section
       aria-labelledby="heritage-menu-title"
-      className={contentShellClassName}
+      className={`${contentShellClassName} my-20 md:my-28`}
       id="menu"
     >
       <div className="mx-auto max-w-155 text-center">
-        <p className="mb-3 text-xs uppercase tracking-[0.16em] text-flameburst-orange">
+        <p className="mb-3 text-xs uppercase tracking-[0.16em] text-orange">
           From our kitchen
         </p>
-        <TextBlockAnimation blockColor="var(--flameburst-orange)">
+        <TextBlockAnimation blockColor="var(--orange)">
           <h2 id="heritage-menu-title" className={sectionHeadingClassName}>
             Our <em className={highlightedTextClassName}>Heritage</em> Menu
           </h2>
@@ -66,7 +68,7 @@ export function Menu() {
           bring it forward.
         </p>
       </div>
-      <CardFanCarousel cards={menuPages} initialIndex={3} />
+      <CardCarousel cards={menuPages} initialIndex={3} />
     </section>
   );
 }

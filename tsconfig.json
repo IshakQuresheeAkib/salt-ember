@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/lib/card-fan-carousel-layout": ["./lib/card-fan-carousel-layout.mts"],
+      "@/lib/card-carousel-layout": ["./lib/card-carousel-layout.mts"],
       "@/lib/hero-food-autoplay-state": ["./lib/hero-food-autoplay-state.mts"],
       "@/*": ["./*"]
     }

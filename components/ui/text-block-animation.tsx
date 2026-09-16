@@ -18,7 +18,7 @@ export default function TextBlockAnimation({
   children,
   animateOnScroll = true,
   delay = 0,
-  blockColor = "var(--flameburst-orange)",
+  blockColor = "var(--orange)",
   stagger = 0.08,
   duration = 0.6,
 }: TextBlockAnimationProps) {

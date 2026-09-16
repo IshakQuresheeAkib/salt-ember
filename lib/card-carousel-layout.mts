@@ -1,4 +1,4 @@
-export const MAX_VISIBLE_FAN_CARDS = 5;
+export const MAX_VISIBLE_CARDS = 5;
 
 const MOBILE_BREAKPOINT = 480;
 const LAPTOP_BREAKPOINT = 800;
@@ -7,7 +7,7 @@ const CAROUSEL_MAX_WIDTH_PX = 1280;
 const CAROUSEL_EDGE_GUTTER_PX = 16;
 const CARD_ASPECT_RATIO = 1024 / 811;
 
-export interface FanPosition {
+export interface Position {
   rotation: number;
   scale: number;
   xRem: number;
@@ -19,11 +19,11 @@ function clamp(value: number, minimum: number, maximum: number) {
   return Math.min(Math.max(value, minimum), maximum);
 }
 
-export function getVisibleFanCardCount(viewportWidth: number) {
-  return viewportWidth < LAPTOP_BREAKPOINT ? 3 : MAX_VISIBLE_FAN_CARDS;
+export function getVisibleCardCount(viewportWidth: number) {
+  return viewportWidth < LAPTOP_BREAKPOINT ? 3 : MAX_VISIBLE_CARDS;
 }
 
-export function getInitialFanViewportWidth() {
+export function getInitialViewportWidth() {
   return 0;
 }
 
@@ -41,14 +41,14 @@ function getCardWidthPx(viewportWidth: number) {
 }
 
 function getCarouselHeightPx(viewportWidth: number) {
-  if (viewportWidth < MOBILE_BREAKPOINT) return 544;
-  if (viewportWidth < LAPTOP_BREAKPOINT) return 608;
-  if (viewportWidth < DESKTOP_BREAKPOINT) return 704;
-  return 832;
+  if (viewportWidth < MOBILE_BREAKPOINT) return 400;
+  if (viewportWidth < LAPTOP_BREAKPOINT) return viewportWidth * 0.75;
+  if (viewportWidth < DESKTOP_BREAKPOINT) return viewportWidth * 0.5;
+  return 720;
 }
 
 function constrainPositionToStage(
-  position: FanPosition,
+  position: Position,
   viewportWidth: number,
   stageWidthPx = Math.min(viewportWidth, CAROUSEL_MAX_WIDTH_PX),
 ) {
@@ -99,33 +99,33 @@ function getVerticalMultiplier(viewportWidth: number, viewportHeight: number) {
   return Math.min(1, (viewportHeight * 0.7) / (idealHeightRem * 16));
 }
 
-export function getInitialFanCenter(totalCards: number, initialIndex?: number) {
+export function getInitialCenter(totalCards: number, initialIndex?: number) {
   if (totalCards <= 0) return 0;
 
   const fallback =
-    totalCards > MAX_VISIBLE_FAN_CARDS ? MAX_VISIBLE_FAN_CARDS >> 1 : totalCards >> 1;
+    totalCards > MAX_VISIBLE_CARDS ? MAX_VISIBLE_CARDS >> 1 : totalCards >> 1;
 
   return Math.min(Math.max(initialIndex ?? fallback, 0), totalCards - 1);
 }
 
-export function getFanEntryOffsetRem(
+export function getEntryOffsetRem(
   viewportWidth: number,
   viewportHeight: number,
 ) {
   return 12 * getVerticalMultiplier(viewportWidth, viewportHeight);
 }
 
-export function getVisibleFanSlots(
+export function getVisibleSlots(
   totalCards: number,
   centerIndex: number,
-  requestedCount = MAX_VISIBLE_FAN_CARDS,
+  requestedCount = MAX_VISIBLE_CARDS,
 ) {
   if (totalCards <= 0) return [];
 
   const visibleCardCount = clamp(
     requestedCount % 2 === 0 ? requestedCount - 1 : requestedCount,
     1,
-    MAX_VISIBLE_FAN_CARDS,
+    MAX_VISIBLE_CARDS,
   );
 
   if (totalCards <= visibleCardCount) {
@@ -135,18 +135,18 @@ export function getVisibleFanSlots(
     }));
   }
 
-  const normalizedCenter = ((centerIndex % totalCards) + totalCards) % totalCards;
+  const normalizedCenter =
+    ((centerIndex % totalCards) + totalCards) % totalCards;
 
-  const fanHalf = visibleCardCount >> 1;
+  const cardHalf = visibleCardCount >> 1;
 
   return Array.from({ length: visibleCardCount }, (_, slot) => ({
-    cardIndex:
-      (normalizedCenter + slot - fanHalf + totalCards) % totalCards,
+    cardIndex: (normalizedCenter + slot - cardHalf + totalCards) % totalCards,
     slot,
   }));
 }
 
-export function getFanSlotPosition(slotCount: number, slot: number): FanPosition {
+export function getSlotPosition(slotCount: number, slot: number): Position {
   const centerSlot = slotCount >> 1;
   const distance = slotCount > 1 ? (slot - centerSlot) / centerSlot : 0;
   const absoluteDistance = Math.abs(distance);
@@ -160,14 +160,14 @@ export function getFanSlotPosition(slotCount: number, slot: number): FanPosition
   };
 }
 
-export function getResponsiveFanPosition(
+export function getResponsivePosition(
   slotCount: number,
   slot: number,
   viewportWidth: number,
   viewportHeight: number,
   stageWidthPx?: number,
-): FanPosition {
-  const base = getFanSlotPosition(slotCount, slot);
+): Position {
+  const base = getSlotPosition(slotCount, slot);
 
   return constrainPositionToStage(
     {
@@ -180,7 +180,7 @@ export function getResponsiveFanPosition(
   );
 }
 
-export function getHoveredFanPositions(
+export function getHoveredPositions(
   slotCount: number,
   hoveredSlot: number | null,
   viewportWidth: number,
@@ -188,12 +188,15 @@ export function getHoveredFanPositions(
   stageWidthPx?: number,
 ) {
   const horizontalMultiplier = getHorizontalMultiplier(viewportWidth);
-  const verticalMultiplier = getVerticalMultiplier(viewportWidth, viewportHeight);
+  const verticalMultiplier = getVerticalMultiplier(
+    viewportWidth,
+    viewportHeight,
+  );
   const centerSlot = slotCount >> 1;
 
   return Array.from({ length: slotCount }, (_, slot) => {
-    const base = getFanSlotPosition(slotCount, slot);
-    const position: FanPosition = {
+    const base = getSlotPosition(slotCount, slot);
+    const position: Position = {
       ...base,
       xRem: base.xRem * horizontalMultiplier,
       yRem: base.yRem * verticalMultiplier,
@@ -228,8 +231,7 @@ export function getHoveredFanPositions(
     return constrainPositionToStage(
       {
         ...position,
-        rotation:
-          position.rotation + direction * (3 / (slotDistance + 1)),
+        rotation: position.rotation + direction * (3 / (slotDistance + 1)),
         xRem: position.xRem + direction * pushStrength * horizontalMultiplier,
         yRem:
           position.yRem -

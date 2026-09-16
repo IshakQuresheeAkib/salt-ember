@@ -28,11 +28,10 @@ type ButtonProps = ButtonLinkProps | ButtonElementProps;
 
 const buttonVariants: Record<ButtonVariant, string> = {
   primary:
-    "gap-[clamp(9px,1.5vw,22px)] bg-silver-mist text-midnight-shadow transition-[transform,scale,background] duration-200 hover:-translate-y-0.5 hover:bg-flameburst-orange active:scale-[0.97]",
+    "gap-[clamp(9px,1.5vw,22px)] bg-orange text-midnight-shadow transition-[transform,scale,background] duration-200 hover:-translate-y-0.5 hover:bg-silver active:scale-[0.97]",
   secondary:
-    "border border-silver-mist text-silver-mist transition-colors duration-200 hover:bg-flameburst-orange hover:text-midnight-shadow",
-  text:
-    "p-0 text-silver-mist underline decoration-flameburst-orange underline-offset-4 transition-colors duration-200 hover:text-flameburst-orange",
+    "border border-orange text-orange transition-colors duration-200 hover:bg-orange hover:text-midnight-shadow",
+  text: "p-0 text-orange underline decoration-orange underline-offset-4 transition-colors duration-200 hover:text-silver hover:decoration-silver",
 };
 
 const buttonBaseClassName =
