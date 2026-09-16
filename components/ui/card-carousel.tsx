@@ -53,7 +53,6 @@ function CarouselCard({
   );
   const interactiveClassName =
     "block size-full cursor-pointer overflow-hidden transition-[filter] duration-200 hover:brightness-110 focus-visible:brightness-110";
-
   return (
     <div
       aria-hidden={!isVisible}
@@ -111,6 +110,9 @@ export default function CardCarousel({
     () => new Set(),
   );
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isCarouselLocked, setIsCarouselLocked] = useState(
+    () => totalCards > 0,
+  );
   const activeCenterIndex = totalCards
     ? Math.min(centerIndex, totalCards - 1)
     : 0;
@@ -138,6 +140,7 @@ export default function CardCarousel({
       if (isAnimating.current || !needsPagination) return;
 
       isAnimating.current = true;
+      setIsCarouselLocked(true);
       directionRef.current = direction;
       setExitingCardIndexes(new Set(visibleMap.keys()));
       setCenterIndex((current) =>
@@ -160,6 +163,7 @@ export default function CardCarousel({
           ? "right"
           : "left";
       isAnimating.current = true;
+      setIsCarouselLocked(true);
       setExitingCardIndexes(new Set(visibleMap.keys()));
       setCenterIndex(index);
     },
@@ -202,17 +206,22 @@ export default function CardCarousel({
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let completedCards = 0;
     let completedExitCards = 0;
+    let reducedMotionUnlockFrame: number | null = null;
     const exitingCardCount = [...wasVisible].filter(
       (cardIndex) => !visibleMap.has(cardIndex),
     ).length;
 
-    if (isFirstMount && !shouldReduceMotion) isAnimating.current = true;
+    if (isFirstMount && !shouldReduceMotion) {
+      isAnimating.current = true;
+      setIsCarouselLocked(true);
+    }
 
     const finishCardAnimation = () => {
       completedCards += 1;
       if (completedCards < visibleMap.size) return;
 
       isAnimating.current = false;
+      setIsCarouselLocked(false);
       hasEntered.current = true;
     };
     const finishExitAnimation = () => {
@@ -326,8 +335,11 @@ export default function CardCarousel({
     });
 
     if (shouldReduceMotion) {
-      isAnimating.current = false;
-      hasEntered.current = true;
+      reducedMotionUnlockFrame = window.requestAnimationFrame(() => {
+        isAnimating.current = false;
+        setIsCarouselLocked(false);
+        hasEntered.current = true;
+      });
     }
 
     previouslyVisible.current = new Set(visibleMap.keys());
@@ -424,6 +436,9 @@ export default function CardCarousel({
       container.removeEventListener("focusout", handleFocusOut);
       window.removeEventListener("resize", handleResize);
       if (leaveTimer) clearTimeout(leaveTimer);
+      if (reducedMotionUnlockFrame !== null) {
+        window.cancelAnimationFrame(reducedMotionUnlockFrame);
+      }
       gsap.killTweensOf(cardElements);
     };
   }, [
@@ -457,6 +472,7 @@ export default function CardCarousel({
       <div className="flex w-full max-w-[90rem] items-center justify-center">
         <div
           ref={containerRef}
+          aria-busy={isCarouselLocked}
           aria-roledescription="carousel"
           className="relative flex h-100 w-full max-w-7xl items-center justify-center overflow-hidden min-[480px]:h-[75vw] min-[800px]:h-[50vw] min-[1440px]:h-180"
           role="region"
@@ -476,16 +492,26 @@ export default function CardCarousel({
         </div>
       </div>
 
-      <p aria-live="polite" className="sr-only">
-        Page {activeCenterIndex + 1} of {totalCards}:{" "}
-        {currentCard.alt ?? "Menu page"}
+      <p
+        aria-atomic="true"
+        aria-live="polite"
+        className="sr-only"
+        id="menu-carousel-status"
+      >
+        {isCarouselLocked
+          ? "Menu pages are moving. Previous and next controls are temporarily unavailable."
+          : `Page ${activeCenterIndex + 1} of ${totalCards}: ${currentCard.alt ?? "Menu page"}`}
       </p>
 
       {needsPagination ? (
         <div className="z-30 mt-6 flex items-center justify-center gap-4 lg:mt-0">
           <button
             aria-label="Previous menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver md:size-12"
+            aria-describedby={
+              isCarouselLocked ? "menu-carousel-status" : undefined
+            }
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver disabled:cursor-not-allowed disabled:opacity-60 md:size-12"
+            disabled={isCarouselLocked}
             onClick={() => cycle("left")}
             type="button"
           >
@@ -510,7 +536,11 @@ export default function CardCarousel({
 
           <button
             aria-label="Next menu page"
-            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver md:size-12"
+            aria-describedby={
+              isCarouselLocked ? "menu-carousel-status" : undefined
+            }
+            className="relative z-30 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-[1.5px] border-orange/60 bg-surface/80 shadow-[0_4px_20px_color-mix(in_srgb,var(--silver)_30%,transparent)] outline-none transition-colors duration-300 hover:border-silver/80 hover:text-silver active:opacity-70 focus-visible:border-orange focus-visible:text-silver disabled:cursor-not-allowed disabled:opacity-60 md:size-12"
+            disabled={isCarouselLocked}
             onClick={() => cycle("right")}
             type="button"
           >

@@ -8,7 +8,7 @@ const mobileNavPath = new URL("../components/mobile-bottom-nav.tsx", import.meta
 const bottomNavPath = new URL("../components/ui/bottom-nav-bar.tsx", import.meta.url);
 const defaultNavItemsPath = new URL("../lib/constants/default-nav-items.ts", import.meta.url);
 
-test("uses the bottom bar for each restaurant navigation anchor and location on mobile", () => {
+test("uses the shared four restaurant navigation anchors in the mobile bottom bar", () => {
   const page = readFileSync(pagePath, "utf8");
   const header = readFileSync(headerPath, "utf8");
   const mobileNav = readFileSync(mobileNavPath, "utf8");
@@ -31,17 +31,14 @@ test("uses the bottom bar for each restaurant navigation anchor and location on 
     );
   }
 
-  assert.match(mobileNav, /const mobileNavigationItems/);
-  assert.match(mobileNav, /SALT_AND_EMBER_MAP_URL/);
-  assert.match(mobileNav, /label: "Location"/);
-  assert.match(mobileNav, /external: true/);
+  assert.match(mobileNav, /items=\{defaultNavItems\}/);
+  assert.doesNotMatch(mobileNav, /SALT_AND_EMBER_MAP_URL/);
+  assert.doesNotMatch(mobileNav, /label: "Location"/);
   assert.match(header, /defaultNavItems\.map/);
   assert.match(header, /const Icon = item\.icon/);
   assert.match(header, /<Icon aria-hidden="true"/);
-  assert.match(header, /hidden[\s\S]*desktop:inline-flex/);
   assert.match(mobileNav, /stickyBottom/);
   assert.match(mobileNav, /desktop:hidden/);
-  assert.match(mobileNav, /!right-\[max\(1rem,env\(safe-area-inset-right\)\)\]/);
   assert.match(bottomNav, /aria-label="Bottom navigation"/);
   assert.match(bottomNav, /aria-current/);
   assert.match(bottomNav, /target=\{item\.external \? "_blank" : undefined\}/);

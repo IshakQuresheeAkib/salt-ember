@@ -35,7 +35,6 @@ export function Footer() {
               src={logo}
               alt="Salt & Ember logo"
               className="size-[clamp(90px,8vw,130px)] object-contain rotate-45"
-              priority
             />
           </a>
           <p className={footerDetailClassName}>

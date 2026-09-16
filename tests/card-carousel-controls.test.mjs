@@ -67,3 +67,20 @@ test("menu carousel mounts only its active and exiting card windows", () => {
     /const cardIndex = Number\(element\.dataset\.menuCard\);/,
   );
 });
+
+test("menu carousel disables and announces pagination while card motion is locked", () => {
+  const carousel = readFileSync(carouselPath, "utf8");
+
+  assert.match(
+    carousel,
+    /const \[isCarouselLocked, setIsCarouselLocked\] = useState\(/,
+  );
+  assert.match(carousel, /if \(isFirstMount && !shouldReduceMotion\)[\s\S]*setIsCarouselLocked\(true\)/);
+  assert.match(carousel, /const finishCardAnimation = \(\) => \{[\s\S]*setIsCarouselLocked\(false\)/);
+  assert.match(carousel, /if \(shouldReduceMotion\) \{[\s\S]*setIsCarouselLocked\(false\)/);
+  assert.match(carousel, /disabled=\{isCarouselLocked\}/);
+  assert.match(
+    carousel,
+    /aria-live="polite"[\s\S]*isCarouselLocked[\s\S]*controls are temporarily unavailable/,
+  );
+});

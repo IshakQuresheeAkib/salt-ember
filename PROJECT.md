@@ -9,7 +9,7 @@ Salt & Ember is a single-page, frontend-only restaurant website built for a Sylh
 ### What the page currently provides
 
 - Header navigation to Home, Menu, Reviews, and Contact.
-- A desktop navigation bar, a Google Maps link, and a fixed mobile bottom navigation bar.
+- A desktop navigation bar, an external Google Maps hero CTA, and a fixed mobile bottom navigation bar.
 - A hero with a selectable six-item food orbit and automatic rotation.
 - A client-side, keyboard-operable carousel for 28 local menu-page images.
 - A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
@@ -145,7 +145,7 @@ Do not move those rules merely to make the stylesheet smaller. Prefer Tailwind f
 
 ### Navigation and controls
 
-- Navigation targets are `#top`, `#menu`, `#testimonials`, and `#contact`.
+- Navigation targets are `#top`, `#menu`, `#testimonials`, and `#contact`; the separate hero location CTA opens Google Maps in a new tab.
 - The mobile navigation uses labelled anchor controls in a fixed bottom bar.
 - Hero food controls are native buttons using `aria-pressed`. Visible carousel pages are buttons with `aria-current` on the selected page; non-visible pages are hidden from the accessibility tree and tab order.
 - Social links have accessible labels. Decorative remote social icons and hero food images are hidden from the accessible name calculation.

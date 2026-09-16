@@ -17,7 +17,13 @@ test("uses reusable button variants for hero CTAs", async () => {
     /import \{ Button \} from "@\/components\/ui\/button";/,
   );
   assert.match(heroSource, /variant="primary"\s+href="#menu"/);
-  assert.match(heroSource, /variant="secondary"\s+href="#contact"/);
+  assert.match(heroSource, /SALT_AND_EMBER_MAP_URL/);
+  assert.match(
+    heroSource,
+    /variant="secondary"\s+href=\{SALT_AND_EMBER_MAP_URL\}[\s\S]*target="_blank"[\s\S]*rel="noopener noreferrer"/,
+  );
+  assert.match(heroSource, /<MapPinned[^>]*aria-hidden="true"/);
+  assert.match(heroSource, /Our location/);
   assert.match(
     buttonSource,
     /export type ButtonVariant = "primary" \| "secondary" \| "text";/,

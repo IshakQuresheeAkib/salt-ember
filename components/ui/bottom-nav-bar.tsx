@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { motion, useReducedMotion } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
@@ -14,6 +14,7 @@ export type BottomNavBarItem = {
   external?: boolean;
   href?: string;
   icon: LucideIcon;
+  isActive?: boolean;
   label: string;
 };
 
@@ -22,6 +23,18 @@ type BottomNavBarProps = {
   defaultIndex?: number;
   items?: readonly BottomNavBarItem[];
   stickyBottom?: boolean;
+};
+
+const getActiveIndexForHash = (
+  items: readonly BottomNavBarItem[],
+  hash: string,
+  fallbackIndex: number,
+) => {
+  const hashIndex = items.findIndex((item) => item.href === hash);
+  if (hashIndex >= 0) return hashIndex;
+
+  const configuredIndex = items.findIndex((item) => item.isActive);
+  return configuredIndex >= 0 ? configuredIndex : fallbackIndex;
 };
 
 export function BottomNavBar({
@@ -37,13 +50,25 @@ export function BottomNavBar({
   );
   const [activeIndex, setActiveIndex] = useState(initialIndex);
 
+  useEffect(() => {
+    const syncActiveIndex = () => {
+      setActiveIndex(
+        getActiveIndexForHash(items, window.location.hash, initialIndex),
+      );
+    };
+
+    syncActiveIndex();
+    window.addEventListener("hashchange", syncActiveIndex);
+    return () => window.removeEventListener("hashchange", syncActiveIndex);
+  }, [initialIndex, items]);
+
   if (items.length === 0) {
     return null;
   }
 
   const itemClassName = (isActive: boolean) =>
     cn(
-      "relative flex min-h-11 min-w-11 items-center rounded-full py-2 transition-colors duration-200 focus:outline-none focus-visible:ring-0",
+      "relative flex min-h-11 min-w-11 items-center rounded-full py-2 transition-colors duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-silver",
       isActive ? "gap-2 bg-primary/10 px-2.5 text-primary" : "bg-transparent px-2 text-muted-foreground hover:bg-muted",
     );
 

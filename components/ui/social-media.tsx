@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import { PhoneCall } from "lucide-react";
@@ -20,6 +22,38 @@ const socialIconClassName = "relative z-10 size-6";
 const socialTooltipClassName =
   "pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md px-2.5 py-1.5 text-xs text-midnight-shadow opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 motion-safe:-translate-y-1";
 
+function SocialIcon({ item }: { item: SocialItem }) {
+  const [hasIconError, setHasIconError] = React.useState(false);
+
+  if (item.kind === "call") {
+    return <PhoneCall aria-hidden="true" className={socialIconClassName} />;
+  }
+
+  if (hasIconError) {
+    return (
+      <span
+        aria-hidden="true"
+        className="relative z-10 text-xs font-bold tracking-wide text-silver"
+      >
+        {item.ariaLabel.slice(0, 2)}
+      </span>
+    );
+  }
+
+  return (
+    <Image
+      src={item.svgUrl}
+      alt=""
+      aria-hidden="true"
+      className={socialIconClassName}
+      height={24}
+      onError={() => setHasIconError(true)}
+      unoptimized
+      width={24}
+    />
+  );
+}
+
 const SocialTooltip = React.forwardRef<HTMLUListElement, SocialTooltipProps>(
   ({ className, items, ...props }, ref) => (
     <ul ref={ref} className={cn(socialListClassName, className)} {...props}>
@@ -38,25 +72,9 @@ const SocialTooltip = React.forwardRef<HTMLUListElement, SocialTooltipProps>(
               className={socialLinkFillClassName}
               style={{ backgroundColor: item.color }}
             />
-            {item.kind === "call" ? (
-              <PhoneCall aria-hidden="true" className={socialIconClassName} />
-            ) : (
-              <Image
-                src={item.svgUrl}
-                alt=""
-                aria-hidden="true"
-                className={socialIconClassName}
-                width={24}
-                height={24}
-                unoptimized
-              />
-            )}
+            <SocialIcon item={item} />
           </a>
-          <span
-            role="tooltip"
-            className={socialTooltipClassName}
-            style={{ backgroundColor: item.color }}
-          >
+          <span aria-hidden="true" className={socialTooltipClassName} style={{ backgroundColor: item.color }}>
             {item.tooltip}
           </span>
         </li>

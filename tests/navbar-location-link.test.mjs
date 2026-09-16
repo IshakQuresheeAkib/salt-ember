@@ -2,20 +2,17 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 
-const pagePath = new URL("../app/page.tsx", import.meta.url);
-const stylesheetPath = new URL("../app/globals.css", import.meta.url);
+const headerPath = new URL("../components/header.tsx", import.meta.url);
+const heroPath = new URL("../components/hero-section.tsx", import.meta.url);
 
-test("renders an accessible animated Maps link at the right side of the navbar", () => {
-  const page = readFileSync(pagePath, "utf8");
-  const stylesheet = readFileSync(stylesheetPath, "utf8");
+test("renders the external Maps action in the hero rather than the primary navbar", () => {
+  const header = readFileSync(headerPath, "utf8");
+  const hero = readFileSync(heroPath, "utf8");
 
-  assert.match(page, /import \{[^}]*MapPin[^}]*\} from "lucide-react"/);
+  assert.doesNotMatch(header, /SALT_AND_EMBER_MAP_URL/);
+  assert.match(hero, /import \{[^}]*MapPinned[^}]*\} from "lucide-react"/);
   assert.match(
-    page,
-    /<a\s+className="navbar-location"[\s\S]*href="https:\/\/maps\.app\.goo\.gl\/qBEyyTSasUwqyaRs5"[\s\S]*target="_blank"[\s\S]*rel="noopener noreferrer"[\s\S]*aria-label="Open Salt & Ember's location in Google Maps"[\s\S]*<MapPin[^>]*aria-hidden="true"/,
+    hero,
+    /<Button[\s\S]*variant="secondary"[\s\S]*href=\{SALT_AND_EMBER_MAP_URL\}[\s\S]*target="_blank"[\s\S]*rel="noopener noreferrer"[\s\S]*<MapPinned[^>]*aria-hidden="true"[\s\S]*Our location/,
   );
-  assert.match(stylesheet, /\.navbar-location\s*\{/);
-  assert.match(stylesheet, /\.navbar-location__pin\s*\{[\s\S]*animation:/);
-  assert.match(stylesheet, /@keyframes navbar-location-bob/);
-  assert.match(stylesheet, /\.navbar-location:focus-visible/);
 });
