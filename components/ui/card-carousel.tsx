@@ -24,6 +24,7 @@ export interface CardItem {
 interface CardCarouselProps {
   cards: CardItem[];
   initialIndex?: number;
+  onCardActivate?: (index: number, trigger: HTMLButtonElement) => void;
 }
 
 function CarouselCard({
@@ -31,12 +32,14 @@ function CarouselCard({
   index,
   isCurrent,
   isVisible,
+  onCardActivate,
   onSelect,
 }: {
   card: CardItem;
   index: number;
   isCurrent: boolean;
   isVisible: boolean;
+  onCardActivate?: (index: number, trigger: HTMLButtonElement) => void;
   onSelect: (index: number) => void;
 }) {
   const image = (
@@ -79,7 +82,14 @@ function CarouselCard({
         <button
           aria-current={isCurrent ? "true" : undefined}
           className={interactiveClassName}
-          onClick={() => onSelect(index)}
+          onClick={(event) => {
+            if (onCardActivate) {
+              onCardActivate(index, event.currentTarget);
+              return;
+            }
+
+            onSelect(index);
+          }}
           tabIndex={isVisible ? 0 : -1}
           type="button"
         >
@@ -93,6 +103,7 @@ function CarouselCard({
 export default function CardCarousel({
   cards,
   initialIndex,
+  onCardActivate,
 }: CardCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const isAnimating = useRef(false);
@@ -485,6 +496,7 @@ export default function CardCarousel({
                 isCurrent={index === activeCenterIndex}
                 isVisible={visibleMap.has(index)}
                 key={card.imgUrl}
+                onCardActivate={onCardActivate}
                 onSelect={selectCard}
               />
             ) : null,

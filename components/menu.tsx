@@ -1,12 +1,14 @@
 "use client";
 
 import CardCarousel, { type CardItem } from "@/components/ui/card-carousel";
+import MenuPageViewer from "@/components/ui/menu-page-viewer";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import {
   contentShellClassName,
   highlightedTextClassName,
   sectionHeadingClassName,
 } from "@/lib/tailwind";
+import { useRef, useState } from "react";
 
 const menuPageNames = [
   "718174826_122132414409161286_343033684358365820_n.jpg",
@@ -48,6 +50,10 @@ const menuPages: CardItem[] = menuPageNames.map((name, index) => ({
 }));
 
 export function Menu() {
+  const cardTriggerRef = useRef<HTMLElement | null>(null);
+  const [selectedPageIndex, setSelectedPageIndex] = useState<number | null>(null);
+  const [shouldAnimateViewer, setShouldAnimateViewer] = useState(true);
+
   return (
     <section
       aria-labelledby="heritage-menu-title"
@@ -64,11 +70,27 @@ export function Menu() {
           </h2>
         </TextBlockAnimation>
         <p className="mt-[15px] mb-0 text-[clamp(11.2px,10.56px+0.14vw,13px)] text-muted-foreground">
-          Browse every page of our menu. Use the arrows or select a page to
-          bring it forward.
+          Browse every page of our menu. Use the arrows to browse, then click a
+          page to open it in full.
         </p>
       </div>
-      <CardCarousel cards={menuPages} initialIndex={3} />
+      <CardCarousel
+        cards={menuPages}
+        initialIndex={3}
+        onCardActivate={(index, trigger) => {
+          cardTriggerRef.current = trigger;
+          setShouldAnimateViewer(!trigger.matches(":focus-visible"));
+          setSelectedPageIndex(index);
+        }}
+      />
+      <MenuPageViewer
+        onPageChange={setSelectedPageIndex}
+        onRequestClose={() => setSelectedPageIndex(null)}
+        pages={menuPages}
+        returnFocusRef={cardTriggerRef}
+        selectedPageIndex={selectedPageIndex}
+        shouldAnimate={shouldAnimateViewer}
+      />
     </section>
   );
 }
