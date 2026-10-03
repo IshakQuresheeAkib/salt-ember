@@ -32,6 +32,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # environment files
+.env
 .env*
 !.env.example
 
@@ -41,6 +42,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.env
 .21st
 .commandcode
