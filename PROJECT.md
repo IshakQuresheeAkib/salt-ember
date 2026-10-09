@@ -12,6 +12,7 @@ Salt & Ember is a single-page, frontend-only restaurant website built for a Sylh
 - A desktop navigation bar, an external Google Maps hero CTA, and a fixed mobile bottom navigation bar.
 - A hero with a selectable six-item food orbit and automatic rotation.
 - A client-side, keyboard-operable carousel for 28 local menu-page images.
+- A "Meet The Chefs" presentation showcasing four culinary leaders with portraits, craft roles, and responsive scroll animations.
 - A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
 - A contact footer with a maps link, phone link, WhatsApp link, Facebook link, and Instagram link.
 
@@ -86,6 +87,7 @@ components/
   mobile-bottom-nav.tsx          # client-side restaurant navigation adapter
   hero-food-selector.tsx         # hero selection, autoplay, GSAP orbit
   menu.tsx                       # local menu-page fixture and carousel composition
+  meet-the-chefs.tsx             # chef profiles and responsive GSAP scroll effects
   testimonials.tsx               # Framer Motion or reduced-motion testimonials
   footer.tsx                     # contact and social presentation
   ui/
@@ -99,7 +101,7 @@ lib/
   card-carousel-layout.mts   # pure carousel geometry and responsive rules
   gsap.ts                        # one-time GSAP plugin and ease registration
   hero-food-autoplay-state.mts   # pure autoplay state rules
-  constants/                     # social and testimonial fixtures
+  constants/                     # chefs, social and testimonial fixtures
   types.ts, utils.ts             # shared types and utilities
 tests/                           # focused Node test files
 public/
@@ -110,22 +112,19 @@ public/
 
 ### Rendering and client boundaries
 
-`app/page.tsx` is server-rendered by default and composes the hero, menu, testimonials, and footer. Client components are limited to interaction and browser APIs:
+`app/page.tsx` is server-rendered by default and composes the hero, menu, meet-the-chefs section, testimonials, and footer. Client components are limited to interaction and browser APIs:
 
 - `hero-food-selector.tsx` observes reduced motion, document visibility, viewport geometry, and drives GSAP orbit transitions.
 - `menu.tsx` supplies the local menu-page fixture. `card-carousel.tsx` owns the selected page, pagination, keyboard arrows, hover/focus layout, responsive visible-card count, and its reduced-motion behavior.
+- `meet-the-chefs.tsx` observes reduced motion and uses GSAP `ScrollTrigger` with `matchMedia` to drive mobile kinetic tilt, scrub parallax, active ember glow, and desktop staggered entrance.
 - `testimonials.tsx` reads the reduced-motion preference and drives the animated testimonial columns.
 - `text-block-animation.tsx` uses GSAP `SplitText` only when the viewport is at least 768px wide and reduced motion is not requested.
 
 ### Images
 
-Remote images are currently permitted only from:
+Remote images are currently permitted only from: `res.cloudinary.com`
 
-- `images.unsplash.com`
-- `hebbkx1anhila5yf.public.blob.vercel-storage.com`
-- `cdn.21st.dev`
-
-Any additional remote image source must be added to `next.config.ts` before it is used with `next/image`.
+Remote assets (such as chef portraits) are delivered via Cloudinary. Any additional remote image source must be added to `next.config.ts` before it is used with `next/image`.
 
 ## 4. Styling architecture
 
@@ -160,6 +159,13 @@ Do not move those rules merely to make the stylesheet smaller. Prefer Tailwind f
 - Manual selections update a polite live region.
 - GSAP owns food-path transitions, carousel movement, navigation underlines, and title/section line reveals. `MotionPathPlugin`, `DrawSVGPlugin`, `ScrollTrigger`, `SplitText`, and two custom eases are registered in `lib/gsap.ts`.
 
+### Meet the Chefs motion
+
+- Displays four culinary profiles in a responsive grid (1 column on mobile, 2 on tablet, 4 on desktop).
+- On mobile (<640px), cards feature individual 3D kinetic tilt entrance (`ember-out` ease), scrubbed portrait parallax, and a focal ember horizon glow when centered in the viewport.
+- On tablet and desktop (>=640px), cards enter via a coordinated staggered entrance (`stagger: 0.1`).
+- Under `prefers-reduced-motion`, all GSAP scroll animations and transformations are bypassed, rendering cards statically in place.
+
 ### Testimonials and reduced motion
 
 - Motion-capable presentation continuously translates three testimonial columns, with nine primary cards and visually repeated cards for the loop.
@@ -175,6 +181,7 @@ The following values are implementation fixtures or external links and should be
 
 - food state labels and image paths in `components/hero-food-selector.tsx`;
 - menu-page filenames in `components/menu.tsx`, with the corresponding assets in `public/menu-images/`;
+- chef profiles, craft statuses, and Cloudinary image paths in `lib/constants/chefs.ts`;
 - testimonial copy, names, sources, and optional ratings in `lib/constants/testimonials.ts`;
 - phone, map, WhatsApp, Facebook, and Instagram data in `lib/constants/social-media.ts`;
 - page title and description in `app/layout.tsx`.

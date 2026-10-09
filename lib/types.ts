@@ -6,3 +6,10 @@ export interface Testimonial {
   source: ReviewSource;
   rating?: number;
 }
+
+export interface Chef {
+  id: string;
+  name: string;
+  title: string;
+  image: string;
+}
