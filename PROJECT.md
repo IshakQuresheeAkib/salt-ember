@@ -181,7 +181,7 @@ The following values are implementation fixtures or external links and should be
 
 - food state labels and image paths in `components/hero-food-selector.tsx`;
 - menu-page filenames in `components/menu.tsx`, with the corresponding assets in `public/menu-images/`;
-- chef profiles, craft statuses, and Cloudinary image paths in `lib/constants/chefs.ts`;
+- chef profiles and Cloudinary image paths in `lib/constants/chefs.ts`;
 - testimonial copy, names, sources, and optional ratings in `lib/constants/testimonials.ts`;
 - phone, map, WhatsApp, Facebook, and Instagram data in `lib/constants/social-media.ts`;
 - page title and description in `app/layout.tsx`.
