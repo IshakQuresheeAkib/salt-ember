@@ -1,0 +1,30 @@
+# Salt & Ember
+
+> A modern fire-led restaurant and steakhouse in Sylhet, Bangladesh where artisanal wood-fired cooking meets global culinary instincts.
+
+## Restaurant Details
+- **Name**: Salt & Ember
+- **Tagline**: Flavour Meets Fire
+- **Type**: Fire-led Steakhouse & Continental Restaurant
+- **Location**: Baruthkhana Point, East Zindabazar, Sylhet 3100, Bangladesh
+- **Geo Coordinates**: 24.8949° N, 91.8687° E
+- **Map Destination**: https://maps.app.goo.gl/qBEyyTSasUwqyaRs5
+- **Phone**: +880 1704 083 376
+- **WhatsApp**: https://wa.me/8801704083376
+- **Social Media**:
+  - Facebook: https://www.facebook.com/saltandember7
+  - Instagram: https://www.instagram.com/salt.and.ember_
+
+## Culinary Concept & Highlights
+- **Hearth & Flame**: Authentic wood-fired grill and charcoal embers honoring seasonal marinades and artisanal smoke.
+- **Cuisine**: Steaks, Continental, Wood-Fired Grill, Thai & Chinese, Seafood, Artisanal Burgers & Kebabs.
+- **Atmosphere**: Modern, family-friendly, romantic dining, party and corporate event spaces.
+
+## Menu & Experience
+- **Heritage Menu**: Extensive multi-page artisanal menu available on-site and browsable at https://salt-ember.vercel.app/#menu
+- **Key Categories**: Appetizers, Biriyani, Gourmet Burgers, Charcoal Kebabs, Fresh Pasta, Wood-Fired Pizza.
+- **Chefs**:
+  - Ashraf Al-Mansur (Executive Chef - Firecraft & Smoke Architecture)
+  - Tariq Vance (Master of Flame - Charcoal & Slow Ember Roasting)
+  - Elena Rostova (Pastry & Embers - Hearth Bakery & Charred Botanicals)
+  - Marcus Chen (Sauce & Marinade Alchemist - Umami Glazes & Acid Balances)
