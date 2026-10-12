@@ -8,7 +8,7 @@ export const chefs: readonly Chef[] = [
     image: "https://res.cloudinary.com/dhfg728um/image/upload/v1791551403/chef1_g8bydg.jpg",
   },
   {
-    id: "Jumman-rahman",
+    id: "jumman-rahman",
     name: "Jumman Rahman",
     title: "Executive Sous Chef",
     image: "https://res.cloudinary.com/dhfg728um/image/upload/v1791551404/chef2_alw2lm.jpg",

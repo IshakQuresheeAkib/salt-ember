@@ -29,7 +29,7 @@ npm install
 npm run dev
 ```
 
-Open the URL printed by Next.js. The runtime fetches remote images from Unsplash, Vercel Blob, and `cdn.21st.dev`; their domains are allowed in `next.config.ts`.
+Open the URL printed by Next.js. The runtime fetches remote chef portraits from Cloudinary; its domain (`res.cloudinary.com`) is allowed in `next.config.ts`.
 
 ## Verification
 

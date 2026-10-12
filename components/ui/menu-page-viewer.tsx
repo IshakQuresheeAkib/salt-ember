@@ -23,7 +23,6 @@ const preloadedUrls = new Set<string>();
 
 function preloadImage(url: string, priority: "high" | "low" = "low"): void {
   if (typeof window === "undefined" || !url || preloadedUrls.has(url)) return;
-  preloadedUrls.add(url);
 
   const img = new Image();
   if (priority === "high") {
@@ -32,7 +31,16 @@ function preloadImage(url: string, priority: "high" | "low" = "low"): void {
   img.decoding = "async";
   img.src = url;
   if (typeof img.decode === "function") {
-    img.decode().catch(() => {});
+    img
+      .decode()
+      .then(() => {
+        preloadedUrls.add(url);
+      })
+      .catch(() => {});
+  } else {
+    img.onload = () => {
+      preloadedUrls.add(url);
+    };
   }
 }
 
@@ -75,8 +83,10 @@ export default function MenuPageViewer({
   const activePageIndex = selectedPageIndex ?? 0;
   const page = selectedPageIndex === null ? undefined : pages[activePageIndex];
   const isOpen = Boolean(page);
-  const prevIndex = pages.length ? (activePageIndex - 1 + pages.length) % pages.length : 0;
-  const nextIndex = pages.length ? (activePageIndex + 1) % pages.length : 0;
+  const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
+  const isImageLoaded = page
+    ? preloadedUrls.has(page.imgUrl) || loadedUrl === page.imgUrl
+    : false;
 
   const closeDialog = useCallback(() => {
     const dialog = dialogRef.current;
@@ -201,10 +211,17 @@ export default function MenuPageViewer({
       if (pages[idx]) preloadImage(pages[idx].imgUrl, "high");
     }
 
+    const isSaveData =
+      typeof navigator !== "undefined" &&
+      // @ts-expect-error Connection saveData is non-standard Chromium API
+      Boolean(navigator.connection?.saveData);
+
+    if (isSaveData) return;
+
     const schedule =
       typeof window.requestIdleCallback === "function"
         ? window.requestIdleCallback
-        : (cb: () => void) => window.setTimeout(cb, 100);
+        : (cb: () => void) => window.setTimeout(cb, 150);
 
     const id = schedule(() => {
       for (let i = 0; i < pages.length; i++) {
@@ -289,7 +306,7 @@ export default function MenuPageViewer({
     >
       {page ? (
         <section
-          aria-busy={false}
+          aria-busy={!isImageLoaded}
           className="pointer-events-none mx-auto grid h-full w-full grid-rows-[auto_minmax(0,1fr)_auto] gap-y-3 px-3 py-3 sm:gap-y-4 sm:px-6 sm:py-6"
         >
           <header className="pointer-events-auto mx-auto flex w-full items-center justify-between gap-3 border-b border-orange/50 pb-3 sm:max-w-[calc((100dvh-12.25rem)*0.792)]">
@@ -329,6 +346,8 @@ export default function MenuPageViewer({
                   <button
                     className="flex min-h-11 items-center gap-2 rounded-md bg-orange px-4 py-2 text-sm font-semibold text-midnight-shadow transition-colors hover:bg-silver focus-visible:outline-orange"
                     onClick={() => {
+                      if (page) preloadedUrls.delete(page.imgUrl);
+                      setLoadedUrl(null);
                       setImageAttempt((attempt) => attempt + 1);
                       setImageState("loaded");
                     }}
@@ -349,7 +368,10 @@ export default function MenuPageViewer({
               >
                 <img
                   alt={page.alt ?? `Menu page ${activePageIndex + 1}`}
-                  className="block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)]"
+                  className={cn(
+                    "block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] transition-[filter,transform] duration-500 ease-out will-change-[filter,transform] motion-reduce:transition-none",
+                    isImageLoaded ? "blur-0 scale-100" : "blur-md scale-105",
+                  )}
                   decoding="async"
                   draggable={false}
                   fetchPriority="high"
@@ -357,19 +379,13 @@ export default function MenuPageViewer({
                   onError={() => setImageState("error")}
                   onLoad={() => {
                     preloadedUrls.add(page.imgUrl);
+                    setLoadedUrl(page.imgUrl);
                     setImageState("loaded");
                   }}
                   src={page.imgUrl}
                 />
               </div>
             )}
-            {/* Preload adjacent page images in the DOM for zero-delay instant switching */}
-            {pages.length > 1 ? (
-              <div aria-hidden="true" className="hidden">
-                <img alt="" decoding="async" fetchPriority="high" loading="eager" src={pages[prevIndex].imgUrl} />
-                <img alt="" decoding="async" fetchPriority="high" loading="eager" src={pages[nextIndex].imgUrl} />
-              </div>
-            ) : null}
           </div>
 
           <footer className="pointer-events-auto mx-auto flex w-full items-center justify-between gap-3 border-t border-orange/50 pt-3 sm:max-w-[calc((100dvh-12.25rem)*0.792)]">

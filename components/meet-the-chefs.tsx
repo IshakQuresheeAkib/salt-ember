@@ -189,7 +189,6 @@ export function MeetTheChefs() {
                   fill
                   sizes="(max-width: 640px) 310px, (max-width: 1024px) 50vw, 25vw"
                   className="chef-card-img object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-                  priority={chef.id === "ashraf-al-mansur"}
                 />
               </div>
 
