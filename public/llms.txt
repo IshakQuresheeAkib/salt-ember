@@ -24,7 +24,7 @@
 - **Heritage Menu**: Extensive multi-page artisanal menu available on-site and browsable at https://salt-ember.vercel.app/#menu
 - **Key Categories**: Appetizers, Biriyani, Gourmet Burgers, Charcoal Kebabs, Fresh Pasta, Wood-Fired Pizza.
 - **Chefs**:
-  - Ashraf Al-Mansur (Executive Chef - Firecraft & Smoke Architecture)
-  - Tariq Vance (Master of Flame - Charcoal & Slow Ember Roasting)
-  - Elena Rostova (Pastry & Embers - Hearth Bakery & Charred Botanicals)
-  - Marcus Chen (Sauce & Marinade Alchemist - Umami Glazes & Acid Balances)
+  - Ashraf Al-Mansur (Executive Chef)
+  - Jumman Rahman (Executive Sous Chef)
+  - Wahidul Hasan Tayef (Artisan Pastry Chef)
+  - Kazi Tanvir (Master Butcher & Grill)
