@@ -51,6 +51,7 @@ function CarouselCard({
       priority={isCurrent}
       sizes="(max-width: 479px) 60vw, (max-width: 799px) 42vw, (max-width: 1439px) 27vw, (max-width: 2525px) 19vw, 480px"
       src={card.imgUrl}
+      unoptimized
       width={1622}
     />
   );
