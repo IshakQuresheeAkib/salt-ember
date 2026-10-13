@@ -66,3 +66,12 @@ test("the dialog padding remains available for backdrop dismissal", () => {
   assert.match(viewer, /<section[\s\S]*pointer-events-none/);
   assert.match(viewer, /pointer-events-auto/);
 });
+
+test("the viewer retains the previously displayed page and preloads idle pages to avoid blank screens", () => {
+  const viewer = readFileSync(viewerPath, "utf8");
+
+  assert.match(viewer, /displayedPage/);
+  assert.match(viewer, /requestIdleCallback/);
+  assert.match(viewer, /preloadedImages/);
+});
+

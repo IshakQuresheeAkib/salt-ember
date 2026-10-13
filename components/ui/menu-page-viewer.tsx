@@ -20,6 +20,7 @@ import { getMenuPageSwipeDirection } from "@/lib/menu-page-viewer-gesture.mjs";
 import { cn } from "@/lib/utils";
 
 const preloadedUrls = new Set<string>();
+const preloadedImages = new Map<string, HTMLImageElement>();
 
 function preloadImage(url: string, priority: "high" | "low" = "low"): void {
   if (typeof window === "undefined" || !url || preloadedUrls.has(url)) return;
@@ -27,16 +28,24 @@ function preloadImage(url: string, priority: "high" | "low" = "low"): void {
   const img = new Image();
   if (priority === "high") {
     img.fetchPriority = "high";
+  } else {
+    img.fetchPriority = "low";
   }
   img.decoding = "async";
   img.src = url;
-  if (typeof img.decode === "function") {
+  preloadedImages.set(url, img);
+
+  if (img.complete) {
+    preloadedUrls.add(url);
+  } else if (typeof img.decode === "function") {
     img
       .decode()
       .then(() => {
         preloadedUrls.add(url);
       })
-      .catch(() => {});
+      .catch(() => {
+        preloadedUrls.add(url);
+      });
   } else {
     img.onload = () => {
       preloadedUrls.add(url);
@@ -84,6 +93,7 @@ export default function MenuPageViewer({
   const page = selectedPageIndex === null ? undefined : pages[activePageIndex];
   const isOpen = Boolean(page);
   const [loadedUrl, setLoadedUrl] = useState<string | null>(null);
+  const [displayedPage, setDisplayedPage] = useState<MenuPage | null>(null);
   const isImageLoaded = page
     ? preloadedUrls.has(page.imgUrl) || loadedUrl === page.imgUrl
     : false;
@@ -201,23 +211,63 @@ export default function MenuPageViewer({
     };
   }, [isOpen]);
 
+  /* ── Preload initial carousel pages immediately, then remaining in idle ── */
+  useEffect(() => {
+    if (!pages.length) return;
+
+    // Elevate only the initial carousel cover page to avoid network contention
+    if (pages[3]) preloadImage(pages[3].imgUrl, "high");
+
+    const isSaveData =
+      typeof navigator !== "undefined" &&
+      // @ts-expect-error Connection saveData is non-standard Chromium API
+      Boolean(navigator.connection?.saveData);
+
+    if (isSaveData) return;
+
+    const schedule =
+      typeof window.requestIdleCallback === "function"
+        ? window.requestIdleCallback
+        : (cb: () => void) => window.setTimeout(cb, 200);
+
+    const cancelSchedule =
+      typeof window.cancelIdleCallback === "function"
+        ? window.cancelIdleCallback
+        : (id: number) => clearTimeout(id);
+
+    const id = schedule(() => {
+      for (let i = 0; i < pages.length; i++) {
+        if (i !== 3) {
+          preloadImage(pages[i].imgUrl, "low");
+        }
+      }
+    });
+
+    return () => {
+      cancelSchedule(id as number);
+    };
+  }, [pages]);
+
   /* ── On page change / open: preload active & adjacent pages ── */
   useEffect(() => {
     if (!isOpen || !page) return;
 
-    // Ensure active page is preloaded with high priority
+    // Elevate active page with high priority
     preloadImage(page.imgUrl, "high");
 
-    // Eagerly preload adjacent neighbors (+1, -1, +2, -2) for instant navigation
-    const p1 = (activePageIndex - 1 + pages.length) % pages.length;
-    const n1 = (activePageIndex + 1) % pages.length;
-    const p2 = (activePageIndex - 2 + pages.length) % pages.length;
-    const n2 = (activePageIndex + 2) % pages.length;
+    // Preload immediate neighbors (+1, -1) with high priority
+    const next1 = (activePageIndex + 1) % pages.length;
+    const prev1 = (activePageIndex - 1 + pages.length) % pages.length;
+    if (pages[next1]) preloadImage(pages[next1].imgUrl, "high");
+    if (pages[prev1]) preloadImage(pages[prev1].imgUrl, "high");
 
-    preloadImage(pages[p1].imgUrl, "low");
-    preloadImage(pages[n1].imgUrl, "low");
-    preloadImage(pages[p2].imgUrl, "low");
-    preloadImage(pages[n2].imgUrl, "low");
+    // Preload remaining neighbors (+2..+5) with low priority to avoid network contention
+    for (let offset = 2; offset <= 5; offset++) {
+      const nextIdx = (activePageIndex + offset) % pages.length;
+      const prevIdx = (activePageIndex - offset + pages.length) % pages.length;
+      if (pages[nextIdx]) preloadImage(pages[nextIdx].imgUrl, "low");
+      if (pages[prevIdx]) preloadImage(pages[prevIdx].imgUrl, "low");
+    }
   }, [isOpen, page, activePageIndex, pages]);
 
   useEffect(
@@ -241,6 +291,8 @@ export default function MenuPageViewer({
       }}
       onClose={() => {
         setIsClosing(false);
+        setLoadedUrl(null);
+        setDisplayedPage(null);
         onRequestClose();
         window.requestAnimationFrame(() => returnFocusRef.current?.focus());
       }}
@@ -321,27 +373,50 @@ export default function MenuPageViewer({
               </div>
             ) : (
               <div
-                className="flex h-full w-full items-center justify-center p-4 sm:p-8"
-                key={`${page.imgUrl}-${imageAttempt}`}
+                className="relative flex h-full w-full items-center justify-center p-4 sm:p-8"
                 onTouchEnd={handleTouchEnd}
                 onTouchMove={handleTouchMove}
                 onTouchStart={handleTouchStart}
               >
+                {/* Fallback image: retains previous page so the screen is NEVER blank while loading */}
+                {displayedPage && displayedPage.imgUrl !== page.imgUrl && !isImageLoaded ? (
+                  <img
+                    alt={displayedPage.alt ?? ""}
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 block h-full w-full select-none object-contain p-4 shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] sm:p-8"
+                    decoding="async"
+                    draggable={false}
+                    height={2048}
+                    src={displayedPage.imgUrl}
+                    width={1622}
+                  />
+                ) : null}
+
+                {/* Loading indicator on cold first open */}
+                {!isImageLoaded && (!displayedPage || displayedPage.imgUrl === page.imgUrl) ? (
+                  <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
+                    <div className="size-8 animate-spin rounded-full border-2 border-orange/20 border-t-orange" />
+                  </div>
+                ) : null}
+
+                {/* Active page image */}
                 <img
                   alt={page.alt ?? `Menu page ${activePageIndex + 1}`}
                   className={cn(
-                    "block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] transition-opacity duration-300 ease-out motion-reduce:transition-none",
+                    "block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] transition-opacity duration-200 ease-out motion-reduce:transition-none",
                     isImageLoaded ? "opacity-100" : "opacity-0",
                   )}
                   decoding="async"
                   draggable={false}
                   fetchPriority="high"
                   height={2048}
+                  key={`${page.imgUrl}-${imageAttempt}`}
                   loading="eager"
                   onError={() => setImageState("error")}
                   onLoad={() => {
                     preloadedUrls.add(page.imgUrl);
                     setLoadedUrl(page.imgUrl);
+                    setDisplayedPage(page);
                     setImageState("loaded");
                   }}
                   src={page.imgUrl}
