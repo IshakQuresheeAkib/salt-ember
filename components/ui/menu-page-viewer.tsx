@@ -201,46 +201,7 @@ export default function MenuPageViewer({
     };
   }, [isOpen]);
 
-  /* ── Preload initial carousel pages immediately, then remaining in idle ── */
-  useEffect(() => {
-    if (!pages.length) return;
-
-    // Prioritize initial cover page (index 3) and immediate carousel neighbors first
-    const priorityIndices = [3, 2, 4, 1, 5, 0];
-    for (const idx of priorityIndices) {
-      if (pages[idx]) preloadImage(pages[idx].imgUrl, "high");
-    }
-
-    const isSaveData =
-      typeof navigator !== "undefined" &&
-      // @ts-expect-error Connection saveData is non-standard Chromium API
-      Boolean(navigator.connection?.saveData);
-
-    if (isSaveData) return;
-
-    const schedule =
-      typeof window.requestIdleCallback === "function"
-        ? window.requestIdleCallback
-        : (cb: () => void) => window.setTimeout(cb, 150);
-
-    const id = schedule(() => {
-      for (let i = 0; i < pages.length; i++) {
-        if (!priorityIndices.includes(i)) {
-          preloadImage(pages[i].imgUrl, "low");
-        }
-      }
-    });
-
-    return () => {
-      if (typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(id as number);
-      } else {
-        clearTimeout(id as number);
-      }
-    };
-  }, [pages]);
-
-  /* ── On page change / open: aggressively preload active & adjacent pages ── */
+  /* ── On page change / open: preload active & adjacent pages ── */
   useEffect(() => {
     if (!isOpen || !page) return;
 
@@ -253,10 +214,10 @@ export default function MenuPageViewer({
     const p2 = (activePageIndex - 2 + pages.length) % pages.length;
     const n2 = (activePageIndex + 2) % pages.length;
 
-    preloadImage(pages[p1].imgUrl, "high");
-    preloadImage(pages[n1].imgUrl, "high");
-    preloadImage(pages[p2].imgUrl, "high");
-    preloadImage(pages[n2].imgUrl, "high");
+    preloadImage(pages[p1].imgUrl, "low");
+    preloadImage(pages[n1].imgUrl, "low");
+    preloadImage(pages[p2].imgUrl, "low");
+    preloadImage(pages[n2].imgUrl, "low");
   }, [isOpen, page, activePageIndex, pages]);
 
   useEffect(
@@ -306,7 +267,6 @@ export default function MenuPageViewer({
     >
       {page ? (
         <section
-          aria-busy={!isImageLoaded}
           className="pointer-events-none mx-auto grid h-full w-full grid-rows-[auto_minmax(0,1fr)_auto] gap-y-3 px-3 py-3 sm:gap-y-4 sm:px-6 sm:py-6"
         >
           <header className="pointer-events-auto mx-auto flex w-full items-center justify-between gap-3 border-b border-orange/50 pb-3 sm:max-w-[calc((100dvh-12.25rem)*0.792)]">
@@ -335,6 +295,7 @@ export default function MenuPageViewer({
           </header>
 
           <div
+            aria-busy={!isImageLoaded}
             className="pointer-events-auto relative mx-auto aspect-[811/1024] min-h-0 w-full self-center overflow-hidden border border-orange/40 bg-midnight-shadow sm:max-w-[calc((100dvh-12.25rem)*0.792)]"
           >
             {imageState === "error" ? (
@@ -369,12 +330,13 @@ export default function MenuPageViewer({
                 <img
                   alt={page.alt ?? `Menu page ${activePageIndex + 1}`}
                   className={cn(
-                    "block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] transition-[filter,transform] duration-500 ease-out will-change-[filter,transform] motion-reduce:transition-none",
-                    isImageLoaded ? "blur-0 scale-100" : "blur-md scale-105",
+                    "block h-full w-full select-none object-contain shadow-[0_18px_50px_color-mix(in_srgb,var(--midnight-shadow)_75%,transparent)] transition-opacity duration-300 ease-out motion-reduce:transition-none",
+                    isImageLoaded ? "opacity-100" : "opacity-0",
                   )}
                   decoding="async"
                   draggable={false}
                   fetchPriority="high"
+                  height={2048}
                   loading="eager"
                   onError={() => setImageState("error")}
                   onLoad={() => {
@@ -383,6 +345,7 @@ export default function MenuPageViewer({
                     setImageState("loaded");
                   }}
                   src={page.imgUrl}
+                  width={1622}
                 />
               </div>
             )}

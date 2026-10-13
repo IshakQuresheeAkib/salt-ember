@@ -107,7 +107,6 @@ tests/                           # focused Node test files
 public/
   hero-food/                     # six local hero food images
   logo.webp                      # header logo asset
-  menu-images/                   # 28 local menu-page images
 ```
 
 ### Rendering and client boundaries

@@ -32,6 +32,10 @@ cloudinary.config({
 });
 
 const menuDir = path.resolve(process.cwd(), "public", "menu-images");
+if (!fs.existsSync(menuDir)) {
+  console.log("No public/menu-images directory found. Nothing to upload.");
+  process.exit(0);
+}
 const files = fs.readdirSync(menuDir).filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
 
 console.log(`Found ${files.length} images in ${menuDir}`);
