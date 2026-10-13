@@ -190,7 +190,8 @@ body {
   margin-right: calc(var(--hero-art-right-bleed) * -1);
 }
 .hero-dish-stage {
-  --hero-arc-midpoint-x: 36%;
+  --hero-arc-midpoint-x: 45%;
+  --hero-arc-midpoint-y: 41%;
   position: absolute;
   top: 50%;
   right: 0;
@@ -207,7 +208,7 @@ body {
 }
 .hero-dish-scene.is-initial {
   z-index: 1;
-  top: 50%;
+  top: var(--hero-arc-midpoint-y, 50%);
   left: var(--hero-arc-midpoint-x);
   opacity: 1;
   transform: translate(-50%, -50%);
@@ -308,7 +309,8 @@ body {
     margin: 0;
   }
   .hero-dish-stage {
-    --hero-arc-midpoint-x: 40%;
+    --hero-arc-midpoint-x: 55%;
+    --hero-arc-midpoint-y: 50%;
     top: 0;
     width: 100%;
     height: 100%;
@@ -342,9 +344,12 @@ body {
 }
 
 @media (min-width: 2000px) {
+  .hero-dish-stage {
+    --hero-arc-midpoint-x: 45%;
+    --hero-arc-midpoint-y: 56%;
+  }
   .hero-dish-curve {
     width: 55%;
     height: 112%;
   }
-
 }

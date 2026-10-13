@@ -132,36 +132,53 @@ export const metadata: Metadata = {
   },
 };
 
-const restaurantStructuredData = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "@id": `${siteConfig.url}/#restaurant`,
-  name: siteConfig.name,
-  description: siteConfig.description,
-  url: siteConfig.url,
-  image: `${siteConfig.url}/og-image.png`,
-  logo: `${siteConfig.url}/logo.png`,
-  telephone: siteConfig.contact.telephoneRaw,
-  priceRange: "$$",
-  servesCuisine: [
-    "Fire-led Cooking",
-    "Wood-fired Grill",
-    "Steakhouse",
-    "Artisanal",
-  ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: siteConfig.location.streetAddress,
-    addressLocality: siteConfig.location.addressLocality,
-    addressRegion: siteConfig.location.addressRegion,
-    postalCode: siteConfig.location.postalCode,
-    addressCountry: siteConfig.location.addressCountry,
-  },
-  hasMap: siteConfig.location.mapUrl,
-  sameAs: [
-    siteConfig.social.facebook,
-    siteConfig.social.instagram,
-    siteConfig.contact.whatsappUrl,
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteConfig.url}/#website`,
+      url: siteConfig.url,
+      name: siteConfig.name,
+      description: siteConfig.description,
+      inLanguage: "en-BD",
+      publisher: {
+        "@id": `${siteConfig.url}/#restaurant`,
+      },
+    },
+    {
+      "@type": "Restaurant",
+      "@id": `${siteConfig.url}/#restaurant`,
+      name: siteConfig.name,
+      description: siteConfig.description,
+      url: siteConfig.url,
+      image: `${siteConfig.url}/og-image.png`,
+      logo: `${siteConfig.url}/logo.png`,
+      telephone: siteConfig.contact.telephoneRaw,
+      priceRange: siteConfig.priceRange,
+      servesCuisine: [...siteConfig.servesCuisine],
+      currenciesAccepted: siteConfig.currenciesAccepted,
+      hasMenu: `${siteConfig.url}/#menu`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: siteConfig.location.streetAddress,
+        addressLocality: siteConfig.location.addressLocality,
+        addressRegion: siteConfig.location.addressRegion,
+        postalCode: siteConfig.location.postalCode,
+        addressCountry: siteConfig.location.addressCountry,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: siteConfig.location.latitude,
+        longitude: siteConfig.location.longitude,
+      },
+      hasMap: siteConfig.location.mapUrl,
+      sameAs: [
+        siteConfig.social.facebook,
+        siteConfig.social.instagram,
+        siteConfig.contact.whatsappUrl,
+      ],
+    },
   ],
 };
 
@@ -179,7 +196,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(restaurantStructuredData),
+            __html: JSON.stringify(structuredData),
           }}
         />
       </head>

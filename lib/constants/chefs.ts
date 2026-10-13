@@ -8,14 +8,14 @@ export const chefs: readonly Chef[] = [
     image: "https://res.cloudinary.com/dhfg728um/image/upload/v1791551403/chef1_g8bydg.jpg",
   },
   {
-    id: "Jumman-rahman",
+    id: "jumman-rahman",
     name: "Jumman Rahman",
     title: "Executive Sous Chef",
     image: "https://res.cloudinary.com/dhfg728um/image/upload/v1791551404/chef2_alw2lm.jpg",
   },
   {
-    id: "marcus-vance",
-    name: "Marcus Vance",
+    id: "wahidul-hasan-tayef",
+    name: "Wahidul Hasan Tayef",
     title: "Artisan Pastry Chef",
     image: "https://res.cloudinary.com/dhfg728um/image/upload/v1791551404/d03f51f44c9c7ce260627d69b1a08a14_yi1emi.jpg",
   },

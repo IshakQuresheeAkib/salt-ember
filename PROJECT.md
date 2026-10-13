@@ -11,7 +11,7 @@ Salt & Ember is a single-page, frontend-only restaurant website built for a Sylh
 - Header navigation to Home, Menu, Reviews, and Contact.
 - A desktop navigation bar, an external Google Maps hero CTA, and a fixed mobile bottom navigation bar.
 - A hero with a selectable six-item food orbit and automatic rotation.
-- A client-side, keyboard-operable carousel for 28 local menu-page images.
+- A client-side, keyboard-operable carousel for 28 menu-page images delivered via Cloudinary.
 - A "Meet The Chefs" presentation showcasing four culinary leaders with portraits, craft roles, and responsive scroll animations.
 - A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
 - A contact footer with a maps link, phone link, WhatsApp link, Facebook link, and Instagram link.
@@ -86,7 +86,7 @@ components/
   hero-section.tsx               # hero copy, calls to action, social links
   mobile-bottom-nav.tsx          # client-side restaurant navigation adapter
   hero-food-selector.tsx         # hero selection, autoplay, GSAP orbit
-  menu.tsx                       # local menu-page fixture and carousel composition
+  menu.tsx                       # menu-page carousel composition
   meet-the-chefs.tsx             # chef profiles and responsive GSAP scroll effects
   testimonials.tsx               # Framer Motion or reduced-motion testimonials
   footer.tsx                     # contact and social presentation
@@ -101,13 +101,12 @@ lib/
   card-carousel-layout.mts   # pure carousel geometry and responsive rules
   gsap.ts                        # one-time GSAP plugin and ease registration
   hero-food-autoplay-state.mts   # pure autoplay state rules
-  constants/                     # chefs, social and testimonial fixtures
+  constants/                     # chefs, menu, social and testimonial fixtures
   types.ts, utils.ts             # shared types and utilities
 tests/                           # focused Node test files
 public/
   hero-food/                     # six local hero food images
   logo.webp                      # header logo asset
-  menu-images/                   # 28 local menu-page images
 ```
 
 ### Rendering and client boundaries
@@ -180,8 +179,8 @@ No content or control may depend on animation completing successfully.
 The following values are implementation fixtures or external links and should be changed only as an approved, coherent content update:
 
 - food state labels and image paths in `components/hero-food-selector.tsx`;
-- menu-page filenames in `components/menu.tsx`, with the corresponding assets in `public/menu-images/`;
-- chef profiles, craft statuses, and Cloudinary image paths in `lib/constants/chefs.ts`;
+- menu-page Cloudinary image paths in `lib/constants/menu.ts`;
+- chef profiles and Cloudinary image paths in `lib/constants/chefs.ts`;
 - testimonial copy, names, sources, and optional ratings in `lib/constants/testimonials.ts`;
 - phone, map, WhatsApp, Facebook, and Instagram data in `lib/constants/social-media.ts`;
 - page title and description in `app/layout.tsx`.
