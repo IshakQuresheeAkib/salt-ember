@@ -10,9 +10,9 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-background pb-20 text-foreground desktop:pb-0">
       <HeroSection />
 
-      <Menu />
-
       <FoodMenuSection />
+
+      <Menu />
 
       <Testimonials />
 

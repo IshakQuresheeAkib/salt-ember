@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { SocialTooltip } from "@/components/ui/social-media";
@@ -8,6 +10,7 @@ import {
   SALT_AND_EMBER_WHATSAPP_URL,
   SOCIAL_MEDIA_LINKS,
 } from "@/lib/constants/social-media";
+import { trackOutboundContactClick } from "@/lib/pixel-tracker";
 import { contentShellClassName } from "@/lib/tailwind";
 import { cn } from "@/lib/utils";
 import logo from "@/public/logo.webp";
@@ -17,7 +20,7 @@ const footerHeadingClassName =
   "mb-3.5 text-[10px] uppercase tracking-[1.6px] text-orange";
 const footerDetailClassName = "text-xs leading-[1.7] text-muted-foreground";
 const footerInteractiveDetailClassName =
-  "inline-flex min-h-8 items-center text-xs leading-[1.7] text-muted-foreground";
+  "inline-flex min-h-8 items-center text-xs leading-[1.7] text-muted-foreground transition-colors hover:text-orange";
 const footerGridClassName =
   "grid grid-cols-1 gap-[clamp(24px,3vw,40px)] min-[481px]:grid-cols-[1.65fr_1fr] min-[1120px]:grid-cols-[2fr_1fr_1.5fr_1fr]";
 
@@ -47,10 +50,11 @@ export function Footer() {
           <p className={footerHeadingClassName}>Find us</p>
           <p className={footerDetailClassName}>
             <a
-              className="inline-block min-h-8"
+              className="inline-block min-h-8 transition-colors hover:text-orange"
               href={SALT_AND_EMBER_MAP_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackOutboundContactClick("map")}
             >
               Baruthkhana Point, East Zindabazar
               <br />
@@ -63,6 +67,7 @@ export function Footer() {
           <a
             className={footerInteractiveDetailClassName}
             href={SALT_AND_EMBER_MOBILE_TEL}
+            onClick={() => trackOutboundContactClick("telephone")}
           >
             {SALT_AND_EMBER_MOBILE_NUMBER}
           </a>
@@ -72,6 +77,7 @@ export function Footer() {
             href={SALT_AND_EMBER_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackOutboundContactClick("whatsapp")}
           >
             WhatsApp us
           </a>

@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter, Yeon_Sung } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { siteConfig, siteOrigin } from "@/lib/constants/site";
+import { MetaPixel } from "@/components/meta-pixel";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -200,7 +201,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <MetaPixel />
+        {children}
+      </body>
     </html>
   );
 }

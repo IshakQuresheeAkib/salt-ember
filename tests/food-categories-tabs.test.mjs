@@ -65,12 +65,12 @@ test("Food menu dishes have mobile-optimized images configured", async () => {
   assert.match(dataFile, /=w400-h267-c-rw/, "Expected mobile-optimized 400px WebP crop parameter");
 });
 
-test("FoodMenuSection uses Next.js Image with responsive mobile sizes", async () => {
-  const sectionSource = await readSource("../components/food-menu-section.tsx");
+test("FoodMenuCard uses Next.js Image with responsive mobile sizes", async () => {
+  const cardSource = await readSource("../components/food-menu-card.tsx");
   
-  assert.match(sectionSource, /import Image from "next\/image"/, "Expected Next.js Image import");
-  assert.match(sectionSource, /sizes="\(max-width: 640px\) 250px, \(max-width: 1024px\) 350px, 400px"/, "Expected responsive mobile sizes attribute");
-  assert.match(sectionSource, /unoptimized=\{dish\.image\.includes\("googleusercontent\.com"\)\}/, "Expected unoptimized flag for pre-rendered Google CDN WebP thumbnails");
+  assert.match(cardSource, /import Image from "next\/image"/, "Expected Next.js Image import");
+  assert.match(cardSource, /sizes="\(max-width: 640px\) 250px, \(max-width: 1024px\) 350px, 400px"/, "Expected responsive mobile sizes attribute");
+  assert.match(cardSource, /unoptimized=\{dish\.image\.includes\("googleusercontent\.com"\)\}/, "Expected unoptimized flag for pre-rendered Google CDN WebP thumbnails");
 });
 
 test("next.config.ts configures Google Photos remotePattern", async () => {

@@ -8,6 +8,7 @@ export interface FoodItem {
   isPopular?: boolean;
   isSpicy?: boolean;
   image?: string;
+  imageMobile?: string;
 }
 
 export interface FoodCategory {
@@ -122,8 +123,19 @@ export const FOOD_CATEGORIES: FoodCategory[] = [
 export const FOOD_DISHES: FoodItem[] = [
   // Appetizers & Starters (Pages 2-5)
   {
+    id: "starter-bbq-chicken",
+    image: "/images/menu/main-courses/barbecue-chicken-dish.png",
+    name: "Barbecue Chicken",
+    category: "starters",
+    price: "$17.00",
+    description: "Served with veggies",
+    portion: "Served with veggies",
+    isPopular: true,
+  },
+  {
     id: "starter-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
+    image: "/images/menu/starters/prawn-sticks.jpg",
+    imageMobile: "/images/menu/starters/prawn-sticks-mobile.jpg",
     name: "Prawn Sticks (6 pcs)",
     category: "starters",
     price: "550 TK",
@@ -133,7 +145,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v=w400-h267-c-rw",
+    image: "/images/menu/starters/chicken-basket.jpg",
+    imageMobile: "/images/menu/starters/chicken-basket-mobile.jpg",
     name: "Chicken Basket",
     category: "starters",
     price: "440 TK",
@@ -142,7 +155,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-3",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
+    image: "/images/menu/starters/fish-and-chips.jpg",
+    imageMobile: "/images/menu/starters/fish-and-chips-mobile.jpg",
     name: "Fish & Chips",
     category: "starters",
     price: "550 TK",
@@ -152,7 +166,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-4",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOxZdsjIXAnzoF8JovS9RHmBkn0kE8KaNrLq4KCJLjbdgpV9zFUABdU3hB6zLdV9QC_RyCy7Z0Pt_0T0RPPTDV3eC5RjBbiHVM_b7My1sdDrXEYTS6L=w400-h267-c-rw",
+    image: "/images/menu/starters/french-fries.jpg",
+    imageMobile: "/images/menu/starters/french-fries-mobile.jpg",
     name: "French Fries",
     category: "starters",
     price: "200 TK",
@@ -161,7 +176,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-5",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
+    image: "/images/menu/starters/golden-fried-shrimp.jpg",
+    imageMobile: "/images/menu/starters/golden-fried-shrimp-mobile.jpg",
     name: "Golden Fried Shrimp (6 pcs)",
     category: "starters",
     price: "480 TK",
@@ -170,7 +186,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-6",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF=w400-h267-c-rw",
+    image: "/images/menu/starters/garlic-mushrooms.jpg",
+    imageMobile: "/images/menu/starters/garlic-mushrooms-mobile.jpg",
     name: "Garlic Mushrooms",
     category: "starters",
     price: "450 TK",
@@ -189,7 +206,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-8",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369=w400-h267-c-rw",
+    image: "/images/menu/starters/buffalo-wings.jpg",
+    imageMobile: "/images/menu/starters/buffalo-wings-mobile.jpg",
     name: "Buffalo Wings (6 pcs)",
     category: "starters",
     price: "450 TK",
@@ -229,7 +247,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-12",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOWIF7Ta9Q3XuIx4XuO7D_sAZEJ63qPc9z_4H0NLDQmXSllc4SJeWZg_zmHNlM2x05Qr6keEeGrEZKxwGYsfUUnaHVMXCj3XEsnNNrIVc078-AsTD9C=w400-h267-c-rw",
+    image: "/images/menu/starters/fried-wonton.jpg",
+    imageMobile: "/images/menu/starters/fried-wonton-mobile.jpg",
     name: "Fried Wonton (8 pcs)",
     category: "starters",
     price: "290 TK",
@@ -240,7 +259,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Soups & Noodles (Page 6)
   {
     id: "soup-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ=w400-h267-c-rw",
+    image: "/images/menu/soups-noodles/cream-of-mushroom-soup.jpg",
+    imageMobile: "/images/menu/soups-noodles/cream-of-mushroom-soup-mobile.jpg",
     name: "Cream of Mushroom",
     category: "soups-noodles",
     price: "380 TK",
@@ -281,7 +301,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Salads (Pages 7-8)
   {
     id: "salad-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
+    image: "/images/menu/salads/chicken-cashew-nut-salad.jpg",
+    imageMobile: "/images/menu/salads/chicken-cashew-nut-salad-mobile.jpg",
     name: "Chicken Cashew Nut Salad",
     category: "salads",
     price: "500 TK",
@@ -338,7 +359,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Beef Steaks (Pages 16-18)
   {
     id: "steak-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczP1tyoAliB-FUS2atBOn8glsb7x6asHARI23ApVQQFmZFIlEAsQD6lcfW8YLY4Lq8fIXcVCcpcEj2hcQRt2nE_rcuIoHzV4Vu5MeusiE7vish2s0krY=w400-h267-c-rw",
+    image: "/images/menu/beef-steaks/tomahawk-steak.jpg",
+    imageMobile: "/images/menu/beef-steaks/tomahawk-steak-mobile.jpg",
     name: "Tomahawk Steak [500g]",
     category: "beef-steaks",
     price: "2590 TK",
@@ -348,7 +370,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT=w400-h267-c-rw",
+    image: "/images/menu/beef-steaks/sirloin-steak.jpg",
+    imageMobile: "/images/menu/beef-steaks/sirloin-steak-mobile.jpg",
     name: "Sirloin Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -358,7 +381,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-3",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczN-WqtrqY6Z6eMoXl9mxX1n1y7dbMdffrI697nvX-ucQ6Yih_L5tr0NwLtMi8bldhw6m1_ZZ4DvCDdXo5aV--GlS-PeHfT3caogvfE-SJLLb2fQvVft=w400-h267-c-rw",
+    image: "/images/menu/beef-steaks/t-bone-steak.jpg",
+    imageMobile: "/images/menu/beef-steaks/t-bone-steak-mobile.jpg",
     name: "T-Bone Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -367,7 +391,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-4",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczN38pPsWrjMMWbiitpYcm05pyjPjsDpUT-gHawM4erIYoxOBIteOZYlVhDGCKXOcHvXtU2_U1Vh6c6cpbLKpIjXUipvAvDzNCWE_-yrWAFxeOb5Y8DI=w400-h267-c-rw",
+    image: "/images/menu/beef-steaks/ribeye-steak.jpg",
+    imageMobile: "/images/menu/beef-steaks/ribeye-steak-mobile.jpg",
     name: "Ribeye Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -389,7 +414,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Slow-Cooked Meat (Page 19)
   {
     id: "slow-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
+    image: "/images/menu/slow-cooked/bbq-back-ribs.jpg",
+    imageMobile: "/images/menu/slow-cooked/bbq-back-ribs-mobile.jpg",
     name: "BBQ Back Ribs (500g)",
     category: "slow-cooked",
     price: "1890 TK",
@@ -410,8 +436,19 @@ export const FOOD_DISHES: FoodItem[] = [
 
   // Main Courses [Chicken & Fish] (Pages 9-13)
   {
+    id: "main-bbq-chicken",
+    image: "/images/menu/main-courses/barbecue-chicken-dish.png",
+    name: "Barbecue Chicken",
+    category: "main-courses",
+    price: "$17.00",
+    description: "Served with veggies",
+    portion: "Served with veggies",
+    isPopular: true,
+  },
+  {
     id: "main-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_=w400-h267-c-rw",
+    image: "/images/menu/main-courses/sizzling-cheesy-chicken-steak.jpg",
+    imageMobile: "/images/menu/main-courses/sizzling-cheesy-chicken-steak-mobile.jpg",
     name: "Sizzling Cheesy Chicken Steak",
     category: "main-courses",
     price: "650 TK",
@@ -430,7 +467,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-3",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl=w400-h267-c-rw",
+    image: "/images/menu/main-courses/peri-peri-chicken.jpg",
+    imageMobile: "/images/menu/main-courses/peri-peri-chicken-mobile.jpg",
     name: "Peri Peri Chicken",
     category: "main-courses",
     price: "540 TK",
@@ -534,7 +572,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Pasta & Spaghetti (Pages 22-23)
   {
     id: "pasta-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM=w400-h267-c-rw",
+    image: "/images/menu/pasta-spaghetti/creamy-chicken-alfredo.jpg",
+    imageMobile: "/images/menu/pasta-spaghetti/creamy-chicken-alfredo-mobile.jpg",
     name: "Creamy Chicken Alfredo",
     category: "pasta-spaghetti",
     price: "490 TK",
@@ -544,7 +583,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh=w400-h267-c-rw",
+    image: "/images/menu/pasta-spaghetti/seafood-marinara.jpg",
+    imageMobile: "/images/menu/pasta-spaghetti/seafood-marinara-mobile.jpg",
     name: "Seafood Marinara",
     category: "pasta-spaghetti",
     price: "550 TK",
@@ -593,7 +633,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Pizza (Page 24)
   {
     id: "pizza-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR=w400-h267-c-rw",
+    image: "/images/menu/pizza/mexican-hot-pizza.jpg",
+    imageMobile: "/images/menu/pizza/mexican-hot-pizza-mobile.jpg",
     name: "Mexican Hot",
     category: "pizza",
     price: "850 / 1000 TK",
@@ -604,7 +645,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS=w400-h267-c-rw",
+    image: "/images/menu/pizza/bbq-chicken-pizza.jpg",
+    imageMobile: "/images/menu/pizza/bbq-chicken-pizza-mobile.jpg",
     name: "BBQ Chicken",
     category: "pizza",
     price: "850 / 1000 TK",
@@ -787,7 +829,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-5",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
+    image: "/images/menu/kebabs-naan/garlic-naan.jpg",
+    imageMobile: "/images/menu/kebabs-naan/garlic-naan-mobile.jpg",
     name: "Garlic Naan",
     category: "kebabs-naan",
     price: "80 TK",
@@ -805,7 +848,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-7",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
+    image: "/images/menu/kebabs-naan/butter-naan.jpg",
+    imageMobile: "/images/menu/kebabs-naan/butter-naan-mobile.jpg",
     name: "Butter Naan",
     category: "kebabs-naan",
     price: "70 TK",
@@ -894,7 +938,8 @@ export const FOOD_DISHES: FoodItem[] = [
   // Beverages (Pages 26-27)
   {
     id: "bev-1",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
+    image: "/images/menu/beverages/classic-espresso.jpg",
+    imageMobile: "/images/menu/beverages/classic-espresso-mobile.jpg",
     name: "Espresso",
     category: "beverages",
     price: "120 / 180 TK",
@@ -903,7 +948,8 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
+    image: "/images/menu/beverages/iced-americano.jpg",
+    imageMobile: "/images/menu/beverages/iced-americano-mobile.jpg",
     name: "Americano",
     category: "beverages",
     price: "150 / 200 TK",

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PhoneCall } from "lucide-react";
 
 import { type SocialItem } from "@/lib/constants/social-media";
+import { trackOutboundContactClick } from "@/lib/pixel-tracker";
 import { cn } from "@/lib/utils";
 
 export interface SocialTooltipProps extends React.HTMLAttributes<HTMLUListElement> {
@@ -63,6 +64,13 @@ const SocialTooltip = React.forwardRef<HTMLUListElement, SocialTooltipProps>(
             href={item.href}
             aria-label={item.ariaLabel}
             className={socialLinkClassName}
+            onClick={() => {
+              if (item.kind === "call") {
+                trackOutboundContactClick("telephone");
+              } else if (item.ariaLabel === "WhatsApp") {
+                trackOutboundContactClick("whatsapp");
+              }
+            }}
             {...(item.external
               ? { target: "_blank", rel: "noopener noreferrer" }
               : undefined)}
