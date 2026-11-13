@@ -1,6 +1,6 @@
 import { Menu } from "@/components/menu";
+import { FoodMenuSection } from "@/components/food-menu-section";
 import { HeroSection } from "@/components/hero-section";
-import { MeetTheChefs } from "@/components/meet-the-chefs";
 import { Footer } from "@/components/footer";
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import Testimonials from "@/components/testimonials";
@@ -12,7 +12,7 @@ export default function Home() {
 
       <Menu />
 
-      <MeetTheChefs />
+      <FoodMenuSection />
 
       <Testimonials />
 
