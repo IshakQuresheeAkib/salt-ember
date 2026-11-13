@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Search, X, Flame, Sparkles, BookOpen, Utensils } from "lucide-react";
 import {
@@ -288,34 +289,56 @@ interface FoodCardPlaceholderProps {
 }
 
 function FoodCardPlaceholder({ dish }: FoodCardPlaceholderProps) {
-  return (
-    <article className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange/60 hover:bg-surface hover:shadow-[0_8px_30px_rgba(227,100,20,0.12)]">
-      <div>
-        {/* Visual Card Image / Wireframe Preview */}
-        <div className="relative mb-4 flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-midnight-shadow/60">
-          <div className="absolute inset-0 bg-gradient-to-t from-midnight-shadow via-transparent to-transparent opacity-80" />
-          
-          {/* Subtle decorative glowing ember rings */}
-          <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-orange/10 blur-2xl transition-opacity group-hover:opacity-100" />
-          
-          {/* Dish Silhouette / Placeholder Marker */}
-          <div className="relative z-10 flex flex-col items-center gap-1.5 text-center">
-            <Utensils className="h-6 w-6 text-orange/70 transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-[10px] tracking-widest text-muted-foreground/60 uppercase">
-              Dish Card Preview
-            </span>
-          </div>
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
-          {/* Badges */}
+  return (
+    <article className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border/40 bg-card/60 p-4 sm:p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange/60 hover:bg-surface hover:shadow-[0_8px_30px_rgba(227,100,20,0.12)]">
+      <div>
+        {/* Visual Card Image */}
+        <div className="relative mb-4 flex aspect-[16/10] w-full items-center justify-center overflow-hidden rounded-xl border border-white/5 bg-midnight-shadow/80">
+          {dish.image && !imageError ? (
+            <>
+              {/* Shimmer / Skeleton while image loads */}
+              {!imageLoaded && (
+                <div className="absolute inset-0 animate-pulse bg-surface/60" />
+              )}
+              <Image
+                src={dish.image}
+                alt={dish.name}
+                fill
+                sizes="(max-width: 640px) 250px, (max-width: 1024px) 350px, 400px"
+                unoptimized={dish.image.includes("googleusercontent.com")}
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageError(true)}
+                className={cn(
+                  "object-cover transition-transform duration-500 ease-out group-hover:scale-105",
+                  imageLoaded ? "opacity-100" : "opacity-0",
+                )}
+              />
+              {/* Ambient bottom-to-top vignette to elevate typography and badges */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-midnight-shadow/80 via-transparent to-transparent" />
+            </>
+          ) : (
+            <div className="relative z-10 flex flex-col items-center gap-1.5 text-center">
+              <Utensils className="h-6 w-6 text-orange/70 transition-transform duration-300 group-hover:scale-110" />
+              <span className="text-[10px] tracking-widest text-muted-foreground/60 uppercase">
+                Salt & Ember
+              </span>
+            </div>
+          )}
+
+          {/* Badges: Popular / Spicy */}
           <div className="absolute top-2.5 left-2.5 z-10 flex flex-wrap gap-1.5">
             {dish.isPopular && (
-              <span className="flex items-center gap-1 rounded-full border border-orange/40 bg-orange/20 px-2 py-0.5 text-[10px] font-semibold text-orange backdrop-blur-xs">
+              <span className="flex items-center gap-1 rounded-full border border-orange/40 bg-midnight-shadow/85 px-2 py-0.5 text-[10px] font-semibold text-orange backdrop-blur-md">
                 <Sparkles className="h-2.5 w-2.5" />
                 <span>Popular</span>
               </span>
             )}
             {dish.isSpicy && (
-              <span className="flex items-center gap-1 rounded-full border border-red-500/40 bg-red-950/40 px-2 py-0.5 text-[10px] font-semibold text-orange backdrop-blur-xs">
+              <span className="flex items-center gap-1 rounded-full border border-red-500/40 bg-midnight-shadow/85 px-2 py-0.5 text-[10px] font-semibold text-orange backdrop-blur-md">
                 <Flame className="h-2.5 w-2.5 text-orange" />
                 <span>Spicy</span>
               </span>
@@ -323,7 +346,7 @@ function FoodCardPlaceholder({ dish }: FoodCardPlaceholderProps) {
           </div>
 
           {dish.portion && (
-            <div className="absolute right-2.5 bottom-2.5 z-10 rounded-md bg-midnight-shadow/80 px-2 py-0.5 text-[10px] font-medium text-silver/80 backdrop-blur-xs">
+            <div className="absolute right-2.5 bottom-2.5 z-10 rounded-md border border-white/10 bg-midnight-shadow/85 px-2 py-0.5 text-[10px] font-medium text-silver/90 backdrop-blur-md">
               {dish.portion}
             </div>
           )}
@@ -341,13 +364,13 @@ function FoodCardPlaceholder({ dish }: FoodCardPlaceholderProps) {
         </p>
       </div>
 
-      {/* Card Footer: Price & Ready Status */}
+      {/* Card Footer: Price & Culinary Signature */}
       <div className="mt-5 flex items-center justify-between border-t border-white/5 pt-3">
         <span className="font-heading text-base font-bold text-orange">
           {dish.price}
         </span>
-        <span className="text-[11px] font-medium text-muted-foreground/60 group-hover:text-muted-foreground">
-          Card Ready
+        <span className="text-[11px] font-medium text-muted-foreground/60 transition-colors group-hover:text-orange/80">
+          Flame Crafted
         </span>
       </div>
     </article>

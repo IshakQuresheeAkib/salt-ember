@@ -7,6 +7,7 @@ export interface FoodItem {
   portion?: string;
   isPopular?: boolean;
   isSpicy?: boolean;
+  image?: string;
 }
 
 export interface FoodCategory {
@@ -122,6 +123,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Appetizers & Starters (Pages 2-5)
   {
     id: "starter-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
     name: "Prawn Sticks (6 pcs)",
     category: "starters",
     price: "550 TK",
@@ -131,6 +133,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v=w400-h267-c-rw",
     name: "Chicken Basket",
     category: "starters",
     price: "440 TK",
@@ -139,6 +142,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
     name: "Fish & Chips",
     category: "starters",
     price: "550 TK",
@@ -148,6 +152,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOxZdsjIXAnzoF8JovS9RHmBkn0kE8KaNrLq4KCJLjbdgpV9zFUABdU3hB6zLdV9QC_RyCy7Z0Pt_0T0RPPTDV3eC5RjBbiHVM_b7My1sdDrXEYTS6L=w400-h267-c-rw",
     name: "French Fries",
     category: "starters",
     price: "200 TK",
@@ -156,6 +161,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
     name: "Golden Fried Shrimp (6 pcs)",
     category: "starters",
     price: "480 TK",
@@ -164,6 +170,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF=w400-h267-c-rw",
     name: "Garlic Mushrooms",
     category: "starters",
     price: "450 TK",
@@ -172,6 +179,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
     name: "Fried Calamari Rings",
     category: "starters",
     price: "490 TK",
@@ -181,6 +189,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-8",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369=w400-h267-c-rw",
     name: "Buffalo Wings (6 pcs)",
     category: "starters",
     price: "450 TK",
@@ -190,6 +199,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-9",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369=w400-h267-c-rw",
     name: "Naga Wings (6 pcs)",
     category: "starters",
     price: "450 TK",
@@ -200,6 +210,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-10",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369=w400-h267-c-rw",
     name: "BBQ Wings (6 pcs)",
     category: "starters",
     price: "450 TK",
@@ -208,6 +219,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-11",
+    image: "/hero-food/appetizer.png",
     name: "Poutine",
     category: "starters",
     price: "590 TK",
@@ -217,6 +229,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-12",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOWIF7Ta9Q3XuIx4XuO7D_sAZEJ63qPc9z_4H0NLDQmXSllc4SJeWZg_zmHNlM2x05Qr6keEeGrEZKxwGYsfUUnaHVMXCj3XEsnNNrIVc078-AsTD9C=w400-h267-c-rw",
     name: "Fried Wonton (8 pcs)",
     category: "starters",
     price: "290 TK",
@@ -227,6 +240,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Soups & Noodles (Page 6)
   {
     id: "soup-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ=w400-h267-c-rw",
     name: "Cream of Mushroom",
     category: "soups-noodles",
     price: "380 TK",
@@ -235,6 +249,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "soup-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt=w400-h267-c-rw",
     name: "Thai Soup (Thick)",
     category: "soups-noodles",
     price: "250 TK / 550 TK",
@@ -244,6 +259,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "soup-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt=w400-h267-c-rw",
     name: "Seafood Clear Soup",
     category: "soups-noodles",
     price: "390 TK",
@@ -253,6 +269,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "soup-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ=w400-h267-c-rw",
     name: "Ramen Noodle Soup",
     category: "soups-noodles",
     price: "520 TK",
@@ -264,6 +281,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Salads (Pages 7-8)
   {
     id: "salad-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Chicken Cashew Nut Salad",
     category: "salads",
     price: "500 TK",
@@ -273,6 +291,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "salad-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Red Bean Salad",
     category: "salads",
     price: "450 TK",
@@ -281,6 +300,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "salad-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Grilled Chicken Salad",
     category: "salads",
     price: "500 TK",
@@ -289,6 +309,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "salad-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Chicken Hawaiian Salad",
     category: "salads",
     price: "550 TK",
@@ -297,6 +318,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "salad-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Russian Salad",
     category: "salads",
     price: "450 TK",
@@ -305,6 +327,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "salad-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn=w400-h267-c-rw",
     name: "Greek Salad",
     category: "salads",
     price: "600 TK",
@@ -315,6 +338,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Beef Steaks (Pages 16-18)
   {
     id: "steak-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1tyoAliB-FUS2atBOn8glsb7x6asHARI23ApVQQFmZFIlEAsQD6lcfW8YLY4Lq8fIXcVCcpcEj2hcQRt2nE_rcuIoHzV4Vu5MeusiE7vish2s0krY=w400-h267-c-rw",
     name: "Tomahawk Steak [500g]",
     category: "beef-steaks",
     price: "2590 TK",
@@ -324,6 +348,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT=w400-h267-c-rw",
     name: "Sirloin Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -333,6 +358,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN-WqtrqY6Z6eMoXl9mxX1n1y7dbMdffrI697nvX-ucQ6Yih_L5tr0NwLtMi8bldhw6m1_ZZ4DvCDdXo5aV--GlS-PeHfT3caogvfE-SJLLb2fQvVft=w400-h267-c-rw",
     name: "T-Bone Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -341,6 +367,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN38pPsWrjMMWbiitpYcm05pyjPjsDpUT-gHawM4erIYoxOBIteOZYlVhDGCKXOcHvXtU2_U1Vh6c6cpbLKpIjXUipvAvDzNCWE_-yrWAFxeOb5Y8DI=w400-h267-c-rw",
     name: "Ribeye Steak (300g)",
     category: "beef-steaks",
     price: "1990 TK",
@@ -350,6 +377,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "steak-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMPruSzV7a6jPv-YLSuKkfErnKg3BzBKlYGudlz8eaIOJguiIgAuGADVUPVaHM5tsv5iP9hWWW0JYuLPMcbumGRF2cc-8RBizsFhBklqjXdGdMYL9WH=w400-h267-c-rw",
     name: "Surf & Turf",
     category: "beef-steaks",
     price: "2120 TK",
@@ -361,6 +389,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Slow-Cooked Meat (Page 19)
   {
     id: "slow-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "BBQ Back Ribs (500g)",
     category: "slow-cooked",
     price: "1890 TK",
@@ -370,6 +399,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "slow-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "BBQ Short Ribs (500g)",
     category: "slow-cooked",
     price: "1900 TK",
@@ -381,6 +411,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Main Courses [Chicken & Fish] (Pages 9-13)
   {
     id: "main-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_=w400-h267-c-rw",
     name: "Sizzling Cheesy Chicken Steak",
     category: "main-courses",
     price: "650 TK",
@@ -390,6 +421,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_=w400-h267-c-rw",
     name: "Chicken Rollatini",
     category: "main-courses",
     price: "600 TK",
@@ -398,6 +430,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl=w400-h267-c-rw",
     name: "Peri Peri Chicken",
     category: "main-courses",
     price: "540 TK",
@@ -408,6 +441,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl=w400-h267-c-rw",
     name: "Texan Hasselback Fried Chicken",
     category: "main-courses",
     price: "540 TK",
@@ -416,6 +450,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Grilled Chicken with Creamy Mushroom Sauce",
     category: "main-courses",
     price: "540 TK",
@@ -425,6 +460,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
     name: "Grilled Dory Fish",
     category: "main-courses",
     price: "640 TK",
@@ -433,6 +469,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
     name: "English Breaded Fish (Dory)",
     category: "main-courses",
     price: "640 TK",
@@ -441,6 +478,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-8",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Chicken Parmesan",
     category: "main-courses",
     price: "590 TK",
@@ -449,6 +487,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-9",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Honey Glazed Chicken",
     category: "main-courses",
     price: "540 TK",
@@ -457,6 +496,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-10",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl=w400-h267-c-rw",
     name: "BBQ Grilled Chicken",
     category: "main-courses",
     price: "540 TK",
@@ -465,6 +505,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-11",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Crispy Chicken with Mushroom Sauce",
     category: "main-courses",
     price: "540 TK",
@@ -473,6 +514,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-12",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Chicken Steak",
     category: "main-courses",
     price: "550 TK",
@@ -481,6 +523,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "main-13",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Chicken Ala-Creme",
     category: "main-courses",
     price: "490 TK",
@@ -491,6 +534,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Pasta & Spaghetti (Pages 22-23)
   {
     id: "pasta-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM=w400-h267-c-rw",
     name: "Creamy Chicken Alfredo",
     category: "pasta-spaghetti",
     price: "490 TK",
@@ -500,6 +544,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh=w400-h267-c-rw",
     name: "Seafood Marinara",
     category: "pasta-spaghetti",
     price: "550 TK",
@@ -509,6 +554,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM=w400-h267-c-rw",
     name: "Creamy Shrimp Alfredo",
     category: "pasta-spaghetti",
     price: "550 TK",
@@ -517,6 +563,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-4",
+    image: "/hero-food/pasta.png",
     name: "Spaghetti Bolognese (Beef)",
     category: "pasta-spaghetti",
     price: "570 TK",
@@ -526,6 +573,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh=w400-h267-c-rw",
     name: "Pasta Basta",
     category: "pasta-spaghetti",
     price: "490 TK",
@@ -534,6 +582,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pasta-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh=w400-h267-c-rw",
     name: "Pasta Europa",
     category: "pasta-spaghetti",
     price: "520 TK",
@@ -544,6 +593,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Pizza (Page 24)
   {
     id: "pizza-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR=w400-h267-c-rw",
     name: "Mexican Hot",
     category: "pizza",
     price: "850 / 1000 TK",
@@ -554,6 +604,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS=w400-h267-c-rw",
     name: "BBQ Chicken",
     category: "pizza",
     price: "850 / 1000 TK",
@@ -562,6 +613,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR=w400-h267-c-rw",
     name: "Meat Lover's",
     category: "pizza",
     price: "900 / 1100 TK",
@@ -571,6 +623,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS=w400-h267-c-rw",
     name: "Hawaiian Pizza",
     category: "pizza",
     price: "850 / 1000 TK",
@@ -579,6 +632,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS=w400-h267-c-rw",
     name: "Naga Chicken",
     category: "pizza",
     price: "800 / 950 TK",
@@ -588,6 +642,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "pizza-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR=w400-h267-c-rw",
     name: "Classic Margherita",
     category: "pizza",
     price: "750 / 850 TK",
@@ -598,6 +653,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Thai & Chinese (Page 25)
   {
     id: "tc-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT=w400-h267-c-rw",
     name: "Beef Sizzling",
     category: "thai-chinese",
     price: "590 TK",
@@ -607,6 +663,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_=w400-h267-c-rw",
     name: "Chicken Sizzling",
     category: "thai-chinese",
     price: "530 TK",
@@ -615,6 +672,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-=w400-h267-c-rw",
     name: "Sweet & Sour Chicken",
     category: "thai-chinese",
     price: "520 TK",
@@ -623,6 +681,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU=w400-h267-c-rw",
     name: "Sweet & Sour Prawn",
     category: "thai-chinese",
     price: "650 TK",
@@ -631,6 +690,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF=w400-h267-c-rw",
     name: "Chicken Chili Onion",
     category: "thai-chinese",
     price: "550 TK",
@@ -640,6 +700,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF=w400-h267-c-rw",
     name: "Beef Chili Onion",
     category: "thai-chinese",
     price: "600 TK",
@@ -649,6 +710,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "Egg Fried Rice",
     category: "thai-chinese",
     price: "390 TK",
@@ -657,6 +719,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-8",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "Mixed Fried Rice",
     category: "thai-chinese",
     price: "520 TK",
@@ -666,6 +729,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-9",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
     name: "Mixed Vegetables",
     category: "thai-chinese",
     price: "390 TK",
@@ -674,6 +738,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "tc-10",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v=w400-h267-c-rw",
     name: "Thai Fried Chicken (8 pcs)",
     category: "thai-chinese",
     price: "600 TK",
@@ -684,6 +749,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Kebabs & Naan (Page 21)
   {
     id: "kebab-1",
+    image: "/hero-food/kebab.png",
     name: "Tikka Kebab",
     category: "kebabs-naan",
     price: "350 TK",
@@ -693,6 +759,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-2",
+    image: "/hero-food/kebab.png",
     name: "Hariyali Kebab",
     category: "kebabs-naan",
     price: "350 TK",
@@ -701,6 +768,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-3",
+    image: "/hero-food/kebab.png",
     name: "Reshmi Kebab",
     category: "kebabs-naan",
     price: "350 TK",
@@ -710,6 +778,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-4",
+    image: "/hero-food/kebab.png",
     name: "Tandoori Chicken",
     category: "kebabs-naan",
     price: "220 TK",
@@ -718,6 +787,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
     name: "Garlic Naan",
     category: "kebabs-naan",
     price: "80 TK",
@@ -726,6 +796,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
     name: "Plain Naan",
     category: "kebabs-naan",
     price: "60 TK",
@@ -734,6 +805,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
     name: "Butter Naan",
     category: "kebabs-naan",
     price: "70 TK",
@@ -742,6 +814,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "kebab-8",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg=w400-h267-c-rw",
     name: "Onion Naan",
     category: "kebabs-naan",
     price: "90 TK",
@@ -752,6 +825,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Biryani (Page 15)
   {
     id: "biryani-1",
+    image: "/hero-food/biriyani.png",
     name: "Tikka Biryani",
     category: "biryani",
     price: "450 TK",
@@ -761,6 +835,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "biryani-2",
+    image: "/hero-food/biriyani.png",
     name: "Tandoori Kabuli Biryani",
     category: "biryani",
     price: "430 TK",
@@ -769,6 +844,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "biryani-3",
+    image: "/hero-food/biriyani.png",
     name: "Mutton Hyderabadi Biryani",
     category: "biryani",
     price: "490 TK",
@@ -780,6 +856,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Extra Side Dishes [1:1] (Page 14)
   {
     id: "side-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "Mexican Fried Rice",
     category: "sides",
     price: "150 TK",
@@ -788,6 +865,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "side-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY=w400-h267-c-rw",
     name: "Egg Fried Rice (Side)",
     category: "sides",
     price: "150 TK",
@@ -796,6 +874,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "side-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz=w400-h267-c-rw",
     name: "Sautéed Vegetables",
     category: "sides",
     price: "150 TK",
@@ -804,6 +883,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "side-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT=w400-h267-c-rw",
     name: "Mashed Potatoes",
     category: "sides",
     price: "150 TK",
@@ -814,6 +894,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Beverages (Pages 26-27)
   {
     id: "bev-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Espresso",
     category: "beverages",
     price: "120 / 180 TK",
@@ -822,6 +903,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Americano",
     category: "beverages",
     price: "150 / 200 TK",
@@ -830,6 +912,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Cappuccino",
     category: "beverages",
     price: "210 TK",
@@ -839,6 +922,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Café Latte",
     category: "beverages",
     price: "210 TK",
@@ -847,6 +931,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Flat White",
     category: "beverages",
     price: "230 TK",
@@ -855,6 +940,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Spanish Latte",
     category: "beverages",
     price: "240 TK",
@@ -864,6 +950,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Caramel Latte",
     category: "beverages",
     price: "260 TK",
@@ -872,6 +959,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-8",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Vanilla Latte",
     category: "beverages",
     price: "260 TK",
@@ -880,6 +968,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-9",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Hazelnut Latte",
     category: "beverages",
     price: "250 TK",
@@ -888,6 +977,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-10",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Café Mocha",
     category: "beverages",
     price: "260 TK",
@@ -896,6 +986,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-11",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Double Hot Chocolate",
     category: "beverages",
     price: "210 TK",
@@ -904,6 +995,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-12",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Iced Cappuccino",
     category: "beverages",
     price: "220 TK",
@@ -912,6 +1004,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-13",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Iced Café Latte",
     category: "beverages",
     price: "230 TK",
@@ -920,6 +1013,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-14",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Iced Mocha Latte",
     category: "beverages",
     price: "240 TK",
@@ -928,6 +1022,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-15",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Iced Caramel Latte",
     category: "beverages",
     price: "260 TK",
@@ -936,6 +1031,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-16",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Iced Hazelnut Latte",
     category: "beverages",
     price: "250 TK",
@@ -944,6 +1040,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-17",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Medium Iced Americano",
     category: "beverages",
     price: "200 TK",
@@ -952,6 +1049,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-18",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Iced Mango Milk Coffee",
     category: "beverages",
     price: "240 TK",
@@ -961,6 +1059,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-19",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Brownie Mocha Frappe",
     category: "beverages",
     price: "320 TK",
@@ -970,6 +1069,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-20",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Mocha Frappe",
     category: "beverages",
     price: "240 TK",
@@ -978,6 +1078,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-21",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Caramel Frappe",
     category: "beverages",
     price: "270 TK",
@@ -986,6 +1087,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-22",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Hazelnut Frappe",
     category: "beverages",
     price: "260 TK",
@@ -994,6 +1096,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-23",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Vanilla Frappe",
     category: "beverages",
     price: "250 TK",
@@ -1002,6 +1105,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-24",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Arabian Dates Shake",
     category: "beverages",
     price: "260 TK",
@@ -1011,6 +1115,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-25",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Mango & Strawberry Shake",
     category: "beverages",
     price: "240 TK",
@@ -1019,6 +1124,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-26",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Biscoff Milkshake",
     category: "beverages",
     price: "300 TK",
@@ -1028,6 +1134,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-27",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Oreo Milkshake",
     category: "beverages",
     price: "230 TK",
@@ -1036,6 +1143,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-28",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Nutella Shake",
     category: "beverages",
     price: "280 TK",
@@ -1044,6 +1152,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-29",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Blueberry Milkshake",
     category: "beverages",
     price: "290 TK",
@@ -1052,6 +1161,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-30",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Chocolate Shake",
     category: "beverages",
     price: "230 TK",
@@ -1060,6 +1170,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-31",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Caramel Shake",
     category: "beverages",
     price: "250 TK",
@@ -1068,6 +1179,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-32",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Vanilla Milkshake",
     category: "beverages",
     price: "220 TK",
@@ -1076,6 +1188,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-33",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Lychee Mint Bliss",
     category: "beverages",
     price: "320 TK",
@@ -1085,6 +1198,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-34",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Virgin Mojito",
     category: "beverages",
     price: "280 TK",
@@ -1094,6 +1208,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-35",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Ocean Sunset Mocktail",
     category: "beverages",
     price: "350 TK",
@@ -1103,6 +1218,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-36",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Blue Orange Fizz",
     category: "beverages",
     price: "320 TK",
@@ -1111,6 +1227,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-37",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Fizzy Strawberry Mint",
     category: "beverages",
     price: "290 TK",
@@ -1119,6 +1236,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-38",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Fizzy Mango Mint",
     category: "beverages",
     price: "300 TK",
@@ -1127,6 +1245,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-39",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Coconut Mango Mint",
     category: "beverages",
     price: "310 TK",
@@ -1135,6 +1254,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-40",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Fizzy Blueberry Mint",
     category: "beverages",
     price: "290 TK",
@@ -1143,6 +1263,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-41",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Kiwi Fizzy Mint",
     category: "beverages",
     price: "330 TK",
@@ -1151,6 +1272,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-42",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Raspberry Ice Fusion",
     category: "beverages",
     price: "310 TK",
@@ -1159,6 +1281,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-43",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Belgian Lemonade",
     category: "beverages",
     price: "190 TK",
@@ -1167,6 +1290,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-44",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Strawberry Lemonade",
     category: "beverages",
     price: "160 TK",
@@ -1175,6 +1299,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-45",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Mango Lemonade",
     category: "beverages",
     price: "170 TK",
@@ -1183,6 +1308,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-46",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Blue Ocean Lemonade",
     category: "beverages",
     price: "180 TK",
@@ -1191,6 +1317,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-47",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Orange Lemonade",
     category: "beverages",
     price: "180 TK",
@@ -1199,6 +1326,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "bev-48",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Fresh Fruit Juices",
     category: "beverages",
     price: "210 TK",
@@ -1209,6 +1337,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Desserts & Pastry (Page 27)
   {
     id: "dessert-1",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Oreo Cheesecake",
     category: "desserts",
     price: "240 TK",
@@ -1218,6 +1347,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-2",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Blueberry Cheesecake",
     category: "desserts",
     price: "280 TK",
@@ -1227,6 +1357,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-3",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Tiramisu Cheesecake",
     category: "desserts",
     price: "290 TK",
@@ -1236,6 +1367,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-4",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Strawberry Cheesecake",
     category: "desserts",
     price: "280 TK",
@@ -1244,6 +1376,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-5",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Biscoff Cheesecake",
     category: "desserts",
     price: "320 TK",
@@ -1253,6 +1386,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-6",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os=w400-h267-c-rw",
     name: "Chocolate Brownie",
     category: "desserts",
     price: "180 TK",
@@ -1261,6 +1395,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "dessert-7",
+    image: "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT=w400-h267-c-rw",
     name: "Muffin",
     category: "desserts",
     price: "110 TK",
