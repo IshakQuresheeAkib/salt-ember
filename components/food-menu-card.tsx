@@ -23,9 +23,9 @@ export function FoodMenuCard({ dish, className }: FoodMenuCardProps) {
   return (
     <article
       className={cn(
-        "group relative flex flex-col justify-between rounded-[16px] p-6 pt-0",
-        "bg-[rgba(249,129,29,0.09)] backdrop-blur-[5.8px] [-webkit-backdrop-filter:blur(5.8px)]",
-        "border border-[rgba(249,129,29,0.13)] hover:border-orange/40",
+        "group relative flex flex-col justify-between rounded-2xl p-4 mb-10 pt-0",
+        "bg-[rgba(249,129,29,0.09)] backdrop-blur-sm [-webkit-backdrop-filter:blur(8px)]",
+        "border border-transparent hover:border-orange/40",
         "shadow-[0_4px_30px_rgba(0,0,0,0.1)]",
         "hover:shadow-[0_20px_40px_rgba(0,0,0,0.5),0_0_30px_rgba(249,129,29,0.2)]",
         "transition-all duration-400 ease-out hover:-translate-y-2",
@@ -35,79 +35,16 @@ export function FoodMenuCard({ dish, className }: FoodMenuCardProps) {
     >
       <div>
         {/* Visual Circular Dish Header - Positioned at top of card */}
-        <div className="relative mx-auto -mt-12 sm:-mt-14 h-40 w-40 sm:h-44 sm:w-44 md:h-48 md:w-48 shrink-0">
-          {/* Atmospheric floating garnish: Red chili pepper to top right */}
-          <div className="pointer-events-none absolute -top-3 -right-2 z-20 transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:rotate-12">
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 32 32"
-              fill="none"
-              className="drop-shadow-[0_4px_6px_rgba(0,0,0,0.4)]"
-            >
-              <path
-                d="M22 6C20 4 16 5 13 8C10 11 8 16 9 21C9.5 23.5 11 25.5 13 25C15 24.5 16.5 21.5 18 18C19.5 14.5 23 10 23.5 8C23.8 6.8 23 6.4 22 6Z"
-                fill="#DC2626"
-              />
-              <path
-                d="M19 11C18 9 15 8 13 10C11 12 10 15 10.5 18C11 15 13 12 16 11Z"
-                fill="#EF4444"
-                opacity="0.8"
-              />
-              <path
-                d="M22 6C23 4.5 24 3 26 2.5C25.5 4 24.5 5 23.5 5.8L22 6Z"
-                fill="#15803D"
-              />
-            </svg>
-          </div>
-
-          {/* Atmospheric floating garnish: Fresh green basil leaf to bottom right */}
-          <div className="pointer-events-none absolute -bottom-1 -right-1 z-20 transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:translate-y-1 group-hover:-rotate-12">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.35)]"
-            >
-              <path
-                d="M12 2C8 4 4 8 4 13C4 17.5 7.5 20.5 12 21C16.5 20.5 20 17.5 20 13C20 8 16 4 12 2Z"
-                fill="#16A34A"
-              />
-              <path
-                d="M12 4V19"
-                stroke="#15803D"
-                strokeWidth="1.2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
-
-          {/* Atmospheric floating garnish: Small herb leaf to bottom left */}
-          <div className="pointer-events-none absolute bottom-4 -left-2 z-20 transition-transform duration-500 ease-out group-hover:-translate-x-1 group-hover:translate-y-0.5 group-hover:rotate-6">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="drop-shadow-[0_2px_4px_rgba(0,0,0,0.35)]"
-            >
-              <path
-                d="M6 5C9 4 14 6 16 10C18 14 16 19 12 20C8 19 5 15 5 11C5 8.5 5.5 6.5 6 5Z"
-                fill="#22C55E"
-                opacity="0.9"
-              />
-            </svg>
-          </div>
+        <div className="relative mx-auto -mt-20 h-40 w-40 sm:h-44 sm:w-44 lg:h-48 lg:w-48 shrink-0">
 
           {/* Cast Iron / Dark Ceramic Skillet Rim with Ambient Depth */}
-          <div className="relative h-full w-full rounded-full p-2 bg-gradient-to-b from-[#2a2a2e] via-[#18181b] to-[#09090b] shadow-[0_16px_36px_rgba(0,0,0,0.45)] ring-1 ring-white/10 transition-transform duration-500 ease-out group-hover:scale-105 group-hover:rotate-2">
+          <div className="relative h-full w-full transition-transform duration-500 ease-out group-hover:scale-105 group-hover:rotate-2">
             {/* Inner Circular Food Image Container */}
-            <div className="relative h-full w-full rounded-full overflow-hidden bg-neutral-950 ring-1 ring-white/10">
+            <div className="relative h-full w-full">
               {dish.image && !imageError ? (
                 <>
                   {!imageLoaded && (
-                    <div className="absolute inset-0 animate-pulse bg-neutral-800" />
+                    <div className="absolute inset-0 animate-pulse" />
                   )}
                   <Image
                     src={dish.image}
@@ -119,11 +56,11 @@ export function FoodMenuCard({ dish, className }: FoodMenuCardProps) {
                     onLoad={() => setImageLoaded(true)}
                     onError={() => setImageError(true)}
                     className={cn(
-                      "object-cover transition-all duration-700 ease-out group-hover:scale-110",
+                      "object-contain transition-all duration-700 ease-out group-hover:scale-110",
                       imageLoaded ? "opacity-100" : "opacity-0",
                     )}
                   />
-                  <div className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,0,0,0.5)]" />
+                  <div className="pointer-events-none absolute inset-0" />
                 </>
               ) : (
                 <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-neutral-800 to-neutral-900 text-center">
@@ -137,7 +74,7 @@ export function FoodMenuCard({ dish, className }: FoodMenuCardProps) {
           </div>
 
           {/* Diffused Plate Shadow Cast onto Glass Surface */}
-          <div className="pointer-events-none absolute -bottom-2 inset-x-4 h-6 rounded-full bg-black/40 blur-md" />
+          <div className="pointer-events-none absolute -bottom-2 inset-x-4 h-6 bg-black/40 blur-md" />
         </div>
 
         {/* Content Details: Badges, Title, and Description */}

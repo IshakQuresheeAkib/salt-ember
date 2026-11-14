@@ -228,7 +228,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "starter-10",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369=w400-h267-c-rw",
+    image: "/images/menu/soups-noodles/bbq-wings.png",
     name: "BBQ Wings (6 pcs)",
     category: "starters",
     price: "450 TK",
@@ -259,7 +259,7 @@ export const FOOD_DISHES: FoodItem[] = [
   // Soups & Noodles (Page 6)
   {
     id: "soup-1",
-    image: "/images/menu/soups-noodles/cream-of-mushroom-soup.jpg",
+    image: "/images/menu/soups-noodles/cream-of-mushroom-soup.png",
     imageMobile: "/images/menu/soups-noodles/cream-of-mushroom-soup-mobile.jpg",
     name: "Cream of Mushroom",
     category: "soups-noodles",
@@ -269,7 +269,7 @@ export const FOOD_DISHES: FoodItem[] = [
   },
   {
     id: "soup-2",
-    image: "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt=w400-h267-c-rw",
+    image: "/images/menu/soups-noodles/thahi-soup.png",
     name: "Thai Soup (Thick)",
     category: "soups-noodles",
     price: "250 TK / 550 TK",
