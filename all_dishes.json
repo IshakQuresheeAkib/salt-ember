@@ -1,0 +1,4153 @@
+[
+  {
+    "cluster_id": "Shoot-Day-1-D01",
+    "album": "Shoot-Day-1",
+    "dish_index": 1,
+    "shot_count": 5,
+    "time_start": "2026-02-20 08:29:54",
+    "time_end": "2026-02-20 08:31:32",
+    "best_shot": {
+      "id": "AF1QipMN0fv6YHhyin9WMKR4adj61Dik6IW528BB8YzN",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ",
+      "w": 9375,
+      "h": 6250,
+      "time": "2026-02-20 08:30:37"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOf04y6y3NGyRW57yGkhkLVZ_qVN7R4poHuynkW",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM_ilxWeqdrIr4GFQMeUNEO0u_ZBgxaD99OxVxgeEiX3o-oQ5X1Fh4c7DqOf2SOuFhuKG_DucEOCAmeAl4uyBzII8UH0VcLEa78xlHMxgRAFRgPmt-l",
+        "w": 9372,
+        "h": 6248,
+        "time": "2026-02-20 08:29:54",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipP2cXueObWeCxyn7GtcQFGq1cduOZ2NI_UIWjID",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMeeR0kQHoqEur9jJPJ4zdYArhbBONKDXD2pqRsTLxthrUkGbH8P34KXAz6rK4NHgjWecrUSI3IlpNInwpsmowRN7z_qOeyClbXV6iIfRYec1KyShuZ",
+        "w": 9379,
+        "h": 6253,
+        "time": "2026-02-20 08:30:07",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMN0fv6YHhyin9WMKR4adj61Dik6IW528BB8YzN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ",
+        "w": 9375,
+        "h": 6250,
+        "time": "2026-02-20 08:30:37",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPU92WanIL1MfNwO0HfWCnFOPWiGcsFUAb9AUHG",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO6lk1XQPOp92aUM0kgrkZmw8HavPYiY97oDXl4_JxjCRf8rDpIaQJ37Rzweujm4V6gseDh0AM8FCN3uJdldQFiR2KmPzMR-c8yEiLy0Jj3MNaDR-__",
+        "w": 9483,
+        "h": 6322,
+        "time": "2026-02-20 08:30:46",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPWrLGPIalztDcJz4XseW4FvBd3zqzVfS7WOlna",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOPqLLmuuMFqLksfswcP3E2-q8YkddgBQZcyjKYJy_4U4O97EbXoOc66hKAcieRYK09aeKMXb8CFiayZTy3_EANM_IzC_1h0efYu5g7vSe6jKZLLNYk",
+        "w": 9448,
+        "h": 6299,
+        "time": "2026-02-20 08:31:32",
+        "shot_num": 5
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D02",
+    "album": "Shoot-Day-1",
+    "dish_index": 2,
+    "shot_count": 5,
+    "time_start": "2026-02-20 08:33:16",
+    "time_end": "2026-02-20 08:33:57",
+    "best_shot": {
+      "id": "AF1QipOeI-8IbuU5blqEJjPtpCq0PRWdzc3fMqJMQwwV",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNvacyf5VQAINt5S7yO2IZFkozZQGqtKIihI-8EGnivmQr1oHcPz5qM6K6JFR_hC1Z9vdQ1QW8rNLafikxcOtaiLX4D206-jNOndEDVRuvJHPUvdXbR",
+      "w": 9382,
+      "h": 6255,
+      "time": "2026-02-20 08:33:23"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMqTsMv8uddmyjMLJ1TvseHfryzPqhCkgGA9mrD",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOBjjJNAJhRjTyu1x4I_kmzE_8o_mMhZNftHc4ffoJpcUqQpZ0vT8fzmIFQ2imEUj396uj5OwcACI5YHWrGOBS68T2C6FJKwDo6GtGJDTR-U6R2SjiR",
+        "w": 9374,
+        "h": 6249,
+        "time": "2026-02-20 08:33:16",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipNfCwup9OWS2QDiUNS72NLoobFkrFLaET9Yha7p",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOS9o8dD4mB-_mJxfR4zUMOMFBgvNSJMixwf7sKCwp3wEa_YHyyI5x8n5kRtlX9rsek08wOm1Fhqj2NCXqb4H8mYSG0AD1UTCN07GIpTOkyuBAN9O5n",
+        "w": 9394,
+        "h": 6263,
+        "time": "2026-02-20 08:33:21",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOeI-8IbuU5blqEJjPtpCq0PRWdzc3fMqJMQwwV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNvacyf5VQAINt5S7yO2IZFkozZQGqtKIihI-8EGnivmQr1oHcPz5qM6K6JFR_hC1Z9vdQ1QW8rNLafikxcOtaiLX4D206-jNOndEDVRuvJHPUvdXbR",
+        "w": 9382,
+        "h": 6255,
+        "time": "2026-02-20 08:33:23",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipO14ZsDrYmTqX4BCUHQWlLR5rwtaZdgkTYoIi1E",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMtwHWVfOe8hM6WP9fwj8XhvyvlYpfPAtZIAYy0EIssgK2QBDtC4cQvLf039ogo5nbv01I3hqqYK-3pKDburpQ_DJ-QUAzpi5zjxkMp1Yi7tjZ4cw4N",
+        "w": 9441,
+        "h": 6294,
+        "time": "2026-02-20 08:33:29",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNglFLWmtVZBjpgET6uTNOwnNQSgqE-iiF1U0Fp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOgc47wkbh_RPU_ULbdw3HtXUosXdYYPY2bxO5pHyWD14xtqb1kT99TieWH4Fnx701X07qHGRPqEi55d6czvmSN0Nrhm_KeZYCVzxIrJENPpHjC6nQD",
+        "w": 9481,
+        "h": 6321,
+        "time": "2026-02-20 08:33:57",
+        "shot_num": 5
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D03",
+    "album": "Shoot-Day-1",
+    "dish_index": 3,
+    "shot_count": 20,
+    "time_start": "2026-02-20 08:35:25",
+    "time_end": "2026-02-20 08:40:39",
+    "best_shot": {
+      "id": "AF1QipOUBJlWDhmVXW-c0PUtBC8djrgc9gGiTjBOGScF",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt",
+      "w": 6164,
+      "h": 9246,
+      "time": "2026-02-20 08:38:05"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOHfbzfexTB_hYGwHY0yjTjHE5lPrWgJXEsnjE6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPEeq7nJpGfu6jdDD5N6FmdzHv6Bows2Y30HnWurNYjaM1dw5VIkU2v-zsT2D8QL_mcbz_5C3AQypBo20jq2AQPo4ZHr5Mg-y4R_X-HCrE-pmRKqYgw",
+        "w": 9304,
+        "h": 6203,
+        "time": "2026-02-20 08:35:25",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMP5gfqtzjWfIb5MphomOHZN0jsTroKSAVdu0dd",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO08hBPvDB4kEFWWYZvsUqbdTrvdKVxjuOXaTO5YXBktDM6jGC_84X4-VgjF3DNXfgd_gTrowawwYgC7XHSIir6VCd5QBWYmv4MN6kQB4dZoZS6h5xP",
+        "w": 9503,
+        "h": 6335,
+        "time": "2026-02-20 08:35:31",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMh7wsOfz6ibRAHuCMDxP3xoaywKFwvSIjKUI74",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP0-DIO2rU-onKmuuT75qqiKAPWz98LAfGv8ddQwc_q1ra6OmxaJ22mJ-BxrUgKSqHC-e25Bvp8I2HrZ8SjRxBUC1_hsZUiUuZaSkJMNQzR9i9Zb770",
+        "w": 9355,
+        "h": 6237,
+        "time": "2026-02-20 08:35:42",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMlUsvVjO79bKXGI4IDSRZRCmUjEXAQvapiaX8l",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNWOwgMkpyX9izS3GtSSv-Kg1OZa3ENWplqToi9PN1s83YMcbO1_2Lu8baSHYPAXasSZqizN1vuPHpUS2jufUd9_JRDzEmeqKy4NNUB2MbpdaV7iEpH",
+        "w": 9196,
+        "h": 6131,
+        "time": "2026-02-20 08:35:50",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPW88fF9dKcM2zRvluXIK7SG1_GLAPauRsQ_AVE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOncNJm55fXBSC9cVqW23D_tXOAOJshr5t6Pq9ttmCMrHn7JKe9ahBnePgoGKSrxfYP7ilUh6YnLGaDqy-srZ_IHmjL6T2HnKfWS9jV7KJTCFkngpES",
+        "w": 9240,
+        "h": 6160,
+        "time": "2026-02-20 08:36:09",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipOugcbrh4QnwgSZE4Rqn1fNJR9zMz39NcjCfI4V",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczORigZuw0QIZtTn_mHxkc3hZfttE1YWBacZ0C4Lb6N_yqNxauf5ydpfIVsOC5gQEsmxhBnQ6-EhPWUDyeaGo13BRxKZd0f3TAQSQ7bGLqz40Hh9wYny",
+        "w": 9161,
+        "h": 6107,
+        "time": "2026-02-20 08:36:18",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipPuwO1la1StRq1pPG_0sD3NNXpi4hQlkjsOvgTJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM4IQiB3nk8hG9OMbR2V0doxkOh_4eFBxPW9nG8ZYkyQg7m-LBZs6vDHoOuTLZtPFkqxZ_hE2pDQi1rqwPwbrjmBkhMn9IxlW7rxhid-cv9q2pQOu9L",
+        "w": 9324,
+        "h": 6216,
+        "time": "2026-02-20 08:37:30",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipOcrwKc2118lR6rSPV2NuJIpfyN8B9l5cx71eN7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPuItktwznqQ2ANhj5vBX4zsPUeuPoGbsmN2QSSWS4rvv6EmDNx88lIfuZcwSaYBs_kRjSolL6eOmNmzUBs_uPNQNNwDQjA8J7mn7hE4tiZzDsD9IIW",
+        "w": 6111,
+        "h": 9166,
+        "time": "2026-02-20 08:38:00",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipNT67kiYOVCj8QrBqnXkzR0rjNfMpEhEvM3k30Q",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOeGpxd3tt0EeWlQ3-kfM9LIAVSjlA7UvNjuJZaAZRmGHyI5txzET2c0JRJWLRrUHzI1B6XhbEmSj_nfqSD1BCCyyrjC2kYlBMhV8YN6DIpJID7JHGV",
+        "w": 6115,
+        "h": 9172,
+        "time": "2026-02-20 08:38:02",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipOIhrgMgVYPbs957vLL33--27BAta77VCb2G2Iw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNL05trus6xc3FKURSnMn3WTbosmcPQWCEpsQAi8bQXZZQH8u_oRpQGwTCAZN20tsw3P9vmkuYicw78VJ8U1prdeOlRJl77OGSh2NQ2ZIltUsBrNRTD",
+        "w": 6155,
+        "h": 9232,
+        "time": "2026-02-20 08:38:04",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipOUBJlWDhmVXW-c0PUtBC8djrgc9gGiTjBOGScF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt",
+        "w": 6164,
+        "h": 9246,
+        "time": "2026-02-20 08:38:05",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipOit39Acwa0iCigFwCfZx_rndeLDYi5Y9ZIdDpg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOWMuH_9uUfRWbmVGrhLFCuBUpLyS1Ysszuq8ctWB5OJeYWfXAJLO3eNKqMxqRT63G33JlzzE0RmGBOMLwQgKAxaA7_Qnh1d3szkmvJAnkbJDdC-dvB",
+        "w": 9227,
+        "h": 6151,
+        "time": "2026-02-20 08:39:14",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOM72PUA3-9XR9r4O-Zyu799TNFdVm-vsvkGsat",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPWUflLfmV8CQkS5imcRX-J5NFE7K7WMrMbRif6cg_0R18Xz9Jhsv3nBU4C0SCei8Z1eDL9wV2P_WpbFTSbklwvouBHaomTk-D3THgnkICli809vDyQ",
+        "w": 9239,
+        "h": 6159,
+        "time": "2026-02-20 08:39:22",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipOWJvgGMJQEyH0M-2NvCadfD4XwXF6Ddglbe_c7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMKNdcZp8iPCAT32DQOqSMPYIla9DmWcSA2dos4GKRGnImzMU6RXI5VTUtnJSrDRVC4Tlmh5xm4DrdLfSEz6Q6jDeTqU45dI4IyhsoT95TCrO-WlG2Z",
+        "w": 9301,
+        "h": 6201,
+        "time": "2026-02-20 08:39:25",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipMMby8JXW2vJy46Q9ZOZM0xoGoORvmr3zWe6iVo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOAcccjwS4ERnZKY9ubLqckib4rllH50Rdaykqu0YNBosBDNIUO1FNynhvDAD1-BGxz3-AGGijAcdsMd2mQR3eOhfoW1u5Pf4AYUuSxRP2LZdcpnf8Q",
+        "w": 9270,
+        "h": 6180,
+        "time": "2026-02-20 08:39:27",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipPVv0x4-B2Ox0rSIfruzoys0JMF-nkOkt5dsfs_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNaWhMWLnZnn-lwCxURHTuKf-IVsuqNThltfEF8PZvLj8nCjPDc5KNuqsrJljRnoexNiQ2CPZaWS4u3TrGPbskxmoa1nYSETBPpltBi6IfWAV_6D6GC",
+        "w": 9258,
+        "h": 6172,
+        "time": "2026-02-20 08:39:28",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipNU2fr2FGx1RKE6mrNApHljkdMlBiB42eyPJNph",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPu7t0SmvL9FWRGlSxeBh4jSMplgtI1qMSIKHWOG0ZRt1AXrTKsx66rJBjcJhKv4EP-ulAOgXoafAaHxlpyGxeaCsJ6r1CIXIodNJHpxMCajbzRC9Vk",
+        "w": 9242,
+        "h": 6161,
+        "time": "2026-02-20 08:40:02",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipOiDbE8v_eAucLeMh_r0xB-NgppgZTVrvBvqoNY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMicwdrFRfrnVq5lE6dOcmIz2Ed6DcfC-L-EVMGI6aHFpx-WWLbXu0HGxuxegCLuR_NpqcsxKzV5j4nFpVNcgFUtcFHIbvB2ZkzSsDW4yA2w9x3S5Hg",
+        "w": 9403,
+        "h": 6269,
+        "time": "2026-02-20 08:40:15",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipOJD7unWE02XBkGnmT9MGPu6cpxmBYpXP-eHCOh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMr31qzoe-8BSm0SQqGfShZM4pEdlzBK_3wZdWyjkpW2ddNkC6QD5WDuARtPrgcwp6SyJFYp2Qyjv175-fLLkAX6SceCalEDzRkVMyAoyevJmO9LuU3",
+        "w": 9414,
+        "h": 6276,
+        "time": "2026-02-20 08:40:29",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipNZycOjCPW_OWgNTWOaiNZbkmI-2fQH-e65CN-Z",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOwbjko4s8wpqW0nUGlEaV9ezSrbCPKIvjCVC7ZtQzsbK6yLRFYsVaL6uFyRrTifvNW5lnK2AwtW51FkvYj1zS8p57sAi6C32vIzxM-Guhqzdum4swT",
+        "w": 9270,
+        "h": 6180,
+        "time": "2026-02-20 08:40:39",
+        "shot_num": 20
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D04",
+    "album": "Shoot-Day-1",
+    "dish_index": 4,
+    "shot_count": 22,
+    "time_start": "2026-02-20 08:46:38",
+    "time_end": "2026-02-20 08:51:07",
+    "best_shot": {
+      "id": "AF1QipP24D7yGjx66ertDjtSWUvph3FfIoCinFD5UDeO",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF",
+      "w": 9476,
+      "h": 6317,
+      "time": "2026-02-20 08:48:47"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMgtgN2fzXj0gQojQmI4D9jpdAK-55QCRdQpLMF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMVZ1KDo56YKvfbcqPoJD573ptT4QmZZHhBrIT-e2pRYdOwiS076EnES_QxaHMgj-B7_cEo3MxaLnKxPpKiIMyZ9QiG5uf0xR0vHIr-MNladEWuDBW3",
+        "w": 9277,
+        "h": 6185,
+        "time": "2026-02-20 08:46:38",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipOUdiIldMPnD_7vFly70vRYlJUcJEYi1mdEms-7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPUSRbVSJ0nqzu2DPTQg0-rj5Vh929N0WXxdt6lAtHBCeJX5c3jt3jehDv3NuYuIoAF46BlRuZcFjfxIeKybohNAZ91yhderBa1rXWqAY56sG7vrMXo",
+        "w": 9314,
+        "h": 6209,
+        "time": "2026-02-20 08:46:40",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNB_5Yc1ZX6vUIESYPhuG0qb24sL4flQhR_9brL",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO4olwDJqZW7gwdM65rM5nFA_7AQ2x-ZFzirSzJ6qZ_k4ATuhtIZs5DusiWuy_ztNWzJFKZWUZyfUS2s8D6_j0FRaXM36xCwR70k2L3FdEMZ6FdpKRr",
+        "w": 9275,
+        "h": 6183,
+        "time": "2026-02-20 08:46:49",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPz9AhXgPLvLKZOzLeCibSHg8HkJJ3_vA9rSF37",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOD8zkHEb15ER9Sy6ugpkhxzoxmZ42XCnf-BbXwuGXu3p65OJGzk1Mcm88O8KHuJ6sX2ATSlDv_BTf-dnadAjxb_L255Mrm3v-cdxFdqr9RCSB7EWE1",
+        "w": 9221,
+        "h": 6147,
+        "time": "2026-02-20 08:46:52",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipN7WsOp4V90fla3I0tRKaJ-h6pJZSryTKTnfEUy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPcqC6acoGrG8NNl7Cpz8b4SizzXCzej3oZT9skmbvBxgLGzcZJoy-6FQSH_hVIZQgfkAbuAlWkvAc_KWvvKNsPnpAZVIfTIXvXkHmHi04DVYGxeNDH",
+        "w": 9231,
+        "h": 6154,
+        "time": "2026-02-20 08:46:53",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPsftlLLE87WIFEWqQVgVZv2YsWD_vYn3l3lYWD",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNhexB3zPQwgP2gjGH_yiBvYA691DGmY-ig-mHInX4WZP4H1EKTcM4cJfOnsM2zKRbzQbD1J53HQmKBap7oTOyhQu4J42MJnSCEKwqFds8MxAZf9Fve",
+        "w": 9234,
+        "h": 6156,
+        "time": "2026-02-20 08:46:54",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipOaBpfm3u1tnSnV1VkTG4SY9-BOaOJYDrne3KqV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNz6qpJwyQ7xDw9-UYG5IBXuC4s8rdOxGYzk2wlN1H2ynz06FPIRh278CluSsj6frZbQcrhiFcxUqAX32Zaf3rq9daW61L0DCduMtuKcmHDZFR0Goyj",
+        "w": 9083,
+        "h": 6055,
+        "time": "2026-02-20 08:48:02",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipOnXMtrhoE5-Yhw5tUA5suE4E4Xk87ko0eTsTm7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO5R_0ejO9QnbpzfQy_7_SBp2kZWFe1lHkwbrMn-mTwpgy_pIrzULkx6t47iLFwwjECL2y90Cz4e08-1pq9gWdiYkLT7cC0JDNzTWFihwBEbnAkJV_f",
+        "w": 9135,
+        "h": 6090,
+        "time": "2026-02-20 08:48:03",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipMlrtCvbMbAnfU4w6EGmDZww1s7zcHP4ZZIicRf",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMQnurmB9AOnK37NOaNzKcVN5sC5hm2gvB0OrkdpRo14LbLnyawDgzCxyo-YGlBlaWz7fy1O68670FfHgKnHCKSgOf7gC1tKZrSsMkJKxnCwODEPUz_",
+        "w": 9230,
+        "h": 6153,
+        "time": "2026-02-20 08:48:17",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipOh0Hoc84kSpzAtfLAX5jBcbExiHovcGZc5oY0h",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOrgMAzJ-Gn-NysyAKGSb84D7qxEfN4PzUZCxdQ-3WTWm09sLnCvEchys5S-khPOer6Emgu2t9G_nVVkOM_j_WiCfm1dWghpOWicf-8KLQFSSWe92jA",
+        "w": 9351,
+        "h": 6234,
+        "time": "2026-02-20 08:48:19",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipPvRHOzfISvKOrzD1Y9IkWJLZdo7XwQiFOPJlYm",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOWE9RJpji4fOzvngBVmOOFPmsHb4LzozjWVbEvrJaFiTmcVxcmeOD6tVizxMZggIzBl8NHKvFC8Eo-EI1_TWvWj07J7UfZirBNZr0HPsjUH50ZnOGR",
+        "w": 9443,
+        "h": 6295,
+        "time": "2026-02-20 08:48:33",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipP24D7yGjx66ertDjtSWUvph3FfIoCinFD5UDeO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF",
+        "w": 9476,
+        "h": 6317,
+        "time": "2026-02-20 08:48:47",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipPhiDLouZrLlqv5yBgIbf9j2fmmQuZ46pImXtXM",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOO6lux9sVI2rOSrhRJsH4twy1ZmrA3WYWdVtNYIqXF7nMVv73oH1MuDuDOcqWPTkNtTHPn2NGq1vMOpRb1gkpnyKtZVVtNjbvbzIPs7OTauCFeaaAP",
+        "w": 9444,
+        "h": 6296,
+        "time": "2026-02-20 08:48:48",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipOKlnsV1l2Nc4BZPhdTx0c6IyfwCAv860DEw5hc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMZtAgENY2I5rhyEe-u6k3nx7IefTY4nn-EVjnZQ-da-BdqA0-aNdIej2j5D1nagSKq-wMAmIPdljBoMzHyV4loIzht57-gCMwbcCR2P7G7ftB_eSUE",
+        "w": 9349,
+        "h": 6233,
+        "time": "2026-02-20 08:49:57",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipO3aNQPEvInO3h-9kUi8vFwqrRoes8Zmk0PKNID",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPMUo-LY27bYr9xysrNkKEcZGTKmwCMiK9qlTMiBJSc0ge3FvCXuOicBqFLLdXYk82u7vp-YhgJrABniHkLhn3CAKqLG6MfL5muZxxcGe2wUwSG7tJl",
+        "w": 9453,
+        "h": 6302,
+        "time": "2026-02-20 08:50:26",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipMfxd0ap4E1eRBZSxpnirwyHBNxmtk__V1tEiit",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN7daOli4JoJApqD2saz1BS9Weh9ywOh19uGcEw0losxNgbOHQwMCMivNV_6-cUXbGOpv3KetpFuDPu3U7Tz24c-JRM7hT3Lt0Z20_37mpd1T6E2eqh",
+        "w": 9263,
+        "h": 6175,
+        "time": "2026-02-20 08:50:42",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipOTjG4MHvZsBgYp8xh7zQcDRqQKbra0qb7ERDqz",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMno2CJonnOOtCfsaBP9F1xzIkT59ToeIQSlqKScv8EU4KVphyjY0c9M4bZBRV3XiDzIpa0qmMHlnCnBY4sBth30v94lqKtOekid_2rEZZsHx9mD7OO",
+        "w": 9253,
+        "h": 6169,
+        "time": "2026-02-20 08:50:43",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipODJ6UrKRrBMALgCSbztdc7WZrE1QnZGErBOjXb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPZ4dviOKFfY2lBetRvW44AO5zmlRcyOh6eQcxuxDSuKfzvuoVHafrJsJe00zfMGQHqmsbH8unITyhRJoqajAiuF5BHabbkeWEQHX-D76vleMc35UNk",
+        "w": 9300,
+        "h": 6200,
+        "time": "2026-02-20 08:50:44",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipMPHWPBN031jP94Nl5RkQtTRfZFx-ltc137_xAb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPDR5RZYcZXvBij3wa-L-gT-DRyXo3CFwH_dk3NbTXIgh1u6KenM7Eva5OrlO2H35ipru4NczzgMWT_V_RIKDtOrUzVxiMBX2GGi6SM7zql1pyDqeDJ",
+        "w": 9283,
+        "h": 6189,
+        "time": "2026-02-20 08:50:53",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipN8QBH9esUlNwx8yAYgFJTKUfErxVUumhZfjtTq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPBpREooxkpM6JOj2qJu1tvqg2qFEUqZk_dA2bQSzTV3V8vJCNHIi3T2-z2S9x54PfRmCCWJ8VauAwDTe2so1jhihwgkZNIp5kGQ034wKic-YMZ50aM",
+        "w": 9039,
+        "h": 6026,
+        "time": "2026-02-20 08:51:03",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipNlOkT_rwYsDn1HVS2f6qPr_P22FxbtouQTsxK-",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMuyor3BRLQeV9tFZnr_zv808CKyy6bNWbhw4u1gvlq-umkBsBsPLXjLSYa9laq5cezoSEzjpCPsXFUMHiyqLtUtQmMtjBKqkYo13z1OSK8OPvL62ty",
+        "w": 8982,
+        "h": 5988,
+        "time": "2026-02-20 08:51:05",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipMVXv6kXWWBd0sbJmo6DQdAuMouBwwwr4Ek2YUi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPgxz-AMH98s-BOSHupdRWOuZGdUIkQBDvmWOGxvCZxassJv_JMNo1IVLeCq5647OwQe0fLER14GYMat0Wj1UHVA9MJGw0YKYz7kN6AUEVh3WXJuoLy",
+        "w": 8967,
+        "h": 5978,
+        "time": "2026-02-20 08:51:07",
+        "shot_num": 22
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D05",
+    "album": "Shoot-Day-1",
+    "dish_index": 5,
+    "shot_count": 36,
+    "time_start": "2026-02-20 08:52:26",
+    "time_end": "2026-02-20 08:58:27",
+    "best_shot": {
+      "id": "AF1QipMKSoJpiJs4BwnXW1oq0G-b0cGjAFZggtXPVZFB",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU",
+      "w": 9202,
+      "h": 6135,
+      "time": "2026-02-20 08:54:58"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPJ3N8dQg-4VYCgc7AqJF0QsQaJvGq9z502S4VF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNr9A2igOCht8T3QlBdYyoeGRcS0cl0jghM8ZTmpTEch639zUAWgi7FjaSFU268ZcMrZRMGxY8yh5S-KMtnKJYVfjnci2wAep6n6TZBoyxDVwqWtF3A",
+        "w": 9408,
+        "h": 6272,
+        "time": "2026-02-20 08:52:26",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMHjkUl6U3YBwQzSoSvX4MkjMp9WzL9ExpMjrCP",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOrY8akBLQj9jCNW_SwZKSSyPai2dkLxBrBCJHjBhmSifw9T7-LsM7jokQmbPJI7aAiZatWM8nMKdAx9ie15bpYJ4z-PMY0G9FJU5g7-zqRiGU8ilFZ",
+        "w": 9418,
+        "h": 6279,
+        "time": "2026-02-20 08:52:35",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMbkCRQkHWgqkJkfonRHX-WwmQqWqm5ZGC83GCU",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNQwue3LOSh0dzbZYRT3eHE3Jn_84xngl7limSuSYhveIhn6ddmUWr-bgKq-Yi1zoL_0i5OnAoPPG_RDhkIU6VN_ny_9Tws4iBZENcIAtM5eL1rq_81",
+        "w": 9333,
+        "h": 6222,
+        "time": "2026-02-20 08:52:36",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMZgtUMuyWk0TbYAqVp3fvghkCXkD38gzUTe71a",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPKbgd8DVKWE69w31K0zn4xN-LwagzjutLU3TrkukS6vz2Pa6ZXyJMR2Yl8KpHoV7QpH0hdzmZCwwf0Iap9klYTjxuH5BKxMik53WwwtbT9isntxhRX",
+        "w": 9333,
+        "h": 6222,
+        "time": "2026-02-20 08:52:36",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOoT3KbJZUjdEoMRZWya4y-pNvZysNh-RDjOG_E",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMeMYwEsPND8T3qmH_NLlomAQjOqeQ8tI9MBfr8pcstlEM8tMnHwd88Q7COhGNjYLrChRuL4EX1TA1S9qhfMt8O-BHnw5DSNdArmk3S9kPIyAJHNU3w",
+        "w": 9276,
+        "h": 6184,
+        "time": "2026-02-20 08:52:38",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPc3DH1TwnVNG9wvEYrLCgjV0Bd0mj7DRQj_hzj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM6-l12OxgivAmtpuv2pVoTeYWwae1Xa2lAngHQ3Gr1zojEOe2dsIOiLbzxq9pJeFRw0sOADyoUlcvyk2FYCMMxQ59eJeFLKhroBi8xlUEPXVmEKKuD",
+        "w": 9220,
+        "h": 6147,
+        "time": "2026-02-20 08:52:39",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipNS_ffIprfHd2Y6d5BjtNaSwIQzAMjOEC912JWU",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMIz_qQYPHkN2gdJ0xZHWXeFv8_-F6B8BPiLrLHtU1jKyutWBug0NLpgO1QNtr8bYtOyNumB91tYGTkXjBJCQssZ7amea-LGNWM0LDx8BRRSDFJg4Eo",
+        "w": 9107,
+        "h": 6071,
+        "time": "2026-02-20 08:52:40",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipPx-yFolOB6Q2ofWJqSgOa4eMtmvxE4tJtOUXPM",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMzG0T5GsLS2hmZaxNlu9j8s8c1LIqRCraWmR-b6ZZBz5bBn9q4fB-sPf7ZlZMawwTwJ6u9PgUIBiEjddOYwubTXx1v8Pk2AhyVYwXto_ve56Mh1s24",
+        "w": 9106,
+        "h": 6071,
+        "time": "2026-02-20 08:52:41",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipNN80r7aOfWhLymS93Io6DMhGAgYDnYKkO6p-Bt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObUJQuXQ-i94EgRr5_gIGVTc9vsSEwdt1fiJ_Y4lUs66kwHUWLdkxe6-4h8NHJ8YPSAIwucMbCK-9zD23NDEBnJZMGkE5T8bN1J5BL5_Scv7zeUv9D",
+        "w": 9162,
+        "h": 6108,
+        "time": "2026-02-20 08:52:42",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipM-Q9XhXkVDP2KZ4q0SHVxNF37OvJCJeN3kO3bt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNi8vONCsWZTEy13FIPhhUckQuHNZmnKMpBS-I-qo2xTfjl1GGVxLgA5bV50VgbYuNeFxeONJw5vnw7NlNR5ejhsm8tusfcDkDe-EuDrCitpKzEMchG",
+        "w": 6150,
+        "h": 9225,
+        "time": "2026-02-20 08:52:51",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipNTTgdN6iPZS-yery1uH0aXsm_63jGUzf3i-RVT",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczON6e9-lkYRhXV4NDzFHbqwnYYsjb65j5O50tfbvF-DWU3b7oWMdb0_NFiBdM5GUl8Ik7T2yYrw285UuOR4wgimVvw--FYnSaRKGjSTCfSIZv6BDWrB",
+        "w": 9365,
+        "h": 6243,
+        "time": "2026-02-20 08:53:06",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipO2s6gf8gF6p3dM8iFAhvAA7iAMjW7NLcHLPNNg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPyWvV7G2TceegWlh1km1Lf_H_wWlw6p9u1CKHwZ5QNRPHSaFg_YbYfxY9WYhVJ1oDeKYotafSr3r8Y_-A3jNaQtd8nEew158fLf8HrUzNplqqULAzw",
+        "w": 9311,
+        "h": 6207,
+        "time": "2026-02-20 08:53:08",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipO873v3yHZMaYz_QYSaYwEY2-9_SmTXWo119zSN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPKnzBGVmX4yyNaDwgi9oktKxjEWVP3TSuMK7TUnCsW66xe3SSe8hgkHWnDY0O3Ql9_gWtzPJXUDj_qLw8uz5R4rRt_JEAmND5El2stIppM2qhx7g6K",
+        "w": 9486,
+        "h": 6324,
+        "time": "2026-02-20 08:53:18",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipPr0FKFu2Sb24jiX7Ilqoa52Z9d3_N5MkSennbw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPB0AKINsGYrLQLr2v08anCOIn3otHHjOjpzuJluorDpdWRN4GY6tlNGtPSitgYeRnB3QwPWSUiwBvr19U_PdHRif2R85_cTn7MNPnf5KpsiRlqPiod",
+        "w": 8970,
+        "h": 5980,
+        "time": "2026-02-20 08:54:30",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipNJHLZN_YWNxOH1rcCb-GCBTdEkttaNJoW8pJEu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMQ3fA4X7VUrKWEf7zEs8-Z4FDnCx_w12YRuiSdikqVKhnfXPk7a3fJZYN2-Qpjm_zkv4hf9PSWDBSSy3a9R1oHdE5d4tXKveCBZrlAzXKgjj-wcHa7",
+        "w": 9219,
+        "h": 6146,
+        "time": "2026-02-20 08:54:53",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipN4YDxr8losGTQ7mlAz1YEjdD1MdYUeEtI-31fG",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNwi4wsp_x2SCoYUWUS0lSIcEewAT5hslCh0uE95k82d5Nk5m_MSgbqn6f_OdOF-9LSOCsYgmSs0d_quWOJEGfW7tG_noh46skGTR0VM1mmtKskUYyd",
+        "w": 9146,
+        "h": 6097,
+        "time": "2026-02-20 08:54:56",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipM2HVZu0Zs4CYA9G_DXlSQCXlP1-kSAIF6YYAji",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOy79He18GNMpDMkLC_ZYw7wBC4xFfZaekMFTtc832qdAogpvJD0Qks0pkwYeIiR0TEHDcyTWIehhxz46T5tdXDoVLwpGPqEIhQ0fWWLGvXA6OX_tu4",
+        "w": 9155,
+        "h": 6103,
+        "time": "2026-02-20 08:54:57",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipOt8tkO1pMG5WNwd-BurBdDQqXk7oGKo3jXnSyh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOS6PeuTJwIfI85DudrBJMRwHnnGZv_uE6j4cnVQTqrFoGeSW282aRkZ8AC8qHze9WqeivkArh5OWeQUWiHsTgmZw-MK_nAFBAhbJCcflhLQbIK84Sg",
+        "w": 9202,
+        "h": 6135,
+        "time": "2026-02-20 08:54:58",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipMKSoJpiJs4BwnXW1oq0G-b0cGjAFZggtXPVZFB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU",
+        "w": 9202,
+        "h": 6135,
+        "time": "2026-02-20 08:54:58",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipO_ddQ8VE8rKvmnnuoU0fgEOy92oeBbOJgMOYoE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOBqZYfpnpGXBDLPTuHalUhW06KbEbdAdnixH_2DzJ6W3DfYsh1puX5g63d7fzBT5Iwpzdj7jE46GAPyZu6ybuXUjEkf6_kvSSmT6g3U9mYbtLk8O6t",
+        "w": 9330,
+        "h": 6220,
+        "time": "2026-02-20 08:55:23",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipNNgn0hSDKtsPR4_YM0XWbpXWXtHAfGrnagkRSV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOo5dFgLfNnopmWMU3Oeqn-_blztbC-AGpZUcxuSNPWA5XY67QcR2tdSRSAfkAdQqV90NWgTTwq0TT203fsSZ8USlbhOy_ROIz94hql0H1_XLwgM8pn",
+        "w": 9275,
+        "h": 6183,
+        "time": "2026-02-20 08:55:24",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipPkfaqpRTHAIeFm3iIgthvrCCAkW3bxMtiVax9E",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPKNxjunDduHPB_F6PtGKXH6jpPTA-NCIzdHE8sSAu5aAnT3-8VDZ75scJvbiaU840giKzHdGP0zg_dYoFzyMrE2Aj3JyO60oMquAHdJnD_cYueY2Qa",
+        "w": 9176,
+        "h": 6117,
+        "time": "2026-02-20 08:55:44",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipMtXfFhq4-Ql48DgFDK2b0QVg1T7ogh1zl5rANh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczORb9i-wz41AHufHL-cDKWjas5MZ_x77pBx4kb6OMkeuN4lJTdD8QwmrKcSEkPde8huYEqgqF-mfg8s9IS6kj08JThhpZhfHo25jkMbzYtiM8vXnEKW",
+        "w": 9195,
+        "h": 6130,
+        "time": "2026-02-20 08:55:47",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipNJ98m1aUndqWPQhVoaUwCupR_GDTLbofCJURU_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO-Vu3BDVY6uoDSpftKmgbk6bD0tXwQX6Cv94jVWWj-W9t-G64BWG0jWjtS33rMdVpJG1dsiGHAimpku1siXJLv6YuKUFEuazhlVFSlBFcFBRd22JRo",
+        "w": 9182,
+        "h": 6121,
+        "time": "2026-02-20 08:55:48",
+        "shot_num": 24
+      },
+      {
+        "id": "AF1QipOAjK3PmNtTshLFNpFxA0peQ-lIp4wJ2LHDcYhv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN0OV6emoJwYKumu5cLa6AtIkroN8Yb9tcY3mc-S8Shq1ZHXJ7QXHtSp-VrmcMN65zedid_mfyAxRNCfWdpphmUNgDWL9ivKt4rvC7_xuFBHspVEfrC",
+        "w": 9039,
+        "h": 6026,
+        "time": "2026-02-20 08:56:16",
+        "shot_num": 25
+      },
+      {
+        "id": "AF1QipPqk-K-0DHLe_SObksMZwiXfJqIXccDDCm-J4xF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPh8KvL4UONj7O1dhVsKKY5fG_BPvPM6UhTtEXqmyIx5g9oDx0NjUZ0apeE2VDCBCFYbWua25HrCJ2uXJq4IsTJ6Mk245E8MPVTpsXvRbun_saiQNIs",
+        "w": 9097,
+        "h": 6065,
+        "time": "2026-02-20 08:56:19",
+        "shot_num": 26
+      },
+      {
+        "id": "AF1QipN7GqnxTyubKpD-1cYFpBwy1kXom6ZuvL53hxR7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOFKWA1jXygnVpIDXwJ87mKoe6V9puJFyMSni3dhIBa1BvzuoxodMKGtqUZTAzqY3Me0b6FyypkycKPGTXKFh7FPRqGrPBZjznJJpcuT8VIHCCvD3aZ",
+        "w": 9154,
+        "h": 6103,
+        "time": "2026-02-20 08:56:21",
+        "shot_num": 27
+      },
+      {
+        "id": "AF1QipM_7R6AXBs5BpvCVptyZNChLSrfu9Fhspu23PBD",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMOrlcABqdHPypNKv0agxBJaTUkKMHhiPLf2DQOeCcAYIcV3MU9rt3HpIxKTUlNWRzCRQNYWMHxuX_cg_3uGlhMBzWDhj8mtXMCMh7ZGZQmIGb-Xhm7",
+        "w": 9154,
+        "h": 6103,
+        "time": "2026-02-20 08:56:21",
+        "shot_num": 28
+      },
+      {
+        "id": "AF1QipPzQnwP1rJ4Z-RW3BEKdeHtrq-m0sRDOEXs3Lop",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO7XhOtlIUktOeJaNX6JzrFHHlKynLytUtMAvJ_iN0xKouKXB5qxUE7InBEcoc3Dxx3ExWxPEiYxw44RQ8wCM4OWY2g56_4RBBo4Dcepb3tkCCUl-Qq",
+        "w": 9292,
+        "h": 6195,
+        "time": "2026-02-20 08:57:16",
+        "shot_num": 29
+      },
+      {
+        "id": "AF1QipOcqV5uCapDmOkD4fwYb5MKpCu5BFplIvEc1MRL",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPP9-u9IHvm6zwKi-E3n4JcUkiQ17uKiQurlqguUwnms9rdJiAmprhZ2I4-J3wLoAhVogjkVTTpamBPZCluZTNch-4EGA_TUC_ztJ9foDddnlIEjpoj",
+        "w": 9147,
+        "h": 6098,
+        "time": "2026-02-20 08:57:28",
+        "shot_num": 30
+      },
+      {
+        "id": "AF1QipNrGl3EA1aMu5ggzI5Xn7hET8U5aBSFEIG9tZWO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOOYr_kJYHVpdKtWwWEFx-p87Lmg7d-p_GO13BYyOymTl6w5WY_80jx2F3IVj0LbgIjVgLk5lIGZGNsGCp-SFMzbFPCHdE88__NqG3Th42iy6uGYA6w",
+        "w": 9031,
+        "h": 6021,
+        "time": "2026-02-20 08:57:29",
+        "shot_num": 31
+      },
+      {
+        "id": "AF1QipPkdtRsJVk8kSZ6KQtzn3vOFq5BipUoDFFoigXJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNCwsdXlcRIPlB-q5HI3fcUY5Ftx5R0RjYLlxLZWnas4Lo8YZc8A66mqXG0Q4f881jvdnV6kThOz02Y_Bhwy52W8_aSkQSQFLcG1AUY9JQsMueVRgnk",
+        "w": 8949,
+        "h": 5966,
+        "time": "2026-02-20 08:57:30",
+        "shot_num": 32
+      },
+      {
+        "id": "AF1QipNAz2gs2jnKp79r8gfD6aftgVoqu8di5cTxi5yT",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPCR_NKeA_Cf_ug2dpwXnlXCv66x20uoqrPnK_rGJXJ9x2L43YJbVrQc3UJJ8HFgOohQBY4p5KIi_aVNfvrGJovNktS0L_l-730ltbVXZeJLEDSB42j",
+        "w": 8968,
+        "h": 5979,
+        "time": "2026-02-20 08:57:31",
+        "shot_num": 33
+      },
+      {
+        "id": "AF1QipMpz8GGMfgReAgCxNdHhpK-eGM6nDw0OVemHeIE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPadeEaE_wY13QiKxkyO-uAFwG7uK9SSQdSwCaVXi0w6W6VVt7e1z0qZyBI5yfjqwcWAqSyJoLPGdAqnK1u-aXzN7gkyQsPxfSQdeoKLlE88EKaRYs5",
+        "w": 9083,
+        "h": 6055,
+        "time": "2026-02-20 08:57:53",
+        "shot_num": 34
+      },
+      {
+        "id": "AF1QipMHvWgMcdzmbfUZtcZtPRGxRC0mnVS0C6c058_o",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPZgRFXvMEAsMWzk6rKOil1SAeNQGfo7mNr8--Ug22hiM3Blw1xwxSOVOLeL4-DclyHv05iHavzGWfvCHLrJFJxGPKQ1ytM2NGTYiIpFXO9lmCM6CKn",
+        "w": 8741,
+        "h": 5827,
+        "time": "2026-02-20 08:58:24",
+        "shot_num": 35
+      },
+      {
+        "id": "AF1QipOIfiUAfB-SuB6XapVe84dopTqW7S4YqE9kLR0l",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOPD_JNiI23Pu8T3ROzbLurPF0nii1vv22OXeYWVKZ9mMDhcCsVHVV4AAO0IzDO8A8QhUdr_-yc4rIxxmIytsCJFManW9SnzlNsaQR_rdwxMaKPCuGz",
+        "w": 8698,
+        "h": 5799,
+        "time": "2026-02-20 08:58:27",
+        "shot_num": 36
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D06",
+    "album": "Shoot-Day-1",
+    "dish_index": 6,
+    "shot_count": 5,
+    "time_start": "2026-02-20 09:00:28",
+    "time_end": "2026-02-20 09:00:47",
+    "best_shot": {
+      "id": "AF1QipM7OBF61YYXCd8YdMZd3eExHdV20LUb7vlH2OTO",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOWIF7Ta9Q3XuIx4XuO7D_sAZEJ63qPc9z_4H0NLDQmXSllc4SJeWZg_zmHNlM2x05Qr6keEeGrEZKxwGYsfUUnaHVMXCj3XEsnNNrIVc078-AsTD9C",
+      "w": 9338,
+      "h": 6225,
+      "time": "2026-02-20 09:00:33"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPx-uoqUl6sjPa-z_JKiTbAVxz3WBVFTEGVqBvN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMZN-rAWZu4fde8mMjYrbvKum8_GLJJ_4sqxLUYxkrWnAX_rToH0PoWtdUtoorIL2jVTysrERFk0Wsezx_sLpmW2E42DfHGPnZxSAZuNO0SsvBt9ou7",
+        "w": 9500,
+        "h": 6333,
+        "time": "2026-02-20 09:00:28",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipObfGCdRcDf-6AQdQnMoQfhFCypSsmhqdfEUhix",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMwv7KEKrWUMtoFg6eGkb6ut5puNwkqcKCJFcuEO6JanHJczWg7VfQTFRCK7DHI4ROfEmOiVUX6nR4V63Stim4NqI8KcVHCJXro8hnXN5XWwIgdo4tr",
+        "w": 9338,
+        "h": 6225,
+        "time": "2026-02-20 09:00:33",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipM7OBF61YYXCd8YdMZd3eExHdV20LUb7vlH2OTO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOWIF7Ta9Q3XuIx4XuO7D_sAZEJ63qPc9z_4H0NLDQmXSllc4SJeWZg_zmHNlM2x05Qr6keEeGrEZKxwGYsfUUnaHVMXCj3XEsnNNrIVc078-AsTD9C",
+        "w": 9338,
+        "h": 6225,
+        "time": "2026-02-20 09:00:33",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPU_NLA5CAl8kKSsWiHcQvpgEiWzMg4c7vp-oER",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPPjLEYaOz3w_XTxCW8GY6EHbxtMUmHNaDpdKG4NJWuGnuLE8Q2hPbs6gCQm6Q_fRmAhBtS3Fe2WLeo0f8E3cu_gRbtyJemlr1kSh23qb5j2qGrybPp",
+        "w": 9337,
+        "h": 6225,
+        "time": "2026-02-20 09:00:44",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPYVLyXxlsF4e6SI1JAGju33w-67JLwR9-RHI89",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMKXRkgS0uD0kPQ9g-TTa6Z6wT5UVqm9EcFb1sa2E5x3JmBKSWwmggEuPC-a59-2vyu2DO_gJ1kP5lh3kx0UoDL5U51UhbyslEf7b2hXsDRdnvwJPJs",
+        "w": 9271,
+        "h": 6181,
+        "time": "2026-02-20 09:00:47",
+        "shot_num": 5
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D07",
+    "album": "Shoot-Day-1",
+    "dish_index": 7,
+    "shot_count": 59,
+    "time_start": "2026-02-20 09:16:54",
+    "time_end": "2026-02-20 09:30:16",
+    "best_shot": {
+      "id": "AF1QipOiYv44rKi9iVNOv723g4J3Ubc5KRnv5NbQt_lv",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369",
+      "w": 9093,
+      "h": 6062,
+      "time": "2026-02-20 09:24:06"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipN6xFqjhy006YcPsrSWErfAUCG3t7Q8PJXKri1q",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMSfFGuRhyqCFrFD2_qOXfN283YPsGcOmiOt0jhkSfJjPlNUwQcq5hFPjRcX7ixFiJzrAmp3PzUcotTbzo4aLVTE2wl1fwocg5taj3O-SFDJCnQR650",
+        "w": 9039,
+        "h": 6026,
+        "time": "2026-02-20 09:16:54",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipPq9qLeivk0oXdjIP7LI6HtgLG2pYeRW6nkljIU",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN2jVP_eu6l3Oh2OFo-Lx098uLZR_Z33m4kI9fkSH4ZlMFoaKSSODYwspxmgmwwoaxRljtITqM87CalYjuACFXz9nmJTc_K_HcRFD6TKQdsLu9lfU-I",
+        "w": 8981,
+        "h": 5987,
+        "time": "2026-02-20 09:16:56",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPVRnoJ0yb95qlsXgZ_Ztc8Mwlmm30Q1oTMZOHK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNOrGoFjZ5NXx88n6CQI42p81bRLLb_0ajHIxciwYWMfFE05kPbktJ8Y1CuWgjo9ztSQsjadjU18yNBZs0HQCQfV70Cz6hZ17CARKAxApOhlfPZb2L8",
+        "w": 8954,
+        "h": 5969,
+        "time": "2026-02-20 09:16:57",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipOjBgO1DggahldaVo7nRg9mVMmMCBOGoetotHWx",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOdx8qknA4aWfG_nwysTs-84Hs5QOwH98gBS_4LWK3mlinrK_sO9x-sy3b6T-4o0FYQxSAUWvZjpRd70D1xScwKnpsN9PH_cr36WbnRpDq2CUxfu2gx",
+        "w": 8922,
+        "h": 5948,
+        "time": "2026-02-20 09:16:58",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOyl2tRR5dOcf8z7HG5nJ2D_wo07WVXbITUJoeF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNICVzctAGi-jGNOt9faWWzLagFFwHUtudXmo73a4h6KBggYiwD3Lezz1OwsoNm5MgY_ucpMBvSvXybAbHwDInf2ITt_sQalNRanmRaK4Px7q2i0Ws5",
+        "w": 9005,
+        "h": 6003,
+        "time": "2026-02-20 09:17:06",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipN-K-jMS9c5swHLc8y5C0lHtj1J_XXPSPkmQDEy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPNvjTo51_QHP_vzj0q_pXY7WkgIfYBr8D0uXzQOXRg92TI3lhJJUmI-lSpA_Iz8rwaW-aLntJCBo_fNXrMyyQC4E2oTkfOlSh9Acnd9yySnxvd1snd",
+        "w": 9430,
+        "h": 6287,
+        "time": "2026-02-20 09:17:20",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipMUCWiUm7O0b1Z974Kjo9vPwOqPJuI8R1R--YMB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObAi6iwkM-HaoRJ7YUiCDi4qFxq0Rt-i9OFDWpf7BMIoPvgcBdhiD7lmCU4BqMQSiKRMCkSO2awpRW453gVeKMxAiTY0GXv4rE3p-nfwZ_lLJobSG1",
+        "w": 9489,
+        "h": 6326,
+        "time": "2026-02-20 09:17:23",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipOEltYHO93PIDXJLnad_aawqmfyw43MZy7bpkUD",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM9u0-uuWLXJw3luaHXMIMmm11VBTyYQnfmdle1W5BIRc5qU8uQBU1-0eJSRrC27mQ474Ks-LgEpuhu1UYzmkRHDHaxXMv83xBDtT6bkcV-Y_j1eIM0",
+        "w": 9425,
+        "h": 6283,
+        "time": "2026-02-20 09:17:30",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipNLBmVDnhi_VuvPAZhYThLXkmC4HzFNErcswB93",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNTLj1ouRr_VeQL9wAAwB1mHBSfmgNGY7wM918hxu45Qn5Lka4iQBG3yE7HIVn2eXFIXBukPw_xHm9yU9TZs7TkdonLK01AB-VNFOvhNptKxYx2Lbom",
+        "w": 9491,
+        "h": 6327,
+        "time": "2026-02-20 09:17:31",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipN8xr29oAvo-bDF3e8zhts-WSjC2tEoUmMHMvB_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMnJUGxwpi7eu8zeMSvS0IwFPOVpD853VxOXxz3F0yjlStd6xqYj5nsqNiLilkcVnqzGKdsMJ6ZIBXF5nGHZr3buZL3oaBIW9YjpOeAFQ6VZqkKhqL1",
+        "w": 9354,
+        "h": 6236,
+        "time": "2026-02-20 09:17:34",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipME0M_mI6vnjCu387kKbXil9fKKL1sv-Z8-ClmJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMgUa03KH33qL64VdqWNH8TwPQJ7UTc3AZ6_3qwcM84Rk4s4Vs09kFjX9U0mwf_9mhX-TPPx0QxIfxv0aDtu3Lf0l0Fk7aY5sXfcCa9nmezMu2TcTKi",
+        "w": 9206,
+        "h": 6137,
+        "time": "2026-02-20 09:17:35",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipP3wDSPd_5uEkfL7yPxxZyKKA7nHx3eL0A1-EYO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO5JdDjbqMZOu3uiAUntH25IoriGS5BQ856OIWIX2KaOe2SkgWJmd_V-SnarcAFperwPDichW7LJSo-F4mwWzm3chFarnfMgHt1DfEhGWAtFZv24AjM",
+        "w": 9162,
+        "h": 6108,
+        "time": "2026-02-20 09:17:39",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipMgHqEpZcaNRujMUL9S-LggSuWYuueQORKeIzaN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPS7xyLl1jLuPFeQU6YLNhkWTHM3Kotta1layhs8xoHSBxEEzaES-9kndoHFiuVGC5oTYhKricLRg4FjEwKXiT-HAKdaXKGi3xuf4MPK1yjlQMA_bsr",
+        "w": 9332,
+        "h": 6221,
+        "time": "2026-02-20 09:18:29",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipOQGNz1D7Rf255MwCvLytucZZ281MOS2RmPCvbK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMl43jw2b9yN8GyKMayK34WMxcRhDROXJgxRGysE3b2eqttaFfp7y8DZm_U4Q9e6kaKXgwbHWWfYvXH_2c1Hwrr1d5kmsPRNAW56VZ2Sbi6EAdz1kgz",
+        "w": 8986,
+        "h": 5991,
+        "time": "2026-02-20 09:18:36",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipNyyxbm_egrGfK49C9SOlPWBjT_KhW7sQ4a4-rY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMSBL0h1QvmhaBWUmC1cf5cJRbam9SKCxB4se3USXfjHRd9dZ-VqpsBQJCHPPo8eaBjlp8VqgdFeI_z1gE6dhqgg4tsCHUXXMESKkYCFEPVitdr4yrL",
+        "w": 9045,
+        "h": 6030,
+        "time": "2026-02-20 09:18:45",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipPZhql-xGVavObMaR6-OrGPlZNQeAdIyPjmAhYT",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOTdG1-GYlSkG9L38V5QrRU0HAAPjDzLeNpkWvIzegPYh2uuJ98sMl4hj8CiBJF0atpyfJTTQBurHFqRtb9Sk5yhPQHcLkU_9ZpmSQnJSazz7Njhl40",
+        "w": 9413,
+        "h": 6275,
+        "time": "2026-02-20 09:18:51",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipMUJKVxR3tbkT0Z-BN-AfG8lABmIPE9kiBwVm-f",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNo1jfehCL37UxLXDxCBYeUcR9dG4nXDRWhXe8e_FY8IkHZH-3DlG2BzBSy6ndpAANMxfGjHsI9JLgVUW-_J_mDp3n1mfRi77dwtUjAfbaj5LhFG_XC",
+        "w": 9413,
+        "h": 6275,
+        "time": "2026-02-20 09:18:51",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipMHDdIflBCa6_lw4js5vZ6UEtgsFY2XB_PpMNy4",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMT1p4mmo_t9Rz94lMVuFuezs-5APS1QzsJ-JIJE6DQM9XsjkkxGq1O0wOjAi9an4jD97zzi6q9g-g488l642hqYl7Dwq6LkpZ5PJeBhM6lHRdeZkzc",
+        "w": 9112,
+        "h": 6075,
+        "time": "2026-02-20 09:19:32",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipPpF9q_u9JssDvRzDBNN_u_3pR5dBGQp7c4XLBC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMUakoNFTf302nD6uEqYB2zMMR_zZEc0WPVGXwAIRazJqhkSqCfIpAHsKjKfWrAQWO5oRP4_DLDmha0n6-zUpwuZqtr60Ps_966rXFjr_TEhJZP3oq4",
+        "w": 9440,
+        "h": 6293,
+        "time": "2026-02-20 09:19:49",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipMFnCFBWQ6CABdPBh0BNQRhMjzWHiygJfeo0yQa",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM4d6IxyHnxTSE4jUuuWGcWDCGgJuhHWzppVTe9LdC9P1-kAijdKxKXU-zM55VprPjSGYXgpZ0dxu5Khoce3cwj2F_-gFPybJlXsOTECzy5-_04StV0",
+        "w": 9366,
+        "h": 6244,
+        "time": "2026-02-20 09:20:10",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipPWUt8zSfATPtGiGXEbru08C3j_MnmQT1tZ36F-",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM1Pv6ZrqfyT_jWgIEixmuv5SYgdqFj_yVCAwEjFKYPWvIUyb733KXEObw2cpNdZ0VHF7tYe0U5WwcLgpf2eWIXJsP5hktW3Q0vFG-EqXLJDfF2nhEh",
+        "w": 9420,
+        "h": 6280,
+        "time": "2026-02-20 09:20:48",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipNW40LAAxHqFm0cGS2dFtGAPUq1VOvZknfIKbks",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOneb-EOOM8qwYQk3KoHI4SKWJuOYLXvkCfdS5jUGNbqeYs_PzP1gIxy7JlC4xp6JSa1boQV5cUBYy8XG6EzThK8vyX3VHJTPvZ_c7OqpLM98kIeOGi",
+        "w": 9458,
+        "h": 6305,
+        "time": "2026-02-20 09:20:50",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipObYkoP3-TlAw74mhgxEuyJUmLe_73anolLqWUL",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP3VSl1CjaeTeXf3YyxdSzk191yXgYFFbHzxHEqr3sMs7r9pXSeHb1ShsOLx0uvQuqwOO5or_kNtNWp-byk0E70fhhcd7dmOd6fRZXa7Hp1HRNuszKr",
+        "w": 9236,
+        "h": 6157,
+        "time": "2026-02-20 09:21:57",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipNhn4AFoj0cHVwvNPddkVfWtk7pL4pt_iGd4Y-Q",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP3qPFnG335afMXo6TGy14ce86BKC1pX7hzaB-t4_l6c2ucf5tOUa-cqA8C51Z-h2-Ejqcde1buOAWDE6NT8JA80NTGCTBTnjn2Jx6DbxKWrWTK092q",
+        "w": 9150,
+        "h": 6100,
+        "time": "2026-02-20 09:22:04",
+        "shot_num": 24
+      },
+      {
+        "id": "AF1QipPI0dCk2jKhP-Y6AHFo0D0aFqw5V29BrudQ6uXM",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMTzZk8EsbBDsmhN83L0-5--w0hfySBN1rEnqxyHWvbP3DWYeeffYUngNmsPxuvA4mpVUmhvm9AHdF5n16AXJ7kdXbVqIHYz7mNT9ImZfV_G5amPqj6",
+        "w": 9299,
+        "h": 6199,
+        "time": "2026-02-20 09:22:15",
+        "shot_num": 25
+      },
+      {
+        "id": "AF1QipMXUF5pavwzFVztznevAYcD9ZF9MbH-L3dgDcgH",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNFW8u4m1By_q5Cm_7BS2AwBvcdLu7xJSKHSak6JFkPsIQ0QRGxB5rt2k4Fxjca8T9FqDGjV135o2S2qklq_ZcBJilTMbeLkCixb7Ga2QrTKsZ5lgOa",
+        "w": 9131,
+        "h": 6087,
+        "time": "2026-02-20 09:22:44",
+        "shot_num": 26
+      },
+      {
+        "id": "AF1QipMZpIVNSR10SeK4WEeRwCNiZqh3O0auRItAaGcc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPhii_VARXCjNNJt5mLdlwM1Nb5mlPe7lxlnefCsZCgJV2FQ9AdB48YLQBUUDHtsV5opKx3xDULevrnmwV-0CsxiCvTzymDNnLIOMcfcXhTyYJnVjDU",
+        "w": 9415,
+        "h": 6277,
+        "time": "2026-02-20 09:22:52",
+        "shot_num": 27
+      },
+      {
+        "id": "AF1QipNhYJOesd4Hbw05yE2VLOCY-n3UTuFADTTskI0W",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO-0JTBunEYI9rdFE3iV9PqKz569Yoc8xfSnAKh7zskPHtbPiDigQzMJdO1XxF98HXAlVIubxGmuEEY831z3DlB3lJZx9tQ7x5JjNzQMwXwVT2CaGnb",
+        "w": 9124,
+        "h": 6083,
+        "time": "2026-02-20 09:23:52",
+        "shot_num": 28
+      },
+      {
+        "id": "AF1QipPTKQpRb9kk7F7FE6je1SOiUWFSybiwoTQpLFdt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNQXhua0XuGT5fD5OjLNIbaoSDVBwHPk3bVFlJvZtGX93wjplKzhpWENynC8Zy5knEA_ELoFIgnwxTejT5IG1IjeCDbx9rI-eNX5IcmoWoWWJWlhnrU",
+        "w": 9093,
+        "h": 6062,
+        "time": "2026-02-20 09:24:06",
+        "shot_num": 29
+      },
+      {
+        "id": "AF1QipOiYv44rKi9iVNOv723g4J3Ubc5KRnv5NbQt_lv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369",
+        "w": 9093,
+        "h": 6062,
+        "time": "2026-02-20 09:24:06",
+        "shot_num": 30
+      },
+      {
+        "id": "AF1QipMeHPKmYsJciQRAkIrSynu1kh9Na2y001jpkhkE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO-OXVnNR6Ls-BHhOmSzEwkLIlqQtIy2M_NWnH9XUbOLgXjAj7h-cwFxq6LvOAWbwk6YFOdXp15nc6zxPO-ggXTuCskm3t8mcOyd82CX4DBTa9Eo9OK",
+        "w": 9395,
+        "h": 6263,
+        "time": "2026-02-20 09:24:22",
+        "shot_num": 31
+      },
+      {
+        "id": "AF1QipM8PhDGJC3eLR-M2FfYDBFIeIPnTnSzMF1OYi-l",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPNQ2kikKxRMfxChl4gcFhpw25toVaPsgl7GgKYqnB2GPtF2NBkQKjbxuf3gK7KiZnhEMSkX13YjsUr3L1GM6AGwalVD22XIvYH7oPgFBQBZTe8V2OE",
+        "w": 9069,
+        "h": 6046,
+        "time": "2026-02-20 09:25:07",
+        "shot_num": 32
+      },
+      {
+        "id": "AF1QipPM2xMgW-IUAsdC5dCmk4CQR1P2GXN5lVShGaiQ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMqCMcxnykAxluws-_u-p5T2tU2iLUtSow2v4cSJccDGycUnTz3U99bhZ6XUJ1gsXY6VOVvC-IosZGrA-iZAwc1b8Ovz-Jri-boVbN_b0KXkmET1qk4",
+        "w": 9120,
+        "h": 6080,
+        "time": "2026-02-20 09:25:15",
+        "shot_num": 33
+      },
+      {
+        "id": "AF1QipO3FnXNQbdb4Ez8ikkIdXtayVMMnns2knn5dy9W",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNdCcLsoKdH0pBtnyHQqj51U_2URH_EvuHdpm4ZzCwUZCFeAtjsyNwRXvLl7nhEr1TL8m5GU8QtjtYCiY8s_Y8Wo-kjeWcAGieVeAntnecAYm3hLn_C",
+        "w": 9269,
+        "h": 6179,
+        "time": "2026-02-20 09:25:17",
+        "shot_num": 34
+      },
+      {
+        "id": "AF1QipMaZ_ALGRnP-jlmNJCJt-qwgHUNZjZbZOY6ovKV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP1d7pRascltS3IJc97H6FHyNMKIpHsU8D5ljkl8eWIo7emHiatTJ3pLN2THe2YPYexEmletmVYRYsPrEHc4kXlfohAHUAqKj3Z7aA-GZvPYSUKxKYg",
+        "w": 9269,
+        "h": 6179,
+        "time": "2026-02-20 09:25:17",
+        "shot_num": 35
+      },
+      {
+        "id": "AF1QipOlA39IkdWOLcjX_PjLYGLSlzdL-IJWlRKtXP6_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNg3bMH2ArVzoXHFpxTR4XUAinnMyHmT4CxQwXh5flUl4sUKvpX3GxyAIsr1-NJkLyQycn6TKXto2pIZmGKGjZLlfcyjsYWwFwNZxh2Q4OeT_Yn6vwQ",
+        "w": 9271,
+        "h": 6181,
+        "time": "2026-02-20 09:25:42",
+        "shot_num": 36
+      },
+      {
+        "id": "AF1QipPHrNaroWekIUXj_5MiQUoIRq6qzY92CgpvUB-k",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOsQRypBNP9we6MBGrjPO7PE1YM33L2G1I5tPJ1XZOS8vM_FhO2tdmRBGysknfoiYBCYud6mfmCMHWJK4lhr6-oRlTrGiMEZqrPZ_MhOUAOZ5aAp_zO",
+        "w": 9271,
+        "h": 6181,
+        "time": "2026-02-20 09:25:42",
+        "shot_num": 37
+      },
+      {
+        "id": "AF1QipNOaCGlYT-C0rK-OKlnnlXwN_zB1I__ke3cG5h3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOvCHSxj5uaOh9QV0Qrf6mQY_s2V9jc7ypc7dfMWkxZVyxKcgh8egyigHxP5_NEBp6I7F8ON2XuGYDC1py1lnTS0v-MgrxbAfqVF1mT7HWVgnwHDUGK",
+        "w": 9329,
+        "h": 6219,
+        "time": "2026-02-20 09:25:48",
+        "shot_num": 38
+      },
+      {
+        "id": "AF1QipNE83kPG7aPKRzawDTDWQI8YVsiQMA3VDAj4WS8",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN7iH2PC1PxKlo1AH4_jhkkv3Sz73h4p494i50SAKjcdBN_QapTa2s9ZNVTuio6uLJ9E9bPlsHv9IlhLwX2LP9mlHXhJPNDaaXsQgrv-i0DKR8DfzIN",
+        "w": 9291,
+        "h": 6194,
+        "time": "2026-02-20 09:25:50",
+        "shot_num": 39
+      },
+      {
+        "id": "AF1QipNeenuZZO_1aOoO0-040ZLGQMWvAR6nf11qBjJJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNUGqbDdaBmlqyqsQrApVOqGZ-fZLMsudIXEsIHbaqI7BojsaU4mkf1_TPtZx0A6yHsueZnnHBCQbXas0ggwF4MsC7ZdikLLzAK4liTicDbja6YKeQW",
+        "w": 9285,
+        "h": 6190,
+        "time": "2026-02-20 09:26:25",
+        "shot_num": 40
+      },
+      {
+        "id": "AF1QipPaTpQzaZGGjWkkIwU_BhbBhvWhI3-_Y8IWYIw3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPQZYrrAVoeXoDf73bHcAPnBJtGaUFJJ_5KOMGj7BF7KyUE0fUFb3zM21MmpTn9a9oAKLjH1B7R0zAWcE3r8FpLK6GKPnx3Xgs7uBL8cr5z3Le-RL7f",
+        "w": 9347,
+        "h": 6231,
+        "time": "2026-02-20 09:26:39",
+        "shot_num": 41
+      },
+      {
+        "id": "AF1QipO0WjbDBX3CXB1Mrk9tVeh_1doQBI3h73D719Ct",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMP1Ggf-QggCC7wokvSWO7csV5L2KGDtxSJg0FZAcqLaT1-LLdXBrN-pQIZ_40ovwxFOpIupzJ_QDV1Jf8354VltU9-gpndW4ITCB5xcOYfhLUH7g44",
+        "w": 9374,
+        "h": 6249,
+        "time": "2026-02-20 09:26:40",
+        "shot_num": 42
+      },
+      {
+        "id": "AF1QipPd-zwbpz_Q3lo22FcXSIPeOV1iIXOvVH7LHZP6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP0s_OHDmnQ5wF-_OKgCERbxU8UcWVzFV5ZD6dbA3ULdBlECX6Dvok-YnEYfekLV5-QSIYsTlai88HTT3GmyWPKdz1C7Wdx1laeYuDw5Y5At619m64X",
+        "w": 9470,
+        "h": 6313,
+        "time": "2026-02-20 09:26:54",
+        "shot_num": 43
+      },
+      {
+        "id": "AF1QipO9LkovdM64K2rPZeCiRHq9PV9jAFPKTMZbwfCi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO5tFkMqiBcwgats9ZbvIWyDaciw5bnDkY-kXTnWvcc4bi5qamHhZpR-N6t7PsSEAZPSEugiXeB7dJW9TcV0_Z5IYAT7KuzxmFARRjnRS4OlgQMyWOP",
+        "w": 9440,
+        "h": 6293,
+        "time": "2026-02-20 09:27:43",
+        "shot_num": 44
+      },
+      {
+        "id": "AF1QipO1cYWZ6IjQX3usPzB4jyTvcHn3-d0s28GM8hSw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPzymTPAyA6XbtPj9Gri1bGLpsMcDxL-4642J3KnCNzYWOhCcrYzgqLzzbh4FK6OgXJ2IuPxXEWqptjvjhr90jv4ZAj2BQ2MiTBGwte1l2A9iHV4380",
+        "w": 9343,
+        "h": 6229,
+        "time": "2026-02-20 09:27:57",
+        "shot_num": 45
+      },
+      {
+        "id": "AF1QipOa7oiIgDWWdki2maK5HSfVweUu5MjLx1-OlNfw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMQRk43Kym4lVSBbkrYM4JIxziZDM2iVljuWXm9uKZUDhHuNuK5CRZOFV7s3EvX6DH7mvbcSEB1ivdWQg99vcEzJg0i7A7q0SwqWHFa5nKCGF0wRmgE",
+        "w": 9294,
+        "h": 6196,
+        "time": "2026-02-20 09:28:03",
+        "shot_num": 46
+      },
+      {
+        "id": "AF1QipMi3-Stn5C163BPmeY4xmwEjPhqEZG2wB7L5p5x",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMQJ2c1F0FbKc0wMMMmhlAuszBB1s7a2dIQLhv_8CU1M3IxjN6bTIzoVx3hsajOnMwJtZtlmo4cKxUAXH-QIXSGlLcSIcPyl47Hkz1R9nDWEFH2Q6g4",
+        "w": 9294,
+        "h": 6196,
+        "time": "2026-02-20 09:28:03",
+        "shot_num": 47
+      },
+      {
+        "id": "AF1QipN4bC0W822OrjduenWEv8nA7XJTEiWVCnqtxjKe",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOTzmoTwyYqUFupp1nQmLB2Q7sgZw8gOuwunTFgr5imDNlPsjGPf2gkMoGSvMleR3EdpV-tISp1DF4DPbg5Zy3B5HMepDRPY-EOvvXV66Ge-KnqqfA_",
+        "w": 9364,
+        "h": 6243,
+        "time": "2026-02-20 09:28:24",
+        "shot_num": 48
+      },
+      {
+        "id": "AF1QipP5y2Qij3EdZZ_kyGLoM9IM52SKBzOMIndtutXZ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOxS7sPalf0FL5cYRAInhFhwthNHO1GqF2j7F0M9Wcn9sJzpflUGlA66QMYpSPGRWl32RbuITp9bUg0g4bUijuw2abFof85dsf4AUrOR4XhVXPRwnjf",
+        "w": 9458,
+        "h": 6305,
+        "time": "2026-02-20 09:28:28",
+        "shot_num": 49
+      },
+      {
+        "id": "AF1QipMKvnqfTZdXpneCD8dlF2ojrwPm9aLFPMYCFhIj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO_AuKysxcfVFGFthmsLLnpeW6lQzOHPr-w_4FizughBpCUgVEaKc9IUOV4knVobN5CTahbELNtCCI0mI6Ji_xa-mMy9il61Yhjz1F9s99rNP-3oO69",
+        "w": 9423,
+        "h": 6282,
+        "time": "2026-02-20 09:28:37",
+        "shot_num": 50
+      },
+      {
+        "id": "AF1QipNG6FLrcgblsq8XQYjoHnjMaAuNKz8EraKRjjxe",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMUvAyRaNffiFHbKn0PT4G7vKUo3PcCxC8ta6ezAjkk8_gTwFDTLlVWE3gY72HaqVSpGIpI_ISqubiLYEx2g3oAtNmhJlcJKLIoHklt8bhRAhuDlUkJ",
+        "w": 9484,
+        "h": 6323,
+        "time": "2026-02-20 09:28:42",
+        "shot_num": 51
+      },
+      {
+        "id": "AF1QipNg-edaatoHJtV3kbms09QtSF5uwyr1Z8JdJ7Wh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP_G7qldxxgKhoI-b7G8oBVWUMW7Su1GnZwbWzDk4vTSbWyIn3WkR_oTkMMjzi4Q2w9vStV6_brWUvkHvrJ_iqGUfRXbzVFvdaQRAVwxgWQdBEjock5",
+        "w": 9376,
+        "h": 6251,
+        "time": "2026-02-20 09:29:10",
+        "shot_num": 52
+      },
+      {
+        "id": "AF1QipMSaVU77jT3oMB_v_EpbzFfITdiPI8r14SrdDTj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOxhu40rVMOHfcenLnoxzK6tyyyb9apEud9CqIx6TMaobldu2z2_U0yxO2l45jxCHvn37CEgBd3TdHjmYycnPH-qQVTXJ_cEUEUqHy6w-m7S1Q3JUQC",
+        "w": 9376,
+        "h": 6251,
+        "time": "2026-02-20 09:29:10",
+        "shot_num": 53
+      },
+      {
+        "id": "AF1QipMVRkrkuC7JZOO_ET78Ul1xUWIahFdhHbICaBKN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMmezjdRImVx_yRfidOPzHZ1xMb9sIR9r6ncQInMgmSUpAOsNMYLBOeBfGx95yzP-i34_qbNgtLpYfiaQgnHQL4kJQMVqbSbOAvgVJDnOcefVdmDZa_",
+        "w": 9356,
+        "h": 6237,
+        "time": "2026-02-20 09:29:13",
+        "shot_num": 54
+      },
+      {
+        "id": "AF1QipPvSfj5tE8qghtyv6qxZwl5YLRE7J7_nLgSN2dB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPAbLl0q4KwwNuBGln6cBYEN7F84OhQA05gzjy8LdROlN-CXfujI3OGjOKckCPNd6UOnni64QxdQ4jN8apmba_It8ZYJGo0W1XMUhZZT87pL7gC9_gE",
+        "w": 8887,
+        "h": 5925,
+        "time": "2026-02-20 09:29:45",
+        "shot_num": 55
+      },
+      {
+        "id": "AF1QipNomsMQiuJsNjFemE1ca8yDwBmopz2fkKdYWQcl",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNp-T0TJBjak6v-g3QKy-bqu8FK428rX_57lmd8jRvyWV_3bL9aqRzNuy6LN5gf_lgP6Yw-jI0GQi2lH9QQyeLu0bzpbBnV2rU2kdvhu6B5QHJQjJ5C",
+        "w": 9277,
+        "h": 6185,
+        "time": "2026-02-20 09:29:52",
+        "shot_num": 56
+      },
+      {
+        "id": "AF1QipPx27LGevoxz3QLFvDyqyN4jcBq_pmIhxzsBYVE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObAEpespINIS81GxLGy-fuDd9c3ye0evBgNW1oc-heoaXNJBQZmeJcBXZUZfh4SDk6j5EFrdhjFCZZXi9t9MRChmFzO4uJNK21p_5JycjmhdiUr-Nr",
+        "w": 9279,
+        "h": 6186,
+        "time": "2026-02-20 09:29:59",
+        "shot_num": 57
+      },
+      {
+        "id": "AF1QipOh0VNUCbBMnu-WZGEN_Hfc2K8ABgRCviDWCec-",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOv105GulF9rHC7O6Jof3kTM6aJ2SwYzZ_RN5r9I1EB0NbkI1szPlHGwZJK0w-GsnAVumf694bsVVhZeLCtg3dXhVH0W-xxG-Jgc8wbS7oozvQMIiDj",
+        "w": 9255,
+        "h": 6170,
+        "time": "2026-02-20 09:30:10",
+        "shot_num": 58
+      },
+      {
+        "id": "AF1QipMi2KdlHYfdcYNyD5_S7kxSAnflEyDeaJhKjYtc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPVf5W9ar_XuQfJdD1dhZHlmMOrmWZKG2zyHyHHMLdWeNKrnlENN4TeTlGeYEEbNAzCLNY6PqmiJpCNncH-CDsCb82kYnVSqh1n8Dfs-8pEetYKFsBn",
+        "w": 8900,
+        "h": 5933,
+        "time": "2026-02-20 09:30:16",
+        "shot_num": 59
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D08",
+    "album": "Shoot-Day-1",
+    "dish_index": 8,
+    "shot_count": 11,
+    "time_start": "2026-02-20 09:43:55",
+    "time_end": "2026-02-20 09:45:43",
+    "best_shot": {
+      "id": "AF1QipNaTc4MrifU9tpfXvNVkou4rI8soFrBOGF0O0O3",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn",
+      "w": 9500,
+      "h": 6333,
+      "time": "2026-02-20 09:44:50"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPGaThFjWHVarXBHexrQ99-MZlL5WYg9Zo2b9c3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOn1AUDAGc3Tsl3kX8uFTxNQBMTK1Qj72EG-0_q1P4NHSggXnQb1ZrIiLdVIkb5C7vBMIIYEY-TyMgqr5bi6RNNRfFretSq7U2Di39I3aJJNBy5Lw4F",
+        "w": 9438,
+        "h": 6292,
+        "time": "2026-02-20 09:43:55",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipNwf15qc9w5U6XERx9w2bIa63Jh9UnE25Mddloo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMn-38oKHP0LJF0D0rSgFEgn9blYYbXxWEeAPLMqEYBFiPgolZqR4EnGomf_r9vFNDQ3n0cXyMyHMHbM15_JgYSc3BSEAlKo8Aa76hpgfR5i7xn2dk5",
+        "w": 9399,
+        "h": 6266,
+        "time": "2026-02-20 09:44:03",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPxTA3qlkaekReMzGD2vnH26nrVzG_y6tstE1Kj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN-Lhcdf6yXs5Cc8OHsVwMIl4aWMwlcau9EGqJJmWbIs0F3Df7NImk3jq3k7sWq96VYS1mkBpVhCB8Tdd-kh1QlrAYavbGyZ29q__v417Hjjv9ndvcZ",
+        "w": 9182,
+        "h": 6121,
+        "time": "2026-02-20 09:44:11",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipNyQJ5L75aBx3Ty-ClQRACCveMeyd-Y0OUHMWYz",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOpk05s5jUx11yDweM-T-wKq8miCdWRQRAvkprgPKKdjBm4QkUt9-JY_xkdC7-WsSF1BFUdE10Su3QV5VO6qPIfEwdpWCMqP9vR_oSnAD6Q5Wv-_nVb",
+        "w": 9332,
+        "h": 6221,
+        "time": "2026-02-20 09:44:47",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNQVcG44Z1inb_I67EvTH9GKKoej6NO4-wDY7d4",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOoT-U1W4TxfFWT6ZCrqvp8RM5PWQudrCpjoXLe5gor9dPo9RG3v_blEa1ohVlgMHAyJu9ksvhD-KsO_h7u6EuDzpSE8ziUIMRK8yZI2uW9xaedLer5",
+        "w": 9352,
+        "h": 6235,
+        "time": "2026-02-20 09:44:48",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNaTc4MrifU9tpfXvNVkou4rI8soFrBOGF0O0O3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn",
+        "w": 9500,
+        "h": 6333,
+        "time": "2026-02-20 09:44:50",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipPEcovlR3MZIAGHJYq6L1DXGUhhIW_MdDdxhGl9",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOF2-OLqionXneRUOOqb5FgJVWgSJpSmvhYtyFBpfrale4uAlS3vWmhLmLLPsYxQvLM-Qj_P10zlMi2kT9ak8AGIX4-WuV4aeFwiaAnRPd6Y-14hPcD",
+        "w": 9450,
+        "h": 6300,
+        "time": "2026-02-20 09:44:54",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipPd9hv8z4X9k1FdHNIHY1NmkR0_DbelvTi07x_7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP-hRPotS4UT6sg2O1U2-X5Whkt6YqFJ5tW6WH_mKiZYMOOZr9DCnxtWB27CsKN4JKp--FhoTvhYceSneS3NPKMnbAY95UcZ0ticglDnuicIQs6kQbh",
+        "w": 9450,
+        "h": 6300,
+        "time": "2026-02-20 09:44:54",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipO_NzfKENRVMTkFq2debQmmYtbEoPbLLO7jphlo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPvt8UAya9VE3-Tqd8BBif3i7w4SJKc3zkW9EBl9S1pN9TePRI9Ogpg-zwRaQ3MfYgDnA3T9XkpsAmIxrLD8VM5sQOvtquwDvSGcv4CqRe0C4wfhH1N",
+        "w": 9220,
+        "h": 6147,
+        "time": "2026-02-20 09:45:04",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipNaNhB21FQWhdHoSh0Ts4bVlhyJs_lChaaQ4ABZ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNEoe5vajbMJyoUYLS9c14LYjLtfSF3ketlBCax2XAmMYd9Jh_9Yt3a1wDkJuE-8c9oVq34mQMPU2SDJProZnuij2aH6qYz4lIiSMdiu81vpK95qM-m",
+        "w": 9306,
+        "h": 6204,
+        "time": "2026-02-20 09:45:09",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipP5G37_OxQj4YOk7qTcqM-UcizmzlkKY2cOLGVg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNVK9jwYq4p4PaH2IWRoZRV2XNa32E7f05Jr5g0q0L_kmS8VSBRNlkd7sgoeK61FVdE5A6MPSDa9HQXrwQmWtcyX_RzHLjycE9fBre8-3xyT0YZwBHQ",
+        "w": 9124,
+        "h": 6083,
+        "time": "2026-02-20 09:45:43",
+        "shot_num": 11
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D09",
+    "album": "Shoot-Day-1",
+    "dish_index": 9,
+    "shot_count": 10,
+    "time_start": "2026-02-20 09:48:37",
+    "time_end": "2026-02-20 09:50:33",
+    "best_shot": {
+      "id": "AF1QipPpFo31pPKZpnq1ZAqWMmywUSUH1VXamkvsCF7H",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM",
+      "w": 9374,
+      "h": 6249,
+      "time": "2026-02-20 09:49:30"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMU1Zx9e9-qzFeHnd2XmyOsGG5cFIyq3U9pJ_1J",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN-Xrwoj5ZiFtJWxsptWVw4eov5ho1wUNIAt0DSLbUY8ugoXWzdWohPpvG0CVw2lNJMYmkog_2TQsH_Y2B9UId3gzO1RhJqBpocBkDd9B7x0C677Hns",
+        "w": 9374,
+        "h": 6249,
+        "time": "2026-02-20 09:48:37",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipN6MwIt_bklC8-YyNHCJqj7YL_ywW6VlKb8nTSI",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOSs6Um2-ty7NJ05R2NlkaED_YNIfc-BpLFaKUlpa__Jiym77nhlaP_avEbb8VQKXueruX_7LCG58-gleQeIeHotSy1uTYIEoBTpxncl_BjXWN1DyK0",
+        "w": 9408,
+        "h": 6272,
+        "time": "2026-02-20 09:48:48",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOL-11ty5KLBFlfoxqMV8qhepT9cK1bTvC579_z",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPC84b45dJB5yLCj8nmE7JN8zp_mj7PztScvPQFDKv8z5uzApnG8CIzkVncPqxo-2H6svBqeP-VVe6qZ93Fy3ipE5S_PAnEeGiPWZ96xUr3nqOauO8P",
+        "w": 9239,
+        "h": 6159,
+        "time": "2026-02-20 09:48:50",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMSviVLG1YZcxhdbVb_dKckKEFxVowC6JWBBshn",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN9XASMAlU6kBPfOZTg9ODJeGoUprcQL5qPNHNU5XglAhYb25YVU083vn2Dvyd45I4zr4jegtA04unHwhaG49rHQyl2qd_u_6takKd8XuebrSSD0-72",
+        "w": 9236,
+        "h": 6157,
+        "time": "2026-02-20 09:49:20",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPVrBPY-CsHuNKoieS-pTBCpbcTjsEEhodHDkWK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNn11hHz-ETw7_ZLsnx92prEIusCF4ETzsl8qRBvm03buRpQ3ZAx85TZZyQWqvedVB6jktBEXoi2KIdEM4dk4FCATJLAQTZplYL5t9E-zhBQHKZYljE",
+        "w": 9374,
+        "h": 6249,
+        "time": "2026-02-20 09:49:30",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPpFo31pPKZpnq1ZAqWMmywUSUH1VXamkvsCF7H",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM",
+        "w": 9374,
+        "h": 6249,
+        "time": "2026-02-20 09:49:30",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipMn86jN5RhDlGkZhi759dU1kFlBRZKVpabEV7-q",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP3VkxSbpI3kUQ1ySdzRZiQ7dC51XalmkIeqJKmiV_yE-Q89QuQk3uPk7UsfrO1M7AZe6-LTMjnlcDrAI7A7SAPT4JM0eV4xP3E2_D5e5tALLjQtYg3",
+        "w": 9359,
+        "h": 6239,
+        "time": "2026-02-20 09:49:42",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipOmnvJxBoW4cRM8uYLKKf9JUvZ4Ekc2RAAPFIvB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOGxApg8ymR4Zga0Ke4oJ-ZtUvT5_qNKbKpA65gDxS2x-gbAcOVX_aoDChj-uyQdh7C5xHmmAzS03O0_AKET9LzU60L7L5GsR5YEXBwRJpnPJOgjUw7",
+        "w": 9349,
+        "h": 6233,
+        "time": "2026-02-20 09:49:57",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipP1Ww3dnbsREvrRqcT9u5N3qgxHG76QeG6Ln7m8",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM3szd-NqSJMLDOspqfEuJJZxiBGOpqTkmCG-dskKJ3BMm5rpAnsfOLxEmnzCZhGVuq5rIHCTH5vGGMA7dVoYuLkTO7Q5xR2mg0KKIQ4T0zvWCyUkSO",
+        "w": 9067,
+        "h": 6045,
+        "time": "2026-02-20 09:50:24",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipPQQqcoX1flLi5pgYvD0bEgOwcEbfnJWsYz62PB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPvWMa3xwPV057J3B2Vy_2fuG1SeZEo1-aszmaA1KizOOH5b5Fk1eaGBv_ybF4GJ4WSVfb7wygkIMVfuerRdyZ-GgzmtNwvZXtNfSceN5swl0UuiWal",
+        "w": 9313,
+        "h": 6209,
+        "time": "2026-02-20 09:50:33",
+        "shot_num": 10
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D10",
+    "album": "Shoot-Day-1",
+    "dish_index": 10,
+    "shot_count": 27,
+    "time_start": "2026-02-20 09:52:20",
+    "time_end": "2026-02-20 09:59:55",
+    "best_shot": {
+      "id": "AF1QipMaaIIZwOrXVs1VZEHV1eCqOl-tt5fv0a0qLgBe",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS",
+      "w": 9341,
+      "h": 6227,
+      "time": "2026-02-20 09:56:23"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipN5r0tEepqPno39L3sGCsQMhoKmmTyi9WuA5Sub",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNd3I14tuUrXpqwaUkGsCnt7yQr9YBJqiCRnbwGhq0rXfkl4tRdiFoltpVydDVBMzqDUCJ2BNxu6TWWZES49WNmaQFHrWZ4jhl_ijXYGeXjm2kcMpdr",
+        "w": 9221,
+        "h": 6147,
+        "time": "2026-02-20 09:52:20",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipN1C8HyUo3qNz6Rx2iXc7XILE4CeDJ_75vHbHya",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM_ieTaVVg5Sg1wCTw74WTJanJEHgTSBJq2pQ2oAzwEyw9m5XIKfUNi1_1y0956rd89F5Bwc1xSzjq4xrASEdccUK0Fi3NmhtlDszItgFOR3AzMAWmP",
+        "w": 9303,
+        "h": 6202,
+        "time": "2026-02-20 09:53:20",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOENmKD0ibizU6qTT1mQXvEnH9_aoRxICATckv5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMothDt1yTilZUojawg0_wXoEoSwYr_FlEHE1b4OgrXO0LvFdVcHGubT9JcGZhiz5afgUgqEIgwueA9Wk-cYUrzgrn_GPpSYpaYfb3vNQMDYAN_qAsz",
+        "w": 9313,
+        "h": 6209,
+        "time": "2026-02-20 09:53:31",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPbwS8dY0CXbze7XdI9l1wqPS7ovZgfvTZGpFTv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNVs3942fqvXo9vOZEeV3QmMj73tAqzowS-QeLNVlXLJ-pguaW2cFJZ3ulZj7vlu65vO6RWqY0r0ZvSYhHMmRW5L6QL2pYbzPbOKGDTb92Sx-RUD6bG",
+        "w": 9313,
+        "h": 6209,
+        "time": "2026-02-20 09:53:31",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPo5duURHC6HdHi70t_dYmS7bQ8mGImhADsAMDD",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO333JX-IEkSwGmHqOiEGmk9dNXcEpl0CEY9VKb3ICIPZ3mVX_SG2sS5y0egmlm4606ZzQiC5U-yyfn4epj_Yf4QnyeDaBuQnCGjvElXmdABVMNkFub",
+        "w": 9205,
+        "h": 6137,
+        "time": "2026-02-20 09:54:14",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPJ9ZNMPVXiNhEiNTNH0LgaEspLjsDbWDdgM-UY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOpjA0hwSuEW3zVx5RqgJRAd07Wtd-90g8fPRDuv8xFgFkviYPF-7C10USCfjL0SF4mSpgxSBRLjgmNvEQPmNTJLbUqO0DMHXY1tJH3PumHnYt76buQ",
+        "w": 9224,
+        "h": 6149,
+        "time": "2026-02-20 09:54:59",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipOcV29S82qHDdon9rSNeqg9mv5iivYn3-3Bc1j2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMrvVXtoWnKSpq6ljviGtnJTqp2uKm93d4ptxk9Sv8sisuqFkqLPgzOMo-3HDR5j1AAirdyLxvQbQ1B5ZiZ-2DVUcg4rnTVdyvSg-XplUM8vnnyV-35",
+        "w": 9230,
+        "h": 6153,
+        "time": "2026-02-20 09:55:05",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipMOcY1CPzV3BFLBhr7DOoVmdi0a9TaHZjY7GTJx",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPqL8pWWJMVHzJDCNpEHgp0pqaoue0i4K3_R5eMC1nxTKp3jzWC7ZdHJEp3ey5aGN4kXjv9hxbmzaCgJ61nIQP8kx20905LYKIor3eMm3jEuNPsYKuW",
+        "w": 9223,
+        "h": 6149,
+        "time": "2026-02-20 09:55:25",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipODFu0eGzyUUOYYbx9rkqru_sRHVt0CHsB0krKC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPW6NF2KuaaRvpKkdSYcMKbz7vaN6d5ivVQVKuA89Qi9CdnlHiASq9exf81uunqrDCHIcNzaNdyxuSQUQazsnz2yrnteYYBT6LYR8LcfdY31_sy4pp7",
+        "w": 9241,
+        "h": 6161,
+        "time": "2026-02-20 09:55:28",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipOGnpANy6kHeK3gdGwWEs0k8ZXuFadm4oxcTfpX",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMwwLhX5XokifDMBKGI1mwo4AWz9wQa2E_xhFo0xcobEEYUnkuaTJCUcS3x2KkpDMVqXWPBMfXUCKZNOZjvgI8n7gCyHuDzGJWV7ah5zBNGekMom7Tc",
+        "w": 9142,
+        "h": 6095,
+        "time": "2026-02-20 09:55:29",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipP2Qr2B2JhwaRxfL2s07ok5v5gWVZH4EGVKbdEY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNziEuwuL3IPXw_wwmONGdkOzpzDgj5gf_h1radD3t505O4lfa_H8wlUQRFKScf8N_PzMpygbc8_FAb3ota3eFZrXNBDpMKioDq0YPgt7sfug3Hs7hN",
+        "w": 9429,
+        "h": 6286,
+        "time": "2026-02-20 09:56:18",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipMjEDAAXBikWdy0TT0WeMzLh8IyKzx1FQmyEI-A",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPNGp9sYUY5xWexgv27O7PTlcphquOJe4T1QgOkt67grj8pNUbmyyvjFrog1Ugu4rnh4YrN8Mj_N8j9mKYax1Wk9oSL8YYV_9B4JkN6e1M5XT1hlTSF",
+        "w": 9402,
+        "h": 6268,
+        "time": "2026-02-20 09:56:19",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOssmy58--Ed-DjxKw7QgxGl-nD39j8ZX8lZmgO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOlas4TBWwifRYu-3CarlYmRksIHfkrjfcWf-C80VJx-67nfEwCOAgCbMXP_S1D98N4CIp_rE7TdwStI9B68bdSNofF3yAhwKdNsfBRVy3USzCzKOsn",
+        "w": 9364,
+        "h": 6243,
+        "time": "2026-02-20 09:56:21",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipMaaIIZwOrXVs1VZEHV1eCqOl-tt5fv0a0qLgBe",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS",
+        "w": 9341,
+        "h": 6227,
+        "time": "2026-02-20 09:56:23",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipNbFGCh5pAk22M6NXmvvCZh091FnHvjQt38S_L5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMj3POPYeFtFYzLmoUIruJjk8nzLtMfImI0pINMHqxs0y0qRyF8CLQujxRWfA-z7vSfJvsPHZxwM-qBG3Gal-5mwMqrzyh1yVLGAfjfW8gwpGOE0nd-",
+        "w": 9389,
+        "h": 6259,
+        "time": "2026-02-20 09:56:24",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipMxWtr9vmqCjfkqyvPkLbV_wqpyhrwMcpthsg9a",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOvsykXh4XDbm3dQrRV5c5uh5Rser8DbvhhNR3hT0W-pBlzrrKnay-A8G1mhdd_AlM6a-yXfvO_FOGvRG_OcFH4Cbhi5jaXFpT0ThQRVIYosoDThoTe",
+        "w": 9191,
+        "h": 6127,
+        "time": "2026-02-20 09:57:08",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipMO9kk3Bh6v5pMErX8yxBLzP3XtqHNFPGqopQv1",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOT9VDSvvgWj7FyBRmnvvzGBUZQ5cUY8quDsWgmRJdRXbvMsTfjsCC6d6UnoGCorWC8-ljrHrd8ol3LSH1TKKyyfxGem6pIkP_Kz1WKcbNJGN18_rKR",
+        "w": 9234,
+        "h": 6156,
+        "time": "2026-02-20 09:57:16",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipPe7tqXYPIgyXhMnOtYIokELCewJKS2N-nvtIhn",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO9xZDy1QAAkhNoyUXjFTNdkc1NwdbnHPHyJoDpDPfWSKyCSib-N6LXE2BXImU5ztw0a1SwKK9Q-FKbPdzziCA8v6r3Ow901aihCus9veGPIBmTM_Y6",
+        "w": 9208,
+        "h": 6139,
+        "time": "2026-02-20 09:57:17",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipNrVAB--2EndiZpGlmp_o3Sb66dPQh_qkeMs79S",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMsRw2YhqSWljmzDgYtlf2uxsV1rTfRB7JeqRPmzRcKLykbt6SOLbFZ-DWY50I_EkjLu4cRu8bXG0i8rQ00dk46a8BtIMPrWikggcoBSVYzjBkpYzoN",
+        "w": 9212,
+        "h": 6141,
+        "time": "2026-02-20 09:57:18",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipNfVjWHl4mjVpbb9X0kGRiwVgSI8YxrI1Zs3K-h",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPv1AVpzIDiu81n-loKY6YrFQFQ502pX2gW42Xy11NMqwf3dQUtgmw0vGqhF9E54b0_uQJx-i83pI17z2VlSu76thYjnPwlhH-pYMwxhm9WKKMZVuIK",
+        "w": 9341,
+        "h": 6227,
+        "time": "2026-02-20 09:57:27",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipN83mYpp6HzPbDw6Ou66LAysZ4hO83jtLKJPHix",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNNJ-86t97P1nS7rVsNzOxL6yV4KWOKN1V_7WJoqQSC7LYRLUsepVTkIoKHgTYPinzHav41NDNEd9tydBkki8xNangPFR4UhWijLyGaZ6FoustNlamC",
+        "w": 9397,
+        "h": 6265,
+        "time": "2026-02-20 09:58:13",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipNtDHUFCGMWZMpRIdQ6znmv1xz3NyaB6SOOu_SX",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNZ-CJgjxQ8Q_otG_iNF7C0nvno4UEcGR2UU2RE1jmIU7FAVy29xdk-GMEsaXmhXIoX4r37P7Cmau7MxJPuKna7jk67Gamw1nz5jPxlY8AMCIeMlBPL",
+        "w": 9417,
+        "h": 6278,
+        "time": "2026-02-20 09:58:16",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipPUepGO5hV-JGMiJoRKwneCUk9TiwG2Fh76SOx2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPTuEJai-dOCDOG3nUV78gsnf2YisleC5RFFOPqmDSwgj37oMLSr59Y9la8Cw9926AdWJJWr72D8jIkdICVaiBBABB20XWazBmgzOPtSYdY18NtCH7P",
+        "w": 9469,
+        "h": 6313,
+        "time": "2026-02-20 09:58:22",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipO9cQBvGxtxwKVRVI-WBY3x0RFwWPrXcG_YeM2l",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMvOz7wIWu1qNfm-pFQ6J4Mfy4RW6g6prv0sgPzRz3ID7TUeYiN-i9-TEiBETsg8TfKo4YK8_6BPtnqaD_Z3ydJUfK96FdAWIqg3u9__HaLWgFao-GP",
+        "w": 9395,
+        "h": 6263,
+        "time": "2026-02-20 09:59:36",
+        "shot_num": 24
+      },
+      {
+        "id": "AF1QipNKdNtTYGWl4vDYxtSm7rYO-jZc3e3B17bGW2Bo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPQ3BRgbK6lXNjdwmCo0tjoXF_3zppRx5D8dH0pJz4drH-simhd4IfeBRKmeNbt2oxNqtS0ntLCCXZOB56vyUgQgGE6N65RptmxGywoC3MQchvHnHzT",
+        "w": 9315,
+        "h": 6210,
+        "time": "2026-02-20 09:59:41",
+        "shot_num": 25
+      },
+      {
+        "id": "AF1QipOQKPr_uJspqLMFLU0YtBFoCGvUDGn81AuXFjM6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOiz4bhx9lF0ZAGn_-Ew5vMOOVXMahWbV6DFB_JSe7XIJ5qyTiikTtUeMt6U3NOjFlYsQgSB1rp1Xkb3uyMgTvDqLhcB4JZeRDLBqVQtraC8AY8cxmD",
+        "w": 9315,
+        "h": 6210,
+        "time": "2026-02-20 09:59:41",
+        "shot_num": 26
+      },
+      {
+        "id": "AF1QipOvzkv6D2R_R_YGuIXu-myJKQzw6NEPsZhf3jfC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMoCDPwqAaGKCGtZ8gOn2kcuR632B0T1tRsLuRsOtqKdg4ToixrjrRZ12bsHmET__03sAP2m80n85AUonMSQU8j700_4W9h1leaXgUmUrKrI0RrxGde",
+        "w": 9452,
+        "h": 6301,
+        "time": "2026-02-20 09:59:55",
+        "shot_num": 27
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D11",
+    "album": "Shoot-Day-1",
+    "dish_index": 11,
+    "shot_count": 16,
+    "time_start": "2026-02-20 10:01:32",
+    "time_end": "2026-02-20 10:03:49",
+    "best_shot": {
+      "id": "AF1QipMpNeXcBMz8TKuM7p-DRucjLP6eTCQ_Knj9WYCY",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR",
+      "w": 9428,
+      "h": 6285,
+      "time": "2026-02-20 10:02:03"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOTZqhH0KFyvdBlGlJlKCG4NWU0qNIKkef5UmEC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOvpRiYF6xQxXlq65CzpOeZ2UhhchS2yS3na9YU6d4ACF7fcaTGvIzdCdZ_TXDucNcluO61fPUThopAvUyMl-X9YrwOujEBPJip_gMyAwRctdtwz6wq",
+        "w": 9169,
+        "h": 6113,
+        "time": "2026-02-20 10:01:32",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipNAHeo-4yLeycgR_sC5UWzwn5xRSy6cWVGrEpDH",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNimHqitb2wghjGFZHro7C5fK9oKW5TzVfnWlrHBVtF2e-5dAUVtGSK40LcN_SmaE46dLgeFxseC2wx03VICjmpAvrA7c2_5_gFnwK9fRK0nUwCopMn",
+        "w": 9263,
+        "h": 6175,
+        "time": "2026-02-20 10:01:34",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipN483QAbGsx9b2cnOPFfhoA0rxHXlkTKfpxL0ZJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMVyQZKg3QNulqbON63sWDOGU_0PxOEp3bkDS1GLLzDV8rQvsiayjrNLvcWEXP8p3MOW_ybAI6uBCgvNmn6d155vInJFix6T3r6oGQmmk4-VD6JM2Ze",
+        "w": 9337,
+        "h": 6225,
+        "time": "2026-02-20 10:01:34",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMZPxcGZU2Q13EtVvdHyQ5NaLdgxY_anuBBKPI9",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPzlqE01or4LTMnSoVSOD50WdLOTXZ4tUcqLeLu-fBjNoIyR3TPZVXw0JgUL-vAiFmXHv8vMhFqTjzxagSE3dR5mkslkDCtzGKWa-zP8qIhgDPiHycj",
+        "w": 9221,
+        "h": 6147,
+        "time": "2026-02-20 10:01:35",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOtEN-7qxpiKAUmC8pKFPG0GFjYQfMmzfQyfQxY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNgDP7v12bb4KCRTTzLpBLeKyKcp_NTah7gPZT6fxwS8AgesuPDlYjjallwyCW0aCV_c9jyNiTJEv9IZ8SJN6YXwsJA24Hbv5EafCW74RLlAASB4yOQ",
+        "w": 9176,
+        "h": 6117,
+        "time": "2026-02-20 10:01:38",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipMTQzrNObte5q7fbV_x3FNsH9Z-M-kZCDNvyAs5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMk3USPRvHfLvGSEsgLTD71sFDhH22lXT-w_4K7iMDZwq0861DDL7UxMFjBySHX-WzmpUQpyP1tOzI7NFCO-TrNNSUJz_nO4PiZILqYfow8omm6KjrF",
+        "w": 9216,
+        "h": 6144,
+        "time": "2026-02-20 10:01:39",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipMIHGVlSPxYYpF5HtoRMj0-2LdLwIHn61P9T-JT",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM7iVXSWkuedvC-8tHD3o03_wDa19Bw50__UEnn1OIDwFy-taGEIOPN-qbUfWojhuIesucVCmA53wAKUoR_Bz7ra1IJNlmaIkETp-OGFUSx1caaBHgc",
+        "w": 9258,
+        "h": 6172,
+        "time": "2026-02-20 10:01:45",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipPG9hzzNLhQKj1MaxL_0HdUCRCzghpKacSmh5n5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPPDbiMhsvvam9xH7lBUJaIsdex34BYe8O9PMGOnUSWFMfypIFtFQ5FYhLMMNpBl53QqJAAZE3CHspgHolF6gLyNYe24vhVk1vR0_NyY9tWJF7SIdVb",
+        "w": 9385,
+        "h": 6257,
+        "time": "2026-02-20 10:02:00",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipMpNeXcBMz8TKuM7p-DRucjLP6eTCQ_Knj9WYCY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR",
+        "w": 9428,
+        "h": 6285,
+        "time": "2026-02-20 10:02:03",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipOGuOo2gYqshLqUtBolkYO5mMlZgYmiEXdF28dY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOC0qPcTIvmkXW6AvInxSqcQAfQYSq2dOxbEbpTjjIgr0WI57fN55DjsvFyVuq1XUDkSb7bquDzrYUfnUfYIr7hSzhl_dw9S2_El25s2-wHySqzbjHF",
+        "w": 9445,
+        "h": 6297,
+        "time": "2026-02-20 10:02:20",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipPyaftifPzTNidpZdjm-y9SPV7ryWTQnDoM1TnY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPr7WE4Xhb-HJTyNsxN4b56lTMNlR2S6-19hy8z3WTdbssX8tO_cif0MOrAZJM0JBvCXp2vHSMjA9BekB7Y8bH4sdJKx7rlp80h6VvZTxDmTtHsWjBF",
+        "w": 9446,
+        "h": 6297,
+        "time": "2026-02-20 10:02:22",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipPISKOIfvoG1MHdcC695Gdkzday6CXEgVZJOJVo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM9uPVSGwA8B7ECZj6glhK2DdIMma8xgNHDsi8AqTUARWaAJHCPTXibkk-tF7Gro7nnaBnZ1KfYTxo32QcTS8uQd5T6x8ZYfPLjdXnKh485AEtl1vn0",
+        "w": 9198,
+        "h": 6132,
+        "time": "2026-02-20 10:03:16",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipNaIDdAqrPns0rAD_xUllTUDQaCxlLM5lUKNTAt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOy8JFxA_4P7zAnUXUgYV-rRgybNtC9L_hCVZM8eaPPCyDmV8wzDMPRE3yKWP_ItxH9jOezBqNr_XSr5oGPFy0zp0bOtvfSNX4g5fMG1TSLspisknDA",
+        "w": 9102,
+        "h": 6068,
+        "time": "2026-02-20 10:03:19",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipMtbtmlgHwBUVwnWEZopxkWOB8DDaSvMFgbT8HY",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNOovGXPzZ-o_G3ljyAJiFU4FmUqcZ3Pdna3oqItcUxP_Itrv2pGPl0xZ2Bq7AqXUzSGrusqaf9mXz7rVCk7eNB2TrtMk6EKvjss9h7_Ut6h0PGz_ms",
+        "w": 9102,
+        "h": 6068,
+        "time": "2026-02-20 10:03:19",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipNjLgZto0zVAl4gS4Mq2MsCY7vZMrIWBArMojcu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNHLP_Xs_WywQRz8iJZ6i05N_K-LEidUB8N3-TGIYUpJXj6wQ_cXUHZnQuF2EmnW5h_jtCm9nQ2R_yWGZY37cRs6MNQY-xjHI6UHUS4YRdzq3QF08DP",
+        "w": 9147,
+        "h": 6098,
+        "time": "2026-02-20 10:03:27",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipNNri_g5-8BkFpkbLhvJkDdF2xP5IAkWngtD1v6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOrfU6UmI65qE1Rk3hPwtmarEA51ZmOJ-56g75E1vp9krIml_vm8g15qhaI35dMQxpGmCIcTlmOnJlrvWW1gcC4Ke1RLxj5HenGuhVElq7w5UZHTxWR",
+        "w": 9367,
+        "h": 6245,
+        "time": "2026-02-20 10:03:49",
+        "shot_num": 16
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D12",
+    "album": "Shoot-Day-1",
+    "dish_index": 12,
+    "shot_count": 8,
+    "time_start": "2026-02-20 10:07:57",
+    "time_end": "2026-02-20 10:11:02",
+    "best_shot": {
+      "id": "AF1QipNxKdw_lgvDNacyorAY8nKAlohyBRqh_ViL6uNH",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT",
+      "w": 6279,
+      "h": 9419,
+      "time": "2026-02-20 10:09:31"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMoKyKe99Q8Hz7GmN0LOI-j7T28JN_Xe-NvAz8Q",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOnuPb9eyD0QfYsZ6s_xKXzrPy4OIzD8Jl15uLdki3g6kTUB1NAU-iGAa3FAU-H0GGnbnHzkz8CAdlap8cXPeGNZwo-uYcVZu3jjRKTaUpMJdEPuVfj",
+        "w": 6115,
+        "h": 9172,
+        "time": "2026-02-20 10:07:57",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipN9VQbC73PoqBFzVjIP1eFWs2RUptVi4oQI_TFo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO_nh9_-em33ZWx7ZGgNxyi6H9g95pNiBEvjTyOOPXp8pYzTwnlETnWq47Lzp84ZLBJT_oUhEhEMaxnmFVJ_e54zN3OEecIlyxSy_7Etii8cYhvbZ2Q",
+        "w": 6269,
+        "h": 9404,
+        "time": "2026-02-20 10:08:08",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMhlhDGv-M5YggZFKTVH3qDxKPdHocgR2a-cLrl",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPN6qfX-cwPWjAF5HFzArv-vBe-EvFcpnb0FAu34km_hE5STaOibrjjHpGOIkEuVkUW_AA15-3g2eqac6RdieXLvQngo5ZtwsKn-fRVL5EH-f6XugL2",
+        "w": 6215,
+        "h": 9323,
+        "time": "2026-02-20 10:08:13",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipN_noSM73UL-iuZN4W8nDN_CwacCGsrnjE0SoEP",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP96wQ-PstALlpxQ3brlYAuIhKuZO7Gf7-mbpkIQLXKBfbjxzJ99Y1-QyJznd2g1dYKdChhK_smZOlwAtnDX3o7DlWFbRprw5oup1M25hUXnNmZ6cDe",
+        "w": 6269,
+        "h": 9404,
+        "time": "2026-02-20 10:08:48",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNxKdw_lgvDNacyorAY8nKAlohyBRqh_ViL6uNH",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT",
+        "w": 6279,
+        "h": 9419,
+        "time": "2026-02-20 10:09:31",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipO0gxOAZ5BA-PExvQlCrX2_tQaGCieinqOTLe5f",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPQtHacLeHdudYXf6Vi4W0OrmkLlXbyGMPJu3XMgxfDwEqfQ3KnEZtafcY8G5LbhwrIE_4tnCVN54mAmUjhRtd1Z7xAVdYjEw_0XK1thpP7oK7y8GqE",
+        "w": 6115,
+        "h": 9173,
+        "time": "2026-02-20 10:09:57",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipNx9ip3PbITbaWbNXbub2b9PtVYb-M2GnbinNS7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPGT1c9rLEwJdxgpB2aTwkf8PpzZdKNALN_ICf7Ktrjt1iS4OzpEJqnhieSr4Z34P2QDEY1jCitZoz4C2l1penla3bYAHS2TxFy4kzCho8MDHevO0Ry",
+        "w": 9472,
+        "h": 6315,
+        "time": "2026-02-20 10:10:49",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipMxj-XvhSlSZjFEFUzl-Wv276c7abTGhu1EWb-U",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPFeuj85pGk5wPRKypwQbfeYBLf4RBqxK_015Qpa1J66N9HtSL5xLUCPncEYEWErRLoATyTIxxg-BuyUtXt2mNTCSXpDaHH094vbJDGjm3vXYbpzpdE",
+        "w": 9263,
+        "h": 6175,
+        "time": "2026-02-20 10:11:02",
+        "shot_num": 8
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D13",
+    "album": "Shoot-Day-1",
+    "dish_index": 13,
+    "shot_count": 15,
+    "time_start": "2026-02-20 10:14:25",
+    "time_end": "2026-02-20 10:17:31",
+    "best_shot": {
+      "id": "AF1QipNGlfKXVrl-sishPyAyQOo4pwort5P_J3fUrArC",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh",
+      "w": 9328,
+      "h": 6219,
+      "time": "2026-02-20 10:15:32"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPo8RLRPWSLKKk3U2jlRD8lwpEuAxZsD5RWcbPO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNEQ9SOw-9Q0_9iS93mYI78xDibpAOol5DQT-X4yZ0xgzw4rofuZ6hBxsmzWw21SJO2azkveh9RfQ5IM19jNaEX04rWVen8CFKJKDWkWoi8YFkBmIhG",
+        "w": 9135,
+        "h": 6090,
+        "time": "2026-02-20 10:14:25",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMDMhNKNEjSIJvpsNVruGrU2f_DiXZl4_OsI4xt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMOvBSRPcifpjGvaUPAhsg2zDeI-LbIfLu827O7f9aR-RRn54zD1UJ4DRldBj9P0E-xgCtX7RONSlhSYX6xIGG1mkIaI16eV-XAZ5GJ1NhGQS8ff84x",
+        "w": 9349,
+        "h": 6233,
+        "time": "2026-02-20 10:14:36",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOBDHt79JY9GdrwlUt97Lf3-uncKdwppENUSPXg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOvOKYKTLVKWbSRD2bFDjdLHj7w1fdjC-wpkFhTVJN74Cn0jATxE5GTM0audVWRqxw7gLr7onqq_7YmgaubrKLX3U--COQU-EuP4QF2a8JFrnLVGfUM",
+        "w": 9499,
+        "h": 6333,
+        "time": "2026-02-20 10:14:47",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPS6mcZdiP04-bCmaUn4DMgDMncFvMG_PbARsE5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN_AFe_T-c4lyufU6aJO-YG47EK5l6R9tu9ic8665VCZ5iOx-R5wrP9-L5hatNh7PEBTamvReHapyll6ffxvPN4xO55zjh3bDW2Jo-eTN5o6FeQVrOf",
+        "w": 9312,
+        "h": 6208,
+        "time": "2026-02-20 10:15:25",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNSTmJJvhKKp5olE_lW9JL-3GeeBKav82-K7MkN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPao4o2dzewhQc5onur5ksUtDYEVUUrwSn7BD8QfkjEdx7i53GOEJL3eFa-ZBF3CHvpe0id7jUIFOgWdw7bjkpaAN6L8Oj888lVK3j1t-ZTPD9r8-0F",
+        "w": 9312,
+        "h": 6208,
+        "time": "2026-02-20 10:15:25",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPOiqiVPn9O9uR62wxWapD1oeh5UFuT4eY3Aaxu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNh8_98DSSTHjFv8FaAXGcbvcj_srMTfMpk0YRQKmFN6jGOsnB_t9x0lASKmfg6PUAOxZ3Cd1t7xDOz4nScCeTnAnH7G7sma1iH2EywnFoq7_Zfzsts",
+        "w": 9305,
+        "h": 6203,
+        "time": "2026-02-20 10:15:27",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipN-Qu1T5kE2punYsfYhjHEnUPzWL2Cv0sWOPhJt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPRQVPg0Amzn6_tlcjlKl_KJWULxYAxGG1qgjgrpgWaXAwDgvaflMf2k_QcMkEbC0ztjqtLtgrM7fvZLmognujHT2tSPU2sHjOjCASc4LRjgWJMVxKM",
+        "w": 9292,
+        "h": 6195,
+        "time": "2026-02-20 10:15:27",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipNGlfKXVrl-sishPyAyQOo4pwort5P_J3fUrArC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh",
+        "w": 9328,
+        "h": 6219,
+        "time": "2026-02-20 10:15:32",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipNwvLGpCLUZnAwKWeUYTztYZHtm_pkJRvgFDDzV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN7wgAxGraxeJuXRf1cxlzPkhoSrwcfiDBYhnYmRIq0xuzo2p-8yg8-5sDYz80CeFPqAY7-gNPvUep5fb_ajl6b7-vNtDWsi1iKH-sjvPVsNcBYzZl4",
+        "w": 9496,
+        "h": 6331,
+        "time": "2026-02-20 10:15:56",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipMkfq0ArM_Mld0l973dsRi9zZ1hTrbMGh4kQLnK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNzXiy9iBh5rR5XHbgoaZQtUuTEYLQaEkalBpNenVI59YPY91fwomXZHklM351ySmL0uwdGdZxTII0vh5BMlLOUWykYocsmBN1hCZtdS8zCG5EqPXwD",
+        "w": 9416,
+        "h": 6277,
+        "time": "2026-02-20 10:15:58",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipMz8rtqgtMweKU0J2b59AVPC1xEDrsMOfFocnpM",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMRLGRqYSCDC20j40mIKLWP6gJTbBRr7dW2uTNhhIb-PhXCHaXhWKUfWHj491mf_eWxtS8T0E8jzkWFBTS2bJQUQU2-FhaE5PIn4qiGmJq222kl2ivy",
+        "w": 9013,
+        "h": 6009,
+        "time": "2026-02-20 10:16:06",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipPNli_Do5RjKJl1zU6qTFQJlxB7MV93Bd1SXK6n",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMUx69MPxr2JtZPIsl_Po4eQzNTT2_TSy4AL_vkdhZFQPYcio_ehVKFAyF7-u_rTMmOW5S_Re45RrI3Ovlq4fvCJhZcGnkdVh0KP0vRoE2QVNOMQABo",
+        "w": 8950,
+        "h": 5967,
+        "time": "2026-02-20 10:16:09",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipMUfQzC6ogSP1pQ7fEr135J4ax55pS2R8Bg3ha3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPI0G3YUVRWnwr7FyRIugdlKnwRWO7ryyPK3a_Qh-sBX2B85DV8RHEsXaFmGTtctApI8w6WCJWDNjCT0vupengHMrvP1xlJp3ld1isEUaBar2YiRqrF",
+        "w": 9384,
+        "h": 6256,
+        "time": "2026-02-20 10:16:36",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipPG9x-avgp_8HYyNoNOy27lHYw9Ev3FTV6KPixc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMUxCigODbtI-3Y6ZrojrF_Fx2fnpXEezwsr0fxawVPj9VLElp_XlTfwe06Vmd8lv8SgKh1LMEZm-X9Luz0Lm7nPJbjiUtnfRQdNJLtZQg15lVb2x_r",
+        "w": 6176,
+        "h": 9264,
+        "time": "2026-02-20 10:17:23",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipOST2aKMMyJWHi7W0qUTegT0dqlrxN_nyeq3zGy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNXRl03jlGD1R43pwcqF6JK3bGDxGske9k1NFJzkthasa_x78PKz1Ymh0cSLK9gpMggqUGqCBjtSZi8lPRFAEzkWWCHthU9bUGJzhE82Awwpu9lgM_n",
+        "w": 6243,
+        "h": 9365,
+        "time": "2026-02-20 10:17:31",
+        "shot_num": 15
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D14",
+    "album": "Shoot-Day-1",
+    "dish_index": 14,
+    "shot_count": 7,
+    "time_start": "2026-02-20 10:19:15",
+    "time_end": "2026-02-20 10:20:11",
+    "best_shot": {
+      "id": "AF1QipMnkjIA8sQ_bqCtntUfnDVHVbGFSTS1G_RBcF0i",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os",
+      "w": 6118,
+      "h": 9177,
+      "time": "2026-02-20 10:19:45"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipM-bGrqH5Y8Y6PiVzbQM4MIxUv4_my3IdwayJYE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNZQYwQl7nAJbKr8HMTmSseSFsx1EhfYPBn-yfy89YfR1NbwOYx2400ifIkGKgxd0mQ9JPlBhtJcIj-eQ86BhH5zct5cq6jnsrpMpNSxCEw8ZDjVFOe",
+        "w": 6152,
+        "h": 9228,
+        "time": "2026-02-20 10:19:15",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMNNZz_ZqKLe1QzYBQhU4kIwAltPtEyJ2uDRuyk",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN2cLBMcMp1pl7Hm5sIQ09iUDP8zCEnK2s1zeoA47LKGrudNfNuWzDVnyzHuukg11J6nVRikYJxFS5y0VItRok-ewM9ppdjrnJ7zBp_obDRH2rSJyTq",
+        "w": 6157,
+        "h": 9235,
+        "time": "2026-02-20 10:19:16",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPaa4435kA1JcANJqW0FOJfj-DFXlOzYhTo4526",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN47IGk7xPWlYqsxGQU6m_DOeA_uHXcZcJNp0wFaCjmXh9EUPy5Y0rSDPYaenZH3y9L6HZdvYOgaR6oiMAt046ACO1NSQlDmfcXoduHLwMoSCRu4Nku",
+        "w": 6161,
+        "h": 9242,
+        "time": "2026-02-20 10:19:17",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMnkjIA8sQ_bqCtntUfnDVHVbGFSTS1G_RBcF0i",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os",
+        "w": 6118,
+        "h": 9177,
+        "time": "2026-02-20 10:19:45",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipMAOPdqFTMH-X4XKbMFo5JjtFKZTbTIvcWNQ9U-",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOFcweYsFuiVAT3yowaw-s5viw7LTznDJgqFFAbB3C-FMH5-2DN2gpXolrJpqKWI6m63BPju0GD-l9lYkM3Z02uIfnOwSW76X5C2mVG3o-prqQUYkO6",
+        "w": 6145,
+        "h": 9217,
+        "time": "2026-02-20 10:19:49",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPz766joxg_TemV4gZNpzta1QpGeJAh3g162Ehw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOTb12vq9eFmAnjYzn4_wSYWMmqekQSbDYvPiUD4bvUqI_pqMkUUXx1mNUj4n7PE1-qup7_Pf2NL-HPfI9M77KwTwHFzfjsEOL6DsUUnohuef5mVAbG",
+        "w": 6106,
+        "h": 9159,
+        "time": "2026-02-20 10:20:11",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipPKBl-uTPEpoovMePFi5gcyuqBpHWYyCj8yV0qi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPwYFjou5sN9bHvQPHuHcKp_PukeozmCJMeWpQ-T3T_lyjy62D48Bn7KjIeRyeAvTL6bF0IimSZG9-8Y2C6zGesJs_QYwU6gotOgfGmtrO7QCefkp7T",
+        "w": 6129,
+        "h": 9194,
+        "time": "2026-02-20 10:20:11",
+        "shot_num": 7
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D15",
+    "album": "Shoot-Day-1",
+    "dish_index": 15,
+    "shot_count": 51,
+    "time_start": "2026-02-20 10:21:37",
+    "time_end": "2026-02-20 10:31:26",
+    "best_shot": {
+      "id": "AF1QipOny1qZSIpSP20U8DtOzsE8UR5aQSlA1aCpPW2c",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg",
+      "w": 9082,
+      "h": 6055,
+      "time": "2026-02-20 10:27:17"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipNxeMBCPkxgeAgA7S4BuZdykAOVlI9fr8KGTEJi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPlFmiZkQGbXK4aLRfTnq6QNQzgFYwDtlDvKK22LCfkkDYlY3EaOTEDmTtTB37ULHRSiMqtA10xCTOHJAl4wHOfPX2rS6Cci1rBWAK4pNWLxADl29-5",
+        "w": 9192,
+        "h": 6128,
+        "time": "2026-02-20 10:21:37",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipOaczhYzTbgJMiqVaHrfBRqmOLyazgcm_QHBeXE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNgQnAmsxbu86IO4hYenfr3j3dfjbCtRP2zieLnOmvJu5TQboqZqcl-0HnFUEpk9M6uAJV6MvB-Dk7IHVtKMMgIeVz8RC9g0AncTmXa1NuIjtUS4kOy",
+        "w": 9199,
+        "h": 6133,
+        "time": "2026-02-20 10:21:41",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNW0NSVrnG9RerbjlQS2zG2_XKY-jIvUonf7GUG",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM4uytL0BvjUYSmWBTi67U5JmAF4NNCbibwyPzUMEI7-pCR8L2o4K60xxL4pYqncXfYquPECXsyYXmSHiOhEfF9hTZmb7nOTvtNMjlu6rpzwpKvj48k",
+        "w": 9424,
+        "h": 6283,
+        "time": "2026-02-20 10:21:54",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMdiG_PetZFO06Zzw4RhbFv5h7nofDZKC97AbxU",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOlUo7RT-4Qd82LsajlZMhIHNAOXn2jn4sUuRdfsaTZPXFcEvMWChRwZK6nUalyZiiaE3U11vZEghy6kXoq4ujHf7gvMVRnMAJWOOolvABvUwDsqa2k",
+        "w": 9430,
+        "h": 6287,
+        "time": "2026-02-20 10:21:59",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPQuhX3sK3y2a7hrKwZiziKPerhdXOv8RCZLZkI",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMHaCPgsq8p2F5nV57n061e-xNT8kD2X4e5P9smJzKpK4qkZ8AQDa7nLx0xRbomEZxEAJK-uRVQg5AWoeU2FRdAWZ8gkLw1eqjjbtlwJpLl2BA5BKFg",
+        "w": 9484,
+        "h": 6323,
+        "time": "2026-02-20 10:22:01",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNZ6cWgv8bbIAhR5FocNum8xlJNHfTfmVkKY5pq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMyJCYeXin5WU-rVwmWGc1g_B7vVKF0O8Xp9T9bIIlxPAY2zqVIKuFMU4nYnQJ2jLtbG7jRuPoauFQHTUH85l6bRnJ9FZr6lit7kUhpsxUrckX6Xsh2",
+        "w": 9060,
+        "h": 6040,
+        "time": "2026-02-20 10:22:48",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipM80bN5N7HwPEX8HizKY8EhKKy5xRZNdF9kstvi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPwDIJ49li2h1XdN52875DnYy7oz-_71Fo5wug6sRrXHgwIjFLzXZjIU4QXMIBsi2dyk6xVPmON3es4h0jG3F_XLbjliyKsuuTEpR8361x42IDmFqrd",
+        "w": 9051,
+        "h": 6034,
+        "time": "2026-02-20 10:22:50",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipO8SfA8jZXgTCcwYlFnLAP4Xm8LuqNhfAypjQJJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMzdX3-WuRzGAL6Z5QpzMmaTrm9rTGfd8fE_Qy36gtTkMg9R-tAY8O-F-Fc8cXgAYZ6QncGGEzrVEB4cLJdXsp92fa5_hrSS73FEy0V4Mm-rjmMt3Hq",
+        "w": 9110,
+        "h": 6073,
+        "time": "2026-02-20 10:23:02",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipMapUxSwM3FIP0elnKEzDNC8fLWHz5mGddWmTWO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOy3OOHqqqpreE_JfaOkaWyAnAp_C2KfpozNwV6nbEYkfHhHjTgR9pudSr8hl-mjgKzTB7KoPmeLWS49IY_r4udMgYPJ87imGHktatZaS1FrowIxE1L",
+        "w": 9192,
+        "h": 6128,
+        "time": "2026-02-20 10:23:04",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipPAcSYRhsGkk_f6J_c94P51saD7wmqySfaFcRwG",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPSU52X5CzuSuCg8LU2k0eapLBcklt3lmYVF8W6LDSDTceEXzD6ZsqhnTr_UK0-vQ1f6ndORGNSxkv2Rd991otA8cFgMHY86wfeQlazecEfc1byVTct",
+        "w": 9023,
+        "h": 6015,
+        "time": "2026-02-20 10:23:05",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipO_RUg3IzDCt3DtZoAdJ_gQX_266Zv3ppW6Aifm",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNTOuASkYhFyIBlUiTu14zwDH-mX56-TyNPo8Oao9XydKvDHTd4bUIy8WFOVVHul4qkgUzhyhg5lArIFeZ6fB6CYSujraMM3ECl6F3Mi457i4O-Sosm",
+        "w": 9009,
+        "h": 6006,
+        "time": "2026-02-20 10:23:06",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipN78Z2mCDct5B_LY9CAejoXJE5Oz6ar2AhSeoTp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPIx04i7FSa54a3gq32nNOsftWwbpi_yeVv4Wadwd0AqYIMMRoqCjnHuidcnvJ2ty7kdWWUi_taFu4W0mzoWfec8C365uNobQi-57uujSPEK-3HQxkG",
+        "w": 9262,
+        "h": 6175,
+        "time": "2026-02-20 10:23:51",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipO3u6_qaz4kFKXiWofj6EH0sKQZr0v0ndanj1xr",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOGI0Pb1GhQjDKpnSxk3Kjh7-GCfba7mgEiJCQzbDkcCm2AI__rDbN-dYndHju8hfFWlHjDOVPB5CgOyqvQ2KD82T4iet4rekIXBu2ftisneOcOuJw7",
+        "w": 9262,
+        "h": 6175,
+        "time": "2026-02-20 10:23:51",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipNyxNQlkzmPTtvAhLW36Bb5c9MzTbQ6sMNmcqEQ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNZhXMbNS8CtqO0JxGd3lUeFbeJoaCBQ-HyBMmHrGKT1LXbtcCP9uZd2UnaVnWpUULuKfxPczHS4HDNK5O58hE8kdFITjYME2ei6mL2P9iDZrbkisfh",
+        "w": 9342,
+        "h": 6228,
+        "time": "2026-02-20 10:23:54",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipPQ14n_GpVS2OT9KMOOhcOURcDsZcUoPIIiHDpV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOLvx4rKdwhuV4nxsNfg-RHSPYBXmFSsab-YIOpPEQgA2WF8JS6ncldugt6LnTRppi220INUABqvPkKQGGBlfDHgWqR-YNkO6EKeFUd4_LjwG8ZsChS",
+        "w": 9350,
+        "h": 6233,
+        "time": "2026-02-20 10:24:25",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipOEY0XSP_xBywsB5aoMolVmjx7LHhPUehAj-7IC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMEwRVAgCJgDvGeLtyVyV8lxETS_vHrswzOQfBgJpZg6oq6owgpzqYmuOD2AJ30bXkW03YgsUooOY1H3fu29cIwl-PsKfvL5jnln4Y7bQj_y7L1tRlc",
+        "w": 9191,
+        "h": 6127,
+        "time": "2026-02-20 10:24:27",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipPKZA0ZO_1RgvN8W9f1TTlkdyZz1T_TWL-Q5X7p",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPhDdk4T939VQl2PHVo7LLLWLasSJFMP5eymWjNyzgJ6afn9SrTuRgKfkxBVosnVFrITYwLaz_FhoBNpps6iu1oYXdSCcZDDMLTYHurlJbTG3QAJWEp",
+        "w": 9152,
+        "h": 6101,
+        "time": "2026-02-20 10:24:31",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipMmSNGYZ---nJtRVg8cxxYgVCrLEMFLcmTHBcfu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPIdrCSLelXKem8YZkDptFJ3r_cLSB9Ingrzz--39G1wV6RtV-YXzJeLoAyhTLxJhVF3ScMHBylHdmLOH6EeSWkSCnOsPpdHDJrZCdV3JWQdVa3i1wC",
+        "w": 9424,
+        "h": 6283,
+        "time": "2026-02-20 10:24:50",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipOuu-vT_9_kQ6kxkmSzYb7xG-lyt-Bq_rgDa7f9",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO_x4WGgdOqFqlHDhgexD2Sq741UYFmPDtcXUkF_SF7aQWTHWe-l5KosvB4-KuupnvfzHjxtUiLGB6ESVNi79359170UUWiZUjvypaBWEZQYah9YACx",
+        "w": 9429,
+        "h": 6286,
+        "time": "2026-02-20 10:25:06",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipMCJlrrKER679E6tSPJHFpSgK8S2JITXwsFZKJw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOvJfRwvYLCMj4ZrQBCpT8iwix5gkZbiuKP8DlkcDhoiu6kP0e-9hcVE1qOYheDk3iDH6n7MJOdyTWCBBGyhuql3YpLl-KNH13Aj8uqKNLoP_W_sUzw",
+        "w": 9422,
+        "h": 6281,
+        "time": "2026-02-20 10:25:13",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipPkK1NYzgJSN6Re2IISQIKzWKwwGv0QzU0g_I5K",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMBMqp4SmmRyu8c7mRjsjzdINy_QqdKdmlFMbWUsEYgx6X6LuJ8is-JFR2JaPoqPPKrmhlhvOz83Jn5Z3pZxZnhyJfQLMwgQ0ZOxmOb-pS-xPdwiXsA",
+        "w": 9094,
+        "h": 6063,
+        "time": "2026-02-20 10:25:46",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipOCXeKsg58UhgEImMcoX_jQAJA90QwUZg_Xal21",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMlQ4zfmp8HNKWzg8OkofhIaJicFd_zUm1BYAYohCGVdPeQ02W1h6hzPzBZMGXILe2ktrN52J9xjIsUaPXxaAvW7vQN8FdEUrQJhkYUnT8TNqGEdaK9",
+        "w": 9213,
+        "h": 6142,
+        "time": "2026-02-20 10:25:49",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipOBP-chR9XsZqcbdWkgfx_QavL6jhraz_DIhAZc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNJ5oDT4DZCC7w3cqzsL5gg0Uuwpr3qKgdGyL7STwW7p89AaR1RXx-mXmIfycbXZa0ve6ey_0PGvPHuCebr_2YmGrLpyOsorcJKHGiB6AKuxPqhLy71",
+        "w": 8907,
+        "h": 5938,
+        "time": "2026-02-20 10:26:02",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipMuAm06o0yiOzbWWFw70cNhtoH9LmbSvOIQ_Vvg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOfBxo_as7HzDBWujoevvvotit8P0CKaKkLSmL--lmGm5eMe-W9c6GOnR598RGqve-_-yxbb83Vv3d4DYIMn_abWghodJ2ZCgEdwcL6fatZgGdQGcVq",
+        "w": 8907,
+        "h": 5938,
+        "time": "2026-02-20 10:26:02",
+        "shot_num": 24
+      },
+      {
+        "id": "AF1QipNX79ihu7mA7YAEOTzO7TFEuwnCyv8QXFDOW48T",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPvkiL7wz4oSv5NK3K3DroBaDUU0V_9M2fbsHCNscOHlrE5NEaIYzZ6R9Rk31PNLyVth4D3mp--ZXX-pSygruWFEfrrbJ_5Y4vFp94TbimORNMZWx8a",
+        "w": 9361,
+        "h": 6241,
+        "time": "2026-02-20 10:26:28",
+        "shot_num": 25
+      },
+      {
+        "id": "AF1QipOny1qZSIpSP20U8DtOzsE8UR5aQSlA1aCpPW2c",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg",
+        "w": 9082,
+        "h": 6055,
+        "time": "2026-02-20 10:27:17",
+        "shot_num": 26
+      },
+      {
+        "id": "AF1QipM4AuSby09C46gd9hzAz-UAabAbqlOfg8oWi_OS",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNe3s6GL7H_0BumuSTanUvpTSUFa2PxNRKiEiczNjxY7mbyAYhVC28Dx_QwfkG3WTKYd-PuJPlrz64t93sShiSZgVW6iQF3-Wt6ffqfG_AD1DXfGEee",
+        "w": 9082,
+        "h": 6055,
+        "time": "2026-02-20 10:27:17",
+        "shot_num": 27
+      },
+      {
+        "id": "AF1QipNN88n-UrfxsebSan1ol4ov_Ydynm2NoT8fnPpE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPJc7t7U3RX_swnu6kN3p_z1wBlxY4BWFd3uFy5OjQPCctFTJhZJCJEtFgbSwLHukQGMKAmbgV3XO7xNr8PgDjwmtqfWqQf21P4DENtsTSKt3sttF1Y",
+        "w": 9165,
+        "h": 6110,
+        "time": "2026-02-20 10:27:19",
+        "shot_num": 28
+      },
+      {
+        "id": "AF1QipNAwpZues4OGsfbj5ue2RgMUyGA20mAb7ycsP66",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOppW2RHW6Y8-rfX66-24msPChfYd_m3pflhfquoNysPczWTsMcAZq9zIidfA7zwk0dqiQuWkJcAJYewdf4DMGokrDpGD7j6lTHhRA8BqhVgTChU8DB",
+        "w": 9334,
+        "h": 6223,
+        "time": "2026-02-20 10:27:20",
+        "shot_num": 29
+      },
+      {
+        "id": "AF1QipNx3FiD8Ys44qjk9WM0erBUwygrkb8LhZfvvMa2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNXePboLyiTwBMXMaG3u5SiC6Thx4C0Nqr2HdPNnapNbimiDW4aja4vnLxn8KSKSQia-z8ZmxUlzF9aNSskEJiCtb82lKV5qooWfv1cTrd9SSIWwxXs",
+        "w": 9502,
+        "h": 6335,
+        "time": "2026-02-20 10:27:29",
+        "shot_num": 30
+      },
+      {
+        "id": "AF1QipNgYLzA9vYIzh0sYiIRLThRMWXzDXIviI9IG8HF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOSOiZWPbuCKDY77qzDuRKNBS2e8Grej_KQlto2Erh47_IpXAT7upNC4Mihp3fxVuofb8ynWRZGK5_NkdorAfaxzPk2iHXWCLVMpLa0lpmLkT-MMXyL",
+        "w": 9502,
+        "h": 6335,
+        "time": "2026-02-20 10:27:29",
+        "shot_num": 31
+      },
+      {
+        "id": "AF1QipMdrnyTxRpLKFNmx3WIleywOQOU9DxPcFhUHK4K",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPBomOsdCQS-qJBqGeIU2omPs3d16AJPADxmEZkrvz_xHJ-M2YsMl0jQyaSvMMqJd27_eKcBgbX8RlY1AhjPCSj4z5osHdlgyJmFzQwj3OpAyppCUWm",
+        "w": 9465,
+        "h": 6310,
+        "time": "2026-02-20 10:27:31",
+        "shot_num": 32
+      },
+      {
+        "id": "AF1QipNMKWF6a20H4hg-WWyPCYp9fj04w4x-9K42jSkb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPH7lyzb-sfK4ftwZ3HpRgE-4C9-zKx6Uz44_diN5VfVxbQFzHSGv5m9Rs9TSbRjkbrXyi5zpJJONfpQtC2t_D1rzDe3GnydyOuyoRzRneeZJQnd4Ke",
+        "w": 9502,
+        "h": 6335,
+        "time": "2026-02-20 10:27:31",
+        "shot_num": 33
+      },
+      {
+        "id": "AF1QipNwDzSh4Pqd3VHT97nu82Yb9TsXIN99HZGM4keq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO86wGV8WibiVsthIkxEK2bGF9Vv5NPtwhh4Flpyz9noSEci91wD39Vb5EauI31Gmy0PN2-nqDxA-qveK50xgrK2E45zAaJtHcTQsBZ7nvUazCvcurp",
+        "w": 9447,
+        "h": 6298,
+        "time": "2026-02-20 10:27:43",
+        "shot_num": 34
+      },
+      {
+        "id": "AF1QipOhbdVvYs9a5J7RNVaqycpDTq6rOwkB2ldde3IJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMEIXW3x-mgNc3tZIzOMUaaFDyTkhGk-bwU2mZXRkW4K_zQf0VtNp8NfUZrrcMl2mpruEVx4bLSTNNYIIaNqK6k9pHg1tCllF3HAfZ5QpVSzD1E5JZO",
+        "w": 9447,
+        "h": 6298,
+        "time": "2026-02-20 10:27:43",
+        "shot_num": 35
+      },
+      {
+        "id": "AF1QipPQVYbY0dpB3nLpc_1suEFZGCJPhPLub8hWOdIN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM5MvCZSCSVkwzzR8VH98ebXHc7C0ezKNfJjrlLm7HS4GYtkj1W6LxkDlDgYHSxHe9q5isjQfTGVWVak1sTWPK9ZKBM1CYSKbyVpF9SLy97UNyxS_wN",
+        "w": 9503,
+        "h": 6335,
+        "time": "2026-02-20 10:28:21",
+        "shot_num": 36
+      },
+      {
+        "id": "AF1QipMB0tOFcT8iQgGhc8EwQuM--abA98uYBBpilcVC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOoj3JpFypcX2VI7gZQl3FCU1aIv1onTgsjMdC6tSN4pl7mqxBu_i7Imk9ykS3nm0OsoSS2HaFg19YBCmfqZm4ics845IihY5w6RNJdVHOFCmOUyugs",
+        "w": 9339,
+        "h": 6226,
+        "time": "2026-02-20 10:28:25",
+        "shot_num": 37
+      },
+      {
+        "id": "AF1QipPC8x4F0JS8IiEFAJMykrsxA7t5sGVzSeDQjVoU",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObPbmHQd5_THH8mD7aPTAm56dOq7FrmcU30KoxZZaNfSeqr4J63Y1KmVSN8M69Wxv5SMAXGZssT19i5hwmXhVq77q7dn1t6b-A-UkwED7H3FCNEx29",
+        "w": 9287,
+        "h": 6191,
+        "time": "2026-02-20 10:28:26",
+        "shot_num": 38
+      },
+      {
+        "id": "AF1QipPZkNEx1HMlZbHkDgwOIE-eBm3EGNEmiR-LowRu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPWNAcD2b0AN92Ur32Dm5eMI4zgbTeGbjRMLIU7jJj84c3JKpMJSpU0rtf0RNiryD1WsiSWdfNCvVqXvNt8wwl2uDG4rmGniFUC3LfDxdigCzGv_TCT",
+        "w": 9444,
+        "h": 6296,
+        "time": "2026-02-20 10:29:31",
+        "shot_num": 39
+      },
+      {
+        "id": "AF1QipMTjyiqtFT7jCjlz39imIWLPJ64eHDmL0bN6_9F",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPQMqQNwEgDFcykS6cb7-2SUVBi8LgtA4xH-2iz3FgoaMVNQj7rcC84o8nN5y_qU1uTxDhjtgKDNDxMY-xdEEUpD1ztSbxGBTTJGei8lwVSghOus0sP",
+        "w": 9444,
+        "h": 6296,
+        "time": "2026-02-20 10:29:31",
+        "shot_num": 40
+      },
+      {
+        "id": "AF1QipNSkz6Xym7DPMV3QUlVmOcMK2zBitJL9Q07MiSS",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOUWIuCu8oOYC9JNxVa9ABswqJ_0fz9uruIqJeeeYjzod2yaoUzPIdX5MqXpHqCx7jZKkW35yro4Gs-fwXv-sUpSi0s_mqwNDAWsCKPRsy_S_fA_u85",
+        "w": 9438,
+        "h": 6292,
+        "time": "2026-02-20 10:29:35",
+        "shot_num": 41
+      },
+      {
+        "id": "AF1QipNi9JIz9IfVYTl-9ehDIfc5j_KnJhjxLnga1iKt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP2sdEJbPCSSxyqp3nfU3dfKXqwtjCV_YC3Jej_ksiKxjyquW5MebKfzU36Zi3sWWDrSWn6B1HCkRfhXqseYrm2np2TQWhiMI3Abq3fIFJmLzLNvtd4",
+        "w": 9452,
+        "h": 6301,
+        "time": "2026-02-20 10:29:48",
+        "shot_num": 42
+      },
+      {
+        "id": "AF1QipNuZoNh687OQHe7rU-0hncr0ft2mg_IBENSDWhb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNnf0H-XgQRYNTGdvLsE_KVUdJhYPwZirPSp9cEQeVIay3gfAGKp7zItPTU8GW9LhqCH_vliwaO9jOxxGEgzn-U52Q4o84sDi4bXYIDwBWYN_q_u90n",
+        "w": 9501,
+        "h": 6334,
+        "time": "2026-02-20 10:30:19",
+        "shot_num": 43
+      },
+      {
+        "id": "AF1QipMRqaIf8IyxlZIdKPfBWUxujElgcJTrXlWRK_fQ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMI_rEsMkohj-MXixLnYHMRSYBJHI33Hwqsul-xA4t6yibNLX6LlLkopuvuQP43Xe9k8jLa8DtvIA4ZhPzcJBojE3QRsWsPU-tUIvt4WFjD9Awl63WP",
+        "w": 9421,
+        "h": 6281,
+        "time": "2026-02-20 10:30:22",
+        "shot_num": 44
+      },
+      {
+        "id": "AF1QipODCUuXM0U1DLQaOOsW0RzfpBmRv_x_w5hWww6C",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczON_lsa16U2_A2BmefiqzV5kOshpCzOxz9TJ5NjA-h-knyxgdl3liNxUCV0G4wgRfJUWOlmi_M_ax_PQ6dr1DaDUrRWij69Rig_2YxWMtcSLO6b30-x",
+        "w": 9371,
+        "h": 6247,
+        "time": "2026-02-20 10:30:50",
+        "shot_num": 45
+      },
+      {
+        "id": "AF1QipPO-f0QLkQJJ6bwrXNUXRYIcThm7q6q65zU0LhN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMoPpwsVHepyRR1PPA308pME7pxZMu4kE3s_gIQuGNViTpIt2Isg8v5N1CGGA3X2ta6-jW6NyqA2Z3xYkHvrhfD8E9p5bgUcaT5KiuPZfIRM0S_lVto",
+        "w": 9371,
+        "h": 6247,
+        "time": "2026-02-20 10:30:50",
+        "shot_num": 46
+      },
+      {
+        "id": "AF1QipN2IdIpoPdYtw7tyAoCNvl310NbhM3vGeL0MKI4",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN9DzfDzGvkd5FqfGaiIV-wUtwP-vO7Y8OVkI5DjvvFwx1VLsGbw9JfS9XvqoJENlM7ytM5CZ2OPDhCFlpQ2Hb37Ys1VNj-S8928IxYzqaKy_lBnrGq",
+        "w": 9274,
+        "h": 6183,
+        "time": "2026-02-20 10:31:10",
+        "shot_num": 47
+      },
+      {
+        "id": "AF1QipM4xgzid6iOOVzOtEBhGGf-9Om9XyPFjpSXrIFr",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMF745yE_Mjan-v-IoGBGRWgbmQpzuGSATTk6ZA3MERg5wawtawAThbFL63fD7B25LluWApdkIm7fvgodMlrHlrZFdoz9FmZXdnXZISukTUMB58Gv0P",
+        "w": 9278,
+        "h": 6185,
+        "time": "2026-02-20 10:31:20",
+        "shot_num": 48
+      },
+      {
+        "id": "AF1QipMLFMlZdiwwd73OQ_XADTAy8q7qSyh2v7e9nhzh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMBiCFpTsmdz278Mt3AZJ1kPi9PfglZQURgZAYEmjcLUjewMCyIg9WRBah8KjzmiWOxPDwddxR3hyVzjN1zNAiGze4OQrc12YGEciHy9uZGJzt0Vc-M",
+        "w": 9278,
+        "h": 6185,
+        "time": "2026-02-20 10:31:20",
+        "shot_num": 49
+      },
+      {
+        "id": "AF1QipNgRPitKc_FU_RE4J0GX0yfOsF9b4OVNula0Z46",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPZWqUHENf8Ky4k2LPY6f58NnQyrT1_qQaDRiGAbPxSw05bO1MfCzcsgQXft1ETmGCyIGw74PAIMnEPD_JDPcr3FBZgHT_NjhDdhQk5dL9ULhU9bTo_",
+        "w": 9325,
+        "h": 6217,
+        "time": "2026-02-20 10:31:22",
+        "shot_num": 50
+      },
+      {
+        "id": "AF1QipOuOdc5iG0PU9h0Lvw4MlWPkTM0dy0SuzScqiYf",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN7SCdaEbjgeChxFjkIk_d4K9pMq38SKKC0LklpgzKyGTitzwrRxueSezZ34OSHXFJatYBiCI9hTDm7Mdx6jwDv6mwCrureR8S7bZ8SFRhps15qYjCG",
+        "w": 9480,
+        "h": 6320,
+        "time": "2026-02-20 10:31:26",
+        "shot_num": 51
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D16",
+    "album": "Shoot-Day-1",
+    "dish_index": 16,
+    "shot_count": 3,
+    "time_start": "2026-02-20 10:33:33",
+    "time_end": "2026-02-20 10:33:40",
+    "best_shot": {
+      "id": "AF1QipPrrlpMu61k7gNIhJQJGZsYJ29NeXHa0mRyqjL1",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMQJbjtKcyzaqZvswm6ZLTgkcmTevW5IsbHhpqqbJPdGRJjUQjwLN11v5M4dP1LJIdIgq-ghHLO8U2l5AcMG7GpOiqSCWde4BU2FVePdh1AjccGc-w5",
+      "w": 6087,
+      "h": 9130,
+      "time": "2026-02-20 10:33:40"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPVSzkBKFKqEcXEo327paFSzn9gYF4nEvgD2MZC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNV_VQOyJ7ukQwtSp4uP8KAz23SxjQIujm5ipVz8Fkm_jZ2QENnPovT3RUpYvpt9w_BmkvMzHshVZDfHi4JArm2AbtOZhhAni9MSh7DA75fPAidxBkn",
+        "w": 6182,
+        "h": 9273,
+        "time": "2026-02-20 10:33:33",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipPrrlpMu61k7gNIhJQJGZsYJ29NeXHa0mRyqjL1",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMQJbjtKcyzaqZvswm6ZLTgkcmTevW5IsbHhpqqbJPdGRJjUQjwLN11v5M4dP1LJIdIgq-ghHLO8U2l5AcMG7GpOiqSCWde4BU2FVePdh1AjccGc-w5",
+        "w": 6087,
+        "h": 9130,
+        "time": "2026-02-20 10:33:40",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPqpgoCFYvxjtMi9g005N0nlYrwO-wvtDUyvOuj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMjGoRqy8X7wMQwdFLxDcTyhxGuxSK5wPmL_aYQjAwdKSxkbuYFiKAkDgdsaGE4AHqFmLPGPApaOGXNQLxqGFvbVoRYXMmVvfG8uZUgboT2z6dS4Xt0",
+        "w": 6087,
+        "h": 9130,
+        "time": "2026-02-20 10:33:40",
+        "shot_num": 3
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D01",
+    "album": "Shoot-Day-2",
+    "dish_index": 1,
+    "shot_count": 1,
+    "time_start": "2026-02-21 08:49:03",
+    "time_end": "2026-02-21 08:49:03",
+    "best_shot": {
+      "id": "AF1QipMuZ6i7-g0gBB552i-HUXP2gXu4U5U59QY5lotu",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMABBYusDB87dmmwPPiAms4bk-5d0JPB89bEJ6zdo_ZD-_Yh-KV0txKHBysxfqpF95llY5HjDsWMrRUaQpBBHsMQLHholQZaBQKt01-AxcwBJwtINWv",
+      "w": 9150,
+      "h": 6100,
+      "time": "2026-02-21 08:49:03"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMuZ6i7-g0gBB552i-HUXP2gXu4U5U59QY5lotu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMABBYusDB87dmmwPPiAms4bk-5d0JPB89bEJ6zdo_ZD-_Yh-KV0txKHBysxfqpF95llY5HjDsWMrRUaQpBBHsMQLHholQZaBQKt01-AxcwBJwtINWv",
+        "w": 9150,
+        "h": 6100,
+        "time": "2026-02-21 08:49:03",
+        "shot_num": 1
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D02",
+    "album": "Shoot-Day-2",
+    "dish_index": 2,
+    "shot_count": 6,
+    "time_start": "2026-02-21 09:45:00",
+    "time_end": "2026-02-21 09:45:13",
+    "best_shot": {
+      "id": "AF1QipNL2j47wztKKqk1evae7RLm_2ZYK0IqI-ZxcmP_",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOE2jbsdLXimus3Z3OWEbmIUOG1zKCk5l0GM77WL0ZodF2oVhLmVxFzy56ZntKLxVfQ67faO9KbvZ8ECuj7-G9ovwMNke_KuXIwsUdWGPKXPIYwGJTK",
+      "w": 9048,
+      "h": 6032,
+      "time": "2026-02-21 09:45:12"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOKW6lOen5LX3AhSzRjj0V2k7w5rjlCQyK-JFT6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNYP6oIxrU3UZjrzyiyXwAYyh-L43ScgczxFQw79jAXwG1iSYqbJnu-q7heZ5ejkjy2kvoAcs2f0nPaopzZlF5pkzAmP7qKOJOxpbAgZe2O2lvtKZfF",
+        "w": 9066,
+        "h": 6044,
+        "time": "2026-02-21 09:45:00",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipOGOV7xQg_KOtrBuV1PETahiO6jlvNmH6H0UCsP",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMksh71Jkce0LKgJFEjLbyG-SYChHzYd1IUqMNA4hqanDSu2NPh7aG-b2-micklm1SoNK4gyczsGLN0xqhLRuCCuizjIxRfc8vuHCllfE6ILgZArFE5",
+        "w": 9069,
+        "h": 6046,
+        "time": "2026-02-21 09:45:01",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMDpqz8dPH60UknHI4q3N5u4LYi_vgsKisf5YYH",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOt-RJc2pZXMaHBlB-RaH7BrzKsUVaddnMR8MRxTxJiu-pCFpUZr0BRBX-P4PMnCPrp12Q3WZ1GNWh6l3U-qqs2msBvuJ-wKgReg0foM3G_6OF2SGIJ",
+        "w": 9021,
+        "h": 6014,
+        "time": "2026-02-21 09:45:04",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipNL2j47wztKKqk1evae7RLm_2ZYK0IqI-ZxcmP_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOE2jbsdLXimus3Z3OWEbmIUOG1zKCk5l0GM77WL0ZodF2oVhLmVxFzy56ZntKLxVfQ67faO9KbvZ8ECuj7-G9ovwMNke_KuXIwsUdWGPKXPIYwGJTK",
+        "w": 9048,
+        "h": 6032,
+        "time": "2026-02-21 09:45:12",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOj7C4FJizIrIcgPT2YI3J9eZZsstMzvpqADg63",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOqklHLzHoFvHmp-olKqwnk69YhdSsaYvE40QuWJTxD2tNI8PpBmOb-4EY3XpLD_ml3u1riv5ypzcn6ax53rJMoHV_Ds9Ayn3xgwwZ6rXuusoxQJodL",
+        "w": 9114,
+        "h": 6076,
+        "time": "2026-02-21 09:45:13",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNFpP7BUiGhIxD1fP5ZeU5XsSMwHSdV1EFpHFJn",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNvwruxct6rnvGg9muwok1UMQuJ2mQyMSnn3Qi3OfmhXW5anyN-xfxNOkAhL1BuQSwDCksksZ-C0lIAoM8HjPaklDcJeZFEzrKk-2HsksTlnZ3UpHCe",
+        "w": 9048,
+        "h": 6032,
+        "time": "2026-02-21 09:45:13",
+        "shot_num": 6
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D03",
+    "album": "Shoot-Day-2",
+    "dish_index": 3,
+    "shot_count": 6,
+    "time_start": "2026-02-21 10:04:02",
+    "time_end": "2026-02-21 10:05:58",
+    "best_shot": {
+      "id": "AF1QipP2XGKO6EMo-r859rV2RCr5wfrK0BvtjFZk2HrI",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v",
+      "w": 8787,
+      "h": 5858,
+      "time": "2026-02-21 10:05:41"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipMh-j968p8oAszna4kuJp2B9jscgryogjtbrBkp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOX1By7LzbyqKd9Xwzchj4R135idnh_5hhWnLbdthjRIl_a8hi7ZY6cSkO0HJdJndkPZBbQd-kAbmjtkH5W9ERnt5j9a-XZLGjO5ELOzDdz79xWmlk3",
+        "w": 9084,
+        "h": 6056,
+        "time": "2026-02-21 10:04:02",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMtIfRb1VZSK42VAakDZSt_W4UZbh9T-SHa8GkF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPjvFRiSKsauwD9_MpYQq5nbMdbswxCLcTlEKs6R8AErINalprK6ljUtx6FOKcITVvflduCdIU2OxNoDEC1Zz9VcVIZBgW_wSrZ3v-ltyWy3qJGcmGf",
+        "w": 9207,
+        "h": 6138,
+        "time": "2026-02-21 10:04:21",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNO9Rt2_QkBClbGy7MWcXczQiqcbL8EZmlSBdEZ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczONjV26Dzu2oN6-rmA4sDQmX5TyjwysgtNfJ-hp9nqu8LoFJozFXN6JvKm15Cn6NWLfeWzbi3k2S5uigF0snyAcGQHk3DKJGnn8aTSa_zaKIjcBRtHl",
+        "w": 8598,
+        "h": 5732,
+        "time": "2026-02-21 10:05:29",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipP2XGKO6EMo-r859rV2RCr5wfrK0BvtjFZk2HrI",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v",
+        "w": 8787,
+        "h": 5858,
+        "time": "2026-02-21 10:05:41",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipM54_8r3cWHPqrEjC51Z2HfbtheYRy__jCnDSep",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPiIVMduhnBIzSQ3Gj7M1doSiJY6c6qa1KkCtljgGLFLHLX5ucdLEO9nL1kVZ-RzBWNHB7fq4TA1N7z3UhxmD8dnqUzVdbm2BQXcZqug5SA4oNxkUAc",
+        "w": 8973,
+        "h": 5982,
+        "time": "2026-02-21 10:05:48",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipN-vlsJ6IBclVm_8N68GnkmA_S_xRXSWKmXvkoZ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOI0yZecZDtu3w6zUPqSFo7Sw3uK49Raclv5AW5d1n_A-U_8AzdD7kOfx98Ka-G8V7mPXnxP_LPa3I_FiCY_-1ula8ZV-VkOBN0LW4VM-U3AptvKugO",
+        "w": 9225,
+        "h": 6150,
+        "time": "2026-02-21 10:05:58",
+        "shot_num": 6
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D04",
+    "album": "Shoot-Day-2",
+    "dish_index": 4,
+    "shot_count": 1,
+    "time_start": "2026-02-21 10:08:17",
+    "time_end": "2026-02-21 10:08:17",
+    "best_shot": {
+      "id": "AF1QipM9IG2vYHPzIS_qnkoMhtuz3CSn-7_WFet2IMNN",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOxZdsjIXAnzoF8JovS9RHmBkn0kE8KaNrLq4KCJLjbdgpV9zFUABdU3hB6zLdV9QC_RyCy7Z0Pt_0T0RPPTDV3eC5RjBbiHVM_b7My1sdDrXEYTS6L",
+      "w": 8979,
+      "h": 5986,
+      "time": "2026-02-21 10:08:17"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipM9IG2vYHPzIS_qnkoMhtuz3CSn-7_WFet2IMNN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOxZdsjIXAnzoF8JovS9RHmBkn0kE8KaNrLq4KCJLjbdgpV9zFUABdU3hB6zLdV9QC_RyCy7Z0Pt_0T0RPPTDV3eC5RjBbiHVM_b7My1sdDrXEYTS6L",
+        "w": 8979,
+        "h": 5986,
+        "time": "2026-02-21 10:08:17",
+        "shot_num": 1
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D05",
+    "album": "Shoot-Day-2",
+    "dish_index": 5,
+    "shot_count": 10,
+    "time_start": "2026-02-21 10:09:57",
+    "time_end": "2026-02-21 10:14:10",
+    "best_shot": {
+      "id": "AF1QipMF9aKq9jYIov6m5n5icsmQ7mUPsg85nM08U_Ch",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczP1tyoAliB-FUS2atBOn8glsb7x6asHARI23ApVQQFmZFIlEAsQD6lcfW8YLY4Lq8fIXcVCcpcEj2hcQRt2nE_rcuIoHzV4Vu5MeusiE7vish2s0krY",
+      "w": 9123,
+      "h": 6082,
+      "time": "2026-02-21 10:12:23"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipN23aca27_BsduKUcZc666oDXdUuu5WYEJ-m0Y6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO6wwieGXSb5sjchcF6Xc5oMzAWjQXEogQskGkfeMT8jShfQN03QEsIOsJ1oJUFG1XHgmryIfOdBwPW8fc_4RR-2bxOIeXbhjkFywCE_qL1yvlEb5n4",
+        "w": 8901,
+        "h": 5934,
+        "time": "2026-02-21 10:09:57",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipP4VxqMXQP6tIFs-qZKXegl5krpeUy7uyfK9ASo",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOC61BVPIJo5KvSXBOZyzx8oU59IpBqLT6cNq8nxdtj9RSbVFuJPYcFOIK4HdnGTvcH1P1lcvKc8Q1Q4XMOJjZOCqpzlUXpmKOL-2CB4rXu2Nj5vIC8",
+        "w": 9162,
+        "h": 6108,
+        "time": "2026-02-21 10:11:09",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipP9CXT4LfJzPDdlQmCUVGxoNWWfcHLpN8yVQdD5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObNlnHWdeLfuhodTQEiH9w3NRVZN7_vVsAqATy25J_M1vRl7_MWOnYx55mhn99jD1frL_L7Jm9jlH6eIdsxPF2GlhL9qDJ-MgNGqO_354yjZ_qA1of",
+        "w": 9099,
+        "h": 6066,
+        "time": "2026-02-21 10:11:12",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPp6S8Mx3iCIRVhNj_CXDoC8ancOhIJrgQ48s_h",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPj7Fihqg7tobZuo9EBk59bOZXfWtVCmrXPk-L6e5pZzCE9Cq8ooePpleyD4IP9PIfreT-OsS2OczD0xjdTijXzqp4lzsCbvNfzjVE0tvQb0AmBbLI4",
+        "w": 9051,
+        "h": 6034,
+        "time": "2026-02-21 10:11:24",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNkJglaev3XYKy6u3mbVYZepb8LabnkXSxJT7eB",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNgLMKHpAp20haHNu4z9SWuQhYcTf6O1xJmd8MlNkuNfwCPIMB7H-lC7TAmmixmwdJYPy4Vc9bOD7TKHoIfeYIDB_o5GU57dksyiw4-yr_TvFVdMa8V",
+        "w": 9033,
+        "h": 6022,
+        "time": "2026-02-21 10:12:16",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipMF9aKq9jYIov6m5n5icsmQ7mUPsg85nM08U_Ch",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP1tyoAliB-FUS2atBOn8glsb7x6asHARI23ApVQQFmZFIlEAsQD6lcfW8YLY4Lq8fIXcVCcpcEj2hcQRt2nE_rcuIoHzV4Vu5MeusiE7vish2s0krY",
+        "w": 9123,
+        "h": 6082,
+        "time": "2026-02-21 10:12:23",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipPKu_sDjtJ6baNI-rtUOaI1WKJQ98DMSyADX_mc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczODrl6eSzQZbFwo7z_KjwP1P3VGsdWOtHbcx3i1OHqxlBa5S_NLuXPnSgirO0Ve_HUHUUlyxrpNGNc1he1_piXjbzI6MHuJfvHr6a41NcZUVSrL4PAy",
+        "w": 9009,
+        "h": 6006,
+        "time": "2026-02-21 10:12:54",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipN9tshKkBlfbFRt_Ae1X8BpzeUoGhXAyXM_yL_2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPh54nJE3xHwj1AXBQvx3TgqsDziy0QR8_FdGqfUfrTpNLY6os6RL2uyjZuNKwPX1QMWwJsjgbPFLyXE_bJRiP2U0KyZou8eaUc00EHLkbtDI0ybX44",
+        "w": 9141,
+        "h": 6094,
+        "time": "2026-02-21 10:14:06",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipMq0MfFo5XIDlboszGOTDTCuQAK3-4OqzKSiDIk",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO6V4yrYvXyfz4YDVozxzza8Sx80fs67a3iEzkWbiHiexmkAE5haCgjiVdTURiSmOKIkgFOkI2ZBwSSPjdmEG9QpaN003Hku17wtw4NmQcPrXQNEihZ",
+        "w": 9174,
+        "h": 6116,
+        "time": "2026-02-21 10:14:09",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipPqCokoYzgpIp8_6R_rkWPobLAsGOYzhgXUv4sx",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPop105H4CzZvFOXrgxzH1Gl3LrD_czih5RzYHpw8wSnebVZMHzN7O_ciVB1szciuxZyJqNqRGvXBc0xoSkrWd2JnOHTQYey4bxqYDkRsMowf8CxBAw",
+        "w": 9132,
+        "h": 6088,
+        "time": "2026-02-21 10:14:10",
+        "shot_num": 10
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D06",
+    "album": "Shoot-Day-2",
+    "dish_index": 6,
+    "shot_count": 7,
+    "time_start": "2026-02-21 10:16:45",
+    "time_end": "2026-02-21 10:18:58",
+    "best_shot": {
+      "id": "AF1QipOqJ1tIfv8wf6iSzOpugl7Tn0K_CJG5RVfBXDm1",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczPG_VJFhJkFP-8RAAo3LyyBpmFNvzdVGuLdiVFe5Ennyky6dbvIYHcqRLI38wgptyBA0-gzOc8Z7hsNw7f6fBxJil9wJ0CP_zkjdeKiRmNITZBs9Rx_",
+      "w": 9141,
+      "h": 6094,
+      "time": "2026-02-21 10:18:47"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipNmQjPX9Xs9bFV-fYA2MtkWhDou6l40dkh_kIGa",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPSxKtdHychNwp56dxOMgAy7zbTaAhiEwGvsQsTZsGX3GYoE15MwIiZgggEXMmXNxpw8QA7Ef8qotW26gAFN6TMZrhxX9VvyTwOl7rdhpmKeEOvtvdv",
+        "w": 9216,
+        "h": 6144,
+        "time": "2026-02-21 10:16:45",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipPcsvSu8izCDE-aOxOxEUcd1jxw5Yc7YuRCGWKZ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMd-za-aSGwrqVjFEBpsg6W5QhINElGneVjycdFVO0vDHyolg7YUUhdhkgAR_FszLDbQvfw8q53iwQvc2Rs-ZDOVRbPJz_7OuKOtsCZEdP1NCp0AhaP",
+        "w": 9153,
+        "h": 6102,
+        "time": "2026-02-21 10:17:55",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNf9lgBgZzVyRL1jGu8Feu_HZzjdWPKo9v8QGJ8",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM5DnE0C9WdHqLdMeDfW5HZq57de9VygwLNQbgHagBYCTRDY_r7ZeJtkzQ1n9_4nRpk5ah0g0CXXyT3P1IDtyGWzVyTFl-vtcqjDOJAqLJqBZ0-gKly",
+        "w": 9240,
+        "h": 6160,
+        "time": "2026-02-21 10:18:01",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipOqJ1tIfv8wf6iSzOpugl7Tn0K_CJG5RVfBXDm1",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPG_VJFhJkFP-8RAAo3LyyBpmFNvzdVGuLdiVFe5Ennyky6dbvIYHcqRLI38wgptyBA0-gzOc8Z7hsNw7f6fBxJil9wJ0CP_zkjdeKiRmNITZBs9Rx_",
+        "w": 9141,
+        "h": 6094,
+        "time": "2026-02-21 10:18:47",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipMJtAErgtPiNioWlRCF-5xh4wCq_IgjeEq1TLFg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPrrHL8X_D0P-jSY7zHKzshEW_JXlo1_emV4sK0vTjFuIFvdpGR8xbhY90-QJLBoEr-FL5Z4DFnmwTcWNGvTdXEmWlaWKsvMumoGUUsUU3nnYM4dxcD",
+        "w": 9054,
+        "h": 6036,
+        "time": "2026-02-21 10:18:56",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNMV1-W43R5qxj9DTZejLpmr0T6BmE3gOXWps9J",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPUyqkx-eIGbbiIdWEBp8lgUrwuibyu8RqrEjDlpEeOZq1kHaxLX0_nttTRM7FMcZDhi4CcLCLmssE7JMC_wU9PdVR7a1TpHbpdWW0R9TomdriH2kMh",
+        "w": 8871,
+        "h": 5914,
+        "time": "2026-02-21 10:18:57",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipOntJTWJsWXqLYrrHTqNMreMKGZHEdxN22wGS6P",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPXtK-_JGTNcJliHKBLamzdhvo5eShWXfc5Th7V-JbPuGkVTk2Cl9mmEjLmPRCw3OtLUZ9HLPC2I7jCaw0j6ls4OKXe0gUKArRwglcgihw_d9Q4eStO",
+        "w": 8895,
+        "h": 5930,
+        "time": "2026-02-21 10:18:58",
+        "shot_num": 7
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D07",
+    "album": "Shoot-Day-2",
+    "dish_index": 7,
+    "shot_count": 6,
+    "time_start": "2026-02-21 10:21:59",
+    "time_end": "2026-02-21 10:23:55",
+    "best_shot": {
+      "id": "AF1QipNrI3SMJSaNpIT_4t35Ar-XBHi1ATSMrr3jP_Jh",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT",
+      "w": 9291,
+      "h": 6194,
+      "time": "2026-02-21 10:22:43"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipNxRHzD82qrBQ-cU3IFdpssKIxGY_QsTuEm21Of",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOSeYahsAmgqXLeVmKaHN0tWWQ-MNyPrxt9lNkiZ9kSbM1nFYZhrH22OcswdKKYS47j4m_UZzrkI5xwoFfm_B1UEW8Qlznu-9ddnlMn0MxAeSK65kL6",
+        "w": 8997,
+        "h": 5998,
+        "time": "2026-02-21 10:21:59",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipNSSMfZlYIpq3bda6f77lPqHnl-Z6oMTcNRpjlf",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP3ErS7lkQ7UZRbU98m7ls8OQp4j1cgXWkWekZO07p65uCJqsw9z0Ug7S82DWxMyrt_gMDbYSkLjw8HSHgLix_DMl6KnOUR8bXDKd3VO3ePQTWSVIcq",
+        "w": 9129,
+        "h": 6086,
+        "time": "2026-02-21 10:22:06",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMr162voFYilw58N0t-0YBVkT3Aly5pQtgsLqCN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOmQIK1Rf75e0jFOQeYs-6Ei91FP9JTwg20rOMFED99m3RuGxbgvgHKVTBudH6Kz3J1QLiVCTOy7r1mrpV34kfWJjEufYDsEVeAbNuKYgHJl7nSf62v",
+        "w": 9081,
+        "h": 6054,
+        "time": "2026-02-21 10:22:17",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipNrI3SMJSaNpIT_4t35Ar-XBHi1ATSMrr3jP_Jh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT",
+        "w": 9291,
+        "h": 6194,
+        "time": "2026-02-21 10:22:43",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOwQy8IuP5a5UhwR5jby8V3ZbDa4OikPu-5_bef",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPzd6TmlKZ4CBnxjuhuU65kcPEv0zbQRMWDzIKeTMDQkc8wBjZWz2rVG-9sXrSIWFAQAc_8NwvbmPLKNkjHABzF6toAqgi4tMM8r_-_pO5kYdBuLYcu",
+        "w": 8784,
+        "h": 5856,
+        "time": "2026-02-21 10:23:04",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipP8MQbiYwKIyijK_FnZ3KqV30AR_tpPq-OHxB4a",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMHJo9mrQDEaeFNMhdJ4Y8aeoysDwaRXRY-E1t5i1J_LgIn9_792wrWdTLczzIw_jE2CdBbrHnD6zuBtJ6RNt3tWuUAHk17eqsxt__AfE_rgL2dE5Ns",
+        "w": 9327,
+        "h": 6218,
+        "time": "2026-02-21 10:23:55",
+        "shot_num": 6
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D08",
+    "album": "Shoot-Day-2",
+    "dish_index": 8,
+    "shot_count": 14,
+    "time_start": "2026-02-21 10:25:15",
+    "time_end": "2026-02-21 10:29:07",
+    "best_shot": {
+      "id": "AF1QipMA0PmtV-Y-7mB4N9PZ4osGn0e9sh7Pu53DvuVv",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczN-WqtrqY6Z6eMoXl9mxX1n1y7dbMdffrI697nvX-ucQ6Yih_L5tr0NwLtMi8bldhw6m1_ZZ4DvCDdXo5aV--GlS-PeHfT3caogvfE-SJLLb2fQvVft",
+      "w": 9129,
+      "h": 6086,
+      "time": "2026-02-21 10:27:14"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipP2HnFQsGUOqvIQ3IfGVGFoBZIttZ-AQU6SCJri",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOZqVYqYcWENLeNb0dBkmJWEMaBCz2hOEnfqoUVoAeYPBl23rEE8fPXZGxiK9T8NTTgCcbNHxb1g0yW6joCGuT-lsY8mq1ZJXuOOEpCf9EiMW2zh8Cm",
+        "w": 9012,
+        "h": 6008,
+        "time": "2026-02-21 10:25:15",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMxHiGno436DYrLYBVLTmZBqpQy814ihivpxeVp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOZss0SDHyOm-1NYF4vYMEn2xBq0JTnqrWyO6zPrx72xCvTDWXdE5RawctM0-d5Cw-EYB5uYwqMnG98euc82MeLEHXlpaCjk-41EVcqBezhJVUm3aI2",
+        "w": 8961,
+        "h": 5974,
+        "time": "2026-02-21 10:25:26",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipP7ubNtT5UAJcyWhhupDw6Mh0wCahbhq4C1ldf7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOKyhAoTHBqst8pVJgRNZ4O5w3-d7acy_uDJhEtnBBNkFTfGNT0jqnBwR9QvpNSpA7ZX1giGRJiOEcZtoJ_t63D_4tf6uvF6RdU4b8iTIxwe-Ux-64Q",
+        "w": 9147,
+        "h": 6098,
+        "time": "2026-02-21 10:25:38",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipOzdR2wBNiVPTljDIs0ISPtvzyzv-YJVA8upUHX",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN8lecp5PdAPOvOFnV8TKFhje7VFyKB87w8Qn2FCcr4kRUthItCBXOFQXOgpPcJDfC0glhH7KD7nBZiQCwy5gMXIi_vGHDHn3XyvcCeh-yI6HqvNuN4",
+        "w": 9207,
+        "h": 6138,
+        "time": "2026-02-21 10:25:44",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipNT8ebn4C2cui-tVyZr8bPqtIJ5LQiIKE0n9jSy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMFRpVbrrWYgswjJivEHq26rNrW5cGqpqh1bDJRYT6fCCqRMJBeMVQFI1SyHIiss223hv0p4AW4Ue3x4Xel4jTkAl8Ta98XOsgVn69fP7GXQBy_z2FX",
+        "w": 9093,
+        "h": 6062,
+        "time": "2026-02-21 10:25:46",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNVgYvH7AZRHuRt2NzY48B5janG2nQ1ZsKycB0z",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPXkI_2IBPWw1DnJGoqyq6WNEA7AMjxjBsaSGhTYTl1h2Gi-Yx6qOEYhuW7mjhFfIQURjHTAfddwdFOoT-RFjSc9QpYUMVvxHwFmTOSOusPNebO6kEz",
+        "w": 9255,
+        "h": 6170,
+        "time": "2026-02-21 10:25:56",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipOKHGm9vrHW8Izzbwhs7dORqOFIljtH9BAlGcxK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOEOUJW7GmFDA8I_M-MjqLFCP6Qu4Slhg56ghclAF7uJX2jfTedoGmOdzs6cHuvIqMwU6D8PM2kOl8IkaPd1Ah0GCIVIwheGVWACbRn3Cpi1UAXuHUT",
+        "w": 9174,
+        "h": 6116,
+        "time": "2026-02-21 10:26:58",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipMA0PmtV-Y-7mB4N9PZ4osGn0e9sh7Pu53DvuVv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN-WqtrqY6Z6eMoXl9mxX1n1y7dbMdffrI697nvX-ucQ6Yih_L5tr0NwLtMi8bldhw6m1_ZZ4DvCDdXo5aV--GlS-PeHfT3caogvfE-SJLLb2fQvVft",
+        "w": 9129,
+        "h": 6086,
+        "time": "2026-02-21 10:27:14",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipMGjhouGITJmGYq-RLvk0ryiV5YAovWFNusSEmc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO51cz7R3FpyNjzeLJZCD4qM81By2jYCCrEtVCwVjDola6NkmLwW_s6y0lAFf1FasTvVULtIY4sLrPAhXmeM5fPXnUQj5BiXYcdnV4oIZUP3OhG2MD0",
+        "w": 9036,
+        "h": 6024,
+        "time": "2026-02-21 10:27:19",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipNZQMGfNz4qsBFMQH61kDQTEo-1iEfdJZFJz2R0",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMIkHLVVBkehkgPpQaArLkBxzqUbdACp22oT7Iu_BLNUeMgPNsDpvYQsHudg9bdYaVK9PhVk2Hc78mZj_p19_VtKxQozMU84cs1FR-RrNI-ou7Qb8rT",
+        "w": 8979,
+        "h": 5986,
+        "time": "2026-02-21 10:27:38",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipOD-aN4GbplKK9eJYz9I5qX6OBXLAl-a0_0pdX8",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMPiGTZnxqzav271a_5-lO4lReqjbqVefNW_LtVI907o2pH0XUBdLpzPqYZPf3aCKmeKVipFiZmvOtDfR4DGOxEcD63SyY7AmnXq44EIN9Sp6LGyl34",
+        "w": 5954,
+        "h": 8931,
+        "time": "2026-02-21 10:28:10",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipNbqYvVyjMh7ajGmG_rWz58fV-kkbXC6DKxeZSL",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO2qWDvxLj3cZH8GA7Xfs6GSyE11wBC-H2lAo328V0aNwYKijy-sc6zb2nSbVqL3JIL01S4XUHNOhmYPHR8SvmoOyRW4oJFq0lTvHJEz3Cu4HOyLn_w",
+        "w": 6050,
+        "h": 9075,
+        "time": "2026-02-21 10:28:14",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOazSV3EuZgURFVwpnxuKnieR9VCHMJdlLjuyIv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMLmSPrJMxoAoekn8K7hd4OhNsOvLEaGG-401UZeHHv5b7PvKbBlTuXTW_FfFO7E9jownvMZjQhdfLUcxUiivzHr52qXCUegZVcH0WQNgyyJS_kr72u",
+        "w": 9072,
+        "h": 6048,
+        "time": "2026-02-21 10:28:45",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipODaPOYAwjl2L93G74W6ksg37gJavysSgh-bsXV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO_WqQTl3-RsdPtb3L5wfV-C2tDiJ2hHj-MA_rtlChvBZ2LLMYXiR7fDYgrJHVZAe064Dk1febFZRUEP--kl8zfIUygooSQ70biYmC9snYEaCMWUUvA",
+        "w": 8904,
+        "h": 5936,
+        "time": "2026-02-21 10:29:07",
+        "shot_num": 14
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D09",
+    "album": "Shoot-Day-2",
+    "dish_index": 9,
+    "shot_count": 18,
+    "time_start": "2026-02-21 10:31:02",
+    "time_end": "2026-02-21 10:33:55",
+    "best_shot": {
+      "id": "AF1QipN7uAwgb21A2ginB5vkClI5GOmY7D_Qn-h9-vkd",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczMPruSzV7a6jPv-YLSuKkfErnKg3BzBKlYGudlz8eaIOJguiIgAuGADVUPVaHM5tsv5iP9hWWW0JYuLPMcbumGRF2cc-8RBizsFhBklqjXdGdMYL9WH",
+      "w": 9123,
+      "h": 6082,
+      "time": "2026-02-21 10:33:11"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOI9-YhpRsPHPikVHxPoRPf5GrS3DEZBUkecuOq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNbAWgz-jmCMUh9L0aish82EiCwCZLzRBl_aII92Zj7QimlXW3v_HNIMiJA1lJVUoPox9HFJy83V7QbjS4zPsv2CqeiY7WGDBRvX4WvEmXT-VrmemrX",
+        "w": 9123,
+        "h": 6082,
+        "time": "2026-02-21 10:31:02",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipNAfq6YoGUn9n7as-hB-JAqWDL31qGDkqRG5Ply",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMXXS7mfI2vma7JaZfKDa95w8lwaAEmlb2WaJfedHXcVqA_ZUCCadQgriinA47H3rIAd3gTEXTmE3BTKy8AaJP582GrfBAwJJjrKnjzkEc_HdbVjZh4",
+        "w": 9246,
+        "h": 6164,
+        "time": "2026-02-21 10:31:09",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPnO0lWnKK6dw3Xcvu5V6n2Uau1FD9dG6owrjkp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMR-zxdIZ3v1fscRjSy28kSO1ZyJ8URKNaMAFtsyYV68K1uJ6u5m4YKjz7PkYsrIPsSs-JCAItCvEK4-_dvbNdjAaHDb5qGPnh2liHoBw0G_5nQLaTF",
+        "w": 8847,
+        "h": 5898,
+        "time": "2026-02-21 10:31:36",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMLHJdtroGCDe-3JFpw5ssZtzId_MNN0tuw0Acc",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNw9k9bwWiKM8rCw0PxDYfUAYrgVjtSTMrVXAcAIiusXCmRLBo540kWI3_vvW8TPuoU5l-uai25pHdkui-SBoAgPHM5rp-DdI64wmhWB_M0xxuiYxUR",
+        "w": 8895,
+        "h": 5930,
+        "time": "2026-02-21 10:31:38",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipMOVxwKQBunpOldb3Z1HngFH_aDszqCAYsMxRAk",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOZtk5rgOS02eXsVphhOKaZJUSkovkCd9o3VUEa_-KUMVbwVArslvBKjGrRQ740I96dd5LAzjtH0eC5Bgz7CqDo8n0YJvagb92v6DtCzumvGXDG-tfS",
+        "w": 8895,
+        "h": 5930,
+        "time": "2026-02-21 10:31:39",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipPIzlbwbvOTN8vat-jj6gg0va8wVtRkedQ-I-9t",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNsRpmV73ohkVfBypysZwzZuA_EqAh16KSG5hUgI0VlZYMqTPSzq_4SNgpM3pvr0KCXMxj2iTBS0TClksdJtpnA1Sd3Bk_tAwsUUgL1knJXBvoRWgsw",
+        "w": 8964,
+        "h": 5976,
+        "time": "2026-02-21 10:32:25",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipPIJ2dUuIzSD8t8Tjqlh62a8t5zvX9rcanR9rv1",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMsW-PAaBCar2sslN1P2FLWOPH6JqmAJneFOfWyf8uW_PQEMtU86mkO2poyQGAUiXpX1c5McWe34Q2PxGtlXXhkUJTvZRn5T0PovzJ2vmD6Hf4t8mWF",
+        "w": 9150,
+        "h": 6100,
+        "time": "2026-02-21 10:33:02",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipNy4ibsyI-OF99wTrP4BjvniVF146iVcBVUL9tk",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOszAO-dMEXcaJA4-uCm_76XX2C9C-2pL_XQJKrIg9mdJV1dIyfxhfFyJeFcJrDL_WaRGHhhVSyb9jHunqT36SHluzFjGoIRBW7-ZiQWlLfea5PcBKX",
+        "w": 9051,
+        "h": 6034,
+        "time": "2026-02-21 10:33:03",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipOuWLYH2U8qKy6VtXq55HVtRwt2Rbr-nLm2sAvA",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNk6JW34aP_aL_41xF5fLsLKdRicNUxKJqEB7-ilD-GaX3aR9_g2sDRxM95mitdCe333_e5TN-6iGaOA0Y4LHzPVTHOYENUAGxs-mZWJ_Y7nGjKdgRe",
+        "w": 9075,
+        "h": 6050,
+        "time": "2026-02-21 10:33:11",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipN7uAwgb21A2ginB5vkClI5GOmY7D_Qn-h9-vkd",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMPruSzV7a6jPv-YLSuKkfErnKg3BzBKlYGudlz8eaIOJguiIgAuGADVUPVaHM5tsv5iP9hWWW0JYuLPMcbumGRF2cc-8RBizsFhBklqjXdGdMYL9WH",
+        "w": 9123,
+        "h": 6082,
+        "time": "2026-02-21 10:33:11",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipOBF8veLPV8Yu4K86Vsu7ausRI9fyLcr7RrL8dI",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMdmVQtiwNvnaBuVUccfW-gBckUb_PyG2PigVb2zZQRdcT-Xh0WAR0t0d95L8mZDRmtLYQrS9ehE4cZeXUpkL3l3iZIcYu_l-Xjgex98lgOOeJ7xIX0",
+        "w": 8835,
+        "h": 5890,
+        "time": "2026-02-21 10:33:16",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipO5kddIdE3RK_j5Mie6FQepbIIfbEMvrLnzjDRb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN2JhkjyYWw8ZqZZdwkL_DxDsRpwDRY0ugdnKAfvNHqK0TLUlmnHRtYUuX9MYFXA5IfAbKxSJik12Lyz0lB8EWfMVYEjwLiK30-rG1xryIwiGFzFWwn",
+        "w": 8598,
+        "h": 5732,
+        "time": "2026-02-21 10:33:23",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOBjpUBcA3eCeVTzlkKRiHxkjpbSqClvVae7PdV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPxoiyhklYHCkFya-qiGDCcPJIxDCJqcR1IREasU2wuevgxbPUjhV6U5IcIGValEiQ9xsPIes0DodutL7CQrM82hJ8-9_8DsvQqxRXaf-o2Frv9Onay",
+        "w": 8670,
+        "h": 5780,
+        "time": "2026-02-21 10:33:24",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipMIF7pwhvSaDqty8qi6GbHrbs31huaQUy6MrI_p",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMCExGXg-eayt5pvmrQq7yXJQxQPyEqrqv-4QrUXaqIrNUa2JnwY7JKhPG5iVBC1Kl1b5uTY7AA7zOdeCzW1cuMSSXsE2qv1JevdKUwb8fMf5SWjSkT",
+        "w": 8574,
+        "h": 5716,
+        "time": "2026-02-21 10:33:25",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipPMEX6bXV1LwQ_NyVOxB9geNSRszqCk76y0ueRv",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO0rZ0QW98DWJwV-J-UXFbzLtz8TI20Zxxkx639vs6fpiaUoDipH2PFjG9DyvG_anGwDFXrxPqsaYYy19x2gqBVw3sUhYI-0SSNOeQzFeeA6vsac-bL",
+        "w": 8865,
+        "h": 5910,
+        "time": "2026-02-21 10:33:26",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipPVAJxMmlOP8jQwwymsQ4nPxe_PwjIEe_RZ9HbX",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNEIu3D451B3MAPIC4Ljpucz2TrWgXfEfotd_HeehIhbOKo5ISmUcJ_nVmBbu5dpATMbNjnejm9vFysrb5MoSv6fC_-eXisQIstk3Ztpu6IgtdWN92Q",
+        "w": 8934,
+        "h": 5956,
+        "time": "2026-02-21 10:33:52",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipMZmpQu3NCdHDMBzsyckDJ6L8qaWNvHzBYWGq1z",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNbw-7jg0S5pWgqVCN1h_dLu8N8BcyHtyLjW30EYJMU7KBIj2572yUvvC505A6n7zPi4qRDhNo1sTLqKivrJJE91D8B3HDmG96xHeD1QxsnEM3wskQs",
+        "w": 8790,
+        "h": 5860,
+        "time": "2026-02-21 10:33:53",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipOusqpesHPW5pvyupf-D5JbYNn9pC-58m_heVWs",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOFxILY6Kq0fztAVc8DIlnB0wfuU_TCdMCYqlwqrmmb64E_GpOXkpJ7Iemmcq1-8RHxTG5JlyJP0Mzl_QebhE8YcKhoLxU2Q4uwOn4raRzDowp2NS3d",
+        "w": 8544,
+        "h": 5696,
+        "time": "2026-02-21 10:33:55",
+        "shot_num": 18
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D10",
+    "album": "Shoot-Day-2",
+    "dish_index": 10,
+    "shot_count": 4,
+    "time_start": "2026-02-21 10:36:37",
+    "time_end": "2026-02-21 10:37:07",
+    "best_shot": {
+      "id": "AF1QipOSRx_6NIBxtOY-RYAiR8NBr8ssW5IylUowyItL",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczN38pPsWrjMMWbiitpYcm05pyjPjsDpUT-gHawM4erIYoxOBIteOZYlVhDGCKXOcHvXtU2_U1Vh6c6cpbLKpIjXUipvAvDzNCWE_-yrWAFxeOb5Y8DI",
+      "w": 9099,
+      "h": 6066,
+      "time": "2026-02-21 10:36:46"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPjuxecq3hjqy2Y2eE73vwU1mygG-aUrWqsaSUP",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPcoMeWkhmGmECQKlLsHJL8gArC0k7bh9JjmVpiTCAVH_lMjQHYN6XkqftgjYuI1o0VdteTT9Y_KhMht9MP7E_jocC5-TVxZzzUXfP0I0uKzC18aSA6",
+        "w": 9258,
+        "h": 6172,
+        "time": "2026-02-21 10:36:37",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMW0VtJwMynjKEBXSSK43NZSpTRDsSmKCZDyd-d",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN1zAw-dmGaj_7dQ07jYKa5yrvA9o_DQYxvxw6vSJAKWqs51EZ5Iar8yys8q7uoOv9JkNAoZQkiV5w3QVw9zPk00EevVZfSW44TFi0jvl_WtTHnfc2y",
+        "w": 9075,
+        "h": 6050,
+        "time": "2026-02-21 10:36:40",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOSRx_6NIBxtOY-RYAiR8NBr8ssW5IylUowyItL",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN38pPsWrjMMWbiitpYcm05pyjPjsDpUT-gHawM4erIYoxOBIteOZYlVhDGCKXOcHvXtU2_U1Vh6c6cpbLKpIjXUipvAvDzNCWE_-yrWAFxeOb5Y8DI",
+        "w": 9099,
+        "h": 6066,
+        "time": "2026-02-21 10:36:46",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipP25R0srE7Mqp4mbkss7fHSGj11UOPUc3CVX7Fb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPS4HSxvQ5sA9LLrINZKsK40Vgy1xG8mHAlHa2hjUpCCNfIaIOYr8MLXJTPprFyph3otaw7RYIuqHnbalduDIpSp5VJdKbajdfdXGLcuqwmx1oRmP2G",
+        "w": 8961,
+        "h": 5974,
+        "time": "2026-02-21 10:37:07",
+        "shot_num": 4
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D11",
+    "album": "Shoot-Day-2",
+    "dish_index": 11,
+    "shot_count": 24,
+    "time_start": "2026-02-21 10:43:07",
+    "time_end": "2026-02-21 10:47:12",
+    "best_shot": {
+      "id": "AF1QipOcuW7_88Py4H1-BbXtKYyNOZtoU645zoK417ia",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY",
+      "w": 9180,
+      "h": 6120,
+      "time": "2026-02-21 10:45:29"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOS60zyZMxtf6UKn4wz57_1GQqk2LvsHPiUzDPd",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNchLhiR_beOEWrLgg_blwuMOlM61Zk7oNwzzP44-U6u2Rka3cPN8pq_YCXKqzt5QpyzqHvvX_Mbnz3wWweJt6fkevbZ67OBpMfrXvCQcD_g1oMO2HM",
+        "w": 9123,
+        "h": 6082,
+        "time": "2026-02-21 10:43:07",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipPmq2Tgeb8sldovwVyW29MAszNyf69zXtHq-NXJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOH_5Y8rPQCb9t6cIB9nEH1uHntOsNRCBG7FScSpYxGRuCrX6-rolm-BjPsUoXWsqCDy1BpVteShSa3iL6jhQwOf8aZTQ_--48j6wGhRzeTvIZfOa1F",
+        "w": 9279,
+        "h": 6186,
+        "time": "2026-02-21 10:43:34",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNCgFA7IPTR73-_-ebN1K6ugDTJwObTohH-AZqx",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOfuqb1wOrBnutmzQ0WrqWU84ZwafndiisrwMsZcLDdgB0swAOy898O7BbsKSkOJgZ-oeRpgP65V6-ELi26yTARbATvzEWhq3LfzjbHVcn21P14wU8c",
+        "w": 9159,
+        "h": 6106,
+        "time": "2026-02-21 10:43:37",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipM_xkjtDiGEYV-gVDx5Sxs6Bxd5F8ZQAvDdJ2qy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMjx13H4tnWu1et7zDdRAwnKNLB91_vCawLj46lNI0liCgW-6PSW9wPCmXcTIVv12Hx17iyuc4tmiohyP_KaGTvF7MdcKg4KAeeKrOnP7-2pDMFjzqW",
+        "w": 9039,
+        "h": 6026,
+        "time": "2026-02-21 10:43:39",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipMM2n0KFuGxnPhzC4MToxAijV0ReK7sXKn21ae-",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMdm0cV93iIAmMnzKjJ6MnlBNWAT6MZTgVhKCox1INdoSSaZi_-ncXKwY9bTXE5-NEWDK2dRXHOwMmLoDDahZnPTKlH_BsiiYWoW88urBsLZ9CClZDO",
+        "w": 9057,
+        "h": 6038,
+        "time": "2026-02-21 10:43:40",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipMKKEI9QEoq04MSF86G46buN0jujnN902I8RHuh",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOhZnYDtYf0BP4lcgnc7KoqwtzTmddQNgUiQg_ElNSGTROvwSieezrEYAdSQ4ji8QZ8B1F8j3Zm9a9kwKB2cgU6Dkkk3FS3CjHcOB-cQ7m6n3rg-Pq_",
+        "w": 9021,
+        "h": 6014,
+        "time": "2026-02-21 10:43:41",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipMKbWcLGDR5lFC8Np2QIoaSVfdPHhhMWExoYDee",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOioofKd8uNZa0WLqqVjXihQtbbu8VsXK-hZ9wojLAhpKAG7fzgYG69e49jRb-AoMVtmXppeCBWZSJ0NdutWV0aAkSwdc5ra3mKLDVoVHPw4_MMxFmL",
+        "w": 9222,
+        "h": 6148,
+        "time": "2026-02-21 10:43:55",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipMP5To-QbV4Dbn4jnFwLE4xsPcXJUkT0OtGCEZ0",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNTHJyOWIq-ZmvclnCNwOV5Tq7na6n-Ah5g8yVxBMgXOi6G5M17tTl7phGwR7rFewQ0uBaEWrDpB1EKO502-hgRtY9EruPisPlP46f9Kg6ce4AI3p0D",
+        "w": 9246,
+        "h": 6164,
+        "time": "2026-02-21 10:43:57",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipNggJN2_thJsALcshtU77TmvBScgA3NM8hD8u1O",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMpCTXK8F8bdqwvHaiCJ3QIXeK85bfxgfHVCJPC60-ajNofmlKFZXQI-zBt1pZiWynN_7OXoEETjT8K-C0H_CPY7i8KSEnZsSVmoVD8ymR3UR4UAZQB",
+        "w": 9048,
+        "h": 6032,
+        "time": "2026-02-21 10:43:59",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipMJbJC-5IjXfu7MPsqJcVC1nYUDeldB5mx3mGUj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPW5jsfnWakMi-U35Y06aD49IsOQU2C_b7zJKdUIDK74qEhKfMbpGApIxeIF7125TnOpeR4M_UK1bErHZrx73EIvHMuMELk-ojJVWN5WIEfRGdpACHj",
+        "w": 9105,
+        "h": 6070,
+        "time": "2026-02-21 10:44:11",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipPQlAjTW5_o4_f1eXaR-WUES1OTcv5AQYLg6dEI",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPpMijyS5VAOvEKBAkZ1yuVzU7p8H3otXmj7h8NQ2GTN5hB7f53kEX9FC_XMpf-dLtsSgOvSMbh6hj0xDF72p9Hwxlmq9yn4TvAm1wlYNubMuylj_dr",
+        "w": 9111,
+        "h": 6074,
+        "time": "2026-02-21 10:44:31",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipMR7s1OIgU1CfaAbCdFWdPHhANd6sbI4MB6LXYs",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP5VOUm3_sXoroPBiRV-NpUsVaro5rCffNI9LdspeA9YeSxyvMj0kgPi21XCKXzHDTW_tk8adHMJNtNMYl-nl7RWtbc2QV1rj9DA-EagKFRL2JiTDQf",
+        "w": 9156,
+        "h": 6104,
+        "time": "2026-02-21 10:45:23",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOcuW7_88Py4H1-BbXtKYyNOZtoU645zoK417ia",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY",
+        "w": 9180,
+        "h": 6120,
+        "time": "2026-02-21 10:45:29",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipMo3KAO03mJ4tZf6_rttJDqPBQsFaykIIfTXaJT",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNedqSPFNirLpSkVJxZvd_Aa4iJU9riGemRx0fRG0Qj5kdntqxjtoTCvlxlT4OkqWmtoLF-VeLp8W7eWn5cUS4_GjQOqKRBfnC9_HafyGmGfz67S59e",
+        "w": 9165,
+        "h": 6110,
+        "time": "2026-02-21 10:45:39",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipMsmiGRoFccBh4szGQwDVSAYvigHGdXUjdwhq7E",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMx6QlexHOCaYcMyBANAkYyMAKOnpu3BUuqdYuyqWfa9mK3ucZcEzJoRQbxHP2NftK7yQ68OozpYjr2uLaV1CZWj6ZLUIW3Wf-y6E9MmLH7nnB1eh92",
+        "w": 9261,
+        "h": 6174,
+        "time": "2026-02-21 10:45:41",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipN8ISHFVn-JzTcESlDGZSOtInWVcgh9LgSQd2tF",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOV0B-cHWAIv26aluD_p9WIQgNHopZ64Tn2xeBRaa48yXCKcClFvM8Ld4YORMEaBBUyCRMea1KcEGEoClhQG44K95SWXRt1fzSIne8H2dt6I-qOiaAV",
+        "w": 8961,
+        "h": 5974,
+        "time": "2026-02-21 10:45:55",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipN9UD8jbDKW5ANhulRvFOo5wdivHoSVEmjnKlzw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN3eK0XUIryoG-yGdVB8mxbVni-qfUyJ5PXp0lPKjgCDNbzDaurNcSdacLv9hpuNpUdu57gF9YkKm7MSaEcDZImsS3xCDWQir5U_cApIQoyGMIuCJJK",
+        "w": 8997,
+        "h": 5998,
+        "time": "2026-02-21 10:46:23",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipPLVI4bFAdyJUMVeB4Wa-aiYpNKkBgjBavDIRx5",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNRF_LGVZ_Ii_15YTF6zyL8ppKLUy5K_qlmTQdGxvPK5WJ28qT8fV8XjfZBgwYJj1Xf_WmrkZHsMx1x3-YSEcP7SsnKP3rjbW7lFHcs9mg8kF0lWznm",
+        "w": 9225,
+        "h": 6150,
+        "time": "2026-02-21 10:46:52",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipM7Ox33_hK9f4tw5JamofbxtD6ySu12eunrPu2F",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOyGFBBANaNMsw6ALQrC7yGAyJYVcCLyipIAGHzvaAwN5F_ZYA087OegJPSF7fmD6-gaFuiyI_7oHzb8woQaLs68IgCD7g5zl3Vm0n9ZdARERzM73Gn",
+        "w": 8742,
+        "h": 5828,
+        "time": "2026-02-21 10:47:06",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipPH8aE9Ul-KWntahCYUG8X1iNOnGVjNqMLy44sr",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOUGCu6Cfz-o4xHqtIA-BR3CEs2UyMvJuNsYvkUU-I-MdZuxENhbYV8Qud0bS2WhVayrWTBZzpe_eOS2-m7UT3TTfYUOg-Lf3aTu9BYADyxs_IuSjMZ",
+        "w": 8892,
+        "h": 5928,
+        "time": "2026-02-21 10:47:08",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipPR7-vRNcLM8VBw6gyXGFd7R3IUACmILRtw07II",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM7iHBu-4CZ6rvg_78XcOGqNWGs-IBOdkhxCmdglVtfoW4QXeq_PkQ9NYfPV5-N0-peoTTkCHB_QJNHC7qZufUB6Ccw2LLRpgPQ0HODhbC9Vd26EuOh",
+        "w": 8985,
+        "h": 5990,
+        "time": "2026-02-21 10:47:09",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipP_tGwCj9zIs9pVGHLtqAYyJC9_01d-0sOFV_Au",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNI2j_kas2k6eTIyPFx691iDpp9OAvozcKz2dP_2gzikCKJita36e53mc-_igQfYvsKNKSCD3OuocXIouwx0vuPNKSCjZr7E0RZZJHsihOhw5oyTiJr",
+        "w": 8679,
+        "h": 5786,
+        "time": "2026-02-21 10:47:10",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipOqtN8SpcuFQREoAHSuQkJbjZkTuaKNTCOmQO9N",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO8r-2koITWbeXjGVphqePa4Oje_2P2K3z3z8yuMFlLaevbd82EXJ77dfF3eX-mI91x8i6EjCJjZB9mx-snOF7SUK-ez9gn1R7UfL26Nww5urEaoPLp",
+        "w": 8583,
+        "h": 5722,
+        "time": "2026-02-21 10:47:11",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipM8WgplrR62Ai5Fb6ca7oMib5R-XK4Gt9GFoXHu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMDxBqSxnQ-gqv8L6jKuqzrR_Ko7UaFgRNxHCv6e8vWMPlDTkKfVvh3rjRLs3OUiPJ-c6HeHWvW2uBP8sxVkNJu0A4aLm2bs07Hj9SZrlrboK9vggzV",
+        "w": 8571,
+        "h": 5714,
+        "time": "2026-02-21 10:47:12",
+        "shot_num": 24
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D12",
+    "album": "Shoot-Day-2",
+    "dish_index": 12,
+    "shot_count": 33,
+    "time_start": "2026-02-21 11:00:23",
+    "time_end": "2026-02-21 11:06:28",
+    "best_shot": {
+      "id": "AF1QipNClit0B1ygjX_rdtCGa34oMIO__T9_6hE40Z3G",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz",
+      "w": 9012,
+      "h": 6008,
+      "time": "2026-02-21 11:02:24"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipPUwDP2fxjobpX3HJkT-F-yS7y1AWLS7pfKnVOy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPru9GMFMQBwJW7omTA-WbH9tTDhXy2RI3Dv88tvTALQlfCI9fvOSsldeeabrcKhQTqd0xJVuIClmEhuSS2Y-kIAfnblen6KXQHo5BPkzIQ6yV6efYT",
+        "w": 9249,
+        "h": 6166,
+        "time": "2026-02-21 11:00:23",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipP_gq_9Qa8KhojJgZgqjj_7jBKZqyTAo40b67V2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNbPMSpYHIPkCmYoIBj0Esuxatuxc0R3tuieuzm-KmC-dvGBS5AfjnqcFUMieNd5y-a3_63c9DhLOwEfymueAqPTN5ZYInpY0DocS4F8juI4KqXpkg-",
+        "w": 9237,
+        "h": 6158,
+        "time": "2026-02-21 11:00:25",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipMv6pt6bSmd5zYnVXv9lv63NT1Oi-hMmtqY4urn",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPpBx0bj6fjvAyAKAtGorAtkwi8NcfDh7URSdXQ9KLuub-DfxYmDz8jhV1pgLfntZHMpiqGLGqElW8YtOQYtPcCd3QiX5ZyV4g4-iV-MjBOIsPdtJhP",
+        "w": 8988,
+        "h": 5992,
+        "time": "2026-02-21 11:00:30",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipPR60qJ_5kC0BVRrHi6cuxs3wGMn5RaEjHmRzxE",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMyskD5we0eXj9GHKOpsCPhZEeZOHrwlffSSDae6bTXLhlP1gNciEEPpf9_OI-e3s0P2U4smsyGhSOgqnSvEkoGszhjWYhaNPKI2T2JqyaytOPRmpVP",
+        "w": 8907,
+        "h": 5938,
+        "time": "2026-02-21 11:00:32",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipPMB_epfn0PKn49j90ojlw7wMOkwymSMf_c9oYg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPnyki9_XzpValRseumUt_b25x8lRojv4nwf3dDnTsHwsg5nmpv_dByAB5Z3QIsfSRitMmjRCJadayhuYJvSn_pSMZdzutMApYtK8s135pri-xzQM53",
+        "w": 9264,
+        "h": 6176,
+        "time": "2026-02-21 11:00:57",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipNxWoPPrC3zNwmcVuaq8kioHglQQNcy1fr9Mt4c",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczODNfPc5pNYUImUHS1TpY-vBVzDpVXJQ2bJB13rDx1bBQ74QIp0bT3eTMZKXwtFvb0pjatG08lhay6oaLgN318LAj3MW_W6NRlN58mnNptkyxwuviHE",
+        "w": 9225,
+        "h": 6150,
+        "time": "2026-02-21 11:01:04",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipM-B-RV6gOu7bvUDNhyGPbW4Lp_yC_jO52fU-j_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNb2VZOZ1Rq5WAzJoUX0LqaN6VhdPNHX-GXqrP--okaZz_Q8pj3TKynGnbbHTG3Y947Fo5FVAO01cp36SO_enCATRe8zQ79kkr__WHO_T47072IJ45U",
+        "w": 9066,
+        "h": 6044,
+        "time": "2026-02-21 11:01:06",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipNwtRjlJTwB7Oettejx0jCG8hBam5tmkBlDwSyR",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMMQkbow_ASL0dmw_p6_D9eEtLUx_HEZ3CsosemSf066oGwhevFRX4fMs0_SOMBWqd1m4LHDRWV2n3Z6xCHUMNQdreRIzhwXF1QZE8_wIb_u5gF-2P4",
+        "w": 9102,
+        "h": 6068,
+        "time": "2026-02-21 11:01:08",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipPNCrzBsfbxHbY_qh66DlxK4fWYN8MReQ0l8ldw",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPOfZDoGWBIXkz0GpUFzvEUWVfWUIebUGxEf2Jld4oztlrLyxn5ZPX7rdn2WmGQBsTdt5LTrxRikb8P-8SgCbu0dZATDHOaKLBHECKINm8H95xi8Juk",
+        "w": 9222,
+        "h": 6148,
+        "time": "2026-02-21 11:01:21",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipPFLbMiFChBqovRUEL_XokS_2y7NQ9a2_hxdyFJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNT2w5mocRxA6Q5DFByu6ph630MvKvjjhXcT7hgRpjxInm55m0ZJn7mYe1GESfae4dPwAOpARf-WPnU6EO5Gt9giHjGYxXTqAPZpPHI49N5ZaoHtGuG",
+        "w": 9261,
+        "h": 6174,
+        "time": "2026-02-21 11:01:22",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipP308LPaJkw3wnWfTQP0ERgXGbUrQXBuG552BkC",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOdbPpicdTcv0roAr3RFNWwAbBEueet05OSlhCvzrU3BIpX99IBK4Wt4urK8w2Ajb6WXGvVr1C1sLaVPhUVnmfsHXz6yurFPofGXOOHTheRxhfFRr5i",
+        "w": 9132,
+        "h": 6088,
+        "time": "2026-02-21 11:01:36",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipOy_VqxbwCACxxXlb2YsArDusnH6lvAc529XaAV",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP-LGqi92QiQ5DM2d5_nCF2ey2u_AHhkplKcsKZGMY3QpJJVuKwPNXsve9jH2YDfXPM1QV0PKIHmo0Sx4IdCIhWbLDyCA5dy8ddaaFm-KMifVFMLCaS",
+        "w": 9141,
+        "h": 6094,
+        "time": "2026-02-21 11:01:38",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipOf0xrBMJzZXnDr-WAdBCdIP2tcSiEN9DStwBFt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOqHeexSZWQMAHNS6gKI7eizJf9rnge_bNAhJHA2Dt5DcysIzRTdsCw8YYWGXUMCQjMt-yN9uiz8JBnl03OPmywSQpv5N4yZSUkV2S70x4tG7zFGd_P",
+        "w": 8763,
+        "h": 5842,
+        "time": "2026-02-21 11:01:49",
+        "shot_num": 13
+      },
+      {
+        "id": "AF1QipOYCo7q6E5iLOPhPkwLbG1ScNIMKCW2OJN7c8Xb",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPhFTN3fNcMekklnGkEdR_5NcR7ikWQ--24wH1qTv7N-gw6d8NdqafVa60UNNRGp2dMDYfxRz-yWD8PQeJw9KhmItzrJ34pJ0hNfvjjdZHam4emyjbu",
+        "w": 9252,
+        "h": 6168,
+        "time": "2026-02-21 11:02:00",
+        "shot_num": 14
+      },
+      {
+        "id": "AF1QipMA0Ana90VHkPoe03QZrsPdOO4cMkmGJ_NDrYY3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNBIm6iy6stBH7T791RiW4iShY2CwUxUtjdqUQiOSjAmERosloXQAbnYesIfouvb5NmmsrxcqrYDl7e3SmoaTLtm2ndDmEIDlO_9NLAdtWdw2F3nwPF",
+        "w": 9165,
+        "h": 6110,
+        "time": "2026-02-21 11:02:03",
+        "shot_num": 15
+      },
+      {
+        "id": "AF1QipMZ2gIa3UBATo50AkwqbkNkEDOjhj5b47wqfYRA",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNrleMy74y3zLMLBOD0eBtxqRrZ3W6Zgiq48moPH8rtSOrF_hTh2E2693_UUltafG7XJFCMnNEp2Gi6xcJCBXH95Y3NHyl99jm8ukOTo6aRqZVWpZpA",
+        "w": 8997,
+        "h": 5998,
+        "time": "2026-02-21 11:02:22",
+        "shot_num": 16
+      },
+      {
+        "id": "AF1QipNClit0B1ygjX_rdtCGa34oMIO__T9_6hE40Z3G",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz",
+        "w": 9012,
+        "h": 6008,
+        "time": "2026-02-21 11:02:24",
+        "shot_num": 17
+      },
+      {
+        "id": "AF1QipOoZurK-SxkUPseFbUKjXo_YNc7LeTFubXuqhmA",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOlE_FDAMOf60sWmnuBlR9NEnIKQJO1G7WNHuKgeKHWv1-ANhuxk9X1zTsYbQPeCdtTevxI1-6EYh288zG6QZqmKDIcUri02RDO8mioss3qhJXJXyYF",
+        "w": 8964,
+        "h": 5976,
+        "time": "2026-02-21 11:02:31",
+        "shot_num": 18
+      },
+      {
+        "id": "AF1QipMRjbk1xG8XcMeBUr_9NPY6k9B_MxRjKNWw-Vbp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOGZr_pt05pE7b3-7GBunmeRshWdEPETWfkD1UqH0N1EVIr9BLsEumdDT7N9kg2XKzhiayaJC8IKnjap_iI_aWukSgyBA5hlpcspC8-BxZKVqgA2wGt",
+        "w": 9183,
+        "h": 6122,
+        "time": "2026-02-21 11:02:38",
+        "shot_num": 19
+      },
+      {
+        "id": "AF1QipM4narbiAgqZWpUGOPYPUAqWoUlTmlMQE3mKOkM",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOeWMEMVprJSzm3pQ_eOACBOf1Y9ZD1maURVJZsx2CfGbs71zB-5Pt8GSacWi9cyIeiULOOuOK_XmiapoiTaavhnQBKJNUWT4Gt-QQEknHMQYoayb-8",
+        "w": 9015,
+        "h": 6010,
+        "time": "2026-02-21 11:02:44",
+        "shot_num": 20
+      },
+      {
+        "id": "AF1QipPs1guCBE7o4ncJ3Rp-2DI37Qnm2JoQUB31zWLn",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczME0AzXwo_XaRTgh7_1rLTpzKDTghPIRZkK1ogJ6H8t34SBn7joMYt3Sl-bydGuiPFv7zR19LVVchn3hlrYp95QkZeQ5VJg_mcIgZYRKKPpwsxTmYwn",
+        "w": 9204,
+        "h": 6136,
+        "time": "2026-02-21 11:03:59",
+        "shot_num": 21
+      },
+      {
+        "id": "AF1QipPRt2Ac1QlouVu5_UUvu9tA3IGSsXSnIcgJ0jF2",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPybOMVku360gRfTO009g4tgBSfiBvJtt1MRNzaXy3-s2MzQ8hxqrWRIUXaySmtOk8wyIg945OaioYN9JBz0Yg7nrbUvu6ROMiWxwW2QeW-RtBAboLf",
+        "w": 9105,
+        "h": 6070,
+        "time": "2026-02-21 11:04:05",
+        "shot_num": 22
+      },
+      {
+        "id": "AF1QipOECQnV3FKpA_k0jKmF4LoLpQW2MEgrkSNvSH8n",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczObeklc9090wZMNlO32awB-iJsokm6fbGH6X7Sf_zBlvH-pOkYLeDTs_1ICEDE3-IcL1xRewc3RR6-LZl4J6pLCnhuHJmYlurbgRqRmP-7uBRa3l5zQ",
+        "w": 9057,
+        "h": 6038,
+        "time": "2026-02-21 11:04:14",
+        "shot_num": 23
+      },
+      {
+        "id": "AF1QipMjyCKaSh3DDirWdvtU1E66zKwjWbCIsJdamnTK",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPrCqPcYo-al6rTr-XnhZrj4biYVRsAvc1qWg5k0HAqDPIpbPB7KqCtNy1UjTVSlixUeLCXv-y-FJ8stFetbxq1_RSDbDrugFagFnmxfB3nv493YJc6",
+        "w": 8757,
+        "h": 5838,
+        "time": "2026-02-21 11:04:27",
+        "shot_num": 24
+      },
+      {
+        "id": "AF1QipMNFLDiy-9pzcMDpgAEE3tD-ysSBbDJbXYUObxy",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNc0TCv9wC8Za5QmffUEDd8AJT83Edf_wlWWJKCApp557JvnLk0-gPfu-H42FEVNruv4v7B9zAKzjf0XNwLA72M3XuthftwcxXMtCpdtvn2AE3BaAZl",
+        "w": 8958,
+        "h": 5972,
+        "time": "2026-02-21 11:04:35",
+        "shot_num": 25
+      },
+      {
+        "id": "AF1QipNSTBKjBgBpOSitZNXWj3dklgpzUsYUyym2XfyJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMRC_D7LrD9vRZgjY6varqHAjdKDalCNbeiTWeAdrHyN9lhQLEl6QFjwAJr_UpZKvfARycYuAqhr7dpB6wXe6jXOR-2Sq6wOdNSevJqi-ODRkRnudTE",
+        "w": 9033,
+        "h": 6022,
+        "time": "2026-02-21 11:05:03",
+        "shot_num": 26
+      },
+      {
+        "id": "AF1QipMcXWGaPgE_HJ0vQODyAEFqRzmwu9gYwuRBHJcQ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMkwqlaqOjSD4wwuLy-4OlsBlWYs-jaBp_RWed8NMQoSWUUXJFS0RUjAVAIMKtzMBI0sJec0uG6A7mcOue6qbZCp0RYeVPwUjJboLcKf6ABMQieFy9z",
+        "w": 8946,
+        "h": 5964,
+        "time": "2026-02-21 11:05:33",
+        "shot_num": 27
+      },
+      {
+        "id": "AF1QipPOjsRrGLPS2TY6Zk55IAagBXUFmMBk0Qg5M7p6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNi0si_YZaEOLP8c3dcq_q6a2M1BD9to-bXXsX70vbUqvyOLuJ8sBvIH2ve0WQaIjMtovVhszW0v4pYqx78gCDJIlEAahUaajVIJIEU-xeY21As64I-",
+        "w": 9165,
+        "h": 6110,
+        "time": "2026-02-21 11:05:50",
+        "shot_num": 28
+      },
+      {
+        "id": "AF1QipPk7bNNmOx4X-p0reixxptXKRxdmFLaJ5hmy-Qu",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNOryXruMWWSfRKKnaJp7XKHH1f7CHVR1qiXvfH0V0R9NUWvGOLOedMEleyPiNw4HctBcd34z299QJtQqfXYyynegz_wlif_na6nGk7cQVfIcdcfr3L",
+        "w": 8838,
+        "h": 5892,
+        "time": "2026-02-21 11:05:59",
+        "shot_num": 29
+      },
+      {
+        "id": "AF1QipNoeSjrKdvNchuQNr3rFYwWZGihW-01a_CbqsiH",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPSK7KK3RTCWDa9Nut37AAQKYF1q5-U7CfkhrwJIqawDBVAYqzqVIQgV5LpGRQjCCxXOoK2wdFhW7C2j6_8ObQHujFhLE-GuHghg2x_XPkvbIjy0g_v",
+        "w": 9168,
+        "h": 6112,
+        "time": "2026-02-21 11:06:20",
+        "shot_num": 30
+      },
+      {
+        "id": "AF1QipPkM-eNuIgEdowQ3xaEyLFmaYHXzGUqV-cASRbp",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNqfUt3r4jMqzGBvoGQ6YVsGmlD4AxKFrEsHcX9fBj_J6KXo99tO5xU81LRDZ90E-EZbSKYYq2E1PS6yrbWvffhLZBMBVZKtU-4CYWEd9cf07m6VmWd",
+        "w": 9084,
+        "h": 6056,
+        "time": "2026-02-21 11:06:26",
+        "shot_num": 31
+      },
+      {
+        "id": "AF1QipMdp0Cql9p-nwdN13jrVzB-HZH3EjTTW5RL9NY8",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczO7NzERyfp_tn0sPhUB-xdzAbyDGH5OXyMV5qYAdzx59w49Ctr3fyP-mMX6K1tNJrqqwNK9xPzx4MUPHPZhMW8kjvXTZNQZUEwMxvs7qnQJyqob-sQp",
+        "w": 9054,
+        "h": 6036,
+        "time": "2026-02-21 11:06:27",
+        "shot_num": 32
+      },
+      {
+        "id": "AF1QipOcKdvBkZPY7KE76kZ0GencvVqINjeg_QK5lpcN",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNq3zKRJwtyC46V9yPshg8o9CK00gjn8o48EJVUP7rRD0ZevnWMZYSd8ZNAI-ijtxSjb2tmB9PUZImTtVzB0J4XBrqmWs9y5lm05lDz_MhvTmKcJ97B",
+        "w": 9141,
+        "h": 6094,
+        "time": "2026-02-21 11:06:28",
+        "shot_num": 33
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D13",
+    "album": "Shoot-Day-2",
+    "dish_index": 13,
+    "shot_count": 4,
+    "time_start": "2026-02-21 11:08:01",
+    "time_end": "2026-02-21 11:08:16",
+    "best_shot": {
+      "id": "AF1QipOGMz5nYlEogpzhETSEBAS8GpCvHX-3Yhz6qyZ6",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl",
+      "w": 8475,
+      "h": 5650,
+      "time": "2026-02-21 11:08:05"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipOwnX04O-MSsuj5FjIZi6uWBVtcdj70asifWv0N",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOfFXHGPnrWYVphCDh8lKQFzL-LSSUtsiH5_h-i-OdWcdVV7EcWk92XxXh_VFyI9UPKOF9CAyTteFkIOaDbOOUpk7NUT2wDCIaT180NHatK95cQ58wY",
+        "w": 8736,
+        "h": 5824,
+        "time": "2026-02-21 11:08:01",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipOK4LQfh-sM3niuL3WbMDmH_rZNr1DnuH8AGN5O",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNE7VYb781NmBfhTPkdh1zeYVjEQiVEztvXFc6zNnm6XeWaHhL02sE0Z8f_kRQrr2NHVA6OPAQThFd0OXdt7LyGpAEeOJvHxl_npuKDNcGcVPolMP2x",
+        "w": 8640,
+        "h": 5760,
+        "time": "2026-02-21 11:08:04",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipOGMz5nYlEogpzhETSEBAS8GpCvHX-3Yhz6qyZ6",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl",
+        "w": 8475,
+        "h": 5650,
+        "time": "2026-02-21 11:08:05",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipO89H-zhDRxJ4A1wU1UdwF5PlP-E-RSwRKm4-jW",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMJCfQt-1vbc_gfmK6NPjFeZXFi5cgfEwZq1dHKKPf-s-YgYkJ2urIaGErGZdN6gCh9TfGiq6zQ1azKKDu-OUA9fn5sdxO6udvOhJ0rzFHzyNofM1VY",
+        "w": 9228,
+        "h": 6152,
+        "time": "2026-02-21 11:08:16",
+        "shot_num": 4
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D14",
+    "album": "Shoot-Day-2",
+    "dish_index": 14,
+    "shot_count": 6,
+    "time_start": "2026-02-21 11:09:43",
+    "time_end": "2026-02-21 11:10:34",
+    "best_shot": {
+      "id": "AF1QipOrrd41FTQu5dRs6sZ_T8q3l2ke8BP0QVRjIutl",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_",
+      "w": 9111,
+      "h": 6074,
+      "time": "2026-02-21 11:10:15"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipNghiquLlf7ZQWc5311qrl9mkN8KrIbu_N_IXEg",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczN-UQ1Q9Qff781lGqUyTadWaPZ5Js_lWby5C3QkGjXCsgdhAqDZx92hHEB8pTR7YPb-iIcyYbcDqeMg-U1roURdkIZ0yW21-9JQjF6aGBLyHy_Iorls",
+        "w": 8775,
+        "h": 5850,
+        "time": "2026-02-21 11:09:43",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipMeSQgsYf5aDmIrSGWuMe3_1yfLcerb6xjad_wq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPB69wkgygLsT5tE26YGHAwwrF0sETZClMptLJGQhDiGA9Ce5k2eyDyIUg-HMjx7n_41jFwN0viq65PUxyY0WqqKYJoG1hgaEbr1qfQlWHIbWd2aCx9",
+        "w": 8955,
+        "h": 5970,
+        "time": "2026-02-21 11:10:07",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipNm8tg4JI3M26rWjZa1nnUpJ4n25HBTqN4bNPzt",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOXrdNkc0BCw6u5PjjlZ-muWKYLy-5w5jYJbAm3UWb6VPfJGpknzQ_-6ZQoYZZUO4K5ilRzDWjuwPTCPdUDUluCcL4EBtbydh45z_1oJ9CiSD_-fZgE",
+        "w": 8925,
+        "h": 5950,
+        "time": "2026-02-21 11:10:10",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipOrrd41FTQu5dRs6sZ_T8q3l2ke8BP0QVRjIutl",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_",
+        "w": 9111,
+        "h": 6074,
+        "time": "2026-02-21 11:10:15",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOWPefs0ThgzmhCr3DFp0b-sdETXiEciakH8Lx_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM_Q4VkRrXgOlg2Ngt74GhBHhVYj-1SZhOfWbgszpoOoHIAiOiA7xA5Spa0bczqUrmDqh1E_qR_hnbjhkR-AXJJ8redz-V9j7Jju69ENV25hgmnpphP",
+        "w": 9114,
+        "h": 6076,
+        "time": "2026-02-21 11:10:23",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipM-488IRb1rVkGJcuVAju6Y3EHq4dwdcPG43hSJ",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPMVFGxdOcBmFuYdw1XPtbgzWwRGrcZhJWytk8_MMZ94bOpyoph-AZUSqG4Vpv9NEeV9a76-21UJkGtH-3iJtS5RV4vRJfvv80FA9Q5lUt2mozjn2k_",
+        "w": 8745,
+        "h": 5830,
+        "time": "2026-02-21 11:10:34",
+        "shot_num": 6
+      }
+    ]
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D15",
+    "album": "Shoot-Day-2",
+    "dish_index": 15,
+    "shot_count": 13,
+    "time_start": "2026-02-21 11:13:42",
+    "time_end": "2026-02-21 11:15:09",
+    "best_shot": {
+      "id": "AF1QipMjWsLfzLbCBcGSDbMFOwHN_rJ8Wz-OS3-2udL7",
+      "url": "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-",
+      "w": 8913,
+      "h": 5942,
+      "time": "2026-02-21 11:14:27"
+    },
+    "all_shots": [
+      {
+        "id": "AF1QipML5_F6-cHTwGEzEcPm39wbUrbSQKovjiz92App",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOmwK1A4J1zgAn2GpPrLh_snyTkw1DGgS4qtkQUn8B8z_FjW165f5dPRPyMyVCy2Dk9iLVoeBW89XLfdcDT5d2w4XgiuydFCamsk-COyq4sp5iH_OZ7",
+        "w": 9114,
+        "h": 6076,
+        "time": "2026-02-21 11:13:42",
+        "shot_num": 1
+      },
+      {
+        "id": "AF1QipPKnTtfpvTBfjJ0yC0T8VGxFeD4vgbaIFmfA02C",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPAf2Zy9Lq2u7MYXITFlahvuwr-P9Ex2k_BJt4IDimJpxGhXoDcAV3CWqFxnaivty7WgJMMRTeNW0nDfCcbD5wro9CxdyJQhMjZ2kUKzJS2o3__O_dS",
+        "w": 9117,
+        "h": 6078,
+        "time": "2026-02-21 11:13:45",
+        "shot_num": 2
+      },
+      {
+        "id": "AF1QipPrDCT_EYUVDvlghuf1ou6LdPl5NiLb4X0T4Adi",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMuv7KQOPWuQTGCvwGTdtyv0sx4JtuGlpvion-nmWfhyH0KnhS_ahomGO20TKNK2O0Nni6Q3eewj_bTBqpQ3z6WkrVsoPpwQqx9G2ue_jyOU82dEdYe",
+        "w": 9168,
+        "h": 6112,
+        "time": "2026-02-21 11:13:55",
+        "shot_num": 3
+      },
+      {
+        "id": "AF1QipMMN_tG9SCkjBVMz5lHUQqh2BRJ2FjaPVfnRPXO",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPWDpIRTWm3YWv4E2RDuJ5mnrEc2otTDoaxYWhzK09fjOrweWtcpbFJtG1aiT1uQYuVQsPTBDq-P4Tidp8QN_tAGy-Y7YjDRwPy2g-sUACQMUI2V07K",
+        "w": 9216,
+        "h": 6144,
+        "time": "2026-02-21 11:14:00",
+        "shot_num": 4
+      },
+      {
+        "id": "AF1QipOs98OrYPoQFaxD295SdUau2aL9AvjeMjvUWzuj",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczNzM9mDK2SASloVRzns41dNXCbsxcRkSFYsy8T2ggc1vxzZbSgCTNkeA8us6IPj2QG8Y3BOehnGdzni0-mRAWIdckPZwSiRCbM6xa5QisaoeRf6Oucx",
+        "w": 9009,
+        "h": 6006,
+        "time": "2026-02-21 11:14:04",
+        "shot_num": 5
+      },
+      {
+        "id": "AF1QipMvDLQhnPotdqm9OOyEhkGsogEEfinqOnKgufaf",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczOGfGFsp1eBtYexn9laHkA_JetCvERFxY5eZZxUUDqdfiSawF5DNlj7tIdaFUUw7ZFFog0pkJMZ8ZB_9EUSfr5uky7rSwJ2sBwmVMLYiY0lmEj1KBh4",
+        "w": 9285,
+        "h": 6190,
+        "time": "2026-02-21 11:14:15",
+        "shot_num": 6
+      },
+      {
+        "id": "AF1QipMjWsLfzLbCBcGSDbMFOwHN_rJ8Wz-OS3-2udL7",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-",
+        "w": 8913,
+        "h": 5942,
+        "time": "2026-02-21 11:14:27",
+        "shot_num": 7
+      },
+      {
+        "id": "AF1QipONZyvNkSH-YRp3HfWmdqe9LvbHEAnL-3ZWCewq",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMCcEIRW9ykzESc-5fWl7t29-Ntdx_gYIEzRSqfvzPIDmgm3Ui9SBCiQzJoX1yrmmWjvTJ8kAWXhhKEVXDJP-kfU4U3wv0cyH0kaGZB65-Hzmf8mV4o",
+        "w": 9159,
+        "h": 6106,
+        "time": "2026-02-21 11:14:55",
+        "shot_num": 8
+      },
+      {
+        "id": "AF1QipOVMsmFqQ8RjXxNkTPKwogubS82ONzOPKZwqQM3",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPjTKmg7eMEzffdjtBiYo-KMFDEjWX-IjgVTXgF8MVnXuy1JDvUhAdwFL0ycrbK5U4jav9IYlDeFP_vkZahzy9Hu4gkwE5sinEUEBBWQhKqeMj7wtxZ",
+        "w": 8955,
+        "h": 5970,
+        "time": "2026-02-21 11:14:56",
+        "shot_num": 9
+      },
+      {
+        "id": "AF1QipPHCFbpd2plsszXmAaPkeU7AZ4R7hcEhvuWFQ_Y",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczMuuBR_3YjVDl8k9_BnIiln5GKljYEh46AwDy24A1hpQA-ed5RSSBMhu7oiaDixZB6XfccSKgLeUmUADqAityy_ytOwfUuuQ7GtynNsjs36tDwuyeb9",
+        "w": 9150,
+        "h": 6100,
+        "time": "2026-02-21 11:15:05",
+        "shot_num": 10
+      },
+      {
+        "id": "AF1QipOo6GXXJi_Odgwpi9RTFlEp78_rsTKI8apfmmj_",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM-8Oc0axI087q6OmlWcVcGrVdWnucFxKFmJzQhsVaDaQPgdhqDCNzFWtv0LfGqvCfU8OBYLv75SF7ZWhGMS6JWArxOXhOocOJJDHLQKudVIRbZeNz2",
+        "w": 9186,
+        "h": 6124,
+        "time": "2026-02-21 11:15:07",
+        "shot_num": 11
+      },
+      {
+        "id": "AF1QipNAodzJoadArFWfb-PV0aTb-YiHRZnGrV2PvEox",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczM8jJ1DL3OS99YNuCc5-k8nc-5b0wP8Or1PisyV3bcvY26ysU87ttJyRrUwYSY0Xs2V5p-KVMxCmLet16s6_DqvIVjJfZ7DAJHESduXy11nhaIeRqn1",
+        "w": 9213,
+        "h": 6142,
+        "time": "2026-02-21 11:15:08",
+        "shot_num": 12
+      },
+      {
+        "id": "AF1QipN1eAbLh7mVJWjIQDfs6oO5qiykpBXug6YE2z1i",
+        "url": "https://lh3.googleusercontent.com/pw/AP1GczPJF04MuzCzlz_GRieuIrFRKRZmYbYGSHXvJIyzNcJzDkF-Wh4Hi9KG8TRMll0sNFzlQag5AZp0sBac-p5JSToJt_W2xtB_Njiq7zP1laAcv8gi0E34",
+        "w": 9180,
+        "h": 6120,
+        "time": "2026-02-21 11:15:09",
+        "shot_num": 13
+      }
+    ]
+  }
+]

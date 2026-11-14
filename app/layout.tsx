@@ -3,6 +3,9 @@ import { Cormorant_Garamond, Inter, Yeon_Sung } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { siteConfig, siteOrigin } from "@/lib/constants/site";
+import { FOOD_CATEGORIES, FOOD_DISHES } from "@/lib/constants/food-menu-data";
+import { generateMenuStructuredData } from "@/lib/seo-schema";
+import { MetaPixel } from "@/components/meta-pixel";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -132,6 +135,12 @@ export const metadata: Metadata = {
   },
 };
 
+const menuStructuredData = generateMenuStructuredData(
+  FOOD_CATEGORIES,
+  FOOD_DISHES,
+  siteConfig,
+);
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -179,6 +188,7 @@ const structuredData = {
         siteConfig.contact.whatsappUrl,
       ],
     },
+    menuStructuredData,
   ],
 };
 
@@ -200,7 +210,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <MetaPixel />
+        {children}
+      </body>
     </html>
   );
 }

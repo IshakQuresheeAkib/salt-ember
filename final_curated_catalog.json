@@ -1,0 +1,250 @@
+[
+  {
+    "cluster_id": "Shoot-Day-1-D01",
+    "dish_name": "Cream of Mushroom Soup",
+    "category": "soups-noodles",
+    "slug": "cream-of-mushroom-soup",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMWgdC8a20AWATKFkIz1DZ83BNaVGZeQEvqV5vH0O1JHtX7BD-_s2t_08YjnSLcsRZwYvxEVW_6KaqOeS1qnldkZNvFcGwapqJ6N5pght3yV1C5xzbQ",
+    "shots_count": 5
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D02",
+    "dish_name": "Chicken Corn Soup",
+    "category": "soups-noodles",
+    "slug": "chicken-corn-soup",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczNvacyf5VQAINt5S7yO2IZFkozZQGqtKIihI-8EGnivmQr1oHcPz5qM6K6JFR_hC1Z9vdQ1QW8rNLafikxcOtaiLX4D206-jNOndEDVRuvJHPUvdXbR",
+    "shots_count": 5
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D03",
+    "dish_name": "Thai Soup Thick",
+    "category": "soups-noodles",
+    "slug": "thai-soup-thick",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczNY-kKR9H0BGoW3mGzVN93QrIKrxc7dwakQsBkq6T9E1nNUjVREL2VLwNfwlubOzA2hYwk4I8bScOSLhabBFzL3m1aWZ3cdu3MadaPDKRIalKdN_tYt",
+    "shots_count": 20
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D04",
+    "dish_name": "Garlic Mushrooms",
+    "category": "starters",
+    "slug": "garlic-mushrooms",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczNG26UStLxomJIGKvUvWC_fqM1cCvTn5U_7kNZh-MtqnmcSlIos2GOQX2shhyN8XXxSpJhJ5ko1tXgs_Yaa3UaKiHcdSKrjRBkCqJk15K-CaVVussfF",
+    "shots_count": 22
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D05",
+    "dish_name": "Prawn Sticks",
+    "category": "starters",
+    "slug": "prawn-sticks",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOrJMePIvKkQkMTNwHOtT42AVWw1AtTZAamF8CpkrYSt15P0sclRj1uakA62pNRNElfPJgY_HRMmbhGtzVXCXV9qHOQuSHwPtdZDK504ntplnY8goUU",
+    "shots_count": 36
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D06",
+    "dish_name": "Fried Wonton",
+    "category": "starters",
+    "slug": "fried-wonton",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOWIF7Ta9Q3XuIx4XuO7D_sAZEJ63qPc9z_4H0NLDQmXSllc4SJeWZg_zmHNlM2x05Qr6keEeGrEZKxwGYsfUUnaHVMXCj3XEsnNNrIVc078-AsTD9C",
+    "shots_count": 5
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D07",
+    "dish_name": "Buffalo Wings",
+    "category": "starters",
+    "slug": "buffalo-wings",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczO0Q_lN3o0BdmYCmEGwK98g6v8uoGLteRQLLfvvYHtHSvr2xeXCJKCQ55hUmg5hnygsWqjTkjxz8-mQFO8FsqYCGmZDwJN9pnxCnnI1DzQOKnjxL369",
+    "shots_count": 59
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D08",
+    "dish_name": "Chicken Cashew Nut Salad",
+    "category": "salads",
+    "slug": "chicken-cashew-nut-salad",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOMMcP85b3ojHlfUJPfyw09gop6TK7vVpr53E8JVxWt1L4kfJg4pB9g8RcQ-90DveYsuVX1GPMxioU8M5i5GDWfpE1Q0o034TbHobnZ0TJfVM7JDYIn",
+    "shots_count": 11
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D09",
+    "dish_name": "Creamy Chicken Alfredo",
+    "category": "pasta-spaghetti",
+    "slug": "creamy-chicken-alfredo",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMNCdw2FDMCZzLlEdIWa8xtG22T-OTNtUD--G562nj8pB1mfxYyTm91JIWvQfgKKhllNGo964UmvRZMu-X1UecCzrugiYST7AOJ0jotdSLh-6SawOsM",
+    "shots_count": 10
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D10",
+    "dish_name": "BBQ Chicken Pizza",
+    "category": "pizza",
+    "slug": "bbq-chicken-pizza",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOkVK1FYT5J12QXYWI-OBUD7DMtTqorGttP1Kiu1VDPFGEaDAe5L9X1LZY4tw95VxNDX5PdX1ZhLFxQajkXJU-FNy2j0fFL0fSHfkG1iEUVuNCiVcAS",
+    "shots_count": 27
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D11",
+    "dish_name": "Mexican Hot Pizza",
+    "category": "pizza",
+    "slug": "mexican-hot-pizza",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczNnC56a2YrcHrzh9jI3F5LOLZ6qOqMpy-ZREszYV7qY9-cBQvAh0LSjc-nd35y7OLRXgsr2eNhd2pi3FWC8-7VV7qKQrPApkftxTB-_-bboQRDl7ZoR",
+    "shots_count": 16
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D12",
+    "dish_name": "Classic Espresso",
+    "category": "beverages",
+    "slug": "classic-espresso",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMFzEYgHdP9kamrEklsboHl46Iwazj5knsOwA4qy3HMdaW5scosF3FTlNm8jMnBhkuFWkoXBCF3mIPPUymPtpQlbPxyS-fd01Ee8QFA4kpJQzpzr5gT",
+    "shots_count": 8
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D13",
+    "dish_name": "Seafood Marinara",
+    "category": "pasta-spaghetti",
+    "slug": "seafood-marinara",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczPCvSJOAryNL79HBx5hO1Oj7-znbmKn3SlQI04PiPh6_F883y6JyYie06dkeRR6NeD8dGRAE3qIz8Jo6OmOcyKoe486QdWudK7bDOGNLyZh1tV8GLTh",
+    "shots_count": 15
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D14",
+    "dish_name": "Iced Americano",
+    "category": "beverages",
+    "slug": "iced-americano",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczN7UmY9VZErFL6Iz-T0y-fQeMHNEqwjxTjmlEGGE_ZPt3NUcp8EACoqvlUefB6CLEhORij189dJJ-PxlTJDEZpBK63CdbmdxU-LnkLpAJD6aXvaG9Os",
+    "shots_count": 7
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D15",
+    "dish_name": "Garlic Naan",
+    "category": "kebabs-naan",
+    "slug": "garlic-naan",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOl7hVFl0NFrnnXm7cOpfn1FN-pieCtdvXgYO0aIc_Csm9IjtrXkSQY5QCcheAKMUqCGbXjvQfCotrEGe3M5_GpuMO1C4SS5mjSX1E6YxRgDKVvfErg",
+    "shots_count": 51
+  },
+  {
+    "cluster_id": "Shoot-Day-1-D16",
+    "dish_name": "Butter Naan",
+    "category": "kebabs-naan",
+    "slug": "butter-naan",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMQJbjtKcyzaqZvswm6ZLTgkcmTevW5IsbHhpqqbJPdGRJjUQjwLN11v5M4dP1LJIdIgq-ghHLO8U2l5AcMG7GpOiqSCWde4BU2FVePdh1AjccGc-w5",
+    "shots_count": 3
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D01",
+    "dish_name": "Salt & Ember Signature Platter",
+    "category": "main-courses",
+    "slug": "signature-platter",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMABBYusDB87dmmwPPiAms4bk-5d0JPB89bEJ6zdo_ZD-_Yh-KV0txKHBysxfqpF95llY5HjDsWMrRUaQpBBHsMQLHholQZaBQKt01-AxcwBJwtINWv",
+    "shots_count": 1
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D02",
+    "dish_name": "Golden Fried Shrimp",
+    "category": "starters",
+    "slug": "golden-fried-shrimp",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOE2jbsdLXimus3Z3OWEbmIUOG1zKCk5l0GM77WL0ZodF2oVhLmVxFzy56ZntKLxVfQ67faO9KbvZ8ECuj7-G9ovwMNke_KuXIwsUdWGPKXPIYwGJTK",
+    "shots_count": 6
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D03",
+    "dish_name": "Chicken Basket",
+    "category": "starters",
+    "slug": "chicken-basket",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczM5OPqfQcpatvGEquad7IRcPGXD8fZAzEphpvEHQK3jPR-liRCsWjVP8ay8oUMT3Q-ZSN4kswYBynPM7bIYi8Iucta_orBPMrHntqo8rqKdXB7QNr8v",
+    "shots_count": 6
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D04",
+    "dish_name": "French Fries",
+    "category": "starters",
+    "slug": "french-fries",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOxZdsjIXAnzoF8JovS9RHmBkn0kE8KaNrLq4KCJLjbdgpV9zFUABdU3hB6zLdV9QC_RyCy7Z0Pt_0T0RPPTDV3eC5RjBbiHVM_b7My1sdDrXEYTS6L",
+    "shots_count": 1
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D05",
+    "dish_name": "Tomahawk Steak",
+    "category": "beef-steaks",
+    "slug": "tomahawk-steak",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczP1tyoAliB-FUS2atBOn8glsb7x6asHARI23ApVQQFmZFIlEAsQD6lcfW8YLY4Lq8fIXcVCcpcEj2hcQRt2nE_rcuIoHzV4Vu5MeusiE7vish2s0krY",
+    "shots_count": 10
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D06",
+    "dish_name": "Prime Ribeye Steak Special",
+    "category": "beef-steaks",
+    "slug": "prime-ribeye-special",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczPG_VJFhJkFP-8RAAo3LyyBpmFNvzdVGuLdiVFe5Ennyky6dbvIYHcqRLI38wgptyBA0-gzOc8Z7hsNw7f6fBxJil9wJ0CP_zkjdeKiRmNITZBs9Rx_",
+    "shots_count": 7
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D07",
+    "dish_name": "Sirloin Steak",
+    "category": "beef-steaks",
+    "slug": "sirloin-steak",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczN_IrgDw1g9e-cbcrDD35OaPtAS4jsHQ2MW_WLvxThszfj0ve6F-NFeAiqszAsD6qQjXkKBpoAFgnoxbjDBWrxcX00QrwpP7L98Cs1IlBkK4bDE_wgT",
+    "shots_count": 6
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D08",
+    "dish_name": "T-Bone Steak",
+    "category": "beef-steaks",
+    "slug": "t-bone-steak",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczN-WqtrqY6Z6eMoXl9mxX1n1y7dbMdffrI697nvX-ucQ6Yih_L5tr0NwLtMi8bldhw6m1_ZZ4DvCDdXo5aV--GlS-PeHfT3caogvfE-SJLLb2fQvVft",
+    "shots_count": 14
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D09",
+    "dish_name": "Surf and Turf",
+    "category": "beef-steaks",
+    "slug": "surf-and-turf",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczMPruSzV7a6jPv-YLSuKkfErnKg3BzBKlYGudlz8eaIOJguiIgAuGADVUPVaHM5tsv5iP9hWWW0JYuLPMcbumGRF2cc-8RBizsFhBklqjXdGdMYL9WH",
+    "shots_count": 18
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D10",
+    "dish_name": "Ribeye Steak",
+    "category": "beef-steaks",
+    "slug": "ribeye-steak",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczN38pPsWrjMMWbiitpYcm05pyjPjsDpUT-gHawM4erIYoxOBIteOZYlVhDGCKXOcHvXtU2_U1Vh6c6cpbLKpIjXUipvAvDzNCWE_-yrWAFxeOb5Y8DI",
+    "shots_count": 4
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D11",
+    "dish_name": "BBQ Back Ribs",
+    "category": "slow-cooked",
+    "slug": "bbq-back-ribs",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOhDOknx7qbYxaPilJiHC08UlTzvdbvrhjGNhuEACKiexVunyVuLXr1D9RA8RuMKcrr0oKQTOlpR3fnUfbyqr0E1mcvYtbw9fje1PVc7oy7SaoLU7JY",
+    "shots_count": 24
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D12",
+    "dish_name": "Fish & Chips",
+    "category": "starters",
+    "slug": "fish-and-chips",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczNTMeDebkUC6SBBnUPTvqV9L1jp98_2m6gcp3cG0IIEmOfrS9NX-MIkIo--MZ9agu246Xchr9shc_7-Jin3LZJXRbkexehUY6h0DSUb-YlLN6_eZMRz",
+    "shots_count": 33
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D13",
+    "dish_name": "Peri Peri Chicken",
+    "category": "main-courses",
+    "slug": "peri-peri-chicken",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOx226kpkviUq6b9oG7MMpE8ow880UmgtvjGlqeWw0rWI5D0gy0qKIU6aEthXTgt9VQ1Inza-uBTh0cMAs4KgtXUj3epr0QgJJjnW_0R_SjH8Xl_iSl",
+    "shots_count": 4
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D14",
+    "dish_name": "Sizzling Cheesy Chicken Steak",
+    "category": "main-courses",
+    "slug": "sizzling-cheesy-chicken-steak",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczOf7A1nzytMlvt2kx8NnpGJMw3GySXKYM6r_IHiJADNqcpGbrJEKPRerQD-0pgR0nWqY-yIKOLpU0WpUgdsSjO2jAXJW3SBn5noO92bepIbCXwCxc7_",
+    "shots_count": 6
+  },
+  {
+    "cluster_id": "Shoot-Day-2-D15",
+    "dish_name": "Grilled Chicken Creamy Mushroom",
+    "category": "main-courses",
+    "slug": "grilled-chicken-creamy-mushroom",
+    "url": "https://lh3.googleusercontent.com/pw/AP1GczP1KoPQsf8WOIOHa6Q1uoGXXjBViEU3zo-EY9Li9xgnVeqawjLB3TP3lLM3yFgoK8ugdhXvRcmn5O6bM_HXcpmjpUgUMfCv8XWjDC-ZH43zqdCn1xU-",
+    "shots_count": 13
+  }
+]

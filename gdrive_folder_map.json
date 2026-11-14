@@ -1,0 +1,42 @@
+{
+  "starters": {
+    "name": "01 - Appetizers & Starters",
+    "id": "1EvUbuOJIGoQzrgohlueXXcmlTpscnm8M"
+  },
+  "soups-noodles": {
+    "name": "02 - Soups & Noodles",
+    "id": "1hxt57r4SCCFoSDsi7gohOD3bJ7Gys9RC"
+  },
+  "salads": {
+    "name": "03 - Salads",
+    "id": "1mpDJ7bqtMEpVCOgMnCuVreSt3aA87T1Q"
+  },
+  "beef-steaks": {
+    "name": "04 - Beef Steaks",
+    "id": "1uRYWQ_3NehEJM_AZUZDu2eYznDmAqj4g"
+  },
+  "slow-cooked": {
+    "name": "05 - Slow-Cooked Meat",
+    "id": "1hI4IB2TUmTXeHH7q9NNw4vlY_rranATO"
+  },
+  "main-courses": {
+    "name": "06 - Main Courses",
+    "id": "1lrw9uCrPz0pkjujqqDIwsGDm8Ipx4uoi"
+  },
+  "pasta-spaghetti": {
+    "name": "07 - Pasta & Spaghetti",
+    "id": "1UMNVNpBSEGknJv9c7A97ZhrpPOKYX8Zz"
+  },
+  "pizza": {
+    "name": "08 - Pizza",
+    "id": "1agayr3gqxaqWhGUV-wj0EuErwR45qcDi"
+  },
+  "kebabs-naan": {
+    "name": "09 - Kebabs & Naan",
+    "id": "1XcHVJu2WZZcW38A-e4_GtP8WZN7d8Amz"
+  },
+  "beverages": {
+    "name": "10 - Beverages & Desserts",
+    "id": "1VN7yOTMJL8jbDjxItCihkhDS79UpGGb0"
+  }
+}
