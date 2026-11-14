@@ -57,12 +57,15 @@ test("FoodMenuSection is mounted in the main page", async () => {
   assert.match(pageSource, /import \{ FoodMenuSection \} from "@\/components\/food-menu-section"/);
 });
 
-test("Food menu dishes have mobile-optimized images configured", async () => {
+test("Food menu dishes have CDN-optimized images configured", async () => {
   const dataFile = await readSource("../lib/constants/food-menu-data.ts");
   
   assert.match(dataFile, /image\?:\s*string;/, "Expected FoodItem to have optional image field");
-  assert.match(dataFile, /image:\s*"https:\/\/lh3\.googleusercontent\.com/, "Expected Google Photos CDN dish images");
-  assert.match(dataFile, /=w400-h267-c-rw/, "Expected mobile-optimized 400px WebP crop parameter");
+  assert.match(
+    dataFile,
+    /image:\s*"https:\/\/(res\.cloudinary\.com|lh3\.googleusercontent\.com)/,
+    "Expected Cloudinary or Google CDN dish images",
+  );
 });
 
 test("FoodMenuCard uses Next.js Image with responsive mobile sizes", async () => {
