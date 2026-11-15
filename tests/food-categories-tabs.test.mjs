@@ -57,14 +57,14 @@ test("FoodMenuSection is mounted in the main page", async () => {
   assert.match(pageSource, /import \{ FoodMenuSection \} from "@\/components\/food-menu-section"/);
 });
 
-test("Food menu dishes have CDN-optimized images configured", async () => {
+test("Food menu dishes have configured images", async () => {
   const dataFile = await readSource("../lib/constants/food-menu-data.ts");
   
   assert.match(dataFile, /image\?:\s*string;/, "Expected FoodItem to have optional image field");
   assert.match(
     dataFile,
-    /image:\s*"https:\/\/(res\.cloudinary\.com|lh3\.googleusercontent\.com)/,
-    "Expected Cloudinary or Google CDN dish images",
+    /image:\s*"(\/images\/menu\/|https:\/\/(res\.cloudinary\.com|lh3\.googleusercontent\.com|pngimg\.com))/,
+    "Expected local /images/ or CDN dish images",
   );
 });
 

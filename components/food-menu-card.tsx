@@ -103,9 +103,13 @@ export function FoodMenuCard({ dish, className }: FoodMenuCardProps) {
           </h4>
 
           {/* Subtitle / Description */}
-          <p className="mt-1.5 text-xs sm:text-[13px] leading-relaxed text-muted-foreground line-clamp-2">
-            {dish.portion ? `${dish.portion} • ${dish.description}` : dish.description}
-          </p>
+          {(dish.portion || dish.description) && (
+            <p className="mt-1.5 text-xs sm:text-[13px] leading-relaxed text-muted-foreground line-clamp-2">
+              {dish.portion && dish.description
+                ? `${dish.portion} • ${dish.description}`
+                : dish.portion || dish.description}
+            </p>
+          )}
         </div>
       </div>
 

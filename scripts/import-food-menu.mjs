@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execSync } from "node:child_process";
 
 export const VALID_CATEGORIES = new Set([
   "starters",
@@ -17,6 +18,55 @@ export const VALID_CATEGORIES = new Set([
   "beverages",
   "desserts",
 ]);
+
+export function generateDishSlug(name, category = "", existingIds = new Set()) {
+  let slug = (name || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+  if (!slug) {
+    slug = "dish";
+  }
+
+  if (existingIds.has(slug)) {
+    if (category) {
+      const catSlug = `${category}-${slug}`;
+      if (!existingIds.has(catSlug)) {
+        return catSlug;
+      }
+    }
+    let counter = 2;
+    while (existingIds.has(`${slug}-${counter}`)) {
+      counter++;
+    }
+    return `${slug}-${counter}`;
+  }
+
+  return slug;
+}
+
+export function parseAndFormatPrice(rawPrice) {
+  if (!rawPrice) return { valid: false, error: "Missing dish price." };
+  const cleaned = rawPrice.replace(/\s*TK\s*/gi, "").trim();
+  const priceRegex = /^\d+(?:\.\d+)?(?:\s*\/\s*\d+(?:\.\d+)?)*$/;
+  if (!priceRegex.test(cleaned)) {
+    return {
+      valid: false,
+      error: `Invalid price format '${rawPrice}'. Only numbers are accepted (e.g. '550' or '850 / 1000').`,
+    };
+  }
+  const normalizedNumbers = cleaned
+    .split("/")
+    .map((p) => p.trim())
+    .join(" / ");
+  return {
+    valid: true,
+    formattedPrice: `${normalizedNumbers} TK`,
+  };
+}
 
 export function parseCsv(csvString) {
   const rows = [];
@@ -104,47 +154,48 @@ export function validateDishRows(rows) {
 
   rows.forEach((row, idx) => {
     const lineNum = idx + 2;
-    const id = (row.id || "").trim();
+    let id = (row.id || "").trim();
     const name = (row.name || "").trim();
     const category = (row.category || "").trim();
-    const price = (row.price || "").trim();
+    const rawPrice = (row.price || "").trim();
     const description = (row.description || "").trim();
     const portion = (row.portion || "").trim();
     const isPopular = /^(true|yes|1)$/i.test((row.isPopular || "").trim());
     const isSpicy = /^(true|yes|1)$/i.test((row.isSpicy || "").trim());
     const imageUrl = (row.imageUrl || "").trim();
 
+    if (!name) {
+      errors.push(`Row ${lineNum}: Missing dish name.`);
+    }
+
+    if (!id && name) {
+      id = generateDishSlug(name, category, seenIds);
+    }
+
     if (!id) {
-      errors.push(`Row ${lineNum}: Missing dish id.`);
+      errors.push(`Row ${lineNum}: Missing dish id and unable to generate from name.`);
     } else if (seenIds.has(id)) {
       errors.push(`Row ${lineNum}: Duplicate dish id '${id}'.`);
     } else {
       seenIds.add(id);
     }
 
-    if (!name) {
-      errors.push(`Row ${lineNum} ('${id || "unnamed"}'): Missing dish name.`);
-    }
-
     if (!category) {
-      errors.push(`Row ${lineNum} ('${id || "unnamed"}'): Missing dish category.`);
+      errors.push(`Row ${lineNum} ('${id || name || "unnamed"}'): Missing dish category.`);
     } else if (!VALID_CATEGORIES.has(category)) {
       errors.push(
-        `Row ${lineNum} ('${id || "unnamed"}'): Invalid category slug '${category}'. Valid categories are: ${Array.from(VALID_CATEGORIES).join(", ")}`,
+        `Row ${lineNum} ('${id || name || "unnamed"}'): Invalid category slug '${category}'. Valid categories are: ${Array.from(VALID_CATEGORIES).join(", ")}`,
       );
     }
 
-    if (!price) {
-      errors.push(`Row ${lineNum} ('${id || "unnamed"}'): Missing dish price.`);
-    }
-
-    if (!description) {
-      errors.push(`Row ${lineNum} ('${id || "unnamed"}'): Missing dish description.`);
+    const priceResult = parseAndFormatPrice(rawPrice);
+    if (!priceResult.valid) {
+      errors.push(`Row ${lineNum} ('${id || name || "unnamed"}'): ${priceResult.error}`);
     }
 
     if (imageUrl && !imageUrl.startsWith("https://") && !imageUrl.startsWith("/")) {
       errors.push(
-        `Row ${lineNum} ('${id || "unnamed"}'): Image URL must be an https URL or local path starting with '/'. Received: '${imageUrl}'`,
+        `Row ${lineNum} ('${id || name || "unnamed"}'): Image URL must be an https URL or local path starting with '/'. Received: '${imageUrl}'`,
       );
     }
 
@@ -152,9 +203,9 @@ export function validateDishRows(rows) {
       id,
       name,
       category,
-      price,
-      description,
+      price: priceResult.formattedPrice || rawPrice,
     };
+    if (description) dish.description = description;
     if (portion) dish.portion = portion;
     if (isPopular) dish.isPopular = true;
     if (isSpicy) dish.isSpicy = true;
@@ -188,8 +239,10 @@ export function generateTypeScriptCode(existingSource, dishes) {
         `    name: ${JSON.stringify(dish.name)},`,
         `    category: ${JSON.stringify(dish.category)},`,
         `    price: ${JSON.stringify(dish.price)},`,
-        `    description: ${JSON.stringify(dish.description)},`,
       ];
+      if (dish.description) {
+        lines.push(`    description: ${JSON.stringify(dish.description)},`);
+      }
       if (dish.portion) {
         lines.push(`    portion: ${JSON.stringify(dish.portion)},`);
       }
@@ -210,22 +263,35 @@ export function generateTypeScriptCode(existingSource, dishes) {
   return `${prefix}${marker}\n${formattedDishes}\n];\n`;
 }
 
+export function parseSpreadsheet(filePath) {
+  if (filePath.endsWith(".xlsx")) {
+    const readerScript = path.resolve(process.cwd(), "scripts", "read-xlsx.py");
+    const jsonOutput = execSync(`python "${readerScript}" "${filePath}"`, {
+      encoding: "utf8",
+      maxBuffer: 10 * 1024 * 1024,
+    });
+    return JSON.parse(jsonOutput);
+  }
+  const csvContent = fs.readFileSync(filePath, "utf8");
+  return parseCsv(csvContent);
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const writeFlag = args.includes("--write");
   const fileArgs = args.filter((a) => !a.startsWith("--"));
-  const csvFile =
+  const inputFile =
     fileArgs[0] || path.resolve(process.cwd(), "scratch", "menu-template.csv");
 
-  if (!fs.existsSync(csvFile)) {
-    console.error(`CSV file not found: ${csvFile}`);
+  if (!fs.existsSync(inputFile)) {
+    console.error(`Input file not found: ${inputFile}`);
     process.exit(1);
   }
 
-  console.log(`Reading menu CSV from: ${csvFile}`);
-  const csvContent = fs.readFileSync(csvFile, "utf8");
-  const parsedRows = parseCsv(csvContent);
-  console.log(`Parsed ${parsedRows.length} rows from CSV.`);
+  const isXlsx = inputFile.endsWith(".xlsx");
+  console.log(`Reading menu ${isXlsx ? "Excel spreadsheet" : "CSV"} from: ${inputFile}`);
+  const parsedRows = parseSpreadsheet(inputFile);
+  console.log(`Parsed ${parsedRows.length} rows from file.`);
 
   const { valid, errors, dishes } = validateDishRows(parsedRows);
 

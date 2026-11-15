@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execSync } from "node:child_process";
 import { FOOD_DISHES } from "../lib/constants/food-menu-data.ts";
 
 function escapeCsvField(val) {
@@ -16,8 +17,16 @@ function escapeCsvField(val) {
   return str;
 }
 
+function cleanPriceForExport(priceStr) {
+  if (!priceStr) return "";
+  return priceStr
+    .replace(/\s*TK\s*/gi, "")
+    .split("/")
+    .map((p) => p.trim())
+    .join(" / ");
+}
+
 const headers = [
-  "id",
   "name",
   "category",
   "price",
@@ -33,11 +42,10 @@ const rows = [headers.join(",")];
 for (const dish of FOOD_DISHES) {
   rows.push(
     [
-      escapeCsvField(dish.id),
       escapeCsvField(dish.name),
       escapeCsvField(dish.category),
-      escapeCsvField(dish.price),
-      escapeCsvField(dish.description),
+      escapeCsvField(cleanPriceForExport(dish.price)),
+      escapeCsvField(dish.description || ""),
       escapeCsvField(dish.portion || ""),
       escapeCsvField(dish.isPopular ? "TRUE" : "FALSE"),
       escapeCsvField(dish.isSpicy ? "TRUE" : "FALSE"),
@@ -54,3 +62,18 @@ if (!fs.existsSync(scratchDir)) {
 const outputPath = path.join(scratchDir, "menu-template.csv");
 fs.writeFileSync(outputPath, rows.join("\n") + "\n", "utf8");
 console.log(`Exported ${FOOD_DISHES.length} dishes to ${outputPath}`);
+
+// Generate interactive Excel spreadsheet template with dropdowns and boolean controls
+try {
+  const pyScript = path.resolve(
+    process.cwd(),
+    "scripts",
+    "generate-menu-spreadsheet.py",
+  );
+  if (fs.existsSync(pyScript)) {
+    execSync(`python "${pyScript}"`, { stdio: "inherit" });
+  }
+} catch {
+  // Progressive enhancement
+}
+

@@ -16,7 +16,7 @@ export interface RangeOffer {
 export interface MenuItemStructuredData {
   "@type": "MenuItem";
   name: string;
-  description: string;
+  description?: string;
   image?: string;
   offers: SingleOffer | RangeOffer;
 }
@@ -110,7 +110,7 @@ export function generateMenuStructuredData(
           return {
             "@type": "MenuItem",
             name: dish.name,
-            description: dish.description,
+            description: dish.description || "",
             ...(imageUrl ? { image: imageUrl } : {}),
             offers: parseDishOffer(dish.price),
           };

@@ -16,6 +16,14 @@ test("export-menu-template.mjs generates valid CSV containing 136 dishes", () =>
   assert.equal(lines.length, 137, "Expected 1 header line + 136 dish rows");
   assert.match(
     lines[0],
-    /^id,name,category,price,description,portion,isPopular,isSpicy,imageUrl/,
+    /^name,category,price,description,portion,isPopular,isSpicy,imageUrl/,
   );
+  // Verify that exported prices do not contain 'TK'
+  for (let i = 1; i < lines.length; i++) {
+    assert.doesNotMatch(
+      lines[i],
+      /\bTK\b/i,
+      `Row ${i + 1} should not contain 'TK': ${lines[i]}`,
+    );
+  }
 });
