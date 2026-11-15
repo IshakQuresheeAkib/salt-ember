@@ -128,7 +128,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Served with veggies",
     portion: "Served with veggies",
     isPopular: true,
-    image: "https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97928.png",
+    image: "/images/food/magnific-burger.png",
   },
   {
     id: "starter-1",
@@ -138,7 +138,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Fresh shelled prawns, grilled on sticks and served with French fries.",
     portion: "6 pcs",
     isPopular: true,
-    image: "https://pngimg.com/uploads/shrimps/shrimps_PNG96487.png",
+    image: "/images/food/appetizer.png",
   },
   {
     id: "starter-2",
@@ -547,7 +547,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Rich Alfredo sauce tossed with penne pasta and topped with shaved Parmesan.",
     portion: "1 bowl",
     isPopular: true,
-    image: "https://pngimg.com/uploads/pasta/pasta_PNG98620.png",
+    image: "/images/food/pasta.png",
   },
   {
     id: "pasta-2",
@@ -605,7 +605,7 @@ export const FOOD_DISHES: FoodItem[] = [
     portion: "10\" / 12\"",
     isPopular: true,
     isSpicy: true,
-    image: "https://pngimg.com/uploads/pizza/pizza_PNG44096.png",
+    image: "/images/food/magnific-pizza.png",
   },
   {
     id: "pizza-2",
@@ -614,7 +614,7 @@ export const FOOD_DISHES: FoodItem[] = [
     price: "850 / 1000 TK",
     description: "Grilled chicken tossed in BBQ sauce with sautéed mushrooms and capsicum.",
     portion: "10\" / 12\"",
-    image: "https://pngimg.com/uploads/pizza/pizza_PNG44095.png",
+    image: "/images/food/pizza.png",
   },
   {
     id: "pizza-3",
@@ -662,7 +662,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Tender, marinated beef strips served with a savory sauce and vegetables on a super-hot iron plate.",
     portion: "1:2",
     isPopular: true,
-    image: "https://pngimg.com/uploads/rice/rice_PNG98682.png",
+    image: "/images/food/biriyani.png",
   },
   {
     id: "tc-2",
@@ -756,7 +756,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Tender, boneless chicken marinated in yogurt, ginger, garlic, and freshly ground spices.",
     portion: "1 skewer",
     isPopular: true,
-    image: "https://pngimg.com/uploads/kebab/kebab_PNG54.png",
+    image: "/images/food/kebab.png",
   },
   {
     id: "kebab-2",
@@ -830,7 +830,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Smoky tandoori chicken tikka pieces served over fragrant spiced basmati biryani rice.",
     portion: "1 handi",
     isPopular: true,
-    image: "https://pngimg.com/uploads/rice/rice_PNG98682.png",
+    image: "/images/food/biriyani.png",
   },
   {
     id: "biryani-2",
@@ -894,7 +894,7 @@ export const FOOD_DISHES: FoodItem[] = [
     price: "120 / 180 TK",
     description: "Concentrated shot of dark roast espresso.",
     portion: "Single / Double",
-    image: "https://pngimg.com/uploads/cappuccino/cappuccino_PNG97038.png",
+    image: "/images/food/magnific-coffee.png",
   },
   {
     id: "bev-2",
@@ -903,7 +903,7 @@ export const FOOD_DISHES: FoodItem[] = [
     price: "150 / 200 TK",
     description: "Rich espresso diluted with hot filtered water.",
     portion: "Single / Double",
-    image: "https://pngimg.com/uploads/cappuccino/cappuccino_PNG97037.png",
+    image: "/images/food/magnific-coffee.png",
   },
   {
     id: "bev-3",
@@ -913,7 +913,7 @@ export const FOOD_DISHES: FoodItem[] = [
     description: "Equal parts espresso, steamed milk, and velvety milk foam.",
     portion: "1 cup",
     isPopular: true,
-    image: "https://pngimg.com/uploads/cappuccino/cappuccino_PNG97036.png",
+    image: "/images/food/magnific-coffee.png",
   },
   {
     id: "bev-4",

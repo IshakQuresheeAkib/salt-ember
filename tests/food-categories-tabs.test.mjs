@@ -63,7 +63,7 @@ test("Food menu dishes have configured images", async () => {
   assert.match(dataFile, /image\?:\s*string;/, "Expected FoodItem to have optional image field");
   assert.match(
     dataFile,
-    /image:\s*"(\/images\/menu\/|https:\/\/(res\.cloudinary\.com|lh3\.googleusercontent\.com|pngimg\.com))/,
+    /image:\s*"(\/images\/(food|menu)\/|https:\/\/(res\.cloudinary\.com|lh3\.googleusercontent\.com|pngimg\.com))/,
     "Expected local /images/ or CDN dish images",
   );
 });

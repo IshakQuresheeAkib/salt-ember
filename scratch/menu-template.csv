@@ -1,6 +1,6 @@
 name,category,price,description,portion,isPopular,isSpicy,imageUrl
-Barbecue Chicken,starters,550,Served with veggies,Served with veggies,TRUE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97928.png
-Prawn Sticks (6 pcs),starters,550,"Fresh shelled prawns, grilled on sticks and served with French fries.",6 pcs,TRUE,FALSE,https://pngimg.com/uploads/shrimps/shrimps_PNG96487.png
+Barbecue Chicken,starters,550,Served with veggies,Served with veggies,TRUE,FALSE,/images/food/magnific-burger.png
+Prawn Sticks (6 pcs),starters,550,"Fresh shelled prawns, grilled on sticks and served with French fries.",6 pcs,TRUE,FALSE,/images/food/appetizer.png
 Chicken Basket,starters,440,"Four pieces of crispy, deep-fried boneless chicken thighs served with French fries. A kids' favorite!",4 pcs,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97926.png
 Fish & Chips,starters,550,"Flaky dori fillet in a golden, crispy batter, served with chips & tartar sauce.",1 serving,TRUE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97889.png
 French Fries,starters,200,Crispy golden fries seasoned to perfection.,1 basket,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97888.png
@@ -43,19 +43,19 @@ BBQ Grilled Chicken,main-courses,540,Smoky and sweet Caribbean-style grilled chi
 Crispy Chicken with Mushroom Sauce,main-courses,540,Golden-brown crispy boneless chicken thighs served with a savory mushroom sauce.,1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97917.png
 Chicken Steak,main-courses,550,"Flattened chicken breast marinated in savory herbs, lemon juice, and sauces, grilled to tender perfection.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97916.png
 Chicken Ala-Creme,main-courses,490,"Tender chicken breast fillets sautéed in butter with mushrooms, onions, bell peppers, and garlic in rich crème.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97915.png
-Creamy Chicken Alfredo,pasta-spaghetti,490,Rich Alfredo sauce tossed with penne pasta and topped with shaved Parmesan.,1 bowl,TRUE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98620.png
+Creamy Chicken Alfredo,pasta-spaghetti,490,Rich Alfredo sauce tossed with penne pasta and topped with shaved Parmesan.,1 bowl,TRUE,FALSE,/images/food/pasta.png
 Seafood Marinara,pasta-spaghetti,550,Pasta with a tangy and spicy marinara sauce and fresh mixed seafood.,1 bowl,FALSE,TRUE,https://pngimg.com/uploads/pasta/pasta_PNG98619.png
 Creamy Shrimp Alfredo,pasta-spaghetti,550,"Penne pasta with succulent shrimp tossed in a rich, velvety Alfredo sauce.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98618.png
 Spaghetti Bolognese (Beef),pasta-spaghetti,570,Slow-cooked minced beef in a robust tomato sauce over al dente spaghetti.,1 bowl,TRUE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98617.png
 Pasta Basta,pasta-spaghetti,490,"Oven-baked pasta with a creamy sauce, chicken, and lots of melted cheese.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98616.png
 Pasta Europa,pasta-spaghetti,520,"Oven-baked pasta featuring beef slices, mushrooms, chili, cheese, and extra virgin olive oil.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98615.png
-Mexican Hot,pizza,850 / 1000,"Jalapeños, chili peppers, seasoned chicken, onion, black olives, and mozzarella.","10"" / 12""",TRUE,TRUE,https://pngimg.com/uploads/pizza/pizza_PNG44096.png
-BBQ Chicken,pizza,850 / 1000,Grilled chicken tossed in BBQ sauce with sautéed mushrooms and capsicum.,"10"" / 12""",FALSE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44095.png
+Mexican Hot,pizza,850 / 1000,"Jalapeños, chili peppers, seasoned chicken, onion, black olives, and mozzarella.","10"" / 12""",TRUE,TRUE,/images/food/magnific-pizza.png
+BBQ Chicken,pizza,850 / 1000,Grilled chicken tossed in BBQ sauce with sautéed mushrooms and capsicum.,"10"" / 12""",FALSE,FALSE,/images/food/pizza.png
 Meat Lover's,pizza,900 / 1100,"Marinara base with chicken pepperoni, chicken, Italian sausage, and crisp capsicum.","10"" / 12""",TRUE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44094.png
 Hawaiian Pizza,pizza,850 / 1000,"A sweet and savory blend of juicy pineapple chunks, savory chicken, and mozzarella.","10"" / 12""",FALSE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44093.png
 Naga Chicken,pizza,800 / 950,"Spicy Naga chili sauce, tender chicken, onions, black olives, and mushrooms.","10"" / 12""",FALSE,TRUE,https://pngimg.com/uploads/pizza/pizza_PNG44092.png
 Classic Margherita,pizza,750 / 850,"Artisan pizza sauce, creamy mozzarella cheese, tomato slices, and fragrant oregano.","10"" / 12""",FALSE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44091.png
-Beef Sizzling,thai-chinese,590,"Tender, marinated beef strips served with a savory sauce and vegetables on a super-hot iron plate.",1:2,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98682.png
+Beef Sizzling,thai-chinese,590,"Tender, marinated beef strips served with a savory sauce and vegetables on a super-hot iron plate.",1:2,TRUE,FALSE,/images/food/biriyani.png
 Chicken Sizzling,thai-chinese,530,Flavorful marinated chicken and colorful veggies served dramatic and smoking on a hot iron plate.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98681.png
 Sweet & Sour Chicken,thai-chinese,520,"Deep-fried chicken pieces coated in a vibrant, glossy sauce balancing tangy and sweet flavors.",1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98680.png
 Sweet & Sour Prawn,thai-chinese,650,East Asian-inspired dish featuring succulent prawns coated in a glossy sweet-and-tangy sauce.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98679.png
@@ -65,7 +65,7 @@ Egg Fried Rice,thai-chinese,390,"Wok-cooked rice, scrambled eggs, and light seas
 Mixed Fried Rice,thai-chinese,520,"Chicken, shrimp, and colorful vegetables seasoned creating a balance of savory sauce.",1:2,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98675.png
 Mixed Vegetables,thai-chinese,390,A vibrant stir-fry featuring seasonal vegetables in a light sauce of oyster/soy sauce and garlic.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98674.png
 Thai Fried Chicken (8 pcs),thai-chinese,600,"Crispy, spicy aromatic dish featuring bone-in chicken marinated in Thai herbs.",8 pcs,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98673.png
-Tikka Kebab,kebabs-naan,350,"Tender, boneless chicken marinated in yogurt, ginger, garlic, and freshly ground spices.",1 skewer,TRUE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG54.png
+Tikka Kebab,kebabs-naan,350,"Tender, boneless chicken marinated in yogurt, ginger, garlic, and freshly ground spices.",1 skewer,TRUE,FALSE,/images/food/kebab.png
 Hariyali Kebab,kebabs-naan,350,"Chicken marinated in a blend of fresh coriander, mint, green chilies, and spiced yogurt.",1 skewer,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG53.png
 Reshmi Kebab,kebabs-naan,350,"Tender chicken marinated in a creamy, nutty paste of yogurt, cream, and cashews.",1 skewer,TRUE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG52.png
 Tandoori Chicken,kebabs-naan,220,Bone-in chicken marinated in spiced yogurt and roasted in the clay tandoor.,1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG51.png
@@ -73,16 +73,16 @@ Garlic Naan,kebabs-naan,80,Freshly baked clay-oven flatbread topped with minced 
 Plain Naan,kebabs-naan,60,"Soft, traditional leavened bread baked hot against the tandoor walls.",1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG49.png
 Butter Naan,kebabs-naan,70,"Warm, pillowy tandoori naan brushed generously with melted butter.",1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG48.png
 Onion Naan,kebabs-naan,90,Clay-baked naan stuffed with lightly spiced onions and herbs.,1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG47.png
-Tikka Biryani,biryani,450,Smoky tandoori chicken tikka pieces served over fragrant spiced basmati biryani rice.,1 handi,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98682.png
+Tikka Biryani,biryani,450,Smoky tandoori chicken tikka pieces served over fragrant spiced basmati biryani rice.,1 handi,TRUE,FALSE,/images/food/biriyani.png
 Tandoori Kabuli Biryani,biryani,430,"Aromatic long-grain rice layered with roasted chicken, chickpeas, and mild warming spices.",1 handi,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98681.png
 Mutton Hyderabadi Biryani,biryani,490,"Tender mutton slow-cooked with basmati rice, caramelized onions, mint, and saffron.",1 handi,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98680.png
 Mexican Fried Rice,sides,150,"Spiced long-grain rice with sweet corn, kidney beans, and tomato aromatics.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97892.png
 Egg Fried Rice (Side),sides,150,Single portion of wok-tossed rice with fluffy scrambled egg and scallions.,1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97891.png
 Sautéed Vegetables,sides,150,"Fresh broccoli, cauliflower, carrots, and beans sautéed lightly in butter.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97890.png
 Mashed Potatoes,sides,150,"Silky, buttery whipped potatoes seasoned with sea salt and cracked pepper.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97889.png
-Espresso,beverages,120 / 180,Concentrated shot of dark roast espresso.,Single / Double,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97038.png
-Americano,beverages,150 / 200,Rich espresso diluted with hot filtered water.,Single / Double,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97037.png
-Cappuccino,beverages,210,"Equal parts espresso, steamed milk, and velvety milk foam.",1 cup,TRUE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97036.png
+Espresso,beverages,120 / 180,Concentrated shot of dark roast espresso.,Single / Double,FALSE,FALSE,/images/food/magnific-coffee.png
+Americano,beverages,150 / 200,Rich espresso diluted with hot filtered water.,Single / Double,FALSE,FALSE,/images/food/magnific-coffee.png
+Cappuccino,beverages,210,"Equal parts espresso, steamed milk, and velvety milk foam.",1 cup,TRUE,FALSE,/images/food/magnific-coffee.png
 Café Latte,beverages,210,Smooth espresso with steamed milk and a thin layer of microfoam.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97035.png
 Flat White,beverages,230,Double ristretto shot topped with velvety steamed whole milk.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97034.png
 Spanish Latte,beverages,240,Espresso combined with fresh milk and sweet condensed milk.,1 cup,TRUE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97033.png
