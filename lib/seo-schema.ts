@@ -110,7 +110,7 @@ export function generateMenuStructuredData(
           return {
             "@type": "MenuItem",
             name: dish.name,
-            description: dish.description || "",
+            ...(dish.description ? { description: dish.description } : {}),
             ...(imageUrl ? { image: imageUrl } : {}),
             offers: parseDishOffer(dish.price),
           };
