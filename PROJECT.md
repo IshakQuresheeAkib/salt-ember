@@ -28,7 +28,7 @@ Dish orders link to WhatsApp chats with pre-filled order messages.
 
 The code renders restaurant copy, dish descriptions, prices, reviews, photographs, and contact links.
 
-External stakeholders have not verified these values for legal publication. Treat all copy and media as implementation fixtures that require owner review before production launch.
+External stakeholders have not verified these values for legal publication. Treat all copy and media as implementation fixtures that require owner review before production launch. Specifically, current dish images in `lib/constants/food-menu-data.ts` are temporary placeholders; final images will be uploaded to Cloudinary and linked later.
 
 ## 2. Brand and visual system
 
@@ -154,6 +154,8 @@ Local images reside in `public/images/food/`, `public/images/menu/`, and `public
 
 `lib/constants/food-menu-data.ts` stores canonical menu fixtures. It exports 14 food categories and 136 food dishes.
 
+> **Dish imagery note:** The current images assigned in `lib/constants/food-menu-data.ts` are temporary placeholders. Permanent dish images will be uploaded to Cloudinary, and their links will be added here later.
+
 Each category defines five fields:
 - `id`: unique category identifier (e.g., `beef-steaks`, `starters`).
 - `name`: full display name.
@@ -168,7 +170,7 @@ Each dish (`FoodItem`) defines these attributes:
 - `category`: key linking to a valid category ID.
 - `portion`: optional portion specifier (e.g., `1:1`, `4 pcs`, `8" / 12"`).
 - `description`: optional ingredients or preparation text.
-- `image`: local path or remote URL.
+- `image`: local path or remote URL (currently temporary placeholders; permanent Cloudinary links to be added later).
 - `isPopular`: optional boolean flag for popular badge.
 - `isSpicy`: optional boolean flag for spicy indicator.
 
@@ -308,7 +310,7 @@ Component markup uses Tailwind CSS v4 utility classes for sizing, flexbox layout
 ## 9. Content ownership
 
 Update these files when modifying static business information:
-- Menu items and categories: `lib/constants/food-menu-data.ts` (or run import script).
+- Menu items and categories: `lib/constants/food-menu-data.ts` (or run import script). *Note: Current dish images are temporary; final images will be uploaded to Cloudinary and updated here later.*
 - Scanned menu pages: `lib/constants/menu.ts`.
 - Customer reviews: `lib/constants/testimonials.ts`.
 - Contact numbers, WhatsApp links, social profiles: `lib/constants/social-media.ts` and `lib/constants/site.ts`.
