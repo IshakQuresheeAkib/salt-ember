@@ -47,12 +47,12 @@ export function normalizeAndHashString(val?: string): string | undefined {
  */
 export async function sendMetaServerEvent(opts: SendMetaServerEventOptions): Promise<void> {
   const pixelId = process.env.META_PIXEL_ID || process.env.NEXT_PUBLIC_META_PIXEL_ID;
-  const accessToken = process.env.META_ACCESS_TOKEN || process.env.META_CAPI_TOKEN;
+  const accessToken = process.env.META_CAPI_TOKEN?.trim();
 
   if (!pixelId || !accessToken) {
     if (process.env.NODE_ENV !== "production") {
       console.warn(
-        "[Meta CAPI] Event skipped: META_PIXEL_ID or META_ACCESS_TOKEN/META_CAPI_TOKEN is not configured."
+        "[Meta CAPI] Event skipped: META_PIXEL_ID or META_CAPI_TOKEN is not configured."
       );
     }
     return;
@@ -66,9 +66,10 @@ export async function sendMetaServerEvent(opts: SendMetaServerEventOptions): Pro
   }
 
   // Prevent test event code from routing real ad conversions away from Meta's optimization engine in production
-  const isProd = process.env.NODE_ENV === "production";
-  const testEventCode = !isProd
-    ? (opts.testEventCode || process.env.META_TEST_EVENT_CODE)?.trim()
+  const isProd = process.env.NODE_ENV === "production" && process.env.META_ALLOW_TEST_EVENTS !== "true";
+  const rawTestCode = opts.testEventCode || process.env.META_TEST_EVENT_CODE;
+  const testEventCode = !isProd && typeof rawTestCode === "string"
+    ? rawTestCode.trim().slice(0, 50)
     : undefined;
 
   const phHash = normalizeAndHashPhone(opts.phone);
@@ -118,9 +119,9 @@ export async function sendMetaServerEvent(opts: SendMetaServerEventOptions): Pro
       }
     );
 
-    if (!res.ok) {
-      const err = await res.json().catch(() => null);
-      console.error("[Meta CAPI Error Response]", err || res.statusText);
+    const result = await res.json().catch(() => null);
+    if (!res.ok || (result && result.events_received === 0)) {
+      console.error("[Meta CAPI Error Response]", result || res.statusText);
     }
   } catch (err) {
     console.error("[Meta CAPI Dispatch Error]", err);

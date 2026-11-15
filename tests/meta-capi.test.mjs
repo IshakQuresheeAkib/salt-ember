@@ -85,7 +85,7 @@ test("Meta deduplication event ID generates unique IDs inside triggerTracking pe
 
 test("Meta testing verification: test_event_code supported in client, server actions, and CAPI", () => {
   const capiContent = fs.readFileSync("lib/meta-capi.ts", "utf8");
-  assert.match(capiContent, /META_CAPI_TOKEN/, "must support META_CAPI_TOKEN alias");
+  assert.match(capiContent, /META_CAPI_TOKEN/, "must use META_CAPI_TOKEN");
   assert.match(capiContent, /testEventCode\?: string/, "options must define testEventCode");
   assert.match(
     capiContent,
@@ -108,4 +108,86 @@ test("Meta testing verification: test_event_code supported in client, server act
     /testEventCode\?: string/,
     "action params must accept testEventCode"
   );
+});
+
+test("behavioral: sendMetaServerEvent strictly drops test_event_code in production and preserves it in dev", async () => {
+  const originalFetch = globalThis.fetch;
+  const originalEnv = process.env.NODE_ENV;
+  const originalAllow = process.env.META_ALLOW_TEST_EVENTS;
+  const originalPixel = process.env.META_PIXEL_ID;
+  const originalToken = process.env.META_CAPI_TOKEN;
+  const originalTestCode = process.env.META_TEST_EVENT_CODE;
+
+  try {
+    let capturedBody = null;
+    globalThis.fetch = async (url, opts) => {
+      capturedBody = JSON.parse(opts.body);
+      return {
+        ok: true,
+        json: async () => ({ events_received: 1 }),
+      };
+    };
+
+    process.env.META_PIXEL_ID = "test_pixel_123";
+    process.env.META_CAPI_TOKEN = "test_token_123";
+    process.env.META_TEST_EVENT_CODE = "TEST12345";
+
+    const { sendMetaServerEvent } = await import("../lib/meta-capi.ts");
+
+    // 1. In production: test_event_code must be omitted from payload
+    process.env.NODE_ENV = "production";
+    delete process.env.META_ALLOW_TEST_EVENTS;
+    await sendMetaServerEvent({
+      eventName: "InitiateCheckout",
+      eventId: "evt_prod_test",
+      eventSourceUrl: "https://salt-ember.vercel.app/#dishes",
+      clientUserAgent: "TestAgent/1.0",
+      testEventCode: "EXPLICIT_TEST_CODE",
+    });
+
+    assert.equal(
+      capturedBody.test_event_code,
+      undefined,
+      "test_event_code must be undefined when NODE_ENV is production"
+    );
+
+    // 2. In development: test_event_code must be included
+    process.env.NODE_ENV = "development";
+    await sendMetaServerEvent({
+      eventName: "InitiateCheckout",
+      eventId: "evt_dev_test",
+      eventSourceUrl: "https://salt-ember.vercel.app/#dishes",
+      clientUserAgent: "TestAgent/1.0",
+      testEventCode: "EXPLICIT_TEST_CODE",
+    });
+
+    assert.equal(
+      capturedBody.test_event_code,
+      "EXPLICIT_TEST_CODE",
+      "test_event_code must be sent when NODE_ENV is development"
+    );
+  } finally {
+    globalThis.fetch = originalFetch;
+    process.env.NODE_ENV = originalEnv;
+    if (originalAllow !== undefined) process.env.META_ALLOW_TEST_EVENTS = originalAllow;
+    else delete process.env.META_ALLOW_TEST_EVENTS;
+    process.env.META_PIXEL_ID = originalPixel;
+    process.env.META_CAPI_TOKEN = originalToken;
+    process.env.META_TEST_EVENT_CODE = originalTestCode;
+  }
+});
+
+test("verify-meta-capi CLI runs dry-run successfully without network or secrets", async () => {
+  const { execSync } = await import("node:child_process");
+  const output = execSync("node scripts/verify-meta-capi.mjs --dry-run --code=TESTCLI123", {
+    encoding: "utf8",
+  });
+  assert.match(output, /\[Dry-Run\] Payload structure valid/);
+  assert.match(output, /TESTCLI123/);
+});
+
+test(".env.example explicitly configures META_TEST_EVENT_CODE and uses exclusively META_CAPI_TOKEN", () => {
+  const content = fs.readFileSync(".env.example", "utf8");
+  assert.match(content, /^META_TEST_EVENT_CODE=/m, "META_TEST_EVENT_CODE must be active in .env.example");
+  assert.match(content, /^META_CAPI_TOKEN=/m, "META_CAPI_TOKEN must be present");
 });

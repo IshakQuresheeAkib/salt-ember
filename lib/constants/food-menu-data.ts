@@ -252,7 +252,7 @@ export const FOOD_DISHES: FoodItem[] = [
     price: "380 TK",
     description: "A savory blend of rich, flavored creamy mushroom soup served with toasted garlic bread.",
     portion: "1:1",
-    image: "https://pngimg.com/uploads/soup/soup_PNG115.png",
+    image: "/sou.png",
   },
   {
     id: "soup-2",

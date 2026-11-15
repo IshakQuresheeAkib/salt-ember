@@ -242,9 +242,26 @@ The code normalizes Bangladesh phone numbers to E.164 format (`+880`). It applie
 
 The tracking layer reads credentials from `.env.local`:
 - `NEXT_PUBLIC_META_PIXEL_ID` (and server fallback `META_PIXEL_ID`): Meta Pixel ID.
-- `META_ACCESS_TOKEN`: System user access token for Graph API CAPI calls.
+- `META_CAPI_TOKEN`: System user access token for Graph API CAPI calls.
+- `META_TEST_EVENT_CODE`: Test event code from Meta Events Manager > Test events tab.
 
 When credentials are missing, tracker functions exit silently. All user interactions continue without error.
+
+### Testing and verification workflow
+
+1. **Meta Events Manager Test Events Tab**:
+   - Copy your server test event code (e.g., `TEST12345`) from **Events Manager > Your Dataset > Test events** tab.
+   - Configure `META_TEST_EVENT_CODE=TEST12345` in `.env.local` for local development.
+2. **Server-Side Verification CLI**:
+   - Run `npm run verify:meta -- --dry-run` to validate CAPI payload structure without network calls.
+   - Run `npm run verify:meta` (or `npm run verify:meta -- --code=TEST12345`) to dispatch an active test event to Meta Graph API and verify receipt in Events Manager.
+3. **Browser Testing & Deduplication**:
+   - In Events Manager Test events tab, use the "Test Browser Events" URL opener or Meta Pixel Helper to observe browser `PageView` and `InitiateCheckout`.
+   - In non-production environments, passing `?test_event_code=TEST12345` in the URL forwards the test code to the server action, allowing server events to route into the test sandbox.
+   - Meta automatically deduplicates matching client and server events via the shared `event_id` and marks them with a green "Deduplicated" badge.
+4. **Production Safeguard**:
+   - Test event codes are strictly stripped whenever `NODE_ENV === "production"` unless explicitly overridden on preview environments using `META_ALLOW_TEST_EVENTS=true`.
+   - Remove or leave blank `META_TEST_EVENT_CODE` on production host deployments (Vercel/Netlify).
 
 ## 6. SEO and structured data
 
