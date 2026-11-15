@@ -61,7 +61,7 @@ test("generateMenuStructuredData builds valid Schema.org Menu graph", () => {
   assert.equal(menu["@type"], "Menu");
   assert.equal(menu["@id"], `${siteConfig.url}/#menu`);
   assert.equal(menu.url, `${siteConfig.url}/#menu`);
-  assert.equal(menu.inLanguage, "en_BD");
+  assert.equal(menu.inLanguage, "en-BD");
 
   assert.ok(Array.isArray(menu.hasMenuSection));
   assert.equal(menu.hasMenuSection.length, FOOD_CATEGORIES.length);

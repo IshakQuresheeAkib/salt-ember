@@ -148,7 +148,7 @@ export function CategoryTabs({
                 role="tab"
                 id={`food-tab-${cat.id}`}
                 aria-selected={isActive}
-                aria-controls={`food-panel-${cat.id}`}
+                aria-controls={isActive ? `food-panel-${cat.id}` : undefined}
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => onSelect(cat.id)}
                 onKeyDown={(e) => handleKeyDown(e, index)}

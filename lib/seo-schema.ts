@@ -98,7 +98,7 @@ export function generateMenuStructuredData(
     "@id": `${siteUrl}/#menu`,
     name: `${siteConfig.name} Menu`,
     url: `${siteUrl}/#menu`,
-    inLanguage: siteConfig.locale || "en-BD",
+    inLanguage: siteConfig.locale ? siteConfig.locale.replace("_", "-") : "en-BD",
     hasMenuSection: categories.map((cat) => ({
       "@type": "MenuSection",
       name: cat.name,

@@ -45,12 +45,13 @@ export function getMetaCookies(): { fbp?: string; fbc?: string } {
 }
 
 /**
- * Extracts numeric value from price strings (e.g. "550 TK" -> 550)
+ * Extracts numeric value from price strings (e.g. "550 TK" -> 550, "850 / 1000 TK" -> 850)
  */
 export function parseNumericPrice(priceStr: string): number {
-  const sanitized = priceStr.replace(/[^0-9.]/g, "");
-  const num = parseFloat(sanitized);
-  return Number.isNaN(num) ? 0 : num;
+  if (!priceStr) return 0;
+  const basePriceStr = priceStr.includes("/") ? priceStr.split("/")[0] : priceStr;
+  const match = basePriceStr.match(/\d+(?:\.\d+)?/);
+  return match ? parseFloat(match[0]) : 0;
 }
 
 /**
@@ -81,7 +82,6 @@ export function buildDishWhatsAppOrderUrl(dish: FoodItem): {
   whatsappUrl: string;
   triggerTracking: () => void;
 } {
-  const eventId = generateMetaEventId();
   const numericPrice = parseNumericPrice(dish.price);
   const cleanPhone = siteConfig.contact.telephoneRaw.replace(/\D/g, "");
 
@@ -89,6 +89,9 @@ export function buildDishWhatsAppOrderUrl(dish: FoodItem): {
   const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
 
   const triggerTracking = () => {
+    // Generate fresh eventId per click to prevent Meta from deduplicating repeated clicks
+    const eventId = generateMetaEventId();
+
     // 1. Browser Pixel event
     trackClientPixel(
       "InitiateCheckout",

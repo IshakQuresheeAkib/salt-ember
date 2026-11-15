@@ -8,7 +8,7 @@ Salt & Ember is a single-page restaurant website built for a dining venue in Syl
 
 ### Delivered page capabilities
 
-- Header navigation linking to `#top`, `#dishes`, `#menu`, `#testimonials`, and `#contact`.
+- Header navigation and mobile bottom navigation linking to the four primary sections: `#top`, `#menu`, `#testimonials`, and `#contact`.
 - Desktop navigation bar, external Google Maps hero link, and fixed mobile bottom navigation bar.
 - Hero presentation with a selectable six-item food orbit and automated rotation.
 - Interactive food menu section (`#dishes`) featuring 14 category tabs, glassmorphic dish cards, badges for popular and spicy items, prices in Bangladesh Taka, and direct WhatsApp ordering actions.
@@ -146,7 +146,7 @@ Remote image hostnames configured in `next.config.ts`:
 - `lh3.googleusercontent.com` (Google Photos CDN dish images)
 - `pngimg.com` (food dish illustrations)
 
-Local images reside in `public/images/food/`, `public/images/menu/`, and `public/hero-food/`.
+Local images reside in `public/images/food/` and `public/hero-food/`.
 
 ## 4. Menu data and spreadsheet pipeline
 
@@ -154,7 +154,8 @@ Local images reside in `public/images/food/`, `public/images/menu/`, and `public
 
 `lib/constants/food-menu-data.ts` stores canonical menu fixtures. It exports 14 food categories and 136 food dishes.
 
-> **Dish imagery note:** The current images assigned in `lib/constants/food-menu-data.ts` are temporary placeholders. Permanent dish images will be uploaded to Cloudinary, and their links will be added here later.
+> [!WARNING]
+> **Launch Gate — Commercial Image Licensing:** The 125 `pngimg.com` food illustrations used in `lib/constants/food-menu-data.ts` are CC BY-NC 4.0 temporary development placeholders. Because Salt & Ember is a commercial establishment, these placeholder images **must be replaced** with licensed, proprietary, or royalty-free commercial photography (hosted on Cloudinary or local storage) prior to public production launch. Commercial deployment with `pngimg.com` assets is strictly prohibited.
 
 Each category defines five fields:
 - `id`: unique category identifier (e.g., `beef-steaks`, `starters`).
@@ -240,8 +241,8 @@ The code normalizes Bangladesh phone numbers to E.164 format (`+880`). It applie
 ### Environment variables and fallback
 
 The tracking layer reads credentials from `.env.local`:
-- `FB_PIXEL_ID` (or `NEXT_PUBLIC_FB_PIXEL_ID`): Meta Pixel ID.
-- `META_CONVERSIONS_API_TOKEN`: System user access token.
+- `NEXT_PUBLIC_META_PIXEL_ID` (and server fallback `META_PIXEL_ID`): Meta Pixel ID.
+- `META_ACCESS_TOKEN`: System user access token for Graph API CAPI calls.
 
 When credentials are missing, tracker functions exit silently. All user interactions continue without error.
 
@@ -283,7 +284,7 @@ Component markup uses Tailwind CSS v4 utility classes for sizing, flexbox layout
 
 ### Navigation anchors
 
-- Page anchor links point to `#top`, `#dishes`, `#menu`, `#testimonials`, and `#contact`.
+- Shared primary navigation anchors resolve to `#top`, `#menu`, `#testimonials`, and `#contact`; `#dishes` is anchorable for direct deep-linking and CAPI event attribution.
 - Mobile bottom navigation synchronizes active tabs with scroll position and URL hash.
 - Keyboard focus uses a two-pixel Silver Mist outline (`#E4E4E4`) with a four-pixel offset.
 
@@ -351,7 +352,7 @@ Three integration tests verify live HTTP responses and run when `npm run dev` is
 ### Verification checklist
 
 Verify UI changes across mobile (375px) and desktop (1280px) viewports:
-- Header and mobile bottom navigation resolve to `#top`, `#dishes`, `#menu`, `#testimonials`, `#contact`.
+- Header and mobile bottom navigation resolve to `#top`, `#menu`, `#testimonials`, `#contact`.
 - Hero orbit rotates cleanly and honours reduced motion.
 - Food menu category tabs switch dishes with smooth layout transitions.
 - WhatsApp order buttons open chat with correct pre-filled dish details and price.

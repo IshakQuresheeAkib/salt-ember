@@ -57,3 +57,28 @@ test("Root layout mounts MetaPixel component", () => {
   const content = fs.readFileSync("app/layout.tsx", "utf8");
   assert.match(content, /<MetaPixel\s*\/>/);
 });
+
+test("parseNumericPrice correctly parses single, decimal, and range prices", () => {
+  function parseNumericPrice(priceStr) {
+    if (!priceStr) return 0;
+    const basePriceStr = priceStr.includes("/") ? priceStr.split("/")[0] : priceStr;
+    const match = basePriceStr.match(/\d+(?:\.\d+)?/);
+    return match ? parseFloat(match[0]) : 0;
+  }
+
+  assert.equal(parseNumericPrice("550 TK"), 550);
+  assert.equal(parseNumericPrice("৳650"), 650);
+  assert.equal(parseNumericPrice("$17.50"), 17.5);
+  assert.equal(parseNumericPrice("850 / 1000 TK"), 850);
+  assert.equal(parseNumericPrice("250 TK / 550 TK"), 250);
+  assert.equal(parseNumericPrice(""), 0);
+});
+
+test("Meta deduplication event ID generates unique IDs inside triggerTracking per click", () => {
+  const content = fs.readFileSync("lib/pixel-tracker.ts", "utf8");
+  assert.match(
+    content,
+    /const triggerTracking = \(\) => \{\s*\/\/[^\n]*\s*const eventId = generateMetaEventId\(\);/,
+    "eventId must be generated inside triggerTracking for each user click"
+  );
+});

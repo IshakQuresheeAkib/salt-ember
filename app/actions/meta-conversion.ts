@@ -4,6 +4,7 @@ import { headers, cookies } from "next/headers";
 import { after } from "next/server";
 import { sendMetaServerEvent } from "@/lib/meta-capi";
 import { siteConfig } from "@/lib/constants/site";
+import { FOOD_DISHES } from "@/lib/constants/food-menu-data";
 
 export interface DishCheckoutTrackParams {
   dishId: string;
@@ -23,12 +24,13 @@ export interface GeneralContactTrackParams {
 }
 
 /**
- * Parses numeric value from price strings like "550 TK", "$17.00", "৳650"
+ * Parses numeric value from price strings like "550 TK", "$17.00", "850 / 1000 TK"
  */
 function extractNumericPrice(priceStr: string): number {
-  const sanitized = priceStr.replace(/[^0-9.]/g, "");
-  const num = parseFloat(sanitized);
-  return Number.isNaN(num) ? 0 : num;
+  if (!priceStr) return 0;
+  const basePriceStr = priceStr.includes("/") ? priceStr.split("/")[0] : priceStr;
+  const match = basePriceStr.match(/\d+(?:\.\d+)?/);
+  return match ? parseFloat(match[0]) : 0;
 }
 
 /**
@@ -56,7 +58,13 @@ async function getClientContext(clientFbp?: string, clientFbc?: string) {
 export async function trackDishCheckoutAction(params: DishCheckoutTrackParams): Promise<{ success: boolean }> {
   try {
     const { userAgent, rawIp, fbp, fbc } = await getClientContext(params.fbp, params.fbc);
-    const value = extractNumericPrice(params.price);
+
+    // Look up canonical dish data to avoid trusting untrusted client payload values directly
+    const canonicalDish = FOOD_DISHES.find((d) => d.id === params.dishId);
+    const dishName = canonicalDish ? canonicalDish.name : params.dishName;
+    const category = canonicalDish ? canonicalDish.category : params.category;
+    const priceStr = canonicalDish ? canonicalDish.price : params.price;
+    const value = extractNumericPrice(priceStr);
 
     // after() ensures the background promise completes on serverless without delaying user response
     after(async () => {
@@ -69,8 +77,8 @@ export async function trackDishCheckoutAction(params: DishCheckoutTrackParams): 
         fbp,
         fbc,
         customData: {
-          content_name: params.dishName,
-          content_category: params.category,
+          content_name: dishName,
+          content_category: category,
           content_ids: [params.dishId],
           content_type: "product",
           currency: siteConfig.currenciesAccepted || "BDT",

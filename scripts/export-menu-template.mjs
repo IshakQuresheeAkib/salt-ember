@@ -54,26 +54,36 @@ for (const dish of FOOD_DISHES) {
   );
 }
 
+const args = process.argv.slice(2);
+const outArgIndex = args.indexOf("--out");
+const skipXlsx = args.includes("--no-xlsx");
+
 const scratchDir = path.resolve(process.cwd(), "scratch");
 if (!fs.existsSync(scratchDir)) {
   fs.mkdirSync(scratchDir, { recursive: true });
 }
 
-const outputPath = path.join(scratchDir, "menu-template.csv");
+const outputPath =
+  outArgIndex !== -1 && args[outArgIndex + 1]
+    ? path.resolve(args[outArgIndex + 1])
+    : path.join(scratchDir, "menu-template.csv");
+
 fs.writeFileSync(outputPath, rows.join("\n") + "\n", "utf8");
 console.log(`Exported ${FOOD_DISHES.length} dishes to ${outputPath}`);
 
 // Generate interactive Excel spreadsheet template with dropdowns and boolean controls
-try {
-  const pyScript = path.resolve(
-    process.cwd(),
-    "scripts",
-    "generate-menu-spreadsheet.py",
-  );
-  if (fs.existsSync(pyScript)) {
-    execSync(`python "${pyScript}"`, { stdio: "inherit" });
+if (!skipXlsx) {
+  try {
+    const pyScript = path.resolve(
+      process.cwd(),
+      "scripts",
+      "generate-menu-spreadsheet.py",
+    );
+    if (fs.existsSync(pyScript)) {
+      execSync(`python "${pyScript}"`, { stdio: "inherit" });
+    }
+  } catch {
+    // Progressive enhancement
   }
-} catch {
-  // Progressive enhancement
 }
 
