@@ -55,16 +55,31 @@ export function parseNumericPrice(priceStr: string): number {
 }
 
 /**
+ * Resolves test event code from URL query parameters (?test_event_code=...)
+ * Active only when NODE_ENV !== "production".
+ */
+export function getMetaTestEventCode(): string | undefined {
+  if (typeof window === "undefined" || process.env.NODE_ENV === "production") return undefined;
+  return new URLSearchParams(window.location.search).get("test_event_code") || undefined;
+}
+
+/**
  * Safely calls browser Meta Pixel
  */
 export function trackClientPixel(
   eventName: string,
   params: Record<string, unknown> = {},
-  eventId?: string
+  eventId?: string,
+  testEventCode?: string
 ): void {
   if (typeof window !== "undefined" && typeof window.fbq === "function") {
-    if (eventId) {
-      window.fbq("track", eventName, params, { eventID: eventId });
+    const code = testEventCode || getMetaTestEventCode();
+    const options: Record<string, unknown> = {};
+    if (eventId) options.eventID = eventId;
+    if (code) options.test_event_code = code;
+
+    if (Object.keys(options).length > 0) {
+      window.fbq("track", eventName, params, options);
     } else {
       window.fbq("track", eventName, params);
     }
@@ -91,6 +106,7 @@ export function buildDishWhatsAppOrderUrl(dish: FoodItem): {
   const triggerTracking = () => {
     // Generate fresh eventId per click to prevent Meta from deduplicating repeated clicks
     const eventId = generateMetaEventId();
+    const testEventCode = getMetaTestEventCode();
 
     // 1. Browser Pixel event
     trackClientPixel(
@@ -104,7 +120,8 @@ export function buildDishWhatsAppOrderUrl(dish: FoodItem): {
         value: numericPrice,
         num_items: 1,
       },
-      eventId
+      eventId,
+      testEventCode
     );
 
     // 2. Server CAPI event (non-blocking)
@@ -117,6 +134,7 @@ export function buildDishWhatsAppOrderUrl(dish: FoodItem): {
       eventId,
       fbp,
       fbc,
+      testEventCode,
     }).catch((err) => {
       console.error("[CAPI Trigger error]", err);
     });
@@ -132,6 +150,7 @@ export function trackOutboundContactClick(channel: "whatsapp" | "telephone" | "m
   const eventId = generateMetaEventId();
   const eventName = channel === "map" ? "FindLocation" : "Contact";
   const { fbp, fbc } = getMetaCookies();
+  const testEventCode = getMetaTestEventCode();
 
   // 1. Browser Pixel
   trackClientPixel(
@@ -140,11 +159,12 @@ export function trackOutboundContactClick(channel: "whatsapp" | "telephone" | "m
       contact_method: channel,
       currency: siteConfig.currenciesAccepted || "BDT",
     },
-    eventId
+    eventId,
+    testEventCode
   );
 
   // 2. Server CAPI (non-blocking)
-  trackGeneralContactAction({ channel, eventId, fbp, fbc }).catch((err) => {
+  trackGeneralContactAction({ channel, eventId, fbp, fbc, testEventCode }).catch((err) => {
     console.error("[CAPI Contact Trigger error]", err);
   });
 }

@@ -14,6 +14,7 @@ export interface DishCheckoutTrackParams {
   eventId: string;
   fbp?: string;
   fbc?: string;
+  testEventCode?: string;
 }
 
 export interface GeneralContactTrackParams {
@@ -21,6 +22,7 @@ export interface GeneralContactTrackParams {
   eventId: string;
   fbp?: string;
   fbc?: string;
+  testEventCode?: string;
 }
 
 /**
@@ -76,6 +78,7 @@ export async function trackDishCheckoutAction(params: DishCheckoutTrackParams): 
         clientIp: rawIp,
         fbp,
         fbc,
+        testEventCode: params.testEventCode,
         customData: {
           content_name: dishName,
           content_category: category,
@@ -112,6 +115,7 @@ export async function trackGeneralContactAction(params: GeneralContactTrackParam
         clientIp: rawIp,
         fbp,
         fbc,
+        testEventCode: params.testEventCode,
         customData: {
           contact_method: params.channel,
           currency: siteConfig.currenciesAccepted || "BDT",

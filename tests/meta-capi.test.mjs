@@ -82,3 +82,30 @@ test("Meta deduplication event ID generates unique IDs inside triggerTracking pe
     "eventId must be generated inside triggerTracking for each user click"
   );
 });
+
+test("Meta testing verification: test_event_code supported in client, server actions, and CAPI", () => {
+  const capiContent = fs.readFileSync("lib/meta-capi.ts", "utf8");
+  assert.match(capiContent, /META_CAPI_TOKEN/, "must support META_CAPI_TOKEN alias");
+  assert.match(capiContent, /testEventCode\?: string/, "options must define testEventCode");
+  assert.match(
+    capiContent,
+    /const isProd = process\.env\.NODE_ENV === "production"/,
+    "must check production environment"
+  );
+
+  const trackerContent = fs.readFileSync("lib/pixel-tracker.ts", "utf8");
+  assert.match(trackerContent, /getMetaTestEventCode/, "must export getMetaTestEventCode helper");
+  assert.match(trackerContent, /test_event_code/, "must extract test_event_code query parameter");
+  assert.match(
+    trackerContent,
+    /options\.test_event_code = code/,
+    "must pass test_event_code to browser fbq for deduplication"
+  );
+
+  const actionContent = fs.readFileSync("app/actions/meta-conversion.ts", "utf8");
+  assert.match(
+    actionContent,
+    /testEventCode\?: string/,
+    "action params must accept testEventCode"
+  );
+});

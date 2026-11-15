@@ -16,6 +16,7 @@ export interface SendMetaServerEventOptions {
   fbp?: string;
   fbc?: string;
   customData?: Record<string, unknown>;
+  testEventCode?: string;
 }
 
 /**
@@ -46,12 +47,12 @@ export function normalizeAndHashString(val?: string): string | undefined {
  */
 export async function sendMetaServerEvent(opts: SendMetaServerEventOptions): Promise<void> {
   const pixelId = process.env.META_PIXEL_ID || process.env.NEXT_PUBLIC_META_PIXEL_ID;
-  const accessToken = process.env.META_ACCESS_TOKEN;
+  const accessToken = process.env.META_ACCESS_TOKEN || process.env.META_CAPI_TOKEN;
 
   if (!pixelId || !accessToken) {
     if (process.env.NODE_ENV !== "production") {
       console.warn(
-        "[Meta CAPI] Event skipped: META_PIXEL_ID or META_ACCESS_TOKEN is not configured."
+        "[Meta CAPI] Event skipped: META_PIXEL_ID or META_ACCESS_TOKEN/META_CAPI_TOKEN is not configured."
       );
     }
     return;
@@ -66,7 +67,9 @@ export async function sendMetaServerEvent(opts: SendMetaServerEventOptions): Pro
 
   // Prevent test event code from routing real ad conversions away from Meta's optimization engine in production
   const isProd = process.env.NODE_ENV === "production";
-  const testEventCode = !isProd ? process.env.META_TEST_EVENT_CODE : undefined;
+  const testEventCode = !isProd
+    ? (opts.testEventCode || process.env.META_TEST_EVENT_CODE)?.trim()
+    : undefined;
 
   const phHash = normalizeAndHashPhone(opts.phone);
   const emHash = normalizeAndHashString(opts.email);
