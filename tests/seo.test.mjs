@@ -40,6 +40,8 @@ test("layout.tsx renders Restaurant & WebSite JSON-LD structured data", () => {
   assert.match(content, /"@type":\s*"WebSite"/);
   assert.match(content, /"@type":\s*"GeoCoordinates"/);
   assert.match(content, /hasMenu:\s*`\${siteConfig\.url}\/#menu`/);
+  assert.match(content, /generateMenuStructuredData/);
+  assert.match(content, /menuStructuredData/);
   assert.match(content, /canonical:\s*"\/"/);
   assert.match(content, /openGraph:\s*\{/);
   assert.match(content, /twitter:\s*\{/);

@@ -1,0 +1,137 @@
+name,category,price,description,portion,isPopular,isSpicy,imageUrl
+Barbecue Chicken,starters,550,Served with veggies,Served with veggies,TRUE,FALSE,/images/food/magnific-burger.png
+Prawn Sticks (6 pcs),starters,550,"Fresh shelled prawns, grilled on sticks and served with French fries.",6 pcs,TRUE,FALSE,/images/food/appetizer.png
+Chicken Basket,starters,440,"Four pieces of crispy, deep-fried boneless chicken thighs served with French fries. A kids' favorite!",4 pcs,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97926.png
+Fish & Chips,starters,550,"Flaky dori fillet in a golden, crispy batter, served with chips & tartar sauce.",1 serving,TRUE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97889.png
+French Fries,starters,200,Crispy golden fries seasoned to perfection.,1 basket,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97888.png
+Golden Fried Shrimp (6 pcs),starters,480,"Crispy, golden-breaded shrimps fried to perfection.",6 pcs,FALSE,FALSE,https://pngimg.com/uploads/shrimps/shrimps_PNG96483.png
+Garlic Mushrooms,starters,450,Juicy mushrooms sautéed in a rich garlic butter sauce.,1 plate,FALSE,FALSE,https://pngimg.com/uploads/mushroom/mushroom_PNG3224.png
+Fried Calamari Rings,starters,490,"Lightly battered and fried calamari, crispy on the outside and tender on the inside.",1 plate,TRUE,FALSE,https://pngimg.com/uploads/shrimps/shrimps_PNG96481.png
+Buffalo Wings (6 pcs),starters,450,Classic crispy wings tossed in a tangy and spicy buffalo sauce.,6 pcs,FALSE,TRUE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97920.png
+Naga Wings (6 pcs),starters,450,"Wings sautéed in a rich garlic naga sauce, bursting with heat and flavor.",6 pcs,TRUE,TRUE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97919.png
+BBQ Wings (6 pcs),starters,450,Spicy and juicy wings coated in a fiery BBQ sauce.,6 pcs,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97918.png
+Poutine,starters,590,"Crispy French fries topped with a minced beef sauce and melted mozzarella, then baked.",1 bowl,TRUE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97881.png
+Fried Wonton (8 pcs),starters,290,Golden-brown wontons filled with a savory mixture of seasoned chicken and fried to perfection.,8 pcs,FALSE,FALSE,https://pngimg.com/uploads/dumplings/dumplings_PNG75.png
+Cream of Mushroom,soups-noodles,380,"A savory blend of rich, flavored creamy mushroom soup served with toasted garlic bread.",1:1,FALSE,FALSE,https://pngimg.com/uploads/soup/soup_PNG115.png
+Thai Soup (Thick),soups-noodles,250 / 550,"A classic thick soup made with chicken stock, chicken, prawns, lemongrass and coriander leaves.",1:1 / 1:3,TRUE,FALSE,https://pngimg.com/uploads/soup/soup_PNG114.png
+Seafood Clear Soup,soups-noodles,390,"A spicy clear broth featuring squid, dory fish, prawns and crab, infused with galangal and lemongrass.",1:1,FALSE,TRUE,https://pngimg.com/uploads/soup/soup_PNG113.png
+Ramen Noodle Soup,soups-noodles,520,"A steaming bowl of rich broth served with ramen noodles, grilled chicken breast, mushrooms, and an egg.",1 bowl,TRUE,FALSE,https://pngimg.com/uploads/soup/soup_PNG112.png
+Chicken Cashew Nut Salad,salads,500,"Crispy chicken, crunchy toasted cashews, and fresh garden vegetables tossed in a tangy dressing.",1 plate,TRUE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2819.png
+Red Bean Salad,salads,450,"Red onion, fresh parsley, kidney beans, olive oil, paprika, black pepper, and salt with lime-cilantro dressing.",1 plate,FALSE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2818.png
+Grilled Chicken Salad,salads,500,Grilled chicken breast with seasonal vegetables and lime-cilantro dressing.,1 plate,FALSE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2817.png
+Chicken Hawaiian Salad,salads,550,"A tropical and savory dish combining shredded chicken with pineapple chunks, vegetables, and honey mustard.",1 plate,FALSE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2816.png
+Russian Salad,salads,450,"Diced pineapple, apple, grapes, and carrots bound together with a mayonnaise dressing.",1 plate,FALSE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2815.png
+Greek Salad,salads,600,"Lettuce, tomatoes, cucumbers, sliced red onions, bell peppers, black olives, tangy feta, and Greek dressing.",1 plate,FALSE,FALSE,https://pngimg.com/uploads/salad/salad_PNG2814.png
+Tomahawk Steak [500g],beef-steaks,2590,"A grand, bone-in steak for the ultimate carnivore experience. Seared and served with sautéed vegetables, mashed potatoes, and three sauces.",500g,TRUE,FALSE,https://pngimg.com/uploads/steak/steak_PNG94.png
+Sirloin Steak (300g),beef-steaks,1990,Premium sirloin steak grilled to perfection and served with classic sides and custom sauces.,300g,TRUE,FALSE,https://pngimg.com/uploads/steak/steak_PNG93.png
+T-Bone Steak (300g),beef-steaks,1990,"A rich and flavorful t-bone cut, perfectly seasoned and flame-grilled.",300g,FALSE,FALSE,https://pngimg.com/uploads/steak/steak_PNG92.png
+Ribeye Steak (300g),beef-steaks,1990,Tender and juicy ribeye grilled to bring out its rich marbled flavors.,300g,TRUE,FALSE,https://pngimg.com/uploads/steak/steak_PNG91.png
+Surf & Turf,beef-steaks,2120,The best of both worlds: a succulent 200g ribeye steak paired with 1 pc lobster.,200g + 1 pc lobster,TRUE,FALSE,https://pngimg.com/uploads/steak/steak_PNG90.png
+BBQ Back Ribs (500g),slow-cooked,1890,"Leaner ribs from the upper ribcage, slow-cooked until tender in rich barbecue glaze.",500g,TRUE,FALSE,https://pngimg.com/uploads/barbecue/barbecue_PNG69.png
+BBQ Short Ribs (500g),slow-cooked,1900,"Tender beef short ribs, slow-smoked or oven-braised, coated in our signature tangy-sweet BBQ sauce.",500g,TRUE,FALSE,https://pngimg.com/uploads/barbecue/barbecue_PNG68.png
+Barbecue Chicken,main-courses,650,Served with veggies,Served with veggies,TRUE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97928.png
+Sizzling Cheesy Chicken Steak,main-courses,650,"A juicy chicken steak smothered in gooey, melted cheese, served with vegetables on a sizzling skillet.",1 serving,TRUE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97927.png
+Chicken Rollatini,main-courses,600,"A delicious roll stuffed with cheesy chicken and herbs, accompanied by two choice sides.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97926.png
+Peri Peri Chicken,main-courses,540,"South African style fiery, flavorful chicken marinated in a vibrant sauce of bird's eye chilies, garlic, and paprika.",1 serving,TRUE,TRUE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97925.png
+Texan Hasselback Fried Chicken,main-courses,540,"A large, crisp-coated boneless chicken thigh served with a healthy smothering of cream gravy.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97924.png
+Grilled Chicken with Creamy Mushroom Sauce,main-courses,540,"Grilled chicken served with a rich, savory mushroom sauce featuring garlic and herb flavors.",1 serving,TRUE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97923.png
+Grilled Dory Fish,main-courses,640,Dory fish served with a quick lemon-butter sauce made with browned butter and lemon.,1 serving,FALSE,FALSE,https://pngimg.com/uploads/fish/fish_PNG25140.png
+English Breaded Fish (Dory),main-courses,640,Crispy dory fish fillets coated in breadcrumbs and deep-fried until flaky and golden.,1 serving,FALSE,FALSE,https://pngimg.com/uploads/fish/fish_PNG25139.png
+Chicken Parmesan,main-courses,590,"A breaded, fried chicken cutlet smothered in marinara, topped with melted mozzarella and Parmesan, baked golden.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97920.png
+Honey Glazed Chicken,main-courses,540,"Tender chicken glazed in a sticky, flavorful sauce made with soy, honey, garlic, and ginger.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97919.png
+BBQ Grilled Chicken,main-courses,540,Smoky and sweet Caribbean-style grilled chicken seasoned with bold spices.,1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97918.png
+Crispy Chicken with Mushroom Sauce,main-courses,540,Golden-brown crispy boneless chicken thighs served with a savory mushroom sauce.,1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97917.png
+Chicken Steak,main-courses,550,"Flattened chicken breast marinated in savory herbs, lemon juice, and sauces, grilled to tender perfection.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97916.png
+Chicken Ala-Creme,main-courses,490,"Tender chicken breast fillets sautéed in butter with mushrooms, onions, bell peppers, and garlic in rich crème.",1 serving,FALSE,FALSE,https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG97915.png
+Creamy Chicken Alfredo,pasta-spaghetti,490,Rich Alfredo sauce tossed with penne pasta and topped with shaved Parmesan.,1 bowl,TRUE,FALSE,/images/food/pasta.png
+Seafood Marinara,pasta-spaghetti,550,Pasta with a tangy and spicy marinara sauce and fresh mixed seafood.,1 bowl,FALSE,TRUE,https://pngimg.com/uploads/pasta/pasta_PNG98619.png
+Creamy Shrimp Alfredo,pasta-spaghetti,550,"Penne pasta with succulent shrimp tossed in a rich, velvety Alfredo sauce.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98618.png
+Spaghetti Bolognese (Beef),pasta-spaghetti,570,Slow-cooked minced beef in a robust tomato sauce over al dente spaghetti.,1 bowl,TRUE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98617.png
+Pasta Basta,pasta-spaghetti,490,"Oven-baked pasta with a creamy sauce, chicken, and lots of melted cheese.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98616.png
+Pasta Europa,pasta-spaghetti,520,"Oven-baked pasta featuring beef slices, mushrooms, chili, cheese, and extra virgin olive oil.",1 bowl,FALSE,FALSE,https://pngimg.com/uploads/pasta/pasta_PNG98615.png
+Mexican Hot,pizza,850 / 1000,"Jalapeños, chili peppers, seasoned chicken, onion, black olives, and mozzarella.","10"" / 12""",TRUE,TRUE,/images/food/magnific-pizza.png
+BBQ Chicken,pizza,850 / 1000,Grilled chicken tossed in BBQ sauce with sautéed mushrooms and capsicum.,"10"" / 12""",FALSE,FALSE,/images/food/pizza.png
+Meat Lover's,pizza,900 / 1100,"Marinara base with chicken pepperoni, chicken, Italian sausage, and crisp capsicum.","10"" / 12""",TRUE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44094.png
+Hawaiian Pizza,pizza,850 / 1000,"A sweet and savory blend of juicy pineapple chunks, savory chicken, and mozzarella.","10"" / 12""",FALSE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44093.png
+Naga Chicken,pizza,800 / 950,"Spicy Naga chili sauce, tender chicken, onions, black olives, and mushrooms.","10"" / 12""",FALSE,TRUE,https://pngimg.com/uploads/pizza/pizza_PNG44092.png
+Classic Margherita,pizza,750 / 850,"Artisan pizza sauce, creamy mozzarella cheese, tomato slices, and fragrant oregano.","10"" / 12""",FALSE,FALSE,https://pngimg.com/uploads/pizza/pizza_PNG44091.png
+Beef Sizzling,thai-chinese,590,"Tender, marinated beef strips served with a savory sauce and vegetables on a super-hot iron plate.",1:2,TRUE,FALSE,/images/food/biriyani.png
+Chicken Sizzling,thai-chinese,530,Flavorful marinated chicken and colorful veggies served dramatic and smoking on a hot iron plate.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98681.png
+Sweet & Sour Chicken,thai-chinese,520,"Deep-fried chicken pieces coated in a vibrant, glossy sauce balancing tangy and sweet flavors.",1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98680.png
+Sweet & Sour Prawn,thai-chinese,650,East Asian-inspired dish featuring succulent prawns coated in a glossy sweet-and-tangy sauce.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98679.png
+Chicken Chili Onion,thai-chinese,550,Spicy Indo-Chinese dish featuring chicken pieces stir-fried with vibrant onions and green chili.,1:2,FALSE,TRUE,https://pngimg.com/uploads/rice/rice_PNG98678.png
+Beef Chili Onion,thai-chinese,600,"Tender pieces of beef tossed in a savory sauce with onions, green chilies, and bell peppers.",1:2,FALSE,TRUE,https://pngimg.com/uploads/rice/rice_PNG98677.png
+Egg Fried Rice,thai-chinese,390,"Wok-cooked rice, scrambled eggs, and light seasonings with fresh vegetables.",1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98676.png
+Mixed Fried Rice,thai-chinese,520,"Chicken, shrimp, and colorful vegetables seasoned creating a balance of savory sauce.",1:2,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98675.png
+Mixed Vegetables,thai-chinese,390,A vibrant stir-fry featuring seasonal vegetables in a light sauce of oyster/soy sauce and garlic.,1:2,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98674.png
+Thai Fried Chicken (8 pcs),thai-chinese,600,"Crispy, spicy aromatic dish featuring bone-in chicken marinated in Thai herbs.",8 pcs,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98673.png
+Tikka Kebab,kebabs-naan,350,"Tender, boneless chicken marinated in yogurt, ginger, garlic, and freshly ground spices.",1 skewer,TRUE,FALSE,/images/food/kebab.png
+Hariyali Kebab,kebabs-naan,350,"Chicken marinated in a blend of fresh coriander, mint, green chilies, and spiced yogurt.",1 skewer,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG53.png
+Reshmi Kebab,kebabs-naan,350,"Tender chicken marinated in a creamy, nutty paste of yogurt, cream, and cashews.",1 skewer,TRUE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG52.png
+Tandoori Chicken,kebabs-naan,220,Bone-in chicken marinated in spiced yogurt and roasted in the clay tandoor.,1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG51.png
+Garlic Naan,kebabs-naan,80,Freshly baked clay-oven flatbread topped with minced garlic and herbs.,1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG50.png
+Plain Naan,kebabs-naan,60,"Soft, traditional leavened bread baked hot against the tandoor walls.",1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG49.png
+Butter Naan,kebabs-naan,70,"Warm, pillowy tandoori naan brushed generously with melted butter.",1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG48.png
+Onion Naan,kebabs-naan,90,Clay-baked naan stuffed with lightly spiced onions and herbs.,1 pc,FALSE,FALSE,https://pngimg.com/uploads/kebab/kebab_PNG47.png
+Tikka Biryani,biryani,450,Smoky tandoori chicken tikka pieces served over fragrant spiced basmati biryani rice.,1 handi,TRUE,FALSE,/images/food/biriyani.png
+Tandoori Kabuli Biryani,biryani,430,"Aromatic long-grain rice layered with roasted chicken, chickpeas, and mild warming spices.",1 handi,FALSE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98681.png
+Mutton Hyderabadi Biryani,biryani,490,"Tender mutton slow-cooked with basmati rice, caramelized onions, mint, and saffron.",1 handi,TRUE,FALSE,https://pngimg.com/uploads/rice/rice_PNG98680.png
+Mexican Fried Rice,sides,150,"Spiced long-grain rice with sweet corn, kidney beans, and tomato aromatics.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97892.png
+Egg Fried Rice (Side),sides,150,Single portion of wok-tossed rice with fluffy scrambled egg and scallions.,1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97891.png
+Sautéed Vegetables,sides,150,"Fresh broccoli, cauliflower, carrots, and beans sautéed lightly in butter.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97890.png
+Mashed Potatoes,sides,150,"Silky, buttery whipped potatoes seasoned with sea salt and cracked pepper.",1:1,FALSE,FALSE,https://pngimg.com/uploads/fries/fries_PNG97889.png
+Espresso,beverages,120 / 180,Concentrated shot of dark roast espresso.,Single / Double,FALSE,FALSE,/images/food/magnific-coffee.png
+Americano,beverages,150 / 200,Rich espresso diluted with hot filtered water.,Single / Double,FALSE,FALSE,/images/food/magnific-coffee.png
+Cappuccino,beverages,210,"Equal parts espresso, steamed milk, and velvety milk foam.",1 cup,TRUE,FALSE,/images/food/magnific-coffee.png
+Café Latte,beverages,210,Smooth espresso with steamed milk and a thin layer of microfoam.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97035.png
+Flat White,beverages,230,Double ristretto shot topped with velvety steamed whole milk.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97034.png
+Spanish Latte,beverages,240,Espresso combined with fresh milk and sweet condensed milk.,1 cup,TRUE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97033.png
+Caramel Latte,beverages,260,Espresso and steamed milk swirled with rich caramel syrup.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97032.png
+Vanilla Latte,beverages,260,Smooth espresso infused with fragrant French vanilla syrup.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG97031.png
+Hazelnut Latte,beverages,250,Espresso with steamed milk and aromatic roasted hazelnut essence.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG75.png
+Café Mocha,beverages,260,Espresso blended with dark chocolate and steamed milk.,1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG74.png
+Double Hot Chocolate,beverages,210,"Thick, decadent melted chocolate whisked with hot whole milk.",1 cup,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG73.png
+Iced Cappuccino,beverages,220,Chilled espresso poured over ice and cold frothed milk.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG72.png
+Iced Café Latte,beverages,230,Cold espresso and fresh milk served over crystal clear ice.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG71.png
+Iced Mocha Latte,beverages,240,"Chilled espresso, dark chocolate syrup, and cold milk over ice.",1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG70.png
+Iced Caramel Latte,beverages,260,Chilled espresso with caramel drizzle and whole milk.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG69.png
+Iced Hazelnut Latte,beverages,250,Cold brew espresso with hazelnut syrup and cold milk.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG68.png
+Medium Iced Americano,beverages,200,Bold double espresso poured over cold water and ice.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG67.png
+Iced Mango Milk Coffee,beverages,240,"Signature fusion of ripe mango puree, cold milk, and espresso.",1 glass,TRUE,FALSE,https://pngimg.com/uploads/cappuccino/cappuccino_PNG66.png
+Brownie Mocha Frappe,beverages,320,Blended coffee frappe with crumbled chocolate fudge brownie.,1 glass,TRUE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118628.png
+Mocha Frappe,beverages,240,Icy blended coffee frappe with rich chocolate swirl.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118627.png
+Caramel Frappe,beverages,270,"Blended ice, milk, espresso, and golden caramel sauce.",1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118626.png
+Hazelnut Frappe,beverages,260,Creamy icy frappe with toasted hazelnut notes.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118625.png
+Vanilla Frappe,beverages,250,Classic blended iced frappe with pure vanilla extract.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118624.png
+Arabian Dates Shake,beverages,260,Rich milkshake blended with sweet premium Arabian dates and honey.,1 glass,TRUE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118623.png
+Mango & Strawberry Shake,beverages,240,Luscious layered shake made with sweet mango and wild strawberry.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118622.png
+Biscoff Milkshake,beverages,300,Creamy vanilla shake whipped with caramelized Lotus Biscoff spread.,1 glass,TRUE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118621.png
+Oreo Milkshake,beverages,230,Crushed Oreo cookies blended with vanilla bean ice cream.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118620.png
+Nutella Shake,beverages,280,Thick hazelnut cocoa milkshake made with genuine Nutella.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118619.png
+Blueberry Milkshake,beverages,290,Refreshing milkshake blended with real blueberry compote.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118618.png
+Chocolate Shake,beverages,230,Classic double chocolate milkshake topped with dark drizzle.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118617.png
+Caramel Shake,beverages,250,Sweet and creamy shake whipped with rich caramel cream.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118616.png
+Vanilla Milkshake,beverages,220,Traditional smooth vanilla shake made with dairy milk and cream.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/smoothie/smoothie_PNG118615.png
+Lychee Mint Bliss,beverages,320,"Cooling mocktail with juicy lychees, fresh garden mint, and soda.",1 glass,TRUE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG145.png
+Virgin Mojito,beverages,280,"Muddled fresh limes, spearmint leaves, cane syrup, and sparkling water.",1 glass,TRUE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG144.png
+Ocean Sunset Mocktail,beverages,350,"Layered gradient mocktail with tropical citrus, grenadine, and blue curaçao notes.",1 glass,TRUE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG143.png
+Blue Orange Fizz,beverages,320,Sparkling mocktail combining tangy blood orange and electric blue citrus.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG142.png
+Fizzy Strawberry Mint,beverages,290,"Crushed ripe strawberries, fresh mint leaves, and effervescent soda.",1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG141.png
+Fizzy Mango Mint,beverages,300,Sweet mango nectar with bruised fresh mint and crisp bubbles.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG140.png
+Coconut Mango Mint,beverages,310,"Tropical blend of coconut water, ripe mango puree, and garden mint.",1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG139.png
+Fizzy Blueberry Mint,beverages,290,"Wild blueberries, fresh mint sprigs, and lemon sparkling water.",1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG138.png
+Kiwi Fizzy Mint,beverages,330,Zesty green kiwi chunks muddled with mint and soda.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG137.png
+Raspberry Ice Fusion,beverages,310,Tart raspberry puree shaken with crushed ice and citrus soda.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/cocktail/cocktail_PNG136.png
+Belgian Lemonade,beverages,190,Classic European sweet-and-sour lemonade over crushed ice.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16954.png
+Strawberry Lemonade,beverages,160,Freshly squeezed lemon juice swirled with crushed strawberry syrup.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16953.png
+Mango Lemonade,beverages,170,Sun-ripened mango pulp blended with tangy fresh lemon.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16952.png
+Blue Ocean Lemonade,beverages,180,Electric blue citrus lemonade with a cool sparkling finish.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16951.png
+Orange Lemonade,beverages,180,Sweet freshly squeezed orange juice married with tart lemonade.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16950.png
+Fresh Fruit Juices,beverages,210,Daily selection of fresh seasonal fruit cold-pressed to order.,1 glass,FALSE,FALSE,https://pngimg.com/uploads/lemonade/lemonade_PNG16949.png
+Oreo Cheesecake,desserts,240,Velvety cream cheese filling packed with crunchy Oreo cookie chunks on a chocolate biscuit crust.,1 slice,TRUE,FALSE,https://pngimg.com/uploads/cake/cake_PNG97030.png
+Blueberry Cheesecake,desserts,280,New York style baked cheesecake topped with house-made sweet blueberry compote.,1 slice,TRUE,FALSE,https://pngimg.com/uploads/cake/cake_PNG97029.png
+Tiramisu Cheesecake,desserts,290,Italian coffee-infused mascarpone cream cheese layered over espresso biscuit crumbs.,1 slice,TRUE,FALSE,https://pngimg.com/uploads/cake/cake_PNG97028.png
+Strawberry Cheesecake,desserts,280,Rich baked cheesecake crowned with sweet glazed garden strawberries.,1 slice,FALSE,FALSE,https://pngimg.com/uploads/cake/cake_PNG97027.png
+Biscoff Cheesecake,desserts,320,Smooth spiced speculoos cheesecake on a Lotus biscuit crumb crust with cookie butter drizzle.,1 slice,TRUE,FALSE,https://pngimg.com/uploads/cake/cake_PNG97026.png
+Chocolate Brownie,desserts,180,"Fudgy, dense double-chocolate brownie baked with dark chocolate chips.",1 piece,FALSE,FALSE,https://pngimg.com/uploads/chocolate_cake/chocolate_cake_PNG62.png
+Muffin,desserts,110,Freshly baked morning muffin with a moist crumb and golden sugar crown.,1 piece,FALSE,FALSE,https://pngimg.com/uploads/muffin/muffin_PNG201.png

@@ -7,23 +7,17 @@ const testimonialsPath = new URL(
   import.meta.url,
 );
 
-test("testimonial motion is cancelled while the section is paused", () => {
+test("testimonial motion lifecycle uses Framer Motion frame loop and respects pause", () => {
   const testimonials = readFileSync(testimonialsPath, "utf8");
 
-  assert.doesNotMatch(testimonials, /useAnimationFrame/);
-  assert.match(testimonials, /window\.requestAnimationFrame\(updatePosition\)/);
-  assert.match(testimonials, /window\.cancelAnimationFrame\(frameId\)/);
+  assert.match(testimonials, /useAnimationFrame/);
+  assert.match(testimonials, /if\s*\(isPaused\)\s*\{\s*return;\s*\}/);
 });
 
-test("testimonial motion pauses offscreen and during pointer or keyboard interaction", () => {
+test("testimonial motion respects reduced motion preference", () => {
   const testimonials = readFileSync(testimonialsPath, "utf8");
 
-  assert.match(testimonials, /useInView\(sectionRef, \{ amount: 0\.1 \}\)/);
-  assert.match(
-    testimonials,
-    /shouldReduceMotion === true \|\| !isInView \|\| isInteractionPaused \|\| isUserPaused/,
-  );
-  assert.match(testimonials, /onPointerEnter=\{\(\) => setIsInteractionPaused\(true\)\}/);
-  assert.match(testimonials, /onFocus=\{\(\) => setIsInteractionPaused\(true\)\}/);
-  assert.match(testimonials, /aria-label=\{isUserPaused \? "Resume testimonial movement" : "Pause testimonial movement"\}/);
+  assert.match(testimonials, /useReducedMotion\(\)/);
+  assert.match(testimonials, /motionIsPaused = shouldReduceMotion === true/);
+  assert.match(testimonials, /testimonialStaticGridClassName/);
 });

@@ -3,8 +3,14 @@ import test from "node:test";
 
 const baseUrl = process.env.HERO_BASE_URL ?? "http://localhost:3000";
 
-test("keeps one ember curve fixed outside the animated dish scenes", async () => {
-  const response = await fetch(baseUrl);
+test("keeps one ember curve fixed outside the animated dish scenes", async (t) => {
+  let response;
+  try {
+    response = await fetch(baseUrl);
+  } catch {
+    t.skip(`Skipping: dev server is not running on ${baseUrl}`);
+    return;
+  }
 
   assert.equal(response.ok, true, `Expected ${baseUrl} to render successfully`);
 
