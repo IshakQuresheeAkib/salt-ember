@@ -1,192 +1,329 @@
 # Salt & Ember
 
-> **Current implementation reference.** This file describes the repository as it exists in the working tree. It is the intended single reference for project scope, design system, architecture, and engineering rules. It does **not** establish that any restaurant claim, menu item, image, testimonial, contact detail, or external profile has been approved for publication.
+> **Current implementation reference.** This document describes the repository as it exists in the working tree. It serves as the single reference for project scope, design tokens, architecture, and engineering rules. It does not establish that restaurant claims, menu items, imagery, testimonials, contact details, or external profiles have received client publication approval.
 
 ## 1. Product
 
-Salt & Ember is a single-page, frontend-only restaurant website built for a Sylhet, Bangladesh concept. The application has one public route: `/`.
+Salt & Ember is a single-page restaurant website built for a dining venue in Sylhet, Bangladesh. The application operates on one public route: `/`.
 
-### What the page currently provides
+### Delivered page capabilities
 
-- Header navigation to Home, Menu, Reviews, and Contact.
-- A desktop navigation bar, an external Google Maps hero CTA, and a fixed mobile bottom navigation bar.
-- A hero with a selectable six-item food orbit and automatic rotation.
-- A client-side, keyboard-operable carousel for 28 menu-page images delivered via Cloudinary.
-- A testimonial presentation: animated columns when motion is allowed, or a static grid when reduced motion is requested.
-- A contact footer with a maps link, phone link, WhatsApp link, Facebook link, and Instagram link.
+- Header navigation linking to `#top`, `#dishes`, `#menu`, `#testimonials`, and `#contact`.
+- Desktop navigation bar, external Google Maps hero link, and fixed mobile bottom navigation bar.
+- Hero presentation with a selectable six-item food orbit and automated rotation.
+- Interactive food menu section (`#dishes`) featuring 14 category tabs, glassmorphic dish cards, badges for popular and spicy items, prices in Bangladesh Taka, and direct WhatsApp ordering actions.
+- Client-side carousel displaying 28 scanned menu pages served from Cloudinary.
+- Testimonial presentation with animated vertical columns or a static grid when reduced motion is preferred.
+- Dual-layer conversion tracking combining client Meta Pixel and server Meta Conversions API (CAPI).
+- Structured SEO data implementing Schema.org Restaurant, WebSite, and Menu specifications.
+- Contact footer with phone, WhatsApp, Google Maps, Facebook, and Instagram links.
 
-### Explicitly absent
+### System boundaries
 
-There is no backend, database, authentication, CMS, analytics, form submission, reservation flow, event enquiry workflow, ordering, delivery, payment, map embed, persistence, or administration interface.
+The repository contains no database, user authentication, content management system, ordering database, in-app payment gateway, or administration dashboard.
 
-### Content and publication boundary
+Dish orders link to WhatsApp chats with pre-filled order messages.
 
-The code currently renders restaurant positioning, dishes, prices, testimonials, imagery, location, phone/WhatsApp details, and social destinations. Their business approval status cannot be verified from this repository. Treat all such values as implementation content that needs separate owner approval before a production release.
+### Content approval boundary
+
+The code renders restaurant copy, dish descriptions, prices, reviews, photographs, and contact links.
+
+External stakeholders have not verified these values for legal publication. Treat all copy and media as implementation fixtures that require owner review before production launch.
 
 ## 2. Brand and visual system
 
-### Direction
+### Visual direction
 
-The interface uses a dark, fire-led editorial direction. Its visual signature is an off-centre hero composition: copy on the left and a curved, animated food orbit on the right. The implementation uses close food photography, thin orange rules, circular image crops, dark surfaces, and rounded rectangular controls.
+The interface uses a dark, fire-led visual style. Orange accents represent heat and embers.
+
+Visual signatures include an asymmetric hero with curved orbit motion, dark glassmorphic cards with subtle backdrop blur, circular food imagery, and clean borders.
 
 ### Runtime tokens
 
-`app/globals.css` owns the shared token layer. Components should use Tailwind token utilities or these variables, rather than introduce new hard-coded palette values.
+`app/globals.css` defines the shared design tokens. Components access these tokens through Tailwind classes or CSS variables.
 
-| Token                | Current value              | Intended role                               |
-| -------------------- | -------------------------- | ------------------------------------------- |
-| `--silver`           | `#E4E4E4`                  | primary light text and focus outline        |
-| `--orange`           | `#E36414`                  | emphasis, active controls, rules, and heat  |
-| `--midnight-shadow`  | `#0B2228`                  | page canvas and dark text on light controls |
-| `--surface`          | derived with `color-mix()` | raised dark surface                         |
-| `--muted-foreground` | derived with `color-mix()` | secondary text                              |
+| Token | Value | Role |
+| --- | --- | --- |
+| `--silver` | `#E4E4E4` | Primary body text and keyboard focus ring |
+| `--orange` | `#E36414` | Primary brand accent, active tabs, and rules |
+| `--midnight-shadow` | `#0B2228` | Page background canvas and dark button text |
+| `--surface` | derived via `color-mix()` | Raised dark container surfaces |
+| `--muted-foreground` | derived via `color-mix()` | Secondary descriptions and helper text |
 
-Tailwind v4 maps these runtime variables to `background`, `foreground`, `card`, `border`, `primary`, `muted-foreground`, `silver`, `orange`, `surface`, and `midnight-shadow` utilities.
+Tailwind v4 maps these tokens to `background`, `foreground`, `card`, `border`, `primary`, `muted-foreground`, `silver`, `orange`, `surface`, and `midnight-shadow` utility classes.
 
 ### Typography
 
-- `Cormorant Garamond` is loaded as `--font-display`.
-- `Inter` is loaded as `--font-body` and is the document sans font.
-- `Yeon Sung` is loaded as `--font-title` for the hero and section headings.
-- Hero and section heading source currently uses `font-[family-name:var(--font-title)]`; any change to display-type behaviour must verify the corresponding token in `app/globals.css` and the browser output.
+- `Cormorant Garamond` loads as `--font-display`.
+- `Inter` loads as `--font-body` for all standard copy.
+- `Yeon Sung` loads as `--font-title` for section headings and hero titles.
 
-### Responsive composition
+### Responsive layout
 
-The shared page gutter is `clamp(16px, 4.5vw, 112px)`, and content shells use a maximum width of 2200px. The project defines `mobile` below 480px, `tablet` below 801px, and `desktop` from 801px. Individual components use additional layout thresholds where needed.
+The layout uses a responsive page gutter of `clamp(16px, 4.5vw, 112px)` and limits content containers to 2200px.
 
-- Below 801px, the hero becomes a single-column layout and the fixed bottom navigation is used.
-- The menu carousel exposes three pages below 800px and five at 800px and above; its card sizing has additional 480px and 1440px thresholds.
-- The reduced-motion testimonial grid becomes three columns at 801px and above.
+Configured breakpoint rules:
+- `mobile`: below 480px.
+- `tablet`: below 801px.
+- `desktop`: 801px and wider.
+
+On screens below 801px, the hero stacks into a single column, and the fixed bottom navigation bar activates.
+
+The menu page carousel presents three visible cards on narrow viewports and five cards on wider screens.
 
 ## 3. Technical architecture
 
-### Stack
+### Technology stack
 
-- Next.js 16.3.4 with the App Router
+- Next.js 16.3.4 (App Router)
 - React 19.2.8
-- TypeScript 5.9.3 in strict mode
-- Tailwind CSS 4.3.3, with `tw-animate-css` and shadcn Tailwind CSS imports
-- GSAP 3.15.0 and `@gsap/react` for hero and line-reveal motion
-- Framer Motion 13.2.0 for testimonial column movement
-- `next/image` for local and remote images
-- Lucide React for interface icons
+- TypeScript 5.9.3 (strict mode)
+- Tailwind CSS 4.3.3 with `tw-animate-css`
+- GSAP 3.15.0 and `@gsap/react` 2.1.2 (hero orbit, line reveals, SVG underline)
+- Framer Motion 13.2.0 (food tab transitions, testimonial columns)
+- Meta Graph API v22.0 via Next.js Server Actions with `after()`
+- `next/image` for responsive image rendering
+- Lucide React 1.45.0 for icons
+- `@netlify/plugin-nextjs` for serverless hosting compatibility
 
-Exact installed versions are defined by `package.json` and the lockfile.
-
-### Application structure
+### Repository structure
 
 ```text
 app/
-  layout.tsx                     # metadata, Google fonts, document classes
-  page.tsx                       # one-page composition
-  globals.css                    # token layer and CSS-only visual primitives
+  actions/meta-conversion.ts     # server action for background Meta CAPI dispatch
+  layout.tsx                     # document metadata, fonts, SEO schema, Meta Pixel
+  page.tsx                       # single-page component tree
+  globals.css                    # design tokens and custom CSS primitives
 components/
-  header.tsx                     # desktop/mobile navigation and maps link
-  hero-section.tsx               # hero copy, calls to action, social links
-  mobile-bottom-nav.tsx          # client-side restaurant navigation adapter
-  hero-food-selector.tsx         # hero selection, autoplay, GSAP orbit
-  menu.tsx                       # menu-page carousel composition
-  food-menu-section.tsx          # interactive categorized food dishes section
-  testimonials.tsx               # Framer Motion or reduced-motion testimonials
-  footer.tsx                     # contact and social presentation
-  ui/
-    bottom-nav-bar.tsx           # reusable animated bottom navigation primitive
-    button.tsx                   # typed link/button primitive
-    card-carousel.tsx        # selectable, paginated menu-page carousel
-    category-tabs.tsx            # horizontal category tabs with animated active underline & glow
-    draw-random-underline.tsx    # GSAP/DrawSVG navigation underline
-    social-media.tsx             # social/call controls and tooltips
-    text-block-animation.tsx     # GSAP/SplitText line reveal
+  header.tsx                     # desktop and mobile navigation
+  hero-section.tsx               # hero copy, CTAs, and food orbit wrapper
+  hero-food-selector.tsx         # GSAP hero food orbit and auto-rotation
+  food-menu-section.tsx          # categorized food menu with category tabs
+  food-menu-card.tsx             # glassmorphism food card with WhatsApp order CTA
+  menu.tsx                       # menu page viewer wrapper
+  testimonials.tsx               # Framer Motion animated reviews
+  footer.tsx                     # contact links and social media controls
+  meta-pixel.tsx                 # client Meta Pixel script loader and route tracker
+  mobile-bottom-nav.tsx          # fixed mobile bottom navigation
+  ui/                            # buttons, tabs, carousels, text animations
 lib/
-  card-carousel-layout.mts   # pure carousel geometry and responsive rules
-  gsap.ts                        # one-time GSAP plugin and ease registration
-  hero-food-autoplay-state.mts   # pure autoplay state rules
-  constants/                     # menu pages, dishes, food categories, social and testimonial fixtures
-  types.ts, utils.ts             # shared types and utilities
-tests/                           # focused Node test files
+  constants/                     # menu items, categories, reviews, social links
+  card-carousel-layout.mts       # carousel math and responsive coordinates
+  gsap.ts                        # registered GSAP plugins and custom eases
+  meta-capi.ts                   # server-only Meta Conversions API client
+  pixel-tracker.ts               # client event helper and cookie resolver
+  seo-schema.ts                  # Schema.org JSON-LD structured data builder
+  types.ts, utils.ts             # shared TypeScript types and utilities
+scratch/
+  menu-template.csv              # exported food menu spreadsheet (CSV)
+  menu-template.xlsx             # exported food menu spreadsheet (Excel)
+scripts/
+  export-menu-template.mjs       # exports food menu fixtures to CSV template
+  import-food-menu.mjs           # parses CSV/XLSX and regenerates TypeScript data
+  read-xlsx.py                   # Python helper for binary Excel parsing
+tests/                           # automated Node test suites
 public/
-  hero-food/                     # six local hero food images
-  logo.webp                      # header logo asset
+  images/food/                   # local transparent PNG food dish images
+  images/menu/                   # local menu preview images
+  hero-food/                     # local hero orbit dish images
 ```
 
-### Rendering and client boundaries
+### Rendering boundaries
 
-`app/page.tsx` is server-rendered by default and composes the hero, menu, testimonials, and footer. Client components are limited to interaction and browser APIs:
+`app/page.tsx` renders on the server. Client components handle browser events, animation frames, and user state:
 
-- `hero-food-selector.tsx` observes reduced motion, document visibility, viewport geometry, and drives GSAP orbit transitions.
-- `menu.tsx` supplies the local menu-page fixture. `card-carousel.tsx` owns the selected page, pagination, keyboard arrows, hover/focus layout, responsive visible-card count, and its reduced-motion behavior.
-- `testimonials.tsx` reads the reduced-motion preference and drives the animated testimonial columns.
-- `text-block-animation.tsx` uses GSAP `SplitText` only when the viewport is at least 768px wide and reduced motion is not requested.
+- `hero-food-selector.tsx`: monitors visibility, viewport dimensions, and GSAP timelines.
+- `food-menu-section.tsx`: stores active category filter and renders dish cards.
+- `food-menu-card.tsx`: manages image load state, WhatsApp order URLs, and conversion events.
+- `card-carousel.tsx`: tracks active menu page index, keyboard arrows, and gesture swipes.
+- `testimonials.tsx`: drives continuous column translation with Framer Motion.
+- `meta-pixel.tsx`: observes route changes and executes browser pixel events.
 
-### Images
+### Image hosting rules
 
-Remote images are currently permitted only from: `res.cloudinary.com`
+Remote image hostnames configured in `next.config.ts`:
+- `res.cloudinary.com` (scanned menu pages and media assets)
+- `lh3.googleusercontent.com` (Google Photos CDN dish images)
+- `pngimg.com` (food dish illustrations)
 
-Remote assets (such as menu pages) are delivered via Cloudinary. Any additional remote image source must be added to `next.config.ts` before it is used with `next/image`.
+Local images reside in `public/images/food/`, `public/images/menu/`, and `public/hero-food/`.
 
-## 4. Styling architecture
+## 4. Menu data and spreadsheet pipeline
 
-The project has migrated most component layout, spacing, typography, responsive layout, states, and ordinary transitions from global CSS to Tailwind utility classes. The remaining `app/globals.css` rules are intentionally reserved for concerns that are less legible or impractical as utilities:
+### Data source and models
 
-- token definitions, global selection, focus, link, and anchor-offset behaviour;
-- map-pin, hero-icon, and carousel-arrow keyframe effects;
-- runtime elements inserted by GSAP line reveals;
-- hero clipping, orbit geometry, SVG path styling, and desktop/mobile placement;
-- bracket-title pseudo-elements;
-- layered `color-mix()` card shadows and testimonial mask;
-- reduced-motion overrides.
+`lib/constants/food-menu-data.ts` stores canonical menu fixtures. It exports 14 food categories and 136 food dishes.
 
-Do not move those rules merely to make the stylesheet smaller. Prefer Tailwind for normal component-local presentation; retain CSS for generated pseudo-elements, complex geometry, custom properties, and multi-layer visual effects.
+Each category defines five fields:
+- `id`: unique category identifier (e.g., `beef-steaks`, `starters`).
+- `name`: full display name.
+- `shortName`: compact name for mobile tabs.
+- `description`: culinary overview of the category.
+- `pageReference`: page label from the printed menu PDF.
 
-## 5. Interaction, motion, and accessibility contracts
+Each dish (`FoodItem`) defines these attributes:
+- `id`: unique kebab-case slug generated from dish name.
+- `name`: dish title.
+- `price`: price string in Bangladesh Taka (e.g., `550 TK` or dual price `850 / 1000 TK`).
+- `category`: key linking to a valid category ID.
+- `portion`: optional portion specifier (e.g., `1:1`, `4 pcs`, `8" / 12"`).
+- `description`: optional ingredients or preparation text.
+- `image`: local path or remote URL.
+- `isPopular`: optional boolean flag for popular badge.
+- `isSpicy`: optional boolean flag for spicy indicator.
 
-### Navigation and controls
+### Export workflow
 
-- Navigation targets are `#top`, `#menu`, `#testimonials`, and `#contact`; the separate hero location CTA opens Google Maps in a new tab.
-- The mobile navigation uses labelled anchor controls in a fixed bottom bar.
-- Hero food controls are native buttons using `aria-pressed`. Visible carousel pages are buttons with `aria-current` on the selected page; non-visible pages are hidden from the accessibility tree and tab order.
-- Social links have accessible labels. Decorative remote social icons and hero food images are hidden from the accessible name calculation.
-- The shared `:focus-visible` treatment is a two-pixel Silver Mist outline with a four-pixel offset.
+Run the export script to generate a spreadsheet template from current TypeScript fixtures:
 
-### Hero orbit
+```bash
+node scripts/export-menu-template.mjs
+```
 
-- The six selectable states are Appetizer, Biriyani, Burger, Kebab, Pasta, and Pizza.
-- Automatic rotation waits 500ms between selections.
-- Rotation is not scheduled while the page is hidden or reduced motion is enabled.
-- Hovering or focusing the food controls does not interrupt rotation.
-- Manual selections update a polite live region.
-- GSAP owns food-path transitions, carousel movement, navigation underlines, and title/section line reveals. `MotionPathPlugin`, `DrawSVGPlugin`, `ScrollTrigger`, `SplitText`, and two custom eases are registered in `lib/gsap.ts`.
+This command writes `scratch/menu-template.csv`.
 
-### Testimonials and reduced motion
+### Import workflow and validation
 
-- Motion-capable presentation continuously translates three testimonial columns, with nine primary cards and visually repeated cards for the loop.
-- Repeated cards are marked `aria-hidden`.
-- Under `prefers-reduced-motion`, Framer Motion is configured for user preference and all nine testimonials render as a static list.
-- Global reduced-motion CSS removes non-essential transition and animation duration; hero selection falls back to a fade instead of the path movement.
-- No content or control may depend on animation completing successfully.
+Run the import script to update `lib/constants/food-menu-data.ts` from a CSV or XLSX file:
 
-## 6. Content ownership
+```bash
+node scripts/import-food-menu.mjs scratch/menu-template.csv
+# or
+node scripts/import-food-menu.mjs scratch/menu-template.xlsx
+```
 
-The following values are implementation fixtures or external links and should be changed only as an approved, coherent content update:
+The import engine applies these validation rules:
+- Validates category IDs against the 14 approved categories.
+- Verifies price strings contain digits only. It strips and re-applies ` TK` automatically.
+- Generates kebab-case slugs from dish names. It resolves duplicates with category prefixes or numeric suffixes.
+- Converts boolean flags (`TRUE`/`FALSE`, `1`/`0`, `yes`/`no`) into TypeScript booleans.
+- Supports `.csv` directly without extra dependencies. Binary `.xlsx` parsing invokes `scripts/read-xlsx.py` and requires Python 3.
 
-- food state labels and image paths in `components/hero-food-selector.tsx`;
-- menu-page Cloudinary image paths in `lib/constants/menu.ts`;
-- testimonial copy, names, sources, and optional ratings in `lib/constants/testimonials.ts`;
-- phone, map, WhatsApp, Facebook, and Instagram data in `lib/constants/social-media.ts`;
-- page title and description in `app/layout.tsx`.
+## 5. Analytics and tracking (Meta CAPI)
 
+### Dual-layer tracking architecture
 
-## 7. Engineering rules
+The application implements dual-layer conversion tracking. Browser events fire through Meta Pixel, and matching server events fire through the Meta Conversions API (CAPI).
 
-- Preserve the server-first architecture. Add a client boundary only for state, effects, animation, or browser APIs.
-- Use `next/image` with dimensions, useful alternative text for meaningful imagery, and empty alternative text for decorative imagery.
-- Keep GSAP and Framer Motion responsible for separate elements and properties.
-- Preserve stable keys and ensure non-visible carousel pages remain unavailable to pointer and keyboard interaction.
-- Keep desktop and mobile anchor targets in sync when navigation changes.
-- Do not add packages, services, external hosts, public product claims, or operational features without an explicit approved requirement.
-- Preserve existing user work; do not commit, deploy, publish, or modify remote systems unless explicitly requested.
+### Event deduplication
 
-## 8. Local development and verification
+Each tracked interaction creates a unique event ID through `generateMetaEventId()`. The ID uses the format `evt_<timestamp>_<random>`.
+
+The client passes this ID to both Meta Pixel and the server action. Meta matches the shared ID to deduplicate browser and server records.
+
+### Context resolution
+
+`lib/pixel-tracker.ts` reads `_fbp` and `_fbc` cookies on the client. If `_fbc` is missing, it builds the value from any incoming `?fbclid=` URL query.
+
+The server action resolves client IP and User-Agent headers. It inspects `x-nf-client-connection-ip` for Netlify deployments and falls back to standard headers.
+
+### Server action execution with after()
+
+`app/actions/meta-conversion.ts` executes server calls. It uses Next.js `after()` to handle HTTP requests in the background.
+
+This execution guarantees tracking completes on serverless runtimes without slowing user navigation to WhatsApp or external destinations.
+
+### Server-side CAPI implementation
+
+`lib/meta-capi.ts` enforces `server-only` execution. It sends conversion payloads to Meta Graph API `v22.0`.
+
+The code normalizes Bangladesh phone numbers to E.164 format (`+880`). It applies SHA-256 hashing to sensitive fields before dispatch.
+
+### Tracked events
+
+- `InitiateCheckout`: Fires when a visitor clicks the WhatsApp order action on a food card. Payload includes dish name, category, ID, and price in BDT.
+- `Contact`: Fires when a visitor clicks telephone links, general WhatsApp links, or Google Maps directions.
+- `PageView`: Fires in `components/meta-pixel.tsx` on initial page mount and route transitions.
+
+### Environment variables and fallback
+
+The tracking layer reads credentials from `.env.local`:
+- `FB_PIXEL_ID` (or `NEXT_PUBLIC_FB_PIXEL_ID`): Meta Pixel ID.
+- `META_CONVERSIONS_API_TOKEN`: System user access token.
+
+When credentials are missing, tracker functions exit silently. All user interactions continue without error.
+
+## 6. SEO and structured data
+
+### Schema.org graph
+
+`lib/seo-schema.ts` generates JSON-LD structured data injected into `app/layout.tsx`.
+
+The structured data graph includes:
+- `WebSite`: Canonical URL, search descriptions, and English (Bangladesh) language tagging.
+- `Restaurant`: Name, phone, geographic coordinates (Sylhet, Bangladesh), address, opening cuisine list, and map reference.
+- `Menu`: Contains `hasMenuSection` arrays for each category. Each section links `hasMenuItem` nodes containing name, description, image, and price offers in `BDT` currency.
+
+### Search and security configuration
+
+- `app/robots.ts`: Permits global search indexing and points to the XML sitemap.
+- `app/sitemap.ts`: Generates sitemap entry with weekly change frequency.
+- `next.config.ts`: Enforces security response headers:
+  - `X-Content-Type-Options: nosniff`
+  - `X-Frame-Options: DENY`
+  - `Referrer-Policy: strict-origin-when-cross-origin`
+  - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+
+## 7. Styling architecture
+
+Component markup uses Tailwind CSS v4 utility classes for sizing, flexbox layout, grid alignment, typography, and hover feedback.
+
+`app/globals.css` retains rules for features impractical with inline utilities:
+- Global design token definitions and CSS custom properties.
+- Keyboard `:focus-visible` treatments.
+- Keyframe animations for map pins and glow rings.
+- Dynamic DOM elements inserted by GSAP SplitText.
+- Hero orbit curves and coordinate geometry.
+- Glassmorphism backdrop filter support for food cards.
+- Reduced-motion animation cancellation overrides.
+
+## 8. Interaction, motion, and accessibility contracts
+
+### Navigation anchors
+
+- Page anchor links point to `#top`, `#dishes`, `#menu`, `#testimonials`, and `#contact`.
+- Mobile bottom navigation synchronizes active tabs with scroll position and URL hash.
+- Keyboard focus uses a two-pixel Silver Mist outline (`#E4E4E4`) with a four-pixel offset.
+
+### Hero food orbit
+
+- Six food categories: Appetizer, Biriyani, Burger, Kebab, Pasta, Pizza.
+- Automatic rotation cycles every 500ms when the document is visible.
+- Rotation pauses when `prefers-reduced-motion` is enabled or the browser tab is hidden.
+- Selecting an item updates an aria-live region to inform screen reader users.
+
+### Categorized food menu
+
+- Category tabs implement `role="tablist"` with individual `role="tab"` elements.
+- Active tabs toggle `aria-selected="true"`.
+- Tab panels use `role="tabpanel"` linked to matching tab IDs via `aria-labelledby`.
+- Dish cards provide accessible WhatsApp ordering buttons with descriptive `aria-label` text.
+
+### Testimonials and motion safety
+
+- Standard mode animates three vertical columns in a continuous translation loop.
+- Loop elements repeat with `aria-hidden="true"` to prevent duplicate screen reader reading.
+- When `prefers-reduced-motion` is detected, column animation stops and renders a static three-column grid.
+
+## 9. Content ownership
+
+Update these files when modifying static business information:
+- Menu items and categories: `lib/constants/food-menu-data.ts` (or run import script).
+- Scanned menu pages: `lib/constants/menu.ts`.
+- Customer reviews: `lib/constants/testimonials.ts`.
+- Contact numbers, WhatsApp links, social profiles: `lib/constants/social-media.ts` and `lib/constants/site.ts`.
+- Page title and meta descriptions: `app/layout.tsx`.
+
+## 10. Engineering rules
+
+- Keep components server-rendered by default. Add `"use client"` only for user state, DOM listeners, or animation hooks.
+- Use Next.js Server Actions with `after()` for background API tasks. Do not block client response threads.
+- Guard server-only secrets with `import "server-only"`. Never expose API tokens to the client bundle.
+- Keep GSAP and Framer Motion scopes separated. Do not animate the same DOM properties with both libraries.
+- Optimize images with `next/image`. Provide width, height, and meaningful alt text for content images.
+- Keep automated tests passing. Add unit tests in `tests/` when introducing business logic or data pipelines.
+
+## 11. Local development and verification
 
 ### Commands
 
@@ -195,25 +332,30 @@ npm install
 npm run dev
 npm run lint
 npm run type-check
+npm test
 npm run build
 ```
 
-The repository has focused Node tests in `tests/` but no aggregate `test` script. Some tests fetch a running local server and use `HERO_BASE_URL` or `TESTIMONIAL_BASE_URL` when the default ports are unsuitable. Run the intended test file explicitly, for example:
+The test runner executes 80+ unit tests across components, layout coordinates, SEO schema, CAPI dispatch, and spreadsheet parsers:
 
 ```bash
-node --test tests/hero-food-autoplay-state.test.mjs
+npm test
+# or run a specific test file
+node --test tests/food-categories-tabs.test.mjs
 ```
 
-### Browser verification for UI changes
+Three integration tests verify live HTTP responses and run when `npm run dev` is active. They skip safely when the local server is inactive.
 
-Check at least a small mobile viewport and a desktop viewport. Verify:
+### Verification checklist
 
-- all four navigation anchors and the mobile bottom navigation;
-- hero selection, automatic rotation, hover/focus behaviour, document visibility, and reduced motion;
-- menu-page selection, pagination controls, keyboard arrows, hover/focus layout, and reduced motion;
-- testimonial motion and static reduced-motion output;
-- keyboard focus visibility, no clipped controls, and image layout stability.
+Verify UI changes across mobile (375px) and desktop (1280px) viewports:
+- Header and mobile bottom navigation resolve to `#top`, `#dishes`, `#menu`, `#testimonials`, `#contact`.
+- Hero orbit rotates cleanly and honours reduced motion.
+- Food menu category tabs switch dishes with smooth layout transitions.
+- WhatsApp order buttons open chat with correct pre-filled dish details and price.
+- Scanned menu carousel accepts keyboard arrow navigation and touch drag.
+- Structured data passes Google Rich Results testing without schema warnings.
 
-## 9. Documentation status
+## 12. Documentation status
 
 `PROJECT.md` replaces the prior project, product, design, docs, and plan documents. It is the current implementation reference.
